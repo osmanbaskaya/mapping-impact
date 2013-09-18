@@ -1,4 +1,8 @@
 *.py[cod]
+data/
+run/*.gz
+run/*.xml
+run/dummy*
 
 # C extensions
 *.so
