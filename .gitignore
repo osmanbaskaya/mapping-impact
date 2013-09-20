@@ -3,6 +3,7 @@ data/
 run/*.gz
 run/*.xml
 run/dummy*
+run/trash/*
 
 # C extensions
 *.so
