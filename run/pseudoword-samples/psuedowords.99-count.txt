@@ -1,100 +1,100 @@
-<treasure_trove> trove expo
-<verbalisation> wording outcry
-<magnetic_pole> workplace finish_line
-<zealot> jew proponent
-<lager> boot_camp beer
-<glycine> protein vine
-<arawakan> someone negro
-<lancastrian> dynasty england
-<husk> ethanol container
-<arthur> fdr uncle_sam
-<pavage> tax sidewalk
-<focalization> giving_birth blur
-<malady> physical_condition illness
-<drilling> digging oil_production
-<choking> physical_condition murderer
-<savoy> italy napa
-<rave> prom book_review
-<stumblebum> batsman someone
-<water_vole> antelope deer
-<gold_rush> setback emigration
-<sanitation> supplier cleaning
-<avulsion> revolutionary breakaway
-<unevenness> cloth inequality
-<shoeshine> blur social_service
-<jackfruit> olive_tree produce
-<green_alder> woods vine.
-<verbalism> exam plethora
-<shorts> trunks boxers
-<djibouti> africa african_nation
-<omnibus> anthology public_transport
-<ken> savvy sighting
-<procyon> cluster giant_panda
-<pullulation> greens population_growth
-<hatching> giving_birth bounds
-<cartagena> spain colombia
-<cold_war> adversary state_of_war
-<odessa> ukraine texas
-<navel> torso midpoint
-<jay> chief_justice finch
-<worrying> mistreatment quake
-<scleroderma> disease fungus
-<seigniory> acres accountant
-<forgery> counterfeit misdemeanor
-<chancellorsville> old_dominion siege
-<potty> restroom tray
-<quickstep> rock_and_roll choreographer
-<rhubarb> greens vine
-<harbor> seaport shack
-<quantum> concept measurement
-<fogginess> mist blur
-<commerce_secretary> undersecretary advisory_board
-<shred> tad cloth
-<china_rose> rosa cloth
-<bye> someone goodbye
-<marsh_hen> finch swan
-<varsity> graduate_school first_team
-<dross> sewage cull
-<p> mineral wye
-<pegasus> leander cluster
-<two-toed_sloth> antelope deer
-<faroe_islands> district atlantic
-<thesis> premise playwright
-<money_box> container cash_register
-<crenellation> rampart road_construction
-<armyworm> animal vanessa mosquito
-<modernism> artist modernity mistreatment
-<leverage> trajectory disadvantage arbitrage
-<cramp> encephalopathy artifact typewriter
-<infliction> enforcement tort stimulus
-<leon> england spain mexico
-<chicane> full_house doorway hoax
-<fratricide> murderer mortar_fire murder
-<wrinkle> sag deterrent expert
-<bee_balm> melissa vine candy.
-<turbulence> electrical_power weather anarchy
-<comrade> camaraderie revolutionary buddy
-<loyalty> patriotism hate vow
-<stabilizer> chemical fuselage ship
-<bender> crouch someone fastball
-<notation> percentage_point commentary encryption
-<symbolisation> subject_matter imagery artist
-<fiend> satan vampire partisanship
-<gob> mariner cluster yap
-<behaviour> inaction demeanor measurement relations
-<reconstruction> middle_ages remake commentary chronicle
-<regeneration> giving_birth wage_increase resurgence redevelopment
-<impropriety> propriety physical_condition revulsion vandalism
-<justice> sportsmanship market_capitalization chief_justice department_of_justice
-<collector> someone employee valley electronic_equipment
-<deflexion> calamity surf drizzle detour
-<scattering> tad synergy rainfall manure dung
-<constituent> computer_hardware voter entirety premise inning
-<population> someone citizenry expo vii masses
-<ban> decree franc sen test_ban doctorate
-<extinction> inaction someone synergy eradication conditioning shutdown
-<upgrade> hillside software reformist downgrade computer_hardware redevelopment
-<stall> stalls kiosk newsstand malfunction seats depository obstruction_of_justice
-<wind> gale offshoot breathing conversation confidential_information accordion someone rowing
-<bow> linkup violin fore sword sky someone subject_matter artifact workman
+<helper> assistant benefactor
+<infanticide> murderer murder
+<ca> calcium california
+<impasse> deadlock thoroughfare
+<battle_cry> outcry motto
+<joplin> vocalist composer
+<utility_man> ballplayer workman
+<vortex> swirl whirlpool
+<shepard> playwright astronaut
+<franck> composer physicist
+<hypsography> geology measurement
+<wiener> mathematician frankfurter
+<jump_suit> garment uniform
+<gatekeeper> someone doorman
+<watchword> motto password
+<gold_coast> ghana vicinity
+<medallist> medal golfer
+<brady> photographer financier
+<rubinstein> pianist composer
+<bike> motorcycle bicycle
+<macintosh> cloth mac
+<southpaw> lefthander someone
+<war_cry> motto outcry
+<rotisserie> oven restaurant
+<spode> potter porcelain
+<wyatt> architect poet
+<obverse> alternative coin
+<camlet> garment cloth
+<uxoricide> husband murder
+<stater> coin occupant
+<parkinson> surgeon historian
+<diaper> garment cloth
+<straitjacket> deterrent garment
+<fourier> physicist sociologist
+<stealing> theft stealth
+<chancery> tribunal archive
+<truant> absentee offender
+<tourer> tourist auto
+<tyre> sur tire
+<software_package> software merchandise
+<metropolitan> archbishop occupant
+<arbiter> expert arbitrator
+<pic> movie photograph
+<cognomen> moniker surname
+<payload> warhead cargo
+<rallying_cry> motto outcry
+<candidate> campaigner someone
+<shortage> shortfall lack
+<hatchet_man> murderer enforcer
+<medalist> medal golfer
+<odyssey> journey epic
+<gladstone> statesman suitcase
+<lindsay> playwright poet
+<terry> actress cloth
+<left-hander> lefthander someone
+<quandary> predicament dilemma
+<fairy_godmother> benefactor fay
+<guggenheim> philanthropist industrialist
+<loaner> lender auto
+<sackcloth> garment cloth
+<mackintosh> cloth mac
+<changeling> idiot youngster
+<suede> leather cloth
+<mayoress> wife mayor
+<three-decker> sandwich ship warship
+<investigator> researcher expert policeman
+<stevens> psychologist poet filmmaker
+<fitzgerald> poet playwright vocalist
+<nickel> mineral coin greenback
+<flyer> advertisement traveler aviator
+<shaker> someone christian container
+<flier> traveler aviator advertisement
+<bernoulli> physicist mathematician astronomer
+<bomber> airplane someone sandwich
+<gulf> mediterranean disparity chasm
+<chamberlain> statesman treasurer stewardship
+<mead> anthropologist mathematician brew
+<blowout> victory malfunction gala
+<fighter> wrestler airplane guardian
+<duty> prerequisite chore tariff
+<defaulter> absentee debtor rival
+<republican> pol proponent river
+<captive> prisoner animal someone
+<lowell> poet astronomer playwright educator
+<town> river townspeople township architect
+<child> youngster infant someone descendant
+<deliverer> jesus benefactor employee someone
+<effort> try workout feat candidacy
+<mailer> playwright someone advertisement container
+<morris> feminist poet financier statesman
+<sullivan> architect psychiatrist entertainer educator composer
+<material> mineral info cloth equipment applicant
+<surety> inevitability earnest prisoner guarantor warranty
+<hill> england embankment businessman performer infield
+<williams> vocalist mathematician poet ballplayer clergyman playwright
+<moore> composer filmmaker mathematician poet playwright architect
+<porter> laborer doorman playwright composer poet employee ale
+<lee> filmmaker performer actress physicist financier militiaman statesman underside
+<young> animal actress reformist physicist saxophonist poet ballplayer mahdi youngster
 

@@ -20,7 +20,7 @@ if len(sys.argv) != 6:
     exit(1)
 
 pseudo_word_file = fopen(sys.argv[1])
-#tok_f, pos_f, lem_f, raw_f = map(lambda x: fopen(x), sys.argv[2:])
+tok_f, pos_f, lem_f, raw_f = map(lambda x: fopen(x), sys.argv[2:])
 
 # read pseudoword components
 mono_words = set()
@@ -30,11 +30,11 @@ for line in pseudo_word_file:
         map(mono_words.add, line)
 
 
-ll = list(mono_words)
-ll.sort()
-for l in ll:
-    print l
-exit()
+#ll = list(mono_words)
+#ll.sort()
+#for l in ll:
+    #print l
+#exit()
 
 print >> sys.stderr, "total # of pseudowords' components: {}".format(len(mono_words))
 

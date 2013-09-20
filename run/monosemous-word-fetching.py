@@ -30,7 +30,11 @@ for line in open(pseudo_filename):
     if len(line) >= 2:
         map(mono_words.add, line)
 
+prev_sent = ""
 for i, line, tok, pos, lem in zip(c, giga_file, *files):
+    if prev_sent == line:
+        print "\tSame sentences: {}".format(line),
+        continue
     line_list = line.split()
     tok_list = tok.split()
     pos_list = pos.split()
@@ -46,5 +50,6 @@ for i, line, tok, pos, lem in zip(c, giga_file, *files):
             outfiles[2].write(lem)
             outfiles[3].write(line)
             break
+    prev_sent = line
 
 
