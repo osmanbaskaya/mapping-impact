@@ -7,7 +7,7 @@ SEED=1
 
 CORP_FILES=$(shell find /data/ldc/gigaword_eng/ -name "*.gz" | sort)
 RAW_FILES=$(shell find ../data/raw/ -name "out-*.gz" | sort)
-PSEUDO_WORDS_FILE=pseudoword-samples/pseudowords.1001-count.txt
+PSEUDO_W_FILE=pseudoword-samples/pseudowords.1001-count.txt
 
 ### BIN SETUP
 bin:
@@ -20,17 +20,25 @@ gigafetch.out:
 tokenize-lemmatize-postag.out:
 	echo ${RAW_FILES} | xargs -n 1 -P 60 run-tok-pos-lem.py > $@
 
-tok.mono.gz pos.mono.gz raw.mono.gz lem.mono.gz: ${PSEUDO_WORDS_FILE}  #wc -l = 22632220
-	echo ${RAW_FILES} | xargs -n 1 -P 60 monosemous-word-fetching.py $< &> mono-word-fetching.err
-	wait
-	cat ../data/word-components/lem* | gzip > lem.mono.gz
-	cat ../data/word-components/raw* | gzip > raw.mono.gz
-	cat ../data/word-components/tok* | gzip > tok.mono.gz
-	cat ../data/word-components/pos* | gzip > pos.mono.gz
-	#rm -rf ../data/word-components/*out*.gz
+../data/components: ${PSEUDO_W_FILE}  #wc -l = 22632220
+	mkdir $@
+	echo ${RAW_FILES} | xargs -n 1 -P 60 fetch-w.py $< &> fetch-w.err
 
-monosemous-creation: ${PSEUDO_WORDS_FILE} tok.mono.gz pos.mono.gz lem.mono.gz raw.mono.gz
-	rm -rf ../data/monosemous-words/*.gz
-	word-filtering.py $^
+mono.%.gz: ../data/components
+	cat $</$** | gzip > $@
+	#echo `wc -l $@`
+
+../data/monosemous-words: ${PSEUDO_W_FILE} mono.tok.gz mono.pos.gz mono.lem.gz mono.raw.gz
+	mkdir $@
+	mono-word-filtering.py $^ &> mono-word-filtering.err 
+
+../data/pos-filtering: ../data/monosemous-words
+	mkdir $@
+	@echo $(shell find $< -name "*raw.gz" | sort) | sed 's/.raw.gz//g' \
+	| xargs -n 1 -P 40 pos-filter.py
+
+
 
 .SECONDARY:
+#small.tok.gz small.pos.gz small.lem.gz small.raw.gz
+#tok.mono.gz pos.mono.gz lem.mono.gz raw.mono.gz

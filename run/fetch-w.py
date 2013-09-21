@@ -4,8 +4,9 @@
 __author__ = "Osman Baskaya"
 
 import sys
-from itertools import count
+from itertools import count, izip
 from nlp_utils import fopen
+from collections import defaultdict as dd
 from os import path
 
 c = count(1)
@@ -19,9 +20,12 @@ giga_file = fopen(giga_filename)
 
 files = map(lambda x: fopen('../data/processed/' + x + '.' + base), 'tok pos lem'.split())
 
-outpath = "../data/word-components/"
+outpath = "../data/components/"
 outfiles = map(lambda x: open(path.join(outpath, x + '.' + base), 'w'), 
                     'tok pos lem raw'.split())
+
+lines = set()
+collections = [[], [], [], []]
 
 # read pseudoword components
 mono_words = set()
@@ -30,26 +34,24 @@ for line in open(pseudo_filename):
     if len(line) >= 2:
         map(mono_words.add, line)
 
-prev_sent = ""
 for i, line, tok, pos, lem in zip(c, giga_file, *files):
-    if prev_sent == line:
-        print "\tSame sentences: {}".format(line),
-        continue
-    line_list = line.split()
-    tok_list = tok.split()
+    tok_list = tok.lower().split()
     pos_list = pos.split()
     lem_list = lem.split()
     if not len(lem_list) == len(pos_list) == len(tok_list):
         print >> sys.stderr, "{}th line does not have equal number of token for {}".format(i, base)
         continue
-    for lemma in lem_list:
-        if lemma in mono_words:
-            #print "{}\n{}\n{}\n{}".format(tok, pos, lem, line)
-            outfiles[0].write(tok)
-            outfiles[1].write(pos)
-            outfiles[2].write(lem)
-            outfiles[3].write(line)
+    for i in xrange(len(lem_list)):
+        lemma = lem_list[i]
+        token = tok_list[i]
+        if lemma in mono_words or token in mono_words:
+            if line not in lines:
+                lines.add(line)
+                for L, string in izip(collections, [tok, pos, lem, line]):
+                    L.append(string)
             break
-    prev_sent = line
 
-
+# write 2 files
+for f, C in izip(outfiles, collections):
+    f.write(''.join(C))
+    f.close()
