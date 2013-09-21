@@ -39,10 +39,9 @@ for tok, pos, lem, line in izip(tok_f, pos_f, lem_f, raw_f):
             index = i
     assert index is not None, "{}: No match for line:\n\t{}".format(word, line)
     p = pos_list[index]
-    if not p.startswith('NP'):
-        if p.lower()[0] == 'n':
-            for L, string in izip(lists, [tok, pos, lem, line, str(index) + '\n']):
-                L.append(string)
+    if p.lower()[0] == 'n':
+        for L, string in izip(lists, [tok, pos, lem, line, str(index) + '\n']):
+            L.append(string)
 
 for f, L in izip(files, lists):
     f.write(''.join(L))
