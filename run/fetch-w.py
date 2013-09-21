@@ -6,7 +6,6 @@ __author__ = "Osman Baskaya"
 import sys
 from itertools import count, izip
 from nlp_utils import fopen
-from collections import defaultdict as dd
 from os import path
 
 c = count(1)
