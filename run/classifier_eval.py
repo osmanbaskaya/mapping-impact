@@ -4,11 +4,12 @@
 __author__ = "Osman Baskaya"
 
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.cross_validation import KFold
+from sklearn import cross_validation 
 from sklearn import svm
 from data_load import Semeval2013KeyLoader, Semeval2010KeyLoader
 import sys
 from optparse import OptionParser
+import numpy as np
 
 parser = OptionParser()
 parser.add_option("-i", "--ans_file", dest="ansfile", default=None,
@@ -52,20 +53,35 @@ else:
 
 ans_dict = KeyLoader.read_keyfile(ansfile)
 gold_dict = KeyLoader.read_keyfile(keyfile)
-#print senses['add.v'][:4]
+
+classifiers = [svm.SVC, MultinomialNB,]
 
 kfolds = dict()
-for tw, Y in gold_dict.iteritems():
-    kfolds[tw] = KFold(len(Y), n_folds=k, indices=False)
-    print tw, kfolds[tw]
-    X = ans_dict[tw]
-    for train, test in kfolds[tw]:
-        X_train = X[train]
+m, n = len(classifiers), len(gold_dict.keys())
+results = np.zeros([m,n])
+stds = np.zeros([m,n])
+
+for i, c in enumerate(classifiers):
+    for j, tw in enumerate(gold_dict.keys()):
+        data = ans_dict[tw]
+        X = data.reshape(data.shape[0], 1)
+        Y = gold_dict[tw]
+        clf = c()
+        cv = cross_validation.ShuffleSplit(len(Y), n_iter=k,
+                    test_size=0.2, random_state=0)
+        scores = cross_validation.cross_val_score(clf, X, Y, cv=k)
+        results[i,j], stds[i,j] = scores.mean(), scores.std()
+
+
+#for tw, Y in gold_dict.iteritems():
+    #kfolds[tw] = KFold(len(Y), n_folds=k, indices=False)
+    #print tw, kfolds[tw]
+    #X = ans_dict[tw]
+    #for train, test in kfolds[tw]:
+        #X_train, X_test = X[train], X[test]
+        #Y_train, Y_test = Y[train], Y[test]
+
+        
     
 
-classifiers = [MultinomialNB, svm.SVC]
-
-for c in classifiers:
-    clf = c()
-    print >> sys.stderr, "{}: Processing".format(clf)
 

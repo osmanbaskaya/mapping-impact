@@ -37,7 +37,10 @@ mono.%.gz: ../data/components
 	@echo $(shell find $< -name "*raw.gz" | sort) | sed 's/.raw.gz//g' \
 	| xargs -n 1 -P 40 pos-filter.py
 
-check:
+classifier-eval:
+	classifier_eval.py -g dummy.key -k 10 -l Semeval2013 -i dummy.key 
+
+corpus-creation-check:
 	zcat ${CORP_FILES} | grep -iP 'wesleyan'
 
 
