@@ -37,6 +37,9 @@ mono.%.gz: ../data/components
 	@echo $(shell find $< -name "*raw.gz" | sort) | sed 's/.raw.gz//g' \
 	| xargs -n 1 -P 40 pos-filter.py
 
+check:
+	zcat ${CORP_FILES} | grep -iP 'wesleyan'
+
 
 
 .SECONDARY:
