@@ -1,202 +1,202 @@
-<helper> assistant benefactor
-<infanticide> murderer murder
 <ca> calcium california
+<mg> milligram magnesium
 <impasse> deadlock thoroughfare
-<battle_cry> outcry motto
 <joplin> vocalist composer
 <utility_man> ballplayer workman
-<vortex> swirl whirlpool
 <shepard> playwright astronaut
 <franck> composer physicist
 <hypsography> geology measurement
 <wiener> mathematician frankfurter
-<jump_suit> garment uniform
 <gatekeeper> someone doorman
+<battledore> racquet badminton
 <watchword> motto password
 <gold_coast> ghana vicinity
 <medallist> medal golfer
-<brady> photographer financier
 <rubinstein> pianist composer
-<bike> motorcycle bicycle
 <macintosh> cloth mac
 <southpaw> lefthander someone
-<war_cry> motto outcry
 <rotisserie> oven restaurant
-<spode> potter porcelain
 <wyatt> architect poet
-<obverse> alternative coin
-<camlet> garment cloth
-<uxoricide> husband murder
-<stater> coin occupant
+<pensionary> pensioner employee
+<bully> hooligan hoodlum
+<mechanic> machinist repairman
 <parkinson> surgeon historian
-<diaper> garment cloth
-<straitjacket> deterrent garment
+<diamante> sequin cloth
 <fourier> physicist sociologist
+<arminius> theologian armin
 <stealing> theft stealth
-<chancery> tribunal archive
 <truant> absentee offender
 <tourer> tourist auto
-<tyre> sur tire
-<software_package> software merchandise
 <metropolitan> archbishop occupant
-<arbiter> expert arbitrator
-<pic> movie photograph
+<pic> movie photo
 <cognomen> moniker surname
+<priestcraft> machination craftsmanship
 <payload> warhead cargo
-<rallying_cry> motto outcry
+<muscleman> hooligan someone
+<hutton> cricketer geologist
 <candidate> campaigner someone
-<shortage> shortfall lack
+<doubles> badminton tennis
+<saint_nicholas> nicholas santa
 <hatchet_man> murderer enforcer
 <medalist> medal golfer
-<odyssey> journey epic
 <gladstone> statesman suitcase
 <lindsay> playwright poet
 <terry> actress cloth
 <left-hander> lefthander someone
+<turncock> employee faucet
 <quandary> predicament dilemma
 <fairy_godmother> benefactor fay
 <guggenheim> philanthropist industrialist
 <loaner> lender auto
-<sackcloth> garment cloth
 <mackintosh> cloth mac
+<niebuhr> theologian historian
 <changeling> idiot youngster
-<suede> leather cloth
 <mayoress> wife mayor
 <rota> tribunal roster
 <luddite> adversary workman
 <showman> someone impresario
 <veblen> economist mathematician
+<tallis> composer shawl
+<gershwin> lyricist composer
 <catherine> wife empress
 <crown_princess> wife princess
 <thorndike> actress psychologist
 <madonna> mary vocalist
 <patois> lingo dialect
-<thompson> archaeologist physicist
+<thompson> archeologist physicist
+<geek> performer oddball
 <cowper> surgeon poet
 <william_cowper> surgeon poet
 <lefty> someone lefthander
-<doeskin> leather cloth
-<irregular> guerrilla merchandise
 <resident> occupant physician
+<suburbia> suburb subculture
+<dark_horse> campaigner racehorse
 <savoyard> performer frenchman
+<singles> badminton tennis
 <trailblazer> pathfinder innovator
-<squirt> nobody spurt
-<wizard> superstar sorcerer
+<wizard> maven sorcerer
+<deserter> turncoat defector
 <pope> pontiff poet
 <pitman> educator miner
 <decker> playwright artifact
 <small_fry> nobody youngster
-<cyprian> prostitute cypriot
+<flurry> ado snowfall
 <powell> statesman physicist
+<goop> goo max
+<hosteller> hotelier traveler
 <dormitory> dorm bedroom
-<alligator> leather gator
+<glossy> mag photo
+<maillot> swimsuit tights
 <rascal> rogue youngster
 <walpole> historian statesman
 <bullfinch> architect finch
-<mn> mineral minnesota
+<ob> river obstetrics
 <savior> jesus benefactor
+<verdure> greenery profusion
 <tammy> cloth tam
 <warner> filmmaker communicator
-<migrator> migrant animal
 <occupier> occupant serviceman
-<reproach> rebuke disgrace
 <indian_potato> vine sunflower
+<orchis> orchid testicle
 <magician> performer sorcerer
-<brute> attacker animal
+<shepherd> clergyman herdsman
 <potato> murphy vine
+<firebrand> firewood troublemaker
+<smoothie> hypocrite beverage
 <shelf> furniture ledge
 <insurgent> insurrection guerrilla
 <husayn> saddam rex
 <cornell> actress businessman
 <homecoming> reunification repatriation
 <husain> saddam rex
-<winker> someone blinder
-<learner> someone apprentice
+<wine_maker> winemaker winery
 <provider> supplier benefactor
 <barber> composer hairdresser
-<reckoner> expert handbook
 <huckster> seller advertiser
 <leicester> leicestershire england
 <zealot> jew proponent
-<dearth> lack scarcity
 <volta> physicist river
 <devon> england cattle
-<peripatetic> pedestrian disciple
 <ostiary> clergyman doorman
-<swan's_down> cloth swan
-<federalist> pol proponent
-<bloodshed> murder massacre
+<lifter> weightlifter thief
+<federalist> politico proponent
 <suer> suitor plaintiff
-<three-decker> sandwich ship warship
-<investigator> researcher expert policeman
+<saviour> jesus benefactor
+<chemist> physicist pharmacist
+<struma> disease tuberculosis
+<venturer> merchant someone
+<accomplishment> achievement craftsmanship
+<worldling> someone inhabitant
+<rogers> humorist actress psychologist
+<saloon> barroom pub auto
+<hodgkin> physician physicist physiologist
 <stevens> psychologist poet filmmaker
+<tout> scalper advertiser adviser
 <fitzgerald> poet playwright vocalist
-<nickel> mineral coin greenback
 <flyer> advertisement traveler aviator
-<shaker> someone christian container
+<tough> wrestler hoodlum hooligan
 <flier> traveler aviator advertisement
+<watson> inventor psychologist geneticist
 <bernoulli> physicist mathematician astronomer
-<bomber> airplane someone sandwich
-<gulf> mediterranean disparity chasm
+<beaumont> surgeon playwright texas
+<hart> playwright lyricist deer
+<packer> workman wholesaler backpacker
 <chamberlain> statesman treasurer stewardship
-<mead> anthropologist mathematician brew
-<blowout> victory malfunction gala
 <fighter> wrestler airplane guardian
-<duty> prerequisite chore tariff
-<defaulter> absentee debtor rival
-<republican> pol proponent river
-<captive> prisoner animal someone
-<welsh> welshman celtic cattle
+<visitation> tribulation calamity visitor
+<settler> colonist negotiator employee
+<wagner> architect composer opus
+<huxley> physiologist playwright biologist
+<minstrelsy> troupe crooner artistry
+<defaulter> absentee debtor challenger
+<republican> politico proponent river
 <inmate> occupant outpatient prisoner
 <presenter> communicator proponent philanthropist
-<stern> ship violinist torso
 <singer> vocalist inventor playwright
+<watcher> theatergoer sentinel someone
 <trifle> dessert technicality trivia
-<packer> workman wholesaler backpack
 <berlin> germany songwriter limousine
-<rusher> footballer migrant someone
 <scallywag> someone rogue youngster
-<headshot> photograph soccer gunfire
-<paraffin> wax methane kerosene
+<headshot> photo soccer gunfire
+<coca> shrub actress cocaine
+<pilgrim> traveler colonist haji
 <tapestry> complexity cloth rug
-<precursor> mineral someone harbinger
-<outfit> household attire paraphernalia
-<tory> u.s.a. englishman rightist
 <scalawag> someone rogue youngster
-<minstrelsy> troupe vocalist artistry
-<gibson> illustrator filmmaker athlete
+<baggage> luggage wife materiel
+<franklin> historian scientist landowner
+<peacekeeper> reservist guardian pistol
 <lowell> poet astronomer playwright educator
+<haldane> geneticist physiologist playwright statesman
 <town> river townspeople township architect
-<child> youngster infant someone descendant
 <deliverer> jesus benefactor employee someone
-<effort> try workout feat candidacy
+<hess> pianist physiologist hitler physicist
 <mailer> playwright someone advertisement container
-<morris> feminist poet financier statesman
 <thomson> composer inventor physicist mathematician
-<champion> champ guardian proponent superstar
-<butcher> merchant murderer massacre blunder
-<md> mineral physician u.s.a. doctorate
-<simon> christian vocalist playwright economist
+<simon> theologian vocalist playwright economist
+<closet> cupboard restroom furniture kiosk
+<wealth> poverty profusion riches belongings
+<nan> grandma grandparent river bun
+<child> youngster infant someone ancestor
+<absolutism> ascendancy dictatorship disciple doctrine
+<bearer> traveler messenger mourner investor
 <cooper> industrialist filmmaker playwright journeyman
-<nan> grandma u.k. river bun
-<huntington> physician financier businessman river
 <sullivan> architect psychiatrist entertainer educator composer
-<material> mineral info cloth equipment applicant
-<surety> inevitability earnest prisoner guarantor warranty
+<hopkins> educator philanthropist poet biochemist filmmaker
+<hooker> statesman theologian prostitution golfer athlete
+<player> golfer composer filmmaker someone attendee
 <hill> england embankment businessman performer infield
-<friend> buddy rival someone proponent christian
-<hooker> statesman ambrose prostitute golfer athlete
-<thomas> journeyman pol communicator poet christian
-<jersey> u.s.a. atlantic shirt cloth cattle
+<para> pregnancy centavo paratrooper brasil river
+<rat> rodent turncoat sleaze informer hairdo
+<madness> insanity rabies ferocity fad frenzy
 <williams> vocalist mathematician poet ballplayer clergyman playwright
 <moore> composer filmmaker mathematician poet playwright architect
-<mitchell> inventor aviator astronomer playwright statesman choreographer
-<story> narrative myth garret chronicle newsletter liar
+<mitchell> inventor aviator astronomer playwright haywood choreographer
+<lewis> pianist sprinter someone haywood playwright poet
 <porter> laborer doorman playwright composer poet employee ale
-<wright> playwright poet inventor industrialist architect feminist journeyman
-<russell> mahdi filmmaker athlete vocalist astronomer playwright expert
-<lee> filmmaker performer actress physicist financier militiaman statesman underside
-<young> animal actress reformist physicist saxophonist poet ballplayer mahdi youngster
-<smith> statesman architect vocalist feminist actress christian someone economist journeyman aviator
-<jackson> actress vocalist songwriter pol playwright statesman fdr river u.s.a. florida midwest
+<robinson> physicist louis playwright historian ballplayer poet filmmaker
+<wright> playwright poet inventor industrialist architect mott journeyman
+<lee> filmmaker performer actress physicist salomon reservist statesman underside
+<company> pharma militiaman companionship troupe visitor attendee clique workforce household
+<smith> statesman architect vocalist proponent actress baptist someone economist journeyman aviator
+<jackson> actress vocalist songwriter politico playwright statesman fdr wyoming river u.s.a. midwest
 

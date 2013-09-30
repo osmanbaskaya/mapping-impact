@@ -43,6 +43,8 @@ classifier-eval:
 corpus-creation-check:
 	zcat ${CORP_FILES} | grep -iP 'wesleyan'
 
+clear-data:
+	rm -rf ../data/components ../data/monosemous-words ../data/pos-filtering
 
 
 .SECONDARY:

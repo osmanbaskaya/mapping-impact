@@ -4,12 +4,23 @@
 __author__ = "Osman Baskaya"
 
 from sklearn.naive_bayes import MultinomialNB
-from sklearn import cross_validation 
+from sklearn import cross_validation, grid_search
 from sklearn import svm
+from feature_transform import semeval_feature_transform
 from data_load import Semeval2013KeyLoader, Semeval2010KeyLoader
 import sys
 from optparse import OptionParser
 import numpy as np
+
+
+"""
+This scripts is used to test various mapping procedures. Now it supports
+two different test set formats (Semeval2013, Semeval2010) but other 
+formats can be added in data_load module.
+
+
+
+"""
 
 parser = OptionParser()
 parser.add_option("-i", "--ans_file", dest="ansfile", default=None,
@@ -51,15 +62,52 @@ elif loader_type == 'Semeval2010':
 else:
     raise ValueError, "{}, KeyLoader class not valid".format(loader_type)
 
+
+class Evaluator(object):
+
+    def __init__(self, ansfile, keyfile, devfile, k, optimization):
+        raise NotImplementedError
+        self.ansfile = ansfile
+        self.keyfile = keyfile
+        self.devfile = devfile
+        self.k = k # k in k-fold cross validation
+        self.optimization = optimization # parameter optimization true/false
+
+class Semeval2010Evaluator(Evaluator):
+    
+    def __init__(self, ansfile, keyfile, devfile, k, optimization):
+        raise NotImplementedError
+        super(Evaluator, self).__init__(ansfile, keyfile, devfile, k, optimization)
+
+class Semeval2013Evaluator(Evaluator):
+    
+    def __init__(self):
+        raise NotImplementedError
+
 ans_dict = KeyLoader.read_keyfile(ansfile)
 gold_dict = KeyLoader.read_keyfile(keyfile)
 
-classifiers = [svm.SVC, MultinomialNB,]
+print ans_dict['add.v'][:10]
 
-kfolds = dict()
+X, vec = semeval_feature_transform(ans_dict['add.v'])
+print X[:10]
+print vec.get_feature_names()
+exit()
+
+
+def parameter_optimization(clf_type, parameters):
+    raise NotImplementedError, "parameter_optimization def has not impl. yet"
+    svr = svm.SVC()
+    clf = grid_search.GridSearchCV(svr, parameters)
+    return clf
+
+
+classifiers = [svm.SVC, MultinomialNB,]
 m, n = len(classifiers), len(gold_dict.keys())
 results = np.zeros([m,n])
 stds = np.zeros([m,n])
+
+kfolds = dict()
 
 for i, c in enumerate(classifiers):
     for j, tw in enumerate(gold_dict.keys()):
@@ -71,17 +119,4 @@ for i, c in enumerate(classifiers):
                     test_size=0.2, random_state=0)
         scores = cross_validation.cross_val_score(clf, X, Y, cv=k)
         results[i,j], stds[i,j] = scores.mean(), scores.std()
-
-
-#for tw, Y in gold_dict.iteritems():
-    #kfolds[tw] = KFold(len(Y), n_folds=k, indices=False)
-    #print tw, kfolds[tw]
-    #X = ans_dict[tw]
-    #for train, test in kfolds[tw]:
-        #X_train, X_test = X[train], X[test]
-        #Y_train, Y_test = Y[train], Y[test]
-
-        
-    
-
 
