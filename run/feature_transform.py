@@ -6,12 +6,23 @@ __author__ = "Osman Baskaya"
 from sklearn.feature_extraction.text import CountVectorizer
 
 
-__all__ = ['semeval_feature_transform',]
+class FeatureTransformer(object):
+    
+    def __init__(self):
+        pass
 
-def semeval_feature_transform(data):
-    vec = CountVectorizer(min_df=0, token_pattern=r'[\w:%]+')
-    X = vec.fit_transform(data).toarray()
-    return X, vec
+    def semeval_feature_transform(self, data):
+        raise NotImplementedError, "% not implemented" % "feature_transform"
+
+class CountTransformer(FeatureTransformer):
+
+    def __init__(self):
+        super(CountTransformer, self).__init__()
+
+    def semeval_feature_transform(self, data):
+        vec = CountVectorizer(min_df=0, token_pattern=r'[\w:%]+')
+        X = vec.fit_transform(data).toarray()
+        return X, vec
 
 def main():
     pass

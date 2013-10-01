@@ -1,6 +1,7 @@
 #! /usr/bin/python
 # -*- coding: utf-8 -*-
 from __future__ import division
+import sys
 import math
 from collections import defaultdict as dd
 from itertools import izip
@@ -69,7 +70,35 @@ def calc_perp_dict_graded(d):
         p = j / total
         entropy += -p * math.log(p, 2)
     return 2 ** entropy
-    
+
+
+class ColorLogger(object):
+
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+
+    def __init__(self, mode=None):
+        if mode is None:
+            self.disable()
+        self.mode = mode
+
+    def disable(self):
+        self.HEADER = ''
+        self.OKBLUE = ''
+        self.OKGREEN = ''
+        self.WARNING = ''
+        self.FAIL = ''
+        self.ENDC = ''
+
+    def debug(self, message):
+        if self.mode == 2:
+            print >> sys.stderr, self.FAIL, "DEBUG:", message, self.ENDC
+        else:
+            print >> sys.stderr, message
 
 #a = [1, 1, 1, 2, 2, 2, 3, 3]
 #b = ['a', 'a', 'a', 'b', 'b', 'b', 'c', 'c']
