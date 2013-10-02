@@ -22,17 +22,25 @@ class SVCWrapper(ClassifierWrapper):
     def __init__(self):
         super(SVCWrapper, self).__init__("SVC", SVC())
         #FIXME: add gamma parameter
-        self.parameters = {'kernel':('linear', 'rbf'), 'C':[1, 10]}
+        self.parameters = {'kernel':('linear', 'rbf'), 'C':[0.1, 1, 10, 100, 1000]}
         self.is_optimized = False
 
-    def optimize(self, parameters=None):
+    def optimize(self, X, y, cv, parameters=None):
         """Hyperparameter optimization"""
-        raise NotImplementedError, "parameter_optimization def has not impl. yet"
-        if not self.is_optimized:
-            if parameters is None:
-                parameters = self.parameters
-            clf = grid_search.GridSearchCV(self.classifier, parameters)
-        self.is_optimized = True
+
+        best_params = best_estimator = None
+        if parameters is None:
+            parameters = self.parameters
+        try:
+            clf = grid_search.GridSearchCV(self.classifier, parameters, cv=cv)
+            clf.fit(X, y)
+            best_params = clf.best_params_
+            best_estimator = clf.best_estimator_
+        except ValueError, e: # all instances are belongs to the same class
+            pass
+
+        return best_params, best_estimator
+        
 
 def main():
     pass

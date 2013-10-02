@@ -8,11 +8,13 @@ from data_load import SemevalKeyLoader
 import sys
 from optparse import OptionParser
 from sklearn import cross_validation
+import numpy as np
 from logger import SemevalLogger
+from collections import defaultdict as dd
 
 
 """
-This scripts is used to test various mapping procedures. Now it supports
+This script is used to test various mapping procedures. Now it supports
 two different test set formats (Semeval2013, Semeval2010) but other 
 formats can be added in data_load module.
 
@@ -58,7 +60,7 @@ def input_check(opts, mandatories):
 
 class Evaluator(object):
 
-    def __init__(self, cls_wrapper, ansfile, keyfile, devfile, k, 
+    def __init__(self, clf_wrapper, ansfile, keyfile, devfile, k, 
                 optimization, key_loader, ft, logger):
         self.ansfile = ansfile
         self.keyfile = keyfile
@@ -70,20 +72,14 @@ class Evaluator(object):
         self.logger = logger
         if logger is None:
             self.logger = SemevalLogger(3)
-        self.cls_wrapper = cls_wrapper
+        self.clf_wrapper = clf_wrapper
         
         self.X = None
         self.Y = None
         self.X_dev = None
 
-    def load_key_files(self):
-        files = [self.ansfile, self.keyfile, self.devfile]
-        return map(self.key_loader.read_keyfile, files)
-    
-    #def convert_data(self):
-        #"""This method makes preprocessing steps and set test_set, training_set
-        #development_set parameters"""
-        #raise NotImplementedError
+    def load_key_file(self, f):
+        return self.key_loader.read_keyfile(f)
 
     def report(self):
         """This method provides evaluator's details to stderr"""
@@ -91,26 +87,67 @@ class Evaluator(object):
         
 class SemevalEvaluator(Evaluator):
     
-    def __init__(self, cls_wrapper, ansfile, keyfile, devfile, k, optimization, logger): 
-        super(SemevalEvaluator, self).__init__(cls_wrapper, ansfile, keyfile, 
+    def __init__(self, clf_wrapper, ansfile, keyfile, devfile, k, optimization, logger): 
+        super(SemevalEvaluator, self).__init__(clf_wrapper, ansfile, keyfile, 
               devfile, k, optimization, SemevalKeyLoader(), 
               SemevalFeatureTransformer(weighted=False), logger=logger)
         logger.info(self)
 
+    def set_best_estimator(self, params, estimators):
+
+        """ This method finds the best estimator on development set by using
+        GridSearchCV and set this estimator as classifier. It also sets 
+        is_optimized parameters to avoid unnecessary tuning"""
+        
+        assert len(params) == len(estimators)
+        par_list = self.clf_wrapper.parameters.keys()
+        d = dd(lambda : [0, None])
+
+        for e in estimators:
+            pdict = e.get_params()
+            s = ' '.join(map(str, map(pdict.get, par_list)))
+            d[s][0] += 1
+            d[s][1] = e
+
+        max_par = max(d, key= lambda x: d[x][0])
+        self.logger.info("Best set of parameters is: {}".format
+                            (zip(par_list, max_par.split())))
+        self.clf_wrapper.classifier = d[max_par][1]
+        self.clf_wrapper.is_optimized = True
+
     def score(self):
         scores = {}
-        cls = self.cls_wrapper.classifier
-        ans_dict, gold_dict, dev_dict = self.load_key_files()
+        clf = self.clf_wrapper.classifier
+        files = [self.ansfile, self.keyfile, self.devfile]
+        ans_dict, gold_dict, dev_dict = map(self.load_key_file, files)
+
+        # optimization
+        if self.optimization:
+            if not self.clf_wrapper.is_optimized:
+                params = []
+                estimators = []
+                for tw, val in dev_dict.iteritems():
+                    X =  self.ft.convert_data(val)
+                    y = np.array(gold_dict[tw])
+                    cv = cross_validation.ShuffleSplit(len(y), n_iter=10,
+                                test_size=0.2, random_state=0)
+                    p, e = self.clf_wrapper.optimize(X, y, cv=cv)
+                    if p is not None:
+                        params.append(p)
+                        estimators.append(e)
+
+                self.set_best_estimator(params, estimators)
+
+        print self.clf_wrapper.classifier
         for tw, val in ans_dict.iteritems():
-            Y = gold_dict[tw]
+            y = gold_dict[tw]
             X =  self.ft.convert_data(val)
 
-            cv = cross_validation.ShuffleSplit(len(Y), n_iter=self.k,
+            cv = cross_validation.ShuffleSplit(len(y), n_iter=self.k,
                         test_size=0.2, random_state=0)
-            #FIXME: debug argument missing
             self.logger.info('\nCross Validation:' + str([i for i in cv]))
             try:
-                score = cross_validation.cross_val_score(cls, X, Y, cv=cv)
+                score = cross_validation.cross_val_score(clf, X, y, cv=cv)
             except ValueError, e: # all instances are belongs to the same class
                 self.logger.warning("{}\t{}".format(tw, e))
             scores[tw] = score
@@ -124,25 +161,3 @@ class SemevalEvaluator(Evaluator):
         feature_transformer={}, logger={}".format(self.k, self.optimization, \
         self.key_loader, self.ft, self.logger)
 
-#X, vec = semeval_feature_transform(ans_dict['add.v'])
-#print X[:10]
-#print vec.get_feature_names()
-#exit()
-
-# onemli
-#classifiers = [svm.SVC, MultinomialNB,]
-#m, n = len(classifiers), len(gold_dict.keys())
-#results = np.zeros([m,n])
-#stds = np.zeros([m,n])
-
-#kfolds = dict()
-
-#for i, tw in enumerate(gold_dict.keys()):
-    #for j, c in enumerate(classifiers):
-        #data = ans_dict[tw]
-        #X = data.reshape(data.shape[0], 1)
-        #Y = gold_dict[tw]
-        #clf = c()
-        #cv = cross_validation.ShuffleSplit(len(Y), n_iter=k,
-                    #test_size=0.2, random_state=0)
-        #scores = cross_validation.cross_val_score(clf, X, Y, cv=k)

@@ -24,6 +24,7 @@ for i, ans, key, dev in izip(counter, ansfiles, keyfiles, devfiles):
         logger = SemevalLogger(ans, key, dev, w.name, debug_mode)
         e = SemevalEvaluator(w, ans, key, dev, k, optimization=True, logger=logger)
         scores = e.score()
+        exit()
         print scores['book.v']
         exit()
         e.cls_wrapper.classifier.optimize()
