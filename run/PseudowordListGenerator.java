@@ -1,14 +1,14 @@
 import java.io.*;
 import java.util.*;
 
-public class PseduowordListGenerator {
+public class PseudowordListGenerator {
 
     public static void main(String[] args) throws Exception {
 
         if (args.length != 3) {
-            System.out.println("usage: java PseduowordListGenerator " +
+            System.out.println("usage: java PseudowordListGenerator " +
                                "input-pseudowords.txt " +
-                               "excluded-pseduosenses.txt " +
+                               "excluded-pseudosenses.txt " +
                                "output-dir/");
             return;
         }
@@ -81,7 +81,7 @@ public class PseduowordListGenerator {
                     lines.append(pwords.get(i).text).append('\n');
             }
             PrintWriter pw = new PrintWriter(
-                new File(outputDir, "psuedowords." + num + "-count.txt"));
+                new File(outputDir, "pseudowords." + num + "-count.txt"));
             pw.println(lines);
             pw.close();
         }

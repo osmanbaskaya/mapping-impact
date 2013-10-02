@@ -8,21 +8,21 @@ from sklearn.feature_extraction.text import CountVectorizer
 
 class FeatureTransformer(object):
     
-    def __init__(self):
-        pass
+    def __init__(self, name):
+        self.name = name
 
-    def semeval_feature_transform(self, data):
+    def convert_data(self, data):
         raise NotImplementedError, "% not implemented" % "feature_transform"
 
-class CountTransformer(FeatureTransformer):
+class SemevalFeatureTransformer(FeatureTransformer):
 
-    def __init__(self):
-        super(CountTransformer, self).__init__()
+    def __init__(self, weighted=False):
+        super(SemevalFeatureTransformer, self).__init__("SemevalFeatureTransformer")
+        self.vectorizer = CountVectorizer(min_df=0, token_pattern=r'[\w:%]+')
 
-    def semeval_feature_transform(self, data):
-        vec = CountVectorizer(min_df=0, token_pattern=r'[\w:%]+')
-        X = vec.fit_transform(data).toarray()
-        return X, vec
+    def convert_data(self, data):
+        X = self.vectorizer.fit_transform(data).toarray()
+        return X
 
 def main():
     pass
