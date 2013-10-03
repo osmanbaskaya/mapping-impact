@@ -5,7 +5,7 @@ __author__ = "Osman Baskaya"
 
 from classifier_eval import SemevalEvaluator
 from itertools import izip, count
-from classifier import SVCWrapper
+from classifier import SVCWrapper, BernoulliNBWrapper, MultinomialNBWrapper
 from logger import SemevalLogger
 
 
@@ -14,17 +14,17 @@ keyfiles = ['dummy.key',]
 devfiles = ['dummy.key',]
 k = 10
 opt = True #optimization
-wrappers = [SVCWrapper(),]
+wrappers = [SVCWrapper(), BernoulliNBWrapper(), MultinomialNBWrapper()]
+wrappers = [MultinomialNBWrapper()]
 
 counter = count(0)
 
-debug_mode = 3
+debug_mode = 1
 for i, ans, key, dev in izip(counter, ansfiles, keyfiles, devfiles):
     for j, w in enumerate(wrappers):
         logger = SemevalLogger(ans, key, dev, w.name, debug_mode)
-        e = SemevalEvaluator(w, ans, key, dev, k, optimization=True, logger=logger)
+        e = SemevalEvaluator(w, ans, key, dev, k, optimization=opt, logger=logger)
         scores = e.score()
-        exit()
         print scores['book.v']
         exit()
         e.cls_wrapper.classifier.optimize()
