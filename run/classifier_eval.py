@@ -127,6 +127,7 @@ class SemevalEvaluator(Evaluator):
                 params = []
                 estimators = []
                 for tw, val in dev_dict.iteritems():
+                    print tw
                     X =  self.ft.convert_data(val)
                     y = np.array(gold_dict[tw])
                     cv = cross_validation.ShuffleSplit(len(y), n_iter=10,
@@ -138,7 +139,6 @@ class SemevalEvaluator(Evaluator):
 
                 self.set_best_estimator(params, estimators)
 
-        print self.clf_wrapper.classifier
         for tw, val in ans_dict.iteritems():
             y = gold_dict[tw]
             X =  self.ft.convert_data(val)

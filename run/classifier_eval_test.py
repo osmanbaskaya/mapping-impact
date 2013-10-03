@@ -5,7 +5,7 @@ __author__ = "Osman Baskaya"
 
 from classifier_eval import SemevalEvaluator
 from itertools import izip, count
-from classifier import SVCWrapper, BernoulliNBWrapper, MultinomialNBWrapper
+from classifier import SVCWrapper, BernoulliNBWrapper, MultinomialNBWrapper, MNLogitWrapper
 from logger import SemevalLogger
 
 
@@ -13,9 +13,9 @@ ansfiles = ['dummy.key',]
 keyfiles = ['dummy.key',]
 devfiles = ['dummy.key',]
 k = 10
-opt = True #optimization
-wrappers = [SVCWrapper(), BernoulliNBWrapper(), MultinomialNBWrapper()]
-wrappers = [MultinomialNBWrapper()]
+opt = False #optimization
+wrappers = [SVCWrapper(), BernoulliNBWrapper(), MultinomialNBWrapper(), MNLogitWrapper()]
+wrappers = [MNLogitWrapper(),]
 
 counter = count(0)
 
