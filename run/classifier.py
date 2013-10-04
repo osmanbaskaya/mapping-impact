@@ -6,21 +6,9 @@ __author__ = "Osman Baskaya"
 from sklearn import grid_search
 from sklearn.svm import SVC
 from sklearn.naive_bayes import MultinomialNB, BernoulliNB
-from statsmodels.discrete.discrete_model import MNLogit
+#from statsmodels.discrete.discrete_model import MNLogit
 import numpy as np
 import sys
-
-
-# Auxillary class for MNLogit
-class MNLogitW(MNLogit):
-    
-    def __init__(self):
-        self.m = None
-
-    def fit(self, X, y):
-        if self.m is None:
-            m = MNLogit(X, y)
-        return m.fit()
 
 
 class ClassifierWrapper(object):
@@ -69,13 +57,13 @@ class BernoulliNBWrapper(ClassifierWrapper):
         #FIXME: Check ranges
         self.parameters = {'alpha': np.linspace(0,1,11)}
 
-class MNLogitWrapper(ClassifierWrapper):
+#class MNLogitWrapper(ClassifierWrapper):
 
-    def __init__(self):
-        raise NotImplementedError, "soon"
-        super(MNLogitWrapper, self).__init__("MNLogitWrapper", MNLogitW())
-        self.parameters = {}
-        print self.name
+    #def __init__(self):
+        #raise NotImplementedError, "soon"
+        #super(MNLogitWrapper, self).__init__("MNLogitWrapper", MNLogitW())
+        #self.parameters = {}
+        #print self.name
     
 def main():
     pass

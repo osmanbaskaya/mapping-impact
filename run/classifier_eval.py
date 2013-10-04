@@ -5,8 +5,6 @@ __author__ = "Osman Baskaya"
 
 from feature_transform import SemevalFeatureTransformer
 from data_load import SemevalKeyLoader
-import sys
-from optparse import OptionParser
 from sklearn import cross_validation
 import numpy as np
 from logger import SemevalLogger
@@ -22,49 +20,13 @@ formats can be added in data_load module.
 
 __all__ = ['Evaluator', 'SemevalKeyLoader']
 
-parser = OptionParser()
-parser.add_option("-i", "--ans_file", dest="ansfile", default=None,
-                  help="System's Answer file", metavar="System File")
-parser.add_option("-g", "--key_file", dest="keyfile", default=None,
-                  help="gold dataset file", metavar="GOLD")
-parser.add_option("-k", "--num_fold", dest="k", default=None,
-        help="k in k-Fold Cross validation", metavar="TYPE")
-parser.add_option("-s", "--seed", dest="seed", default=None,
-        help="SEED Value", metavar="SEED")
-parser.add_option("-d", "--debug", dest="debug_level", default=0,
-        help="Debug Level for logger", metavar="DEBUG_LEVEL")
-#parser.add_option("-l", "--key_loader", dest="loader", default=None,
-        #help="Key Loader type: semeval | dummy", metavar="KEY_LOADER")
-
-#mandatories = ['keyfile', 'k', 'ansfile']
-mandatories = []
-
-def input_check(opts, mandatories):
-    """ Making sure all mandatory options appeared. """ 
-    run = True
-    for m in mandatories:
-        if not opts.__dict__[m]: 
-            print >> sys.stderr, "mandatory option is missing: %s" % m
-            run = False
-    if not run:
-        print >> sys.stderr
-        parser.print_help()
-        exit(-1)
-
-#(opts, args) = parser.parse_args() 
-#input_check(opts, mandatories)
-#keyfile = opts.keyfile
-#ansfile = opts.ansfile
-#k = int(opts.k)
-#debug_level = int(opts.debug_level)
 
 class Evaluator(object):
 
-    def __init__(self, clf_wrapper, ansfile, keyfile, devfile, k, 
-                optimization, key_loader, ft, logger):
-        self.ansfile = ansfile
-        self.keyfile = keyfile
-        self.devfile = devfile
+    def __init__(self, clf_wrapper, trainset, devset, k, optimization, \
+                 key_loader, ft, logger):
+        self.trainset = trainset
+        self.devset = devset
         self.k = k # k in k-fold cross validation
         self.optimization = optimization # parameter optimization true/false
         self.key_loader = key_loader
@@ -87,10 +49,10 @@ class Evaluator(object):
         
 class SemevalEvaluator(Evaluator):
     
-    def __init__(self, clf_wrapper, ansfile, keyfile, devfile, k, optimization, logger): 
-        super(SemevalEvaluator, self).__init__(clf_wrapper, ansfile, keyfile, 
-              devfile, k, optimization, SemevalKeyLoader(), 
-              SemevalFeatureTransformer(weighted=False), logger=logger)
+    def __init__(self, clf_wrapper, trainset, devset, k, optimization, logger): 
+        super(SemevalEvaluator, self).__init__(clf_wrapper, trainset, devset, k, 
+            optimization, SemevalKeyLoader(), SemevalFeatureTransformer(weighted=False), 
+            logger=logger)
         logger.info(self)
 
     def set_best_estimator(self, params, estimators):
@@ -99,6 +61,7 @@ class SemevalEvaluator(Evaluator):
         GridSearchCV and set this estimator as classifier. It also sets 
         is_optimized parameters to avoid unnecessary tuning"""
         
+        #print estimators
         assert len(params) == len(estimators)
         par_list = self.clf_wrapper.parameters.keys()
         d = dd(lambda : [0, None])
@@ -118,28 +81,35 @@ class SemevalEvaluator(Evaluator):
     def score(self):
         scores = {}
         clf = self.clf_wrapper.classifier
-        files = [self.ansfile, self.keyfile, self.devfile]
-        ans_dict, gold_dict, dev_dict = map(self.load_key_file, files)
-
+        
         # optimization
         if self.optimization:
+            files = [self.devset.data, self.devset.target]
+            dev_system_dict, dev_gold_dict = map(self.load_key_file, files)
+
             if not self.clf_wrapper.is_optimized:
                 params = []
                 estimators = []
-                for tw, val in dev_dict.iteritems():
+                for tw, val in dev_system_dict.iteritems():
                     print tw
                     X =  self.ft.convert_data(val)
-                    y = np.array(gold_dict[tw])
+                    y = np.array(dev_gold_dict[tw])
                     cv = cross_validation.ShuffleSplit(len(y), n_iter=10,
                                 test_size=0.2, random_state=0)
                     p, e = self.clf_wrapper.optimize(X, y, cv=cv)
                     if p is not None:
                         params.append(p)
                         estimators.append(e)
+                    print p
 
                 self.set_best_estimator(params, estimators)
+            self.logger.info("Optimization finished")
+        
+        
+        files = [self.trainset.data, self.trainset.target]
+        system_key_dict, gold_dict = map(self.load_key_file, files)
 
-        for tw, val in ans_dict.iteritems():
+        for tw, val in system_key_dict.iteritems():
             y = gold_dict[tw]
             X =  self.ft.convert_data(val)
 

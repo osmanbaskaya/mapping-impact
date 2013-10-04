@@ -30,10 +30,10 @@ class ColorLogger(object):
 
 class SemevalLogger(ColorLogger):
 
-    def __init__(self, ansfile, testfile, devfile, wrapper_type, mode):
+    def __init__(self, ts, devs, wrapper_type, mode):
         super(SemevalLogger, self).__init__(mode)
-        self.header = "ans:{}, gold:{}, dev:{}, wrapper:{}".format(ansfile,
-                        testfile, devfile, wrapper_type)
+        self.header = "sys:{}, gold:{}, dev_s:{}, dev_g:{}, wrapper:{}".format(
+                      ts.data, ts.target, devs.data, devs.target, wrapper_type)
 
     def error(self, message):
         if self.mode >= 1:
