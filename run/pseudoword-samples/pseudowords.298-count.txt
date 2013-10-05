@@ -1,0 +1,299 @@
+<ca> calcium california
+<impasse> deadlock thoroughfare
+<joplin> vocalist composer
+<utility_man> ballplayer workman
+<shepard> playwright astronaut
+<franck> composer physicist
+<hypsography> geology measurement
+<wiener> mathematician frankfurter
+<gatekeeper> someone doorman
+<battledore> racquet badminton
+<watchword> motto password
+<gold_coast> ghana vicinity
+<medallist> medal golfer
+<rubinstein> pianist composer
+<macintosh> cloth mac
+<southpaw> lefthander someone
+<rotisserie> oven restaurant
+<wyatt> architect poet
+<pensionary> pensioner employee
+<mechanic> machinist repairman
+<parkinson> surgeon historian
+<fourier> physicist sociologist
+<stealing> theft stealth
+<truant> absentee offender
+<tourer> tourist auto
+<metropolitan> archbishop occupant
+<pic> movie photo
+<cognomen> moniker surname
+<payload> warhead cargo
+<muscleman> hooligan someone
+<hutton> cricketer geologist
+<candidate> campaigner someone
+<doubles> badminton tennis
+<saint_nicholas> nicholas santa
+<hatchet_man> murderer enforcer
+<medalist> medal golfer
+<gladstone> statesman suitcase
+<lindsay> playwright poet
+<terry> actress cloth
+<left-hander> lefthander someone
+<turncock> employee faucet
+<quandary> predicament dilemma
+<fairy_godmother> benefactor fay
+<guggenheim> philanthropist industrialist
+<loaner> lender auto
+<mackintosh> cloth mac
+<niebuhr> theologian historian
+<changeling> idiot youngster
+<mayoress> wife mayor
+<rota> tribunal roster
+<luddite> adversary workman
+<showman> someone impresario
+<veblen> economist mathematician
+<tallis> composer shawl
+<gershwin> lyricist composer
+<catherine> wife empress
+<crown_princess> wife princess
+<thorndike> actress psychologist
+<madonna> mary vocalist
+<patois> lingo dialect
+<thompson> archeologist physicist
+<cowper> surgeon poet
+<william_cowper> surgeon poet
+<lefty> someone lefthander
+<resident> occupant physician
+<savoyard> performer frenchman
+<singles> badminton tennis
+<trailblazer> pathfinder innovator
+<wizard> maven sorcerer
+<deserter> turncoat defector
+<pope> pontiff poet
+<pitman> educator miner
+<decker> playwright artifact
+<small_fry> nobody youngster
+<powell> statesman physicist
+<hosteller> hotelier traveler
+<dormitory> dorm bedroom
+<rascal> rogue youngster
+<walpole> historian statesman
+<bullfinch> architect finch
+<savior> jesus benefactor
+<tammy> cloth tam
+<warner> filmmaker communicator
+<occupier> occupant serviceman
+<indian_potato> vine sunflower
+<magician> performer sorcerer
+<shepherd> clergyman herdsman
+<potato> murphy vine
+<firebrand> firewood troublemaker
+<smoothie> hypocrite beverage
+<shelf> furniture ledge
+<insurgent> insurrection guerrilla
+<husayn> saddam rex
+<cornell> actress businessman
+<homecoming> reunification repatriation
+<husain> saddam rex
+<provider> supplier benefactor
+<barber> composer hairdresser
+<huckster> seller advertiser
+<leicester> leicestershire england
+<zealot> jew proponent
+<volta> physicist river
+<devon> england cattle
+<ostiary> clergyman doorman
+<lifter> weightlifter thief
+<suer> suitor plaintiff
+<saviour> jesus benefactor
+<chemist> physicist pharmacist
+<struma> disease tuberculosis
+<venturer> merchant someone
+<worldling> someone inhabitant
+<waxwork> vine effigy
+<jewel> jewelry someone
+<psychopathology> psychology psychiatry
+<dogma> tenet doctrine
+<hummer> vocalist fastball
+<hussein> saddam rex
+<forest> rainforest woodland
+<aristocracy> aristocrat gentry
+<hun> nomad jerry
+<rep> congressman cloth
+<std> syphilis doctorate
+<pox> syphilis smallpox
+<rapscallion> rogue youngster
+<bargainer> trader negotiator
+<win> victory winnings
+<creed> credo doctrine
+<snatcher> thief kidnapper
+<averting> prevention avoidance
+<faller> logger someone
+<white_potato> vine murphy
+<pitchman> salesman seller
+<squeaker> artifact achievement
+<legal_separation> fiat cessation
+<contestant> challenger dissenter
+<aversion> distaste avoidance
+<roadman> spokesperson workman
+<storyteller> narrator liar
+<bangle> jewelry trinket
+<crematorium> morgue furnace
+<renegade> defector turncoat
+<sept> september dynasty
+<blasphemy> profanity desecration
+<weekend_warrior> homeowner reservist
+<crematory> morgue furnace
+<promoter> advertiser impresario
+<forge> furnace workplace
+<pricket> candlestick deer
+<nationalist> patriot proponent
+<advocate> proponent lawyer
+<bikini> atoll swimsuit
+<william_gilbert> poet physicist
+<carnegie> educator industrialist
+<little_bighorn> river carnage
+<elector> voter prince
+<cosmetician> seller journeyman
+<feria> weekday festivity
+<conferrer> philanthropist communicator
+<suspect> someone defendant
+<al> aluminum river
+<taker> customer bettor
+<packinghouse> edifice factory
+<twirler> performer ballplayer
+<garibaldi> patriot blouse
+<squatter> colonist intruder
+<lyric> lyricist ode
+<whoremonger> customer offender
+<cloister> monastery courtyard
+<replay> rematch u.k.
+<schumann> composer pianist
+<mercer> trader inventor
+<mann> educator playwright
+<bruce> physician rex
+<indisposition> illness unwillingness
+<prelature> clergy accountant
+<prelacy> clergy accountant
+<pioneer> innovator colonist
+<parker> saxophonist playwright
+<cordon_bleu> chef insignia
+<virtuoso> maven composer
+<commendation> accolade applause
+<imperial> mustache luggage
+<milt> seafood semen
+<seeger> vocalist poet
+<frankfort> kentucky frankfurt
+<whitman> poet instructor
+<frank> rex frankfurter
+<petitioner> applicant plaintiff
+<barth> theologian playwright
+<brady> photographer philanthropist
+<niger> river africa
+<strategy> counterterrorism strategist
+<singing> vocalist disclosure
+<buttery> pantry restaurant
+<amateur> someone athlete
+<calvin> physicist theologian
+<hawking> physicist seller
+<lecturer> educator talker
+<stylist> artist hairdresser
+<adam's_apple> shrub cartilage
+<spode> journeyman porcelain
+<sierra_nevada> spain california
+<literalism> doctrine partisanship
+<stevens> psychologist poet filmmaker
+<fitzgerald> poet playwright vocalist
+<flyer> advertisement traveler aviator
+<flier> traveler aviator advertisement
+<watson> inventor psychologist geneticist
+<bernoulli> physicist mathematician astronomer
+<beaumont> surgeon playwright texas
+<hart> playwright lyricist deer
+<packer> workman wholesaler backpacker
+<chamberlain> statesman treasurer stewardship
+<fighter> wrestler airplane guardian
+<settler> colonist negotiator employee
+<wagner> architect composer opus
+<defaulter> absentee debtor challenger
+<inmate> occupant outpatient prisoner
+<presenter> communicator proponent philanthropist
+<singer> vocalist inventor playwright
+<trifle> dessert technicality trivia
+<berlin> germany songwriter limousine
+<scallywag> someone rogue youngster
+<headshot> photo soccer gunfire
+<coca> shrub actress cocaine
+<pilgrim> traveler colonist haji
+<tapestry> complexity cloth rug
+<scalawag> someone rogue youngster
+<franklin> historian scientist landowner
+<peacekeeper> reservist guardian pistol
+<gibson> illustrator filmmaker athlete
+<norman> vocalist golfer frenchman
+<walton> composer playwright physicist
+<frog> toad frenchman jewelry
+<bruno> pontiff clergyman mathematician
+<speaker> talker loudspeaker chairwoman
+<punter> rower kicker bettor
+<warrantee> protege customer warranty
+<planter> granger employee container
+<drawer> desk treasurer cartoonist
+<burroughs> playwright inventor poet
+<dunker> vegetarian athlete baptist
+<stinker> turncoat stench artifact
+<allen> gracie filmmaker reservist
+<captive> prisoner incarceration someone
+<taylor> composer actress fdr
+<thrower> employee someone journeyman
+<holder> candlestick landowner investor
+<jacobs> playwright poet physician
+<patron> customer proprietor benefactor
+<chopin> opus playwright composer
+<lobby> foyer someone lobbyist
+<fleming> playwright biologist belgium
+<ranger> policeman firefighter serviceman
+<rusher> footballer colonist someone
+<id> idaho insignia aptitude
+<connecticut> u.s.a. river colonist
+<coke> firewood pepsi cocaine
+<lowell> poet astronomer playwright educator
+<town> river townspeople township architect
+<deliverer> jesus benefactor employee someone
+<mailer> playwright someone advertisement container
+<thomson> composer inventor physicist mathematician
+<simon> theologian vocalist playwright economist
+<closet> cupboard restroom furniture kiosk
+<nan> grandma grandparent river bun
+<child> youngster infant someone ancestor
+<bearer> traveler messenger mourner investor
+<cooper> industrialist filmmaker playwright journeyman
+<walk-in> someone defector victory edifice
+<champion> challenger guardian proponent maven
+<browning> inventor poet playwright cuisine
+<interpreter> mediator someone spokesperson software
+<secretary> undersecretary receptionist confidant desk
+<competition> customer playoff rivalry challenger
+<butcher> merchant murderer carnage misstep
+<booth> desk kiosk murderer newsstand
+<entrant> commodity outset intruder someone
+<sullivan> architect psychiatrist entertainer educator composer
+<hooker> statesman theologian prostitution golfer athlete
+<player> golfer composer filmmaker someone attendee
+<hill> england embankment businessman performer infield
+<para> pregnancy centavo paratrooper brasil river
+<madness> insanity rabies ferocity fad frenzy
+<tapper> bartender someone employee listener choreographer
+<gem> artist jewelry someone muffin merchant
+<barrymore> filmmaker actress playwright vocalist performer
+<skinner> filmmaker actress psychologist journeyman laborer
+<williams> vocalist mathematician poet ballplayer clergyman playwright
+<moore> composer filmmaker mathematician poet playwright architect
+<harris> playwright someone consul poet statesman proprietor
+<davis> magellan artist herman statesman athlete actress
+<porter> laborer doorman playwright composer poet employee ale
+<robinson> physicist louis playwright historian ballplayer poet filmmaker
+<wright> playwright poet inventor industrialist architect mott journeyman
+<lee> filmmaker performer actress physicist salomon reservist statesman underside
+<yard> furlong backyard schoolyard thou dal outfield battlefield sailboat workplace
+<smith> statesman architect vocalist proponent actress baptist someone economist journeyman aviator
+
