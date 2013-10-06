@@ -37,27 +37,25 @@ class SemevalLogger(ColorLogger):
 
     def error(self, message):
         if self.mode >= 1:
-            header = self.header
-            msg = "ERROR: {}\t{}".format(header, message),
+            #msg = "ERROR: {}\t{}".format(self.header, message),
+            msg = "ERROR: {}".format(message),
             #FIXME: Why tuple msg
             print >> sys.stderr, self.FAIL, msg[0], self.ENDC
 
 
     def warning(self, message):
         if self.mode >= 2:
-            header = self.header
-            msg = "WARNING: {}\t{}".format(header, message),
+            #msg = "WARNING: {}\t{}".format(self.header, message),
+            msg = "WARNING: {}".format(message),
             #FIXME: Why tuple msg
             print >> sys.stderr, self.WARNING, msg[0], self.ENDC
 
     def info(self, message):
         if self.mode >= 3:
-            header = self.header
-            msg = "INFO: {}\t{}".format(header, message),
+            msg = "INFO: {}".format(message),
+            #msg = "INFO: {}\t{}".format(self.header, message),
             #FIXME: Why tuple msg
             print >> sys.stderr, self.OKGREEN, msg[0], self.ENDC
-        
-        
 
 def main():
     pass

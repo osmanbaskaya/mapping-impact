@@ -8,6 +8,7 @@ from data_load import SemevalKeyLoader
 from sklearn import cross_validation
 import numpy as np
 from logger import SemevalLogger
+from nlp_utils import calc_perp
 from collections import defaultdict as dd
 
 
@@ -91,7 +92,6 @@ class SemevalEvaluator(Evaluator):
                 params = []
                 estimators = []
                 for tw, val in dev_system_dict.iteritems():
-                    print tw
                     X =  self.ft.convert_data(val)
                     y = np.array(dev_gold_dict[tw])
                     cv = cross_validation.ShuffleSplit(len(y), n_iter=10,
@@ -100,7 +100,7 @@ class SemevalEvaluator(Evaluator):
                     if p is not None:
                         params.append(p)
                         estimators.append(e)
-                    print p
+                    #print p
 
                 self.set_best_estimator(params, estimators)
             self.logger.info("Optimization finished")
@@ -115,12 +115,12 @@ class SemevalEvaluator(Evaluator):
 
             cv = cross_validation.ShuffleSplit(len(y), n_iter=self.k,
                         test_size=0.2, random_state=0)
-            self.logger.info('\nCross Validation:' + str([i for i in cv]))
+            #self.logger.info('\nCross Validation:' + str([i for i in cv]))
             try:
                 score = cross_validation.cross_val_score(clf, X, y, cv=cv)
             except ValueError, e: # all instances are belongs to the same class
                 self.logger.warning("{}\t{}".format(tw, e))
-            scores[tw] = score
+            scores[tw] = (score.mean(), calc_perp(y))
         return scores
 
     def report(self):
