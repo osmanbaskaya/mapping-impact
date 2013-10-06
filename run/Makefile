@@ -7,7 +7,8 @@ SEED=1
 
 CORP_FILES=$(shell find /data/ldc/gigaword_eng/ -name "*.gz" | sort)
 RAW_FILES=$(shell find ../data/raw/ -name "out-*.gz" | sort)
-PSEUDO_W_FILE=pseudoword-samples/pseudowords.998-count.txt
+#PSEUDO_W_FILE=pseudoword-samples/pseudowords.998-count.txt
+PSEUDO_W_FILE=missing_components.txt
 
 ### BIN SETUP
 bin:

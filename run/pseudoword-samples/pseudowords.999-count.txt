@@ -476,6 +476,210 @@
 <ponce> u.k. offender
 <incompetence> competence disease
 <irregular> guerrilla commodity
+<canton> guangzhou switzerland
+<excogitation> inventor creativity
+<field_of_honor> locale battlefield
+<madam> madame businesswoman
+<rescuer> benefactor someone
+<importation> commercialism commodity
+<severn> river england
+<outfielder> outfield cricketer
+<celebrant> someone clergyman
+<handel> composer opus
+<mayflower> warship shrub
+<fast_lane> lifestyle highway
+<bushman> nomad colonist
+<pelter> downpour someone
+<severn_river> river england
+<psychotherapy> psychiatry therapy
+<parliamentarian> legislator robert
+<minstrel> vocalist performer
+<decency> propriety respectability
+<favoritism> partisanship sexism
+<ball-breaker> wife chore
+<service_club> guild edifice
+<vicksburg> river siege
+<dm> diabetes centimeter
+<cl> chlorine liter
+<descriptivism> doctrine proponent
+<spitter> someone fastball
+<beguiler> offender someone
+<midweek> weekday workweek
+<totalitarianism> dictatorship disciple
+<nark> informer policeman
+<galloway> scotland cattle
+<nazi> hitler someone
+<patrician> aristocrat princess
+<vernacular> lingo dialect
+<appleton> physicist river
+<valencia> venezuela spain
+<shylock> lender faust
+<florist> shopkeeper deli
+<confessor> clergyman communicator
+<priest> clergyman priesthood
+<duplex> porch apartment
+<farsi> rex iran
+<mall> walkway courtyard
+<maisonnette> apartment porch
+<parish> parishioner diocese
+<aragon> playwright spain
+<wayne> filmmaker statesman
+<anaglyph> photo cameo
+<cul_de_sac> conduit thoroughfare
+<fugitive> someone escapee
+<fairy> fay someone
+<whitney> inventor california
+<brave> warrior someone
+<ironmonger> trader deli
+<procurer> offender someone
+<watt> kilowatt inventor
+<galley_slave> someone laborer
+<voluntary> serviceman opus
+<israelite> mideast jew
+<forbidden_city> tibet beijing
+<public_square> piazza mart
+<bread> bun thief
+<ejaculator> semen talker
+<teacher> instructor concept
+<voicer> journeyman talker
+<strongman> performer dictatorship
+<tragedy> calamity playwright
+<minstrel_show> troupe revue
+<prescriptivism> doctrine proponent
+<weil> mathematician astronomer
+<tanganyika> africa tanzania
+<half-wit> idiot someone
+<bazar> mart deli
+<calm> composure gale
+<seigniory> realty accountant
+<sinew> tendon someone
+<military_intelligence> dia info
+<hyderabad> pakistan india
+<aborigine> someone aussie
+<trent> river italy
+<horne> vocalist actress
+<hot_seat> gallows accountant
+<rising> liftoff insurrection
+<study_hall> schoolhouse classroom
+<stanford> businessman california
+<histrionics> matinee disclosure
+<sinclair> playwright entrepreneur
+<robbery> theft booty
+<dispatcher> ref employee
+<butte> england montana
+<vampirism> doctrine achievement
+<firestorm> rainstorm controversy
+<walk-up> apartment edifice
+<conviction> doctrine acquittal
+<burke> statesman colonist
+<tragedian> playwright filmmaker
+<pettifogger> offender someone
+<carson> biologist crockett
+<carrel> surgeon depository
+<palsy> paralysis dysfunction
+<kali> shrub deity
+<racine> poet river
+<corpus_christi> january texas
+<fame> renown notoriety
+<infamy> renown notoriety
+<atlanta> cdc siege
+<omnibus> anthology auto
+<sandbox> container u.k.
+<fag> someone cigarette
+<hoffman> architect filmmaker
+<colorado_river> river mexico
+<angus> deity cattle
+<st._joseph> river aspirin
+<mississippi> river u.s.a.
+<sprinkle> rainfall sprinkler
+<preliminary> olympics inception
+<homiletics> theologian artistry
+<trespass> tort intruder
+<one-way_street> doctrine thoroughfare
+<cabal> clique conspirator
+<rationality> sanity knowledge
+<molotov> statesman river
+<vet> veterinarian serviceman
+<lame> someone cloth
+<aboriginal> aussie someone
+<young_turk> insurrection anarchist
+<stewart> filmmaker mathematician
+<raider> looter embezzlement
+<pardoner> someone clergyman
+<photostat> photo copier
+<lewiston> maine idaho
+<doormat> someone rug
+<noguchi> architect biologist
+<loader> laborer warhead
+<johns_hopkins> philanthropist baltimore
+<imaging> imagery mri
+<bismarck> statesman u.s.a.
+<hospice> apartment therapy
+<wheeze> asthma counterterrorism
+<luger> pistol athlete
+<danish> denmark bun
+<portland> oregon maine
+<drudge> someone laborer
+<steerer> mariner accomplice
+<lawlessness> anarchy legality
+<visionary> someone forecaster
+<telegraphy> telecom telegram
+<gold_digger> miner wife
+<armament> weaponry disarmament
+<slave_driver> employer overseer
+<shipment> cargo communique
+<cynic> detractor mathematician
+<panorama> vista montage
+<sucre> centavo andes
+<synergism> synergy doctrine
+<rondeau> sonata poem
+<respondent> defendant communicator
+<negativist> someone pessimist
+<drip_pan> skillet refrigerator
+<haley> vocalist playwright
+<benny> sesame performer
+<foreland> gibraltar woodland
+<du_maurier> playwright illustrator
+<giver> someone philanthropist
+<comedienne> gwynn actress
+<seigneury> realty accountant
+<dismay> downer consternation
+<saxe> statesman saxony
+<chapterhouse> edifice porch
+<holdup> theft slowdown
+<maisonette> apartment porch
+<illusionist> forecaster performer
+<steer> adviser cattle
+<lancaster> england dynasty
+<tallyman> spokesperson employee
+<profit> income profitability
+<ohio> u.s.a. river
+<flat_pea> shrub vine
+<stout> ale obesity
+<straphanger> passenger traveler
+<dead_end> conduit deadlock
+<wanderer> nomad software
+<cartoon> cartoonist movie
+<dribbler> athlete someone
+<ashur> deity iraq
+<maryland> u.s.a. colonist
+<castaway> pariah prisoner
+<eugene> statesman oregon
+<hubbard> playwright alaska
+<bunyan> preacher logger
+<peer> someone earl
+<amphitheater> coliseum stadium
+<heartbreaker> someone victory
+<schiaparelli> astronomer versace
+<amphitheatre> coliseum stadium
+<immortality> durability afterlife
+<piece_de_resistance> showpiece custard
+<rabbinate> priesthood accountant
+<moron> idiot andes
+<hershey> philanthropist river
+<puke> turncoat urine
+<nursery> bedroom edifice
+<guinness> filmmaker ale
 <stevens> psychologist poet filmmaker
 <fitzgerald> poet playwright vocalist
 <flyer> advertisement traveler aviator
@@ -604,6 +808,61 @@
 <cruiser> auto warship speedboat
 <bowler> cricketer golfer derby
 <artificer> inventor journeyman serviceman
+<counselor> adviser overseer lawyer
+<hemp> cloth shrub gallows
+<slaughter> carnage victory alamo
+<hale> salomon astronomer playwright
+<powys> playwright poet statesman
+<bronte> playwright poet statesman
+<montgomery> playwright statesman river
+<comrade> camaraderie stalin buddy
+<fancy> misconception creativity penchant
+<hot_spot> england midpoint nightclub
+<referral> someone advice ref
+<grave> lifetime tomb dialect
+<pothunter> archeologist challenger tracker
+<hotspot> england midpoint nightclub
+<cellar> edifice cupboard depository
+<chandler> playwright retailer shoemaker
+<skidder> someone employee bulldozer
+<conservatory> schoolteacher schoolhouse edifice
+<lister> surgeon bureaucrat coulter
+<savannah> river u.s.a. grassland
+<lafayette> reservist louisiana u.s.a.
+<athletics> gymnastics olympics homework
+<avon> river england cornwall
+<cowboy> herdsman performer someone
+<madeira> river archipelago sherry
+<leakey> anthropologist paleontologist scientist
+<middleman> wholesaler troupe negotiator
+<pudding> custard dessert duff
+<initiate> trainee pundit naivete
+<ga> sarin aluminum river
+<ar> neon hectare river
+<clone> someone copier replica
+<cordova> someone spain andes
+<bride> spouse bridget attendee
+<wise> lifestyle mahdi seton
+<debacle> fiasco downpour victory
+<hudson> river biologist magellan
+<turf> wetland precinct diocese
+<new_york> brooklyn river colonist
+<stuart> artist dynasty rex
+<forerunner> someone vestige ancestor
+<mobile> river u.s.a. statue
+<berth> accountant seaport mattress
+<prosecution> prosecutor defendant pastime
+<invention> creativity innovator inventor
+<bangor> maine welshman u.k.
+<mistress> someone schoolteacher employer
+<garden> orchard thicket patio
+<frustration> letdown prevention displeasure
+<hysteria> frenzy consternation disease
+<homestead> realty colonist bedroom
+<guarantee> warranty guarantor guaranty
+<pinnacle> spire someone hilltop
+<trumbull> salomon artist poet
+<ra> uranium deity longitude
 <lowell> poet astronomer playwright educator
 <town> river townspeople township architect
 <deliverer> jesus benefactor employee someone
@@ -650,6 +909,26 @@
 <harrison> filmmaker beatles fdr jefferson
 <scribe> playwright calligraphy employee sword
 <preserver> redevelopment chef someone equipment
+<middle> midfield inning torso outset
+<repeater> someone offender firearm beeper
+<twin> clan someone waterfall copier
+<dispatch> communique employee velocity murderer
+<syracuse> river italy siege alamo
+<despatch> communique velocity murderer employee
+<episcopate> chairwoman diocese someone accountant
+<morning> midafternoon goodbye daybreak outset
+<convenience> contraption availability restroom partisanship
+<accelerator> auto velocity enzyme container
+<congo> africa river brazzaville shrub
+<server> employee golfer lan utensil
+<antagonism> adversary distaste resentment synergy
+<vault> mausoleum depository edifice athlete
+<campaign> campaigner candidacy siege safari
+<pop> dad beverage cooker reggae
+<ottoman> turk dynasty sofa furniture
+<howe> anthology athlete proponent inventor
+<fashion> lifestyle mistreatment fad commodity
+<fitness> eligibility disability leakage competence
 <sullivan> architect psychiatrist entertainer educator composer
 <hooker> statesman theologian prostitution golfer athlete
 <player> golfer composer filmmaker someone attendee
@@ -672,6 +951,16 @@
 <scott> filmmaker someone statesman playwright insurrection
 <confession> informer communicator baptism manifesto doctrine
 <striker> athlete serviceman someone traveler firearm
+<zombi> genie deity someone robot whiskey
+<zombie> someone genie deity robot whiskey
+<country> superpower oas someone countryside hangout
+<cock> penis faucet firearm rooster raptor
+<beginning> inception outset inning midpoint resumption
+<tip> fingertip philanthropist adviser sword hilltop
+<threshold> outset stench doorway doorstep periphery
+<reasonableness> sanity practicality inequity sportsmanship credibility
+<foil> aluminum enhancement contraption montage sword
+<demerara> carbohydrate river guyana whiskey syrup
 <williams> vocalist mathematician poet ballplayer clergyman playwright
 <moore> composer filmmaker mathematician poet playwright architect
 <harris> playwright someone consul poet statesman proprietor
@@ -682,6 +971,10 @@
 <gap> disparity chasm transformer col controversy heckler
 <miller> goodman playwright poet journeyman typewriter moth
 <story> folklore myth edifice biography newsletter liar
+<gas> gasoline oxygen hydrocarbon infertility auto methane
+<walker> athlete playwright traveler walkway zimmer arbour
+<circus> troupe entertainment ruckus stadium midfield raptor
+<community> parishioner proprietor nato consensus suburb woodland
 <porter> laborer doorman playwright composer poet employee ale
 <robinson> physicist louis playwright historian ballplayer poet filmmaker
 <wright> playwright poet inventor industrialist architect mott journeyman
@@ -689,13 +982,18 @@
 <lawrence> theologian playwright artist actress physicist poet river
 <bench> pew plateau legislature lab tribunal athlete courtroom
 <captain> captaincy commodore policeman kidd rolf aviator employee
+<command> behest acc commandant availability serviceman maestro software
+<button> cloth auto fungus insignia penis contraption artifact
+<bottom> underside aerospace torso inning valley wetland freighter
 <lee> filmmaker performer actress physicist salomon reservist statesman underside
 <turner> insurrection physician artist historian guild journeyman someone cooker
 <reader> readership customer someone ref bradford clergyman educator bestseller
+<ford> filmmaker industrialist inventor playwright fdr philanthropist river hiker
 <hold> wrestler hindsight someone idiot incarceration stronghold prevention luggage container
 <shadow> nightfall locale ufo trepidation vestige asset someone traveler tracker
+<pool> artifact pond ngo consortium bettor waterfall jeopardy tomb masse
+<business> dealership commercialism biz onus tenacity clientele economist someone heroics
 <smith> statesman architect vocalist proponent actress baptist someone economist journeyman aviator
 <master> maestro headmaster conqueror employer educator artifact captaincy historian adviser wreckage
 <court> tribunal courtroom legislature stadium athlete entourage hotel juror vatican courtyard homage
 <release> commodity achievement radioactivity adviser demobilization liftoff waiver contraption talker conduit handover shutdown
-
