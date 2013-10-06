@@ -5,7 +5,9 @@
 <shepard> playwright astronaut
 <franck> composer physicist
 <hypsography> geology measurement
+<wiener> mathematician frankfurter
 <gatekeeper> someone doorman
+<battledore> racquet badminton
 <watchword> motto password
 <gold_coast> ghana vicinity
 <medallist> medal golfer
@@ -51,6 +53,7 @@
 <veblen> economist mathematician
 <tallis> composer shawl
 <gershwin> lyricist composer
+<catherine> wife empress
 <crown_princess> wife princess
 <thorndike> actress psychologist
 <madonna> mary vocalist
@@ -62,6 +65,8 @@
 <resident> occupant physician
 <savoyard> performer frenchman
 <singles> badminton tennis
+<trailblazer> pathfinder innovator
+<wizard> maven sorcerer
 <deserter> turncoat defector
 <pope> pontiff poet
 <pitman> educator miner
@@ -78,6 +83,7 @@
 <warner> filmmaker communicator
 <occupier> occupant serviceman
 <indian_potato> vine sunflower
+<magician> performer sorcerer
 <shepherd> clergyman herdsman
 <potato> murphy vine
 <firebrand> firewood troublemaker
@@ -96,6 +102,7 @@
 <volta> physicist river
 <devon> england cattle
 <ostiary> clergyman doorman
+<lifter> weightlifter thief
 <suer> suitor plaintiff
 <saviour> jesus benefactor
 <chemist> physicist pharmacist
@@ -108,6 +115,7 @@
 <dogma> tenet doctrine
 <hummer> vocalist fastball
 <hussein> saddam rex
+<forest> rainforest woodland
 <aristocracy> aristocrat gentry
 <hun> nomad jerry
 <rep> congressman cloth
@@ -115,6 +123,8 @@
 <pox> syphilis smallpox
 <rapscallion> rogue youngster
 <bargainer> trader negotiator
+<win> victory winnings
+<creed> credo doctrine
 <snatcher> thief kidnapper
 <averting> prevention avoidance
 <faller> logger someone
@@ -123,17 +133,6 @@
 <squeaker> artifact achievement
 <legal_separation> fiat cessation
 <contestant> challenger dissenter
-<aversion> distaste avoidance
-<roadman> spokesperson workman
-<storyteller> narrator liar
-<bangle> jewelry trinket
-<crematorium> morgue furnace
-<renegade> defector turncoat
-<sept> september dynasty
-<blasphemy> profanity desecration
-<weekend_warrior> homeowner reservist
-<crematory> morgue furnace
-<promoter> advertiser impresario
 <stevens> psychologist poet filmmaker
 <fitzgerald> poet playwright vocalist
 <flyer> advertisement traveler aviator
@@ -156,6 +155,7 @@
 <scallywag> someone rogue youngster
 <headshot> photo soccer gunfire
 <coca> shrub actress cocaine
+<pilgrim> traveler colonist haji
 <tapestry> complexity cloth rug
 <scalawag> someone rogue youngster
 <franklin> historian scientist landowner
@@ -163,14 +163,13 @@
 <gibson> illustrator filmmaker athlete
 <norman> vocalist golfer frenchman
 <walton> composer playwright physicist
+<frog> toad frenchman jewelry
 <bruno> pontiff clergyman mathematician
 <speaker> talker loudspeaker chairwoman
 <punter> rower kicker bettor
 <warrantee> protege customer warranty
 <planter> granger employee container
 <drawer> desk treasurer cartoonist
-<burroughs> playwright inventor poet
-<dunker> vegetarian athlete baptist
 <lowell> poet astronomer playwright educator
 <town> river townspeople township architect
 <deliverer> jesus benefactor employee someone
@@ -196,5 +195,6 @@
 <porter> laborer doorman playwright composer poet employee ale
 <robinson> physicist louis playwright historian ballplayer poet filmmaker
 <lee> filmmaker performer actress physicist salomon reservist statesman underside
-<hold> wrestler hindsight someone idiot incarceration stronghold prevention luggage container
+<yard> furlong backyard schoolyard thou dal outfield battlefield sailboat workplace
+<smith> statesman architect vocalist proponent actress baptist someone economist journeyman aviator
 
