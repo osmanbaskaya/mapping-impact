@@ -1,0 +1,34 @@
+Key files:
+
+Key files are formatted according to the senseval-2 format:
+
+  doc-id context-id correct-sense(s)
+
+Although the IDs may be arbitrary (see SemCor for example), we format the IDs to
+make it easier to recover where each instance comes from. In our formatting, the
+doc-id is a combination of the pseudoword and the pseudosense used to make the
+instance, e.g., amphibian::auto.  The instance-id is formatted as the
+pseudosense, the line number of the context file from which the instance was
+drawn, and the instance number of that sense (i.e., how many instances had been
+previously seen).  For example, an instance might be auto.line-15.inst-15.  The
+line number and inst number will differ if certain lines are skipped in the file
+due to being unable to match the pseudosense occurrence with the specified index
+(which is rare).  The correct sense is simply which pseudosense was originally
+present.
+
+
+Instance files:
+
+Each pseudoword has an associated instance file for its key.  This instance file
+specifies the corresponding file and line offsets for the instances in the key
+file.  Line 1 in the instance file corresponds to the instance at Line 1 in the
+key file.  The instance file is formatted as:
+
+  pseudosense-file-prefix line-number column
+
+The file prefix is just the pseudosense, but methods can use the lemmatized or
+POS-tagged files as needed.  Column is the column index (0-based) according to
+the pseudoword.lem.gz file.  
+
+All lines not listed in the instance file may be used for training systems and
+are not used in any part of the key.
