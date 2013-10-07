@@ -56,6 +56,13 @@ class SemevalLogger(ColorLogger):
             #msg = "INFO: {}\t{}".format(self.header, message),
             #FIXME: Why tuple msg
             print >> sys.stderr, self.OKGREEN, msg[0], self.ENDC
+    
+    def init(self, message):
+        if self.mode >= 3:
+            #msg = "INFO: {}".format(message),
+            msg = "INIT: {}\t{}".format(self.header, message),
+            #FIXME: Why tuple msg
+            print >> sys.stderr, self.OKBLUE, msg[0], self.ENDC
 
 def main():
     pass
