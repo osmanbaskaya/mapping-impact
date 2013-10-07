@@ -77,5 +77,4 @@ for i, sys, g, dev_sys, dev_g in izip(counter, sys_fs, gold_fs, dev_sys_fs, dev_
         scores = e.score()
         pprint(scores)
         exit()
-        #e.cls_wrapper.classifier.optimize()
         #e.report()

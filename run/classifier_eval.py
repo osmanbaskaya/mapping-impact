@@ -8,6 +8,7 @@ from data_load import SemevalKeyLoader
 from sklearn import cross_validation
 import numpy as np
 from logger import SemevalLogger
+from nlp_utils import calc_perp
 from collections import defaultdict as dd
 
 
@@ -18,7 +19,7 @@ formats can be added in data_load module.
 
 """
 
-__all__ = ['Evaluator', 'SemevalKeyLoader']
+__all__ = ['Evaluator', 'SemevalEvaluator']
 
 
 class Evaluator(object):
@@ -39,6 +40,7 @@ class Evaluator(object):
         self.X = None
         self.Y = None
         self.X_dev = None
+        logger.init(self)
 
     def load_key_file(self, f):
         return self.key_loader.read_keyfile(f)
@@ -53,7 +55,6 @@ class SemevalEvaluator(Evaluator):
         super(SemevalEvaluator, self).__init__(clf_wrapper, trainset, devset, k, 
             optimization, SemevalKeyLoader(), SemevalFeatureTransformer(weighted=False), 
             logger=logger)
-        logger.info(self)
 
     def set_best_estimator(self, params, estimators):
 
@@ -80,8 +81,6 @@ class SemevalEvaluator(Evaluator):
 
     def score(self):
         scores = {}
-        clf = self.clf_wrapper.classifier
-        
         # optimization
         if self.optimization:
             files = [self.devset.data, self.devset.target]
@@ -91,7 +90,6 @@ class SemevalEvaluator(Evaluator):
                 params = []
                 estimators = []
                 for tw, val in dev_system_dict.iteritems():
-                    print tw
                     X =  self.ft.convert_data(val)
                     y = np.array(dev_gold_dict[tw])
                     cv = cross_validation.ShuffleSplit(len(y), n_iter=10,
@@ -100,7 +98,7 @@ class SemevalEvaluator(Evaluator):
                     if p is not None:
                         params.append(p)
                         estimators.append(e)
-                    print p
+                    #print p
 
                 self.set_best_estimator(params, estimators)
             self.logger.info("Optimization finished")
@@ -108,19 +106,20 @@ class SemevalEvaluator(Evaluator):
         
         files = [self.trainset.data, self.trainset.target]
         system_key_dict, gold_dict = map(self.load_key_file, files)
+        self.logger.info(self.clf_wrapper.classifier)
 
         for tw, val in system_key_dict.iteritems():
             y = gold_dict[tw]
             X =  self.ft.convert_data(val)
-
             cv = cross_validation.ShuffleSplit(len(y), n_iter=self.k,
                         test_size=0.2, random_state=0)
-            self.logger.info('\nCross Validation:' + str([i for i in cv]))
+            #self.logger.info('\nCross Validation:' + str([i for i in cv]))
             try:
-                score = cross_validation.cross_val_score(clf, X, y, cv=cv)
+                score = cross_validation.cross_val_score(
+                    self.clf_wrapper.classifier, X, y, cv=cv)
             except ValueError, e: # all instances are belongs to the same class
                 self.logger.warning("{}\t{}".format(tw, e))
-            scores[tw] = score
+            scores[tw] = (score.mean(), calc_perp(y))
         return scores
 
     def report(self):
