@@ -76,5 +76,5 @@ for i, sys, g, dev_sys, dev_g in izip(counter, sys_fs, gold_fs, dev_sys_fs, dev_
         e = SemevalEvaluator(w, trainset, devset, k, optimization=opt, logger=logger)
         scores = e.score()
         pprint(scores)
-        #e.cls_wrapper.classifier.optimize()
+        exit()
         #e.report()
