@@ -66,6 +66,7 @@
 <pope> pontiff poet
 <pitman> educator miner
 <decker> playwright artifact
+<small_fry> nobody youngster
 <stevens> psychologist poet filmmaker
 <fitzgerald> poet playwright vocalist
 <flyer> advertisement traveler aviator

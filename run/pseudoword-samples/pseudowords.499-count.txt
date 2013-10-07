@@ -339,6 +339,9 @@
 <lander> wyoming spacecraft
 <exotic_dancer> performer choreographer
 <silverweed> vine shrub
+<mama> mom deity
+<favouritism> partisanship sexism
+<yucatan> merida mexico
 <stevens> psychologist poet filmmaker
 <fitzgerald> poet playwright vocalist
 <flyer> advertisement traveler aviator
@@ -478,7 +481,6 @@
 <mason> salomon filmmaker playwright journeyman klan
 <chair> armchair professor chairwoman gallows auto
 <washington> d.c. u.s.a. legislature statesman educator
-<empire> africa legislature monarchy corp mcintosh
 <williams> vocalist mathematician poet ballplayer clergyman playwright
 <moore> composer filmmaker mathematician poet playwright architect
 <harris> playwright someone consul poet statesman proprietor
@@ -490,11 +492,9 @@
 <robinson> physicist louis playwright historian ballplayer poet filmmaker
 <wright> playwright poet inventor industrialist architect mott journeyman
 <russell> mahdi filmmaker athlete vocalist astronomer playwright economist
-<lawrence> theologian playwright artist actress physicist poet river
 <lee> filmmaker performer actress physicist salomon reservist statesman underside
 <turner> insurrection physician artist historian guild journeyman someone cooker
 <hold> wrestler hindsight someone idiot incarceration stronghold prevention luggage container
-<shadow> nightfall locale ufo trepidation vestige asset someone traveler tracker
 <smith> statesman architect vocalist proponent actress baptist someone economist journeyman aviator
 <court> tribunal courtroom legislature stadium athlete entourage hotel juror vatican courtyard homage
 

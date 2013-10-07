@@ -5,9 +5,7 @@
 <shepard> playwright astronaut
 <franck> composer physicist
 <hypsography> geology measurement
-<wiener> mathematician frankfurter
 <gatekeeper> someone doorman
-<battledore> racquet badminton
 <watchword> motto password
 <gold_coast> ghana vicinity
 <medallist> medal golfer
@@ -53,7 +51,6 @@
 <veblen> economist mathematician
 <tallis> composer shawl
 <gershwin> lyricist composer
-<catherine> wife empress
 <crown_princess> wife princess
 <thorndike> actress psychologist
 <madonna> mary vocalist
@@ -65,8 +62,6 @@
 <resident> occupant physician
 <savoyard> performer frenchman
 <singles> badminton tennis
-<trailblazer> pathfinder innovator
-<wizard> maven sorcerer
 <deserter> turncoat defector
 <pope> pontiff poet
 <pitman> educator miner
@@ -83,7 +78,6 @@
 <warner> filmmaker communicator
 <occupier> occupant serviceman
 <indian_potato> vine sunflower
-<magician> performer sorcerer
 <shepherd> clergyman herdsman
 <potato> murphy vine
 <firebrand> firewood troublemaker
@@ -102,7 +96,6 @@
 <volta> physicist river
 <devon> england cattle
 <ostiary> clergyman doorman
-<lifter> weightlifter thief
 <suer> suitor plaintiff
 <saviour> jesus benefactor
 <chemist> physicist pharmacist
@@ -115,7 +108,6 @@
 <dogma> tenet doctrine
 <hummer> vocalist fastball
 <hussein> saddam rex
-<forest> rainforest woodland
 <aristocracy> aristocrat gentry
 <hun> nomad jerry
 <rep> congressman cloth
@@ -123,8 +115,6 @@
 <pox> syphilis smallpox
 <rapscallion> rogue youngster
 <bargainer> trader negotiator
-<win> victory winnings
-<creed> credo doctrine
 <snatcher> thief kidnapper
 <averting> prevention avoidance
 <faller> logger someone
@@ -184,7 +174,6 @@
 <seeger> vocalist poet
 <frankfort> kentucky frankfurt
 <whitman> poet instructor
-<frank> rex frankfurter
 <petitioner> applicant plaintiff
 <barth> theologian playwright
 <brady> photographer philanthropist
@@ -210,7 +199,6 @@
 <take> income cinematography
 <earnings> income salary
 <iceman> employee murderer
-<fete> fiesta festivity
 <herschel> astronomer mathematician
 <grief> heartache stimulus
 <hammock> knoll mattress
@@ -220,16 +208,13 @@
 <atheneum> guild depository
 <illiteracy> ignorance literacy
 <vulture> raptor attacker
-<grove> rainforest orchard
 <chancery> tribunal depository
 <street_fighter> challenger wrestler
 <uruguay_potato> vine murphy
-<asp> viper cobra
 <convict> prisoner offender
 <romanticist> someone artist
 <shooting> gunfire homicide
 <imp> fay youngster
-<chauvinist> bigot patriot
 <chauvinism> patriotism sexism
 <ship_builder> journeyman constructor
 <foe> adversary challenger
@@ -300,22 +285,18 @@
 <informant> communicator talker
 <philosopher> mathematician doctrine
 <standstill> deadlock cessation
-<hajji> iraq haji
 <hostel> inn apartment
 <no-show> customer offender
 <driveller> talker someone
 <william_seward_burroughs> playwright inventor
 <herder> mathematician herdsman
-<rental> belongings transaction
 <mayer> physicist filmmaker
-<spanish_dagger> yucca shrub
 <ishmael> noah pariah
 <rheumatism> disease arthritis
 <bather> traveler someone
 <ptolemy> astronomer rex
 <yogi> ballplayer mathematician
 <uncle> aunt benefactor
-<profits> income winnings
 <dispenser> container supplier
 <wriggler> someone larva
 <superintendent> overseer custodian
@@ -330,19 +311,14 @@
 <scourer> laborer traveler
 <fonda> actress filmmaker
 <niagara> waterfall river
-<stockholding> belongings proprietor
 <pixy> shrub fay
 <aaron> ballplayer clergyman
-<spanish_bayonet> yucca shrub
-<landholding> proprietor belongings
 <crawford> architect actress
-<leper> madman pariah
 <postulator> clergyman communicator
 <whoremaster> customer offender
 <snitcher> thief informer
 <peepshow> expo movie
 <stimulant> stimulus amphetamine
-<mysore> india karnataka
 <plight> predicament warranty
 <speedway> highway racetrack
 <potato_tree> shrub vine
@@ -352,7 +328,6 @@
 <infanticide> murderer homicide
 <cowl> auto headdress
 <follower> disciple traveler
-<exorcist> clergyman sorcerer
 <north_platte> river nebraska
 <easement> prerogative liberalization
 <saint_francis> theologian river
@@ -404,8 +379,6 @@
 <tabula_rasa> knowledge opportunity
 <thatcher> statesman journeyman
 <solitary> incarceration loner
-<conjuror> performer sorcerer
-<conjurer> performer sorcerer
 <field_house> edifice stadium
 <tin_can> warship container
 <donor> philanthropist benefactor
@@ -443,8 +416,6 @@
 <persian> rex iran
 <newman> filmmaker theologian
 <bagger> workman handbag
-<regicide> slayer homicide
-<sensualism> sensuality doctrine
 <joliot-curie> physicist mathematician
 <marlowe> poet faust
 <handiness> expertise availability
@@ -487,7 +458,6 @@
 <forester> playwright granger
 <goldenbush> wildflower shrub
 <wool_stapler> supplier grader
-<jointure> belongings reunification
 <rambler> hiker communicator
 <black_tie> tuxedo necktie
 <river_avon> river england
@@ -506,7 +476,6 @@
 <ponce> u.k. offender
 <incompetence> competence disease
 <irregular> guerrilla commodity
-<highlander> highlands scot
 <canton> guangzhou switzerland
 <excogitation> inventor creativity
 <field_of_honor> locale battlefield
@@ -540,6 +509,46 @@
 <nark> informer policeman
 <galloway> scotland cattle
 <nazi> hitler someone
+<patrician> aristocrat princess
+<vernacular> lingo dialect
+<appleton> physicist river
+<valencia> venezuela spain
+<shylock> lender faust
+<florist> shopkeeper deli
+<confessor> clergyman communicator
+<priest> clergyman priesthood
+<duplex> porch apartment
+<farsi> rex iran
+<mall> walkway courtyard
+<maisonnette> apartment porch
+<parish> parishioner diocese
+<aragon> playwright spain
+<wayne> filmmaker statesman
+<anaglyph> photo cameo
+<cul_de_sac> conduit thoroughfare
+<fugitive> someone escapee
+<fairy> fay someone
+<whitney> inventor california
+<brave> warrior someone
+<ironmonger> trader deli
+<procurer> offender someone
+<watt> kilowatt inventor
+<galley_slave> someone laborer
+<voluntary> serviceman opus
+<israelite> mideast jew
+<forbidden_city> tibet beijing
+<public_square> piazza mart
+<bread> bun thief
+<ejaculator> semen talker
+<teacher> instructor concept
+<voicer> journeyman talker
+<strongman> performer dictatorship
+<tragedy> calamity playwright
+<minstrel_show> troupe revue
+<prescriptivism> doctrine proponent
+<weil> mathematician astronomer
+<tanganyika> africa tanzania
+<half-wit> idiot someone
 <stevens> psychologist poet filmmaker
 <fitzgerald> poet playwright vocalist
 <flyer> advertisement traveler aviator
@@ -562,7 +571,6 @@
 <scallywag> someone rogue youngster
 <headshot> photo soccer gunfire
 <coca> shrub actress cocaine
-<pilgrim> traveler colonist haji
 <tapestry> complexity cloth rug
 <scalawag> someone rogue youngster
 <franklin> historian scientist landowner
@@ -570,7 +578,6 @@
 <gibson> illustrator filmmaker athlete
 <norman> vocalist golfer frenchman
 <walton> composer playwright physicist
-<frog> toad frenchman jewelry
 <bruno> pontiff clergyman mathematician
 <speaker> talker loudspeaker chairwoman
 <punter> rower kicker bettor
@@ -592,7 +599,6 @@
 <fleming> playwright biologist belgium
 <ranger> policeman firefighter serviceman
 <rusher> footballer colonist someone
-<id> idaho insignia aptitude
 <connecticut> u.s.a. river colonist
 <coke> firewood pepsi cocaine
 <trickster> troublemaker offender fay
@@ -633,9 +639,6 @@
 <burton> someone filmmaker ale
 <benedict> anthropologist theologian wife
 <soma> vine deity someone
-<bastion> guardian citadel rampart
-<spying> surveillance espionage sentinel
-<amphibian> auto airplane toad
 <compact> luggage treaty auto
 <waterspout> hurricane downpour conduit
 <baldwin> playwright statesman mcintosh
@@ -648,14 +651,12 @@
 <madras> india river cloth
 <cabalist> clique bowman historian
 <solo> soloist opus aviator
-<millennium> anniversary doctrine thou
 <churchill> statesman playwright manitoba
 <david> guardian artist rex
 <ague> illness malaria dialect
 <marsh> wetland artist playwright
 <inset> montage artifact cloth
 <hays> lawyer prosecutor river
-<evocation> imagery sorcerer stimulus
 <client> lawyer customer lan
 <gulf> mexico disparity chasm
 <crud> snowfall sewage disease
@@ -678,15 +679,22 @@
 <artificer> inventor journeyman serviceman
 <counselor> adviser overseer lawyer
 <hemp> cloth shrub gallows
-<herd> cattle gam herdsman
 <slaughter> carnage victory alamo
 <hale> salomon astronomer playwright
 <powys> playwright poet statesman
 <bronte> playwright poet statesman
 <montgomery> playwright statesman river
-<estate> belongings realty superpower
 <comrade> camaraderie stalin buddy
 <fancy> misconception creativity penchant
+<hot_spot> england midpoint nightclub
+<referral> someone advice ref
+<grave> lifetime tomb dialect
+<pothunter> archeologist challenger tracker
+<hotspot> england midpoint nightclub
+<cellar> edifice cupboard depository
+<chandler> playwright retailer shoemaker
+<skidder> someone employee bulldozer
+<conservatory> schoolteacher schoolhouse edifice
 <lowell> poet astronomer playwright educator
 <town> river townspeople township architect
 <deliverer> jesus benefactor employee someone
@@ -710,8 +718,6 @@
 <monroe> actress fdr river louisiana
 <doctor> physician theologian entertainment doctorate
 <huntington> physician salomon businessman river
-<treasure> riches artist belongings expo
-<po> uranium p.o. river ftc
 <cordoba> centavo someone spain andes
 <works> factory entirety measurement robot
 <officer> commandant landowner policeman mariner
@@ -766,7 +772,6 @@
 <zombi> genie deity someone robot whiskey
 <zombie> someone genie deity robot whiskey
 <country> superpower oas someone countryside hangout
-<cock> penis faucet firearm rooster raptor
 <williams> vocalist mathematician poet ballplayer clergyman playwright
 <moore> composer filmmaker mathematician poet playwright architect
 <harris> playwright someone consul poet statesman proprietor
@@ -777,8 +782,6 @@
 <gap> disparity chasm transformer col controversy heckler
 <miller> goodman playwright poet journeyman typewriter moth
 <story> folklore myth edifice biography newsletter liar
-<guide> lighthouse pathfinder guidebook template reconnaissance edifice
-<trust> belongings confidant trait cartel doctrine friendship
 <porter> laborer doorman playwright composer poet employee ale
 <robinson> physicist louis playwright historian ballplayer poet filmmaker
 <wright> playwright poet inventor industrialist architect mott journeyman
@@ -786,15 +789,12 @@
 <lawrence> theologian playwright artist actress physicist poet river
 <bench> pew plateau legislature lab tribunal athlete courtroom
 <captain> captaincy commodore policeman kidd rolf aviator employee
-<command> behest acc commandant availability serviceman maestro software
 <lee> filmmaker performer actress physicist salomon reservist statesman underside
 <turner> insurrection physician artist historian guild journeyman someone cooker
 <reader> readership customer someone ref bradford clergyman educator bestseller
-<yard> furlong backyard schoolyard thou dal outfield battlefield sailboat workplace
 <hold> wrestler hindsight someone idiot incarceration stronghold prevention luggage container
-<flight> backfield overflight stairway breakout airforce creativity trajectory traveler pilgrimage
+<shadow> nightfall locale ufo trepidation vestige asset someone traveler tracker
 <smith> statesman architect vocalist proponent actress baptist someone economist journeyman aviator
-<force> duress torque brunt constabulary mujahedeen rioter someone clan legality strikeout
+<master> maestro headmaster conqueror employer educator artifact captaincy historian adviser wreckage
 <court> tribunal courtroom legislature stadium athlete entourage hotel juror vatican courtyard homage
-<release> commodity achievement radioactivity adviser demobilization liftoff waiver contraption talker conduit handover shutdown
 

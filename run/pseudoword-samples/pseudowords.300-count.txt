@@ -203,6 +203,7 @@
 <grief> heartache stimulus
 <hammock> knoll mattress
 <weekender> vacationer suitcase
+<hydroplane> airplane speedboat
 <stevens> psychologist poet filmmaker
 <fitzgerald> poet playwright vocalist
 <flyer> advertisement traveler aviator
@@ -287,7 +288,6 @@
 <tapper> bartender someone employee listener choreographer
 <gem> artist jewelry someone muffin merchant
 <barrymore> filmmaker actress playwright vocalist performer
-<skinner> filmmaker actress psychologist journeyman laborer
 <williams> vocalist mathematician poet ballplayer clergyman playwright
 <moore> composer filmmaker mathematician poet playwright architect
 <harris> playwright someone consul poet statesman proprietor

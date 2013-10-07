@@ -476,6 +476,10 @@
 <ponce> u.k. offender
 <incompetence> competence disease
 <irregular> guerrilla commodity
+<canton> guangzhou switzerland
+<excogitation> inventor creativity
+<field_of_honor> locale battlefield
+<madam> madame businesswoman
 <stevens> psychologist poet filmmaker
 <fitzgerald> poet playwright vocalist
 <flyer> advertisement traveler aviator
@@ -603,7 +607,6 @@
 <salem> oregon river india
 <cruiser> auto warship speedboat
 <bowler> cricketer golfer derby
-<artificer> inventor journeyman serviceman
 <lowell> poet astronomer playwright educator
 <town> river townspeople township architect
 <deliverer> jesus benefactor employee someone
@@ -681,14 +684,12 @@
 <hamilton> mathematician duchess scientist statesman river germany
 <gap> disparity chasm transformer col controversy heckler
 <miller> goodman playwright poet journeyman typewriter moth
-<story> folklore myth edifice biography newsletter liar
 <porter> laborer doorman playwright composer poet employee ale
 <robinson> physicist louis playwright historian ballplayer poet filmmaker
 <wright> playwright poet inventor industrialist architect mott journeyman
 <russell> mahdi filmmaker athlete vocalist astronomer playwright economist
 <lawrence> theologian playwright artist actress physicist poet river
 <bench> pew plateau legislature lab tribunal athlete courtroom
-<captain> captaincy commodore policeman kidd rolf aviator employee
 <lee> filmmaker performer actress physicist salomon reservist statesman underside
 <turner> insurrection physician artist historian guild journeyman someone cooker
 <reader> readership customer someone ref bradford clergyman educator bestseller
@@ -697,5 +698,4 @@
 <smith> statesman architect vocalist proponent actress baptist someone economist journeyman aviator
 <master> maestro headmaster conqueror employer educator artifact captaincy historian adviser wreckage
 <court> tribunal courtroom legislature stadium athlete entourage hotel juror vatican courtyard homage
-<release> commodity achievement radioactivity adviser demobilization liftoff waiver contraption talker conduit handover shutdown
 
