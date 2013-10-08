@@ -78,10 +78,26 @@ train.lm.gz: train.tok.gz train.vocab.gz
 	ngram-count -order ${LM_NGRAM} -kndiscount -interpolate -unk -vocab train.vocab.gz -text - -lm $@
 
 train.context.gz: train.tok.gz train.pos.gz train.lemma.gz
-	@extract-train-context.py $^ ${TEST} | gzip > $@
+	extract-train-context.py $^ ${TEST} | gzip > $@
+
+train.sentence.gz: train.tok.gz train.pos.gz train.lemma.gz
+	extract-train-sentence.py $^ ${TEST} | gzip > $@
+
+test-inst-list.gz: ../data/keys/
+	cat ../data/keys/*.instances | sort -t$$'\t' -k1,1 -k2,2n \
+	| uniq | gzip > $@
+
+test.context.gz: test-inst-list.gz
+	zcat $< | extract-test-context.py | gzip > $@
+
+test.sentence.gz: test-inst-list.gz
+	zcat $< | extract-test-sentence.py | gzip > $@
 
 random.context.gz: train.context.gz
-	zcat $< | ./sample-contexts.py 5000  | gzip > $@
+	zcat $< | ./sample-contexts.py 2500  | gzip > $@
+
+random.sentence.gz: train.sentence.gz
+	zcat $< | ./sample-contexts.py 2500  | gzip > $@
 
 FS_NSUB=100 # go until you have this many substitutes
 FS_PSUB=1.0 # or this much cumulative probability
@@ -90,27 +106,21 @@ FS_OPTIONS=-n ${FS_NSUB} -p ${FS_PSUB}
 # 	zcat train.context.gz trial.context.gz test.context.gz |\
 # 	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > $@
 
-all.sub.1.gz all.sub.2.gz all.sub.3.gz all.sub.4.gz: train.lm.gz random.context.gz trial.context.gz test.context.gz
-	zcat random.context.gz trial.context.gz test.context.gz |\
-	tail -n +000001 | head -250000 |\
+all.sub.1.gz all.sub.2.gz all.sub.3.gz all.sub.4.gz all.sub.5.gz: train.lm.gz random.context.gz
+	zcat random.context.gz | tail -n +000001 | head -325000 |\
 	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > all.sub.1.gz &\
-	zcat random.context.gz trial.context.gz test.context.gz |\
-	tail -n +250001 | head -250000 |\
+	zcat random.context.gz | tail -n +325001 | head -325000 |\
 	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > all.sub.2.gz &\
-	zcat random.context.gz trial.context.gz test.context.gz |\
-	tail -n +500001 | head -250000 |\
+	zcat random.context.gz | tail -n +650001 | head -325000 |\
 	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > all.sub.3.gz &\
-	zcat random.context.gz trial.context.gz test.context.gz |\
-	tail -n +750001 |\
+	zcat random.context.gz | tail -n +975001 | head -325000 |\
 	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > all.sub.4.gz &\
+	zcat random.context.gz | tail -n +1300001 |\
+	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > all.sub.5.gz &\
 	wait
-
-train.sentence.gz: train.tok.gz train.pos.gz train.lemma.gz
-	extract-train-sentence.py $^ ${TEST} | gzip > $@
 
 clear-data:
 	rm -rf ../data/components ../data/monosemous-words ../data/pos-filtering
-
 
 .SECONDARY:
 #small.tok.gz small.pos.gz small.lem.gz small.raw.gz
