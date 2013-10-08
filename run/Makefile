@@ -81,7 +81,7 @@ train.context.gz: train.tok.gz train.pos.gz train.lemma.gz
 	@extract-train-context.py $^ ${TEST} | gzip > $@
 
 random.context.gz: train.context.gz
-	zcat $< | ./sample-contexts.py 5000 | gzip > $@
+	zcat $< | ./sample-contexts.py 5000  | gzip > $@
 
 FS_NSUB=100 # go until you have this many substitutes
 FS_PSUB=1.0 # or this much cumulative probability
