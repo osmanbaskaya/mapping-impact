@@ -1,0 +1,204 @@
+Processing add.v.lemma
+Processing appear.v.lemma
+Processing ask.v.lemma
+Processing become.v.lemma
+Processing board.n.lemma
+Processing book.n.lemma
+Processing book.v.lemma
+Processing color.n.lemma
+Processing common.j.lemma
+Processing control.n.lemma
+Processing dark.j.lemma
+Processing date.n.lemma
+Processing dismiss.v.lemma
+Processing familiar.j.lemma
+Processing family.n.lemma
+Processing find.v.lemma
+Processing force.n.lemma
+Processing help.v.lemma
+Processing image.n.lemma
+Processing late.j.lemma
+Processing life.n.lemma
+Processing live.v.lemma
+Processing lose.v.lemma
+Processing meet.v.lemma
+Processing new.j.lemma
+Processing number.n.lemma
+Processing paper.n.lemma
+Processing part.n.lemma
+Processing people.n.lemma
+Processing poor.j.lemma
+Processing power.n.lemma
+Processing read.v.lemma
+Processing serious.j.lemma
+Processing serve.v.lemma
+Processing severe.j.lemma
+Processing sight.n.lemma
+Processing sound.n.lemma
+Processing state.n.lemma
+Processing strike.v.lemma
+Processing strong.j.lemma
+Processing suggest.v.lemma
+Processing trace.n.lemma
+Processing trace.v.lemma
+Processing transfer.v.lemma
+Processing wait.v.lemma
+Processing warm.j.lemma
+Processing way.n.lemma
+Processing window.n.lemma
+Processing win.v.lemma
+Processing write.v.lemma
+make: `hdp' is up to date.
+---------------------
+Number of files: 50
+---------------------
+--algorithm train --data topicmodel_output/ask.v/hdpdata.train.txt --directory topicmodel_output/ask.v --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/book.n/hdpdata.train.txt --directory topicmodel_output/book.n --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/appear.v/hdpdata.train.txt --directory topicmodel_output/appear.v --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/add.v/hdpdata.train.txt --directory topicmodel_output/add.v --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/board.n/hdpdata.train.txt --directory topicmodel_output/board.n --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/book.v/hdpdata.train.txt --directory topicmodel_output/book.v --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/color.n/hdpdata.train.txt --directory topicmodel_output/color.n --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/common.j/hdpdata.train.txt --directory topicmodel_output/common.j --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/dark.j/hdpdata.train.txt --directory topicmodel_output/dark.j --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/control.n/hdpdata.train.txt --directory topicmodel_output/control.n --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/date.n/hdpdata.train.txt --directory topicmodel_output/date.n --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/family.n/hdpdata.train.txt --directory topicmodel_output/family.n --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/dismiss.v/hdpdata.train.txt --directory topicmodel_output/dismiss.v --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/familiar.j/hdpdata.train.txt --directory topicmodel_output/familiar.j --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/force.n/hdpdata.train.txt --directory topicmodel_output/force.n --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/help.v/hdpdata.train.txt --directory topicmodel_output/help.v --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/image.n/hdpdata.train.txt --directory topicmodel_output/image.n --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/late.j/hdpdata.train.txt --directory topicmodel_output/late.j --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/life.n/hdpdata.train.txt --directory topicmodel_output/life.n --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/live.v/hdpdata.train.txt --directory topicmodel_output/live.v --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/lose.v/hdpdata.train.txt --directory topicmodel_output/lose.v --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/new.j/hdpdata.train.txt --directory topicmodel_output/new.j --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/number.n/hdpdata.train.txt --directory topicmodel_output/number.n --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/paper.n/hdpdata.train.txt --directory topicmodel_output/paper.n --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/part.n/hdpdata.train.txt --directory topicmodel_output/part.n --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/poor.j/hdpdata.train.txt --directory topicmodel_output/poor.j --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/people.n/hdpdata.train.txt --directory topicmodel_output/people.n --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/power.n/hdpdata.train.txt --directory topicmodel_output/power.n --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/serious.j/hdpdata.train.txt --directory topicmodel_output/serious.j --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/serve.v/hdpdata.train.txt --directory topicmodel_output/serve.v --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/severe.j/hdpdata.train.txt --directory topicmodel_output/severe.j --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/sight.n/hdpdata.train.txt --directory topicmodel_output/sight.n --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/sound.n/hdpdata.train.txt --directory topicmodel_output/sound.n --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/state.n/hdpdata.train.txt --directory topicmodel_output/state.n --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/read.v/hdpdata.train.txt --directory topicmodel_output/read.v --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/strong.j/hdpdata.train.txt --directory topicmodel_output/strong.j --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/suggest.v/hdpdata.train.txt --directory topicmodel_output/suggest.v --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/trace.n/hdpdata.train.txt --directory topicmodel_output/trace.n --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/trace.v/hdpdata.train.txt --directory topicmodel_output/trace.v --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/wait.v/hdpdata.train.txt --directory topicmodel_output/wait.v --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/strike.v/hdpdata.train.txt --directory topicmodel_output/strike.v --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/warm.j/hdpdata.train.txt --directory topicmodel_output/warm.j --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/way.n/hdpdata.train.txt --directory topicmodel_output/way.n --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/window.n/hdpdata.train.txt --directory topicmodel_output/window.n --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/win.v/hdpdata.train.txt --directory topicmodel_output/win.v --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/transfer.v/hdpdata.train.txt --directory topicmodel_output/transfer.v --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+--algorithm train --data topicmodel_output/write.v/hdpdata.train.txt --directory topicmodel_output/write.v --max_iter 1000 --save_lag -1 --gamma_b 0.1 --alpha_b 1 --random_seed 1
+-----------------------
+all HDP processes done
+-----------------------
+topicmodel_output/add.v
+topicmodel_output/appear.v
+topicmodel_output/ask.v
+topicmodel_output/become.v
+topicmodel_output/board.n
+topicmodel_output/book.n
+topicmodel_output/book.v
+topicmodel_output/color.n
+topicmodel_output/common.j
+topicmodel_output/control.n
+topicmodel_output/dark.j
+topicmodel_output/date.n
+topicmodel_output/dismiss.v
+topicmodel_output/familiar.j
+topicmodel_output/family.n
+topicmodel_output/find.v
+topicmodel_output/force.n
+topicmodel_output/help.v
+topicmodel_output/image.n
+topicmodel_output/late.j
+topicmodel_output/life.n
+topicmodel_output/live.v
+topicmodel_output/lose.v
+topicmodel_output/meet.v
+topicmodel_output/new.j
+topicmodel_output/number.n
+topicmodel_output/paper.n
+topicmodel_output/part.n
+topicmodel_output/people.n
+topicmodel_output/poor.j
+topicmodel_output/power.n
+topicmodel_output/read.v
+topicmodel_output/serious.j
+topicmodel_output/serve.v
+topicmodel_output/severe.j
+topicmodel_output/sight.n
+topicmodel_output/sound.n
+topicmodel_output/state.n
+topicmodel_output/strike.v
+topicmodel_output/strong.j
+topicmodel_output/suggest.v
+topicmodel_output/trace.n
+topicmodel_output/trace.v
+topicmodel_output/transfer.v
+topicmodel_output/wait.v
+topicmodel_output/warm.j
+topicmodel_output/way.n
+topicmodel_output/window.n
+topicmodel_output/win.v
+topicmodel_output/write.v
+	Number of test instances for add.v = 100
+	Number of test instances for appear.v = 100
+	Number of test instances for ask.v = 100
+	Number of test instances for become.v = 100
+	Number of test instances for board.n = 98
+	Number of test instances for book.n = 100
+	Number of test instances for book.v = 23
+	Number of test instances for color.n = 100
+	Number of test instances for common.j = 100
+	Number of test instances for control.n = 100
+	Number of test instances for dark.j = 100
+	Number of test instances for date.n = 97
+	Number of test instances for dismiss.v = 100
+	Number of test instances for familiar.j = 100
+	Number of test instances for family.n = 100
+	Number of test instances for find.v = 100
+	Number of test instances for force.n = 100
+	Number of test instances for help.v = 100
+	Number of test instances for image.n = 100
+	Number of test instances for late.j = 100
+	Number of test instances for life.n = 100
+	Number of test instances for live.v = 100
+	Number of test instances for lose.v = 100
+	Number of test instances for meet.v = 100
+	Number of test instances for new.j = 100
+	Number of test instances for number.n = 100
+	Number of test instances for paper.n = 100
+	Number of test instances for part.n = 100
+	Number of test instances for people.n = 100
+	Number of test instances for poor.j = 100
+	Number of test instances for power.n = 100
+	Number of test instances for read.v = 100
+	Number of test instances for serious.j = 100
+	Number of test instances for serve.v = 100
+	Number of test instances for severe.j = 97
+	Number of test instances for sight.n = 100
+	Number of test instances for sound.n = 74
+	Number of test instances for state.n = 100
+	Number of test instances for strike.v = 100
+	Number of test instances for strong.j = 100
+	Number of test instances for suggest.v = 100
+	Number of test instances for trace.n = 39
+	Number of test instances for trace.v = 78
+	Number of test instances for transfer.v = 100
+	Number of test instances for wait.v = 100
+	Number of test instances for warm.j = 100
+	Number of test instances for way.n = 100
+	Number of test instances for window.n = 100
+	Number of test instances for win.v = 100
+	Number of test instances for write.v = 100

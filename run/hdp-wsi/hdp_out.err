@@ -1,0 +1,900 @@
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/add.v/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/add.v/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/add.v/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/add.v/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/add.v/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/appear.v/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/appear.v/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/appear.v/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/appear.v/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/appear.v/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/ask.v/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/ask.v/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/ask.v/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/ask.v/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/ask.v/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/become.v/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/become.v/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/become.v/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/become.v/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/become.v/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/board.n/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/board.n/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/board.n/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/board.n/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/board.n/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/book.n/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/book.n/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/book.n/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/book.n/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/book.n/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/book.v/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/book.v/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/book.v/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/book.v/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/book.v/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/color.n/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/color.n/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/color.n/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/color.n/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/color.n/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/common.j/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/common.j/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/common.j/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/common.j/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/common.j/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/control.n/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/control.n/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/control.n/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/control.n/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/control.n/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/dark.j/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/dark.j/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/dark.j/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/dark.j/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/dark.j/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/date.n/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/date.n/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/date.n/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/date.n/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/date.n/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/dismiss.v/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/dismiss.v/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/dismiss.v/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/dismiss.v/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/dismiss.v/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/familiar.j/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/familiar.j/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/familiar.j/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/familiar.j/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/familiar.j/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/family.n/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/family.n/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/family.n/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/family.n/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/family.n/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/find.v/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/find.v/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/find.v/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/find.v/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/find.v/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/force.n/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/force.n/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/force.n/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/force.n/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/force.n/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/help.v/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/help.v/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/help.v/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/help.v/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/help.v/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/image.n/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/image.n/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/image.n/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/image.n/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/image.n/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/late.j/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/late.j/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/late.j/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/late.j/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/late.j/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/life.n/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/life.n/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/life.n/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/life.n/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/life.n/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/live.v/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/live.v/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/live.v/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/live.v/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/live.v/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/lose.v/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/lose.v/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/lose.v/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/lose.v/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/lose.v/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/meet.v/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/meet.v/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/meet.v/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/meet.v/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/meet.v/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/new.j/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/new.j/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/new.j/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/new.j/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/new.j/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/number.n/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/number.n/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/number.n/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/number.n/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/number.n/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/paper.n/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/paper.n/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/paper.n/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/paper.n/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/paper.n/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/part.n/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/part.n/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/part.n/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/part.n/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/part.n/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/people.n/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/people.n/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/people.n/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/people.n/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/people.n/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/poor.j/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/poor.j/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/poor.j/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/poor.j/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/poor.j/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/power.n/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/power.n/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/power.n/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/power.n/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/power.n/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/read.v/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/read.v/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/read.v/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/read.v/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/read.v/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/serious.j/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/serious.j/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/serious.j/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/serious.j/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/serious.j/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/serve.v/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/serve.v/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/serve.v/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/serve.v/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/serve.v/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/severe.j/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/severe.j/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/severe.j/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/severe.j/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/severe.j/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/sight.n/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/sight.n/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/sight.n/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/sight.n/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/sight.n/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/sound.n/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/sound.n/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/sound.n/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/sound.n/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/sound.n/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/state.n/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/state.n/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/state.n/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/state.n/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/state.n/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/strike.v/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/strike.v/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/strike.v/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/strike.v/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/strike.v/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/strong.j/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/strong.j/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/strong.j/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/strong.j/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/strong.j/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/suggest.v/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/suggest.v/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/suggest.v/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/suggest.v/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/suggest.v/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/trace.n/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/trace.n/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/trace.n/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/trace.n/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/trace.n/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/trace.v/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/trace.v/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/trace.v/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/trace.v/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/trace.v/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/transfer.v/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/transfer.v/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/transfer.v/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/transfer.v/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/transfer.v/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/wait.v/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/wait.v/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/wait.v/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/wait.v/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/wait.v/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/warm.j/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/warm.j/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/warm.j/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/warm.j/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/warm.j/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/way.n/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/way.n/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/way.n/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/way.n/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/way.n/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/window.n/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/window.n/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/window.n/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/window.n/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/window.n/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/win.v/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/win.v/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/win.v/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/win.v/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/win.v/mode-topics.dat'
+Traceback (most recent call last):
+  File "CalcHDPTopics.py", line 27, in <module>
+    topicdoc_file = open(sys.argv[2])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/write.v/mode-word-assignments.dat'
+Error in file(file, "rt") : cannot open the connection
+Calls: print.topics -> as.matrix -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'topicmodel_output/write.v/mode-topics.dat': No such file or directory
+Execution halted
+./run_hdp.sh: line 68: topicmodel_output/write.v/topics.txt: No such file or directory
+mv: cannot stat `topicmodel_output/write.v/topics.txt.tmp': No such file or directory
+Traceback (most recent call last):
+  File "hdp/CreateTopicWordProbPickle.py", line 26, in <module>
+    tw_file = open(sys.argv[1])
+IOError: [Errno 2] No such file or directory: 'topicmodel_output/write.v/mode-topics.dat'
+sed: can't read topicmodel_output/add.v/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/add.v/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/appear.v/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/appear.v/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/ask.v/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/ask.v/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/become.v/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/become.v/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/board.n/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/board.n/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/book.n/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/book.n/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/book.v/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/book.v/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/color.n/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/color.n/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/common.j/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/common.j/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/control.n/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/control.n/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/dark.j/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/dark.j/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/date.n/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/date.n/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/dismiss.v/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/dismiss.v/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/familiar.j/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/familiar.j/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/family.n/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/family.n/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/find.v/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/find.v/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/force.n/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/force.n/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/help.v/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/help.v/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/image.n/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/image.n/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/late.j/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/late.j/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/life.n/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/life.n/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/live.v/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/live.v/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/lose.v/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/lose.v/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/meet.v/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/meet.v/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/new.j/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/new.j/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/number.n/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/number.n/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/paper.n/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/paper.n/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/part.n/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/part.n/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/people.n/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/people.n/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/poor.j/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/poor.j/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/power.n/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/power.n/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/read.v/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/read.v/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/serious.j/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/serious.j/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/serve.v/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/serve.v/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/severe.j/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/severe.j/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/sight.n/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/sight.n/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/sound.n/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/sound.n/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/state.n/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/state.n/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/strike.v/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/strike.v/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/strong.j/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/strong.j/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/suggest.v/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/suggest.v/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/trace.n/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/trace.n/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/trace.v/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/trace.v/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/transfer.v/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/transfer.v/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/wait.v/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/wait.v/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/warm.j/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/warm.j/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/way.n/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/way.n/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/window.n/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/window.n/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/win.v/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/win.v/topics.pickle': No such file or directory
+sed: can't read topicmodel_output/write.v/topics.txt: No such file or directory
+cp: cannot stat `topicmodel_output/write.v/topics.pickle': No such file or directory
