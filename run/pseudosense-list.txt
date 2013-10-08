@@ -212,7 +212,6 @@ data
 datum
 daughter
 daybreak
-d.c.
 deadlock
 debtor
 december
@@ -849,13 +848,11 @@ turncoat
 tuxedo
 typewriter
 ufo
-u.k.
 undersecretary
 underside
 unwillingness
 uranium
 urine
-u.s.a.
 utah
 utensil
 vacationer
