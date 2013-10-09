@@ -67,6 +67,6 @@ python hdp/ConvertTopicDisplayFormat.py < $output_dir/topics.txt > $output_dir/t
 mv $output_dir/topics.txt.tmp $output_dir/topics.txt
  
 #create the topic-word-probability pickle
-python hdp/CreateTopicWordProbPickle.py $output_dir/mode-topics.dat \
-    $output_dir/vocabs.txt $output_dir/topics.pickle
+#python hdp/CreateTopicWordProbPickle.py $output_dir/mode-topics.dat \
+    #$output_dir/vocabs.txt $output_dir/topics.pickle
 done

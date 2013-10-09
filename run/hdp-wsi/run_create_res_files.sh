@@ -29,6 +29,6 @@ do
     done
 
     sed "s/^/$word: /g" topicmodel_output/$word/topics.txt >> ../$output_dir/$wsd_output.topics
-    cp topicmodel_output/$word/topics.pickle ../$output_dir/topic_wordprob/$word.topics.pickle
+    #cp topicmodel_output/$word/topics.pickle ../$output_dir/topic_wordprob/$word.topics.pickle
 done
 

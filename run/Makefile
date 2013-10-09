@@ -125,8 +125,14 @@ test-comp-sep: sentence/test
 train-comp-sep: sentence/train
 	separate-comps.py random.sentence.gz $<
 
-run-hdp: ${PSEUDO_W_FILE}
+create-input-for-hdp: ${PSEUDO_W_FILE}
+	rm -rf hdp-wsi/wsi_input/example/all/*.lemma
 	create-hdp-input.py $<
+
+eval/hdp.ans:
+	rm -rf hdp-wsi/topicmodelling/topicmodel_output/*
+	cd hdp-wsi/; ./run_wsi.sh; wait
+	cp hdp-wsi/wsi_output/tm_wsi $@
 
 clear-data: 
 	rm -rf ../data/components ../data/monosemous-words ../data/pos-filtering

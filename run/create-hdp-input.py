@@ -34,6 +34,7 @@ for line in open(sys.argv[1]):
     line = line.split()
     base, comps = line[0], line[1:]
     base = base[1:-1]
+    base = base.replace("'", "")
     seen = {}
     test_insts, test_total = fetch(test_path, comps)
     train_insts, train_total = fetch(train_path, comps)
