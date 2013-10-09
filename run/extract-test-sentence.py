@@ -6,7 +6,7 @@ __author__ = "Osman Baskaya"
 import sys
 import gzip
 
-inp = '../data/pos-filtering/%s.lem.gz'
+inp = '../data/pos-filtering/%s.tok.gz'
 
 curr = ""
 c = 1

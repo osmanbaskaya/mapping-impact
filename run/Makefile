@@ -7,7 +7,7 @@ SEED=1
 
 CORP_FILES=$(shell find /data/ldc/gigaword_eng/ -name "*.gz" | sort)
 RAW_FILES=$(shell find ../data/raw/ -name "out-*.gz" | sort)
-PSEUDO_W_FILE=pseudoword-samples/pseudowords.999-count.txt
+PSEUDO_W_FILE=pseudoword-samples/pseudowords.979-count.txt
 
 TRAIN1=$(shell ls ../data/ukwac/UKWAC-* | sort -k 2 -t - -n | head -5 | tail -5)
 TRAIN2=$(shell ls ../data/ukwac/UKWAC-* | sort -k 2 -t - -n | head -10 | tail -5)
@@ -119,7 +119,16 @@ all.sub.1.gz all.sub.2.gz all.sub.3.gz all.sub.4.gz all.sub.5.gz: train.lm.gz ra
 	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > all.sub.5.gz &\
 	wait
 
-clear-data:
+test-comp-sep: sentence/test
+	separate-comps.py test.sentence.gz $<
+
+train-comp-sep: sentence/train
+	separate-comps.py random.sentence.gz $<
+
+run-hdp: ${PSEUDO_W_FILE}
+	create-hdp-input.py $<
+
+clear-data: 
 	rm -rf ../data/components ../data/monosemous-words ../data/pos-filtering
 
 .SECONDARY:
