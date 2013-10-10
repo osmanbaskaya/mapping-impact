@@ -52,8 +52,10 @@ from pprint import pprint
 ### PARAMETERS ###
 sys_fs = ['system.key',]
 gold_fs = ['gold.key',]
-dev_sys_fs = ['dev-system.key',]
-dev_gold_fs = ['dev-gold.key',]
+#dev_sys_fs = ['dev-system.key',]
+#dev_gold_fs = ['dev-gold.key',]
+dev_sys_fs = ['system.key',]
+dev_gold_fs = ['gold.key',]
 k = 10
 opt = True #optimization
 

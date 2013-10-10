@@ -77,7 +77,7 @@ class SemevalEvaluator(Evaluator):
         self.logger.info("Best set of parameters is: {}".format
                             (zip(par_list, max_par.split())))
         self.clf_wrapper.classifier = d[max_par][1]
-        self.clf_wrapper.is_optimized = True
+        #self.clf_wrapper.is_optimized = True
 
     def score(self):
         scores = {}
@@ -89,10 +89,10 @@ class SemevalEvaluator(Evaluator):
             if not self.clf_wrapper.is_optimized:
                 params = []
                 estimators = []
-                for tw, val in dev_system_dict.iteritems():
+                for tw, val in sorted(dev_system_dict.iteritems()):
                     X =  self.ft.convert_data(val)
                     y = np.array(dev_gold_dict[tw])
-                    cv = cross_validation.ShuffleSplit(len(y), n_iter=10,
+                    cv = cross_validation.ShuffleSplit(len(y), n_iter=100,
                                 test_size=0.2, random_state=0)
                     p, e = self.clf_wrapper.optimize(X, y, cv=cv)
                     if p is not None:
@@ -102,7 +102,6 @@ class SemevalEvaluator(Evaluator):
 
                 self.set_best_estimator(params, estimators)
             self.logger.info("Optimization finished")
-        
         
         files = [self.trainset.data, self.trainset.target]
         system_key_dict, gold_dict = map(self.load_key_file, files)
@@ -120,6 +119,7 @@ class SemevalEvaluator(Evaluator):
             except ValueError, e: # all instances are belongs to the same class
                 self.logger.warning("{}\t{}".format(tw, e))
             scores[tw] = (score.mean(), calc_perp(y))
+            self.ft.dump_data_libsvm_format(X, y, 'libsvm-input/' + tw)
         return scores
 
     def report(self):

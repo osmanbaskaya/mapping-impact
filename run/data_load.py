@@ -24,7 +24,7 @@ class SemevalKeyLoader(KeyLoader):
        super(SemevalKeyLoader, self).__init__("semeval")
 
     # override
-    def read_keyfile(self, keyfile):
+    def read_keyfile(self, keyfile, delim='/'):
         lines = open(keyfile).readlines()
         senses = dd(list)
         for line in lines:
@@ -33,7 +33,7 @@ class SemevalKeyLoader(KeyLoader):
             assert size >= 3, "Keyfile does not meet the Semeval constraints"
             if size == 3:
                 if '/' in line[2]:
-                    senses[line[0]].append(line[2].split('/')[0])
+                    senses[line[0]].append(line[2].split(delim)[0])
                 else:
                     senses[line[0]].append(line[2])
             else:

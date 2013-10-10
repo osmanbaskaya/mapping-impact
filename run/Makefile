@@ -99,6 +99,15 @@ random.context.gz: train.context.gz
 random.sentence.gz: train.sentence.gz
 	zcat $< | ./sample-contexts.py 2500  | gzip > $@
 
+test-comp-sep: sentence/test
+	separate-comps.py test.sentence.gz $<
+
+train-comp-sep: sentence/train
+	separate-comps.py random.sentence.gz $<
+
+sub-comp-sep: target.sub.gz sub/
+	separate-comps.py $^
+
 FS_NSUB=100 # go until you have this many substitutes
 FS_PSUB=1.0 # or this much cumulative probability
 FS_OPTIONS=-n ${FS_NSUB} -p ${FS_PSUB}
@@ -119,20 +128,63 @@ all.sub.1.gz all.sub.2.gz all.sub.3.gz all.sub.4.gz all.sub.5.gz: train.lm.gz ra
 	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > all.sub.5.gz &\
 	wait
 
-test-comp-sep: sentence/test
-	separate-comps.py test.sentence.gz $<
+test.sub.1.gz test.sub.2.gz test.sub.3.gz test.sub.4.gz test.sub.5.gz test.sub.6.gz: test.context.gz train.lm.gz
+	zcat $< | tail -n +000001 | head -150000 |\
+	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > test.sub.1.gz &\
+	zcat $< | tail -n +150001 | head -150000 |\
+	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > test.sub.2.gz &\
+	zcat $< | tail -n +300001 | head -150000 |\
+	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > test.sub.3.gz &\
+	zcat $< | tail -n +450001 | head -150000 |\
+	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > test.sub.4.gz &\
+	zcat $< | tail -n +600001 | head -150000 |\
+	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > test.sub.5.gz &\
+	zcat $< | tail -n +750000 |\
+	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > test.sub.6.gz &\
+	wait
 
-train-comp-sep: sentence/train
-	separate-comps.py random.sentence.gz $<
+test.sub.gz: test.sub.1.gz test.sub.2.gz test.sub.3.gz test.sub.4.gz test.sub.5.gz test.sub.6.gz
+	zcat $^ | gzip > $@
+
+#2199795 442158795 4402274133
+target.sub.gz: test.sub.gz all.sub.1.gz all.sub.2.gz all.sub.3.gz all.sub.4.gz
+	zcat $^ | grep -P '^<\w+\.\w+' | gzip > $@
+
+pairs.100.gz: target.sub.gz
+	perl -le 'print "$<" for 1..100' | xargs zcat | wordsub -s ${SEED} | gzip > $@
+
+SC_OPTIONS=-a -r 1 -d 25 -z 0.166 -p 50 -u 0.2 -s ${SEED} -v
+# example: add.v.scode.gz
+# caution: no instance enrichment will be made ({1,3})
+%.scode.gz: pairs.100.gz
+	 zcat $< | grep -P '^<$*\.\d{1,3}>' | scode -i 50 ${SC_OPTIONS} | gzip > scode_vec/$@
 
 create-input-for-hdp: ${PSEUDO_W_FILE}
 	rm -rf hdp-wsi/wsi_input/example/all/*.lemma
 	create-hdp-input.py $<
 
+create-input-for-wordsub: ${PSEUDO_W_FILE}
+	create-wordsub-input.py $<
+
+%.pairs.gz:
+	perl -le 'print "wordsub/$*.gz" for 1..100' | xargs zcat | wordsub -s ${SEED} | \
+	gzip > pairs/$@
+
+SUBS=$(shell find wordsub/  -name "*" | sed 's|wordsub/||g' | sort)
+create-input-for-pairs: wordsub/
+	echo ${SUBS} | sed 's|.gz|.pairs.gz|g' | xargs -n1 -P 50 make 
+
 eval/hdp.ans:
 	rm -rf hdp-wsi/topicmodelling/topicmodel_output/*
 	cd hdp-wsi/; ./run_wsi.sh; wait
 	cp hdp-wsi/wsi_output/tm_wsi $@
+
+kmeans/%.kmeans.gz:
+	y-cluster.py $* ${SEED} 10 #| gzip > $@
+
+PAIRS=$(shell find pairs/ -name "*" | head -5) 
+clustering:
+	echo ${PAIRS} | sed 's/pairs/kmeans/g' | xargs -n 1 -P 60 make
 
 clear-data: 
 	rm -rf ../data/components ../data/monosemous-words ../data/pos-filtering

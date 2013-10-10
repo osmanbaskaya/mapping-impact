@@ -33,15 +33,20 @@ class ClassifierWrapper(object):
         #FIXME: Why do we get index errors for book.v
         except IndexError, e:
             print >> sys.stderr, e
+        try:
+            print "Best Score", y[0], clf.best_score_
+        except AttributeError:
+            pass
         return best_params, best_estimator
 
 
 class SVCWrapper(ClassifierWrapper):
     
     def __init__(self):
-        super(SVCWrapper, self).__init__("SVC", SVC())
+        super(SVCWrapper, self).__init__("SVC", SVC(kernel='linear'))
         #FIXME: add gamma parameter? Check ranges
-        self.parameters = {'kernel':('linear', 'rbf'), 'C':[0.01, 0.1, 1, 10, 100, 1000]}
+        #self.parameters = {'kernel':('linear', 'rbf'), 'C':[0.01, 0.05, 0.1, 0.5, 1, 2, 5, 10]}
+        self.parameters = {'kernel':('linear', 'rbf'), 'C':[10]}
 
 class MultinomialNBWrapper(ClassifierWrapper):
     
