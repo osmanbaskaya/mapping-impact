@@ -12,9 +12,8 @@ lemma_set = set()
 for arg in sys.argv[4:]:
     #FIXME: Bug var burada. Ayni lemma'ya sahip kelimeler var.
     # Onlari eziyor. (trace.n, trace.v; book.n, book.v)
-    match = re.search("(\w+)\.(\w+)\.xml$", arg)
+    match = re.search("(\w+)\.raw.gz$", arg)
     lemma = match.group(1)
-    pos = match.group(2).upper()
     pos = 'N'
     lemma_pos[lemma + pos] = pos
     lemma_count[lemma + pos] =  count(1)

@@ -5,6 +5,9 @@ run/*.xml
 run/dummy*
 run/trash/*
 run/*.class
+run/hdp-wsi/wsi_input
+run/hdp-wsi/wsi_output
+run/hdp-wsi/topicmodelling/topicmodel_output/
 
 # C extensions
 *.so

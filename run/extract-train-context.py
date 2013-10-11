@@ -13,17 +13,12 @@ for arg in sys.argv[4:]:
     #FIXME: Bug var burada. Ayni lemma'ya sahip kelimeler var.
     # Onlari eziyor. (trace.n, trace.v; book.n, book.v)
 
-    #tw = os.path.basename(arg).replace('.raw.gz', '')
-    #lemma = tw
-    match = re.search("(\w+)\.\.raw.gz$", arg)
+    match = re.search("(\w+)\.raw.gz$", arg)
     lemma = match.group(1)
     pos = 'N'
-    print match.group(1)
-    exit()
     lemma_pos[lemma + pos] = pos
     lemma_count[lemma + pos] =  count(1)
     lemma_set.add(match.group(1))
-    #lemma_set.add(tw)
 
 f_tok = gzip.open(sys.argv[1])
 f_pos = gzip.open(sys.argv[2])
