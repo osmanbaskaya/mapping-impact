@@ -5,6 +5,8 @@ __author__ = "Osman Baskaya"
 
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.preprocessing import MinMaxScaler
+from sklearn.feature_extraction import DictVectorizer
+import numpy as np
 
 
 class FeatureTransformer(object):
@@ -21,13 +23,17 @@ class SemevalFeatureTransformer(FeatureTransformer):
         super(SemevalFeatureTransformer, self).__init__("SemevalFeatureTransformer")
         self.vectorizer = CountVectorizer(min_df=0, token_pattern=r'[\w:\.%\d.]+')
     
-    def convert_data(self, data):
-        X = self.vectorizer.fit_transform(data).toarray()
-        assert len(set(data)) == len(self.vectorizer.get_feature_names()),\
-                "Should be same or using Graded senses?"
-        return X
+    def convert_data(self, data, target):
+        X = []
+        y = []
+        for key in data:
+            X.append(dict(data[key]))
+            y.append(target[key][0][0])
         
-    def scale_data(self, X, drange=[-1,1]):
+        vec = DictVectorizer()
+        return vec.fit_transform(X).toarray(), np.array(y)
+        
+    def scale_data(self, X, drange=[0,1]):
         return MinMaxScaler(feature_range=drange).fit_transform(X)
 
     def dump_data_libsvm_format(self, X, y, fn):

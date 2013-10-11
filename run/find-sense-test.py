@@ -5,6 +5,10 @@ import gzip
 import re
 import sys
 
+
+pseudoword = sys.argv[1].replace(".kmeans.gz", "").replace('kmeans/', '')
+
+
 cluster = {}
 for line in gzip.open(sys.argv[1]):
     line = line.strip().split("\t")
@@ -21,5 +25,5 @@ for word in sense_counts.keys():
     for instance, counts in sense_counts[word].iteritems():
         print "%s %s %s" % (word,
                             word + '.' + instance,
-                            ' '.join(("%s.%s/%d" % (word, x[0], x[1]) \
+                            ' '.join(("%s.%s/%d" % (pseudoword, x[0], x[1]) \
                             for x in counts.iteritems())))

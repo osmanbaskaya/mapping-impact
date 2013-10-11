@@ -7,6 +7,7 @@ SEED=1
 
 CORP_FILES=$(shell find /data/ldc/gigaword_eng/ -name "*.gz" | sort)
 RAW_FILES=$(shell find ../data/raw/ -name "out-*.gz" | sort)
+TWITTER=$(shell find ../data/cleaned-tweets/ -name "*.tsv" | sort)
 PSEUDO_W_FILE=pseudoword-samples/pseudowords.979-count.txt
 
 TRAIN1=$(shell ls ../data/ukwac/UKWAC-* | sort -k 2 -t - -n | head -5 | tail -5)
@@ -28,6 +29,7 @@ gigafetch.out:
 tokenize-lemmatize-postag.out:
 	echo ${RAW_FILES} | xargs -n 1 -P 60 run-tok-pos-lem.py > $@
 
+
 ../data/components: ${PSEUDO_W_FILE}  #wc -l = 22632220
 	mkdir $@
 	echo ${RAW_FILES} | xargs -n 1 -P 60 fetch-w.py $< &> fetch-w.err
@@ -41,6 +43,18 @@ mono.%.gz: ../data/components
 	mono-word-filtering.py $^ &> mono-word-filtering.err 
 
 ../data/pos-filtering: ../data/monosemous-words
+	mkdir $@
+	@echo $(shell find $< -name "*raw.gz" | sort) | sed 's/.raw.gz//g' \
+	| xargs -n 1 -P 40 pos-filter.py
+
+../data/twitter/monosemous-words: ${TWITTER}
+	mkdir $@
+	echo $^ | xargs -n 1 -P 1 twitter-tok-pos-lem.py 2>&1 | tee twitter-mono.err
+
+twitter-raw-files: ${TWITTER}
+	twitter-raw-data-create.py $^ ../data/twitter/monosemous-words
+
+../data/twitter/pos-filtering: ../data/twitter/monosemous-words
 	mkdir $@
 	@echo $(shell find $< -name "*raw.gz" | sort) | sed 's/.raw.gz//g' \
 	| xargs -n 1 -P 40 pos-filter.py
@@ -179,12 +193,12 @@ eval/hdp.ans:
 	cd hdp-wsi/; ./run_wsi.sh; wait
 	cp hdp-wsi/wsi_output/tm_wsi $@
 
-kmeans/%.kmeans.gz:
+ans/%.ans:
 	y-cluster.py $* ${SEED} 10 #| gzip > $@
 
-PAIRS=$(shell find pairs/ -name "*" | head -5) 
-clustering:
-	echo ${PAIRS} | sed 's/pairs/kmeans/g' | xargs -n 1 -P 60 make
+PAIRS=$(shell find pairs/ -name "*") 
+ai-ku-res:
+	echo ${PAIRS} | sed -e 's/pairs.gz/ans/g' -e 's/pairs/ans/g' | xargs -n 1 -P 60 make
 
 clear-data: 
 	rm -rf ../data/components ../data/monosemous-words ../data/pos-filtering

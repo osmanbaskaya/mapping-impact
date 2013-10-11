@@ -21,7 +21,6 @@ formats can be added in data_load module.
 
 __all__ = ['Evaluator', 'SemevalEvaluator']
 
-
 class Evaluator(object):
 
     def __init__(self, clf_wrapper, trainset, devset, k, optimization, \
@@ -89,9 +88,10 @@ class SemevalEvaluator(Evaluator):
             if not self.clf_wrapper.is_optimized:
                 params = []
                 estimators = []
-                for tw, val in sorted(dev_system_dict.iteritems()):
-                    X =  self.ft.convert_data(val)
-                    y = np.array(dev_gold_dict[tw])
+                for tw, data in sorted(dev_system_dict.iteritems()):
+                    target = dev_gold_dict[tw]
+                    X, y = self.ft.convert_data(data, target)
+                    X = self.ft.scale_data(X, drange=[-1,1])
                     cv = cross_validation.ShuffleSplit(len(y), n_iter=100,
                                 test_size=0.2, random_state=0)
                     p, e = self.clf_wrapper.optimize(X, y, cv=cv)

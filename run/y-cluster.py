@@ -15,7 +15,7 @@ kval = sys.argv[3]
 
 inp = 'zcat pairs/{}.pairs.gz'.format(tw)
 
-scode = "scode -i 1 -a -r 1 -d 25 -z 0.166 -p 50 -u 0.2 -s {} -v ".format(seed)
+scode = "scode -i 50 -a -r 1 -d 25 -z 0.166 -p 50 -u 0.2 -s {} -v ".format(seed)
 scode_out = "gzip > scode/{}.scode.gz "
 
 process = " | ".join([inp, scode, scode_out.format(tw)])
@@ -24,7 +24,7 @@ os.system(process + " & wait")
 
 column = "perl -ne 'print if s/^1://'";
 kmeans_input_base= "zcat scode/{}.scode.gz".format(tw)
-kmeans_base = "wkmeans -r 2 -l -w -v -s {} -k {}".format(seed, kval)
+kmeans_base = "wkmeans -r 40 -l -w -v -s {} -k {}".format(seed, kval)
 kmeans_out_base = "gzip > kmeans/{}.kmeans.gz".format(tw)
 
 
