@@ -49,15 +49,21 @@ mono.%.gz: ../data/components
 
 ../data/twitter/monosemous-words: ${TWITTER}
 	mkdir $@
-	echo $^ | xargs -n 1 -P 1 twitter-tok-pos-lem.py 2>&1 | tee twitter-mono.err
+	echo $^ | xargs -n 1 -P 60 twitter-tok-pos-lem.py 2>&1 | tee twitter-mono.err
+	wait
+	make twitter-raw-files
 
 twitter-raw-files: ${TWITTER}
 	twitter-raw-data-create.py $^ ../data/twitter/monosemous-words
 
-../data/twitter/pos-filtering: ../data/twitter/monosemous-words
+twitter-clean: ../data/twitter/clean/ ../data/cleaned-tweets/ ../data/cleaner-tweets/
+	remove-twitter-inst.py $^
+	yes n | cp -i ../data/cleaned-tweets/* ../data/cleaner-tweets
+
+../data/twitter/pos-filtering: ../data/twitter/monosemous-words ../data/twitter/clean/
 	mkdir $@
 	@echo $(shell find $< -name "*raw.gz" | sort) | sed 's/.raw.gz//g' \
-	| xargs -n 1 -P 40 pos-filter.py
+	| xargs -n 1 -P 40 twitter-pos-filter.py
 
 classifier-eval:
 	classifier_eval.py -g dummy.key -k 10 -l Semeval2013 -i dummy.key 
@@ -193,12 +199,26 @@ eval/hdp.ans:
 	cd hdp-wsi/; ./run_wsi.sh; wait
 	cp hdp-wsi/wsi_output/tm_wsi $@
 
+NUM_CLUST=10
 ans/%.ans:
-	y-cluster.py $* ${SEED} 10 #| gzip > $@
+	y-cluster.py $* ${SEED} ${NUM_CLUST} #| gzip > $@
 
 PAIRS=$(shell find pairs/ -name "*") 
-ai-ku-res:
+aiku-run:
 	echo ${PAIRS} | sed -e 's/pairs.gz/ans/g' -e 's/pairs/ans/g' | xargs -n 1 -P 60 make
+#./key-mapper.py ans/actor.ans ../data/keys/actor.key
+AIKU_ANS=$(shell find ans/ -name "*.ans" | sed -e 's|\.ans||g' -e 's|ans/||g') 
+eval/aiku.ans:
+	for f in ${AIKU_ANS}; do aiku-key-mapper.py ans/$$f.ans ../data/keys/$$f.key; done
+	cat ans2/*.ans > $@
+
+twitter-exclude-list%.txt: ../data/cleaned-tweets/
+	for i in `ls $<*.tsv`; do echo `cat $$i | wc -l | awk \
+	'{if ($$1<$*) print $$1}'` $$i | sed 's/.tsv//g'; done  | grep -P "\d+" > $@
+
+twitter-pseudoword-samples-more-than-%.txt: twitter-exclude-list%.txt create-pwlist.py
+	create-pwlist.py ${PSEUDO_W_FILE} $< > $@
+	wc -l $@
 
 clear-data: 
 	rm -rf ../data/components ../data/monosemous-words ../data/pos-filtering

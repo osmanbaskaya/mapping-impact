@@ -19,7 +19,7 @@ lemma = gzip.open('../data/twitter/monosemous-words/' + fn + '.lem.gz', 'w')
 new_line = True
 for line in sys.stdin:
     line = line.strip().split("\t")
-    if line[0] != "</s>":
+    if line[0] != "</ENDSENT>":
         if len(line) != 3:
             line = [line[0], "N", line[0]]
         if not new_line:

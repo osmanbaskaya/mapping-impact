@@ -56,7 +56,7 @@ gold_fs = ['gold.key',]
 #dev_gold_fs = ['dev-gold.key',]
 dev_sys_fs = ['y-22-cluster.ans',]
 dev_gold_fs = ['all.key',]
-k = 10
+k = 5
 opt = True #optimization
 
 class Dataset(object):

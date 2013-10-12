@@ -6,7 +6,6 @@ __author__ = "Osman Baskaya"
 from feature_transform import SemevalFeatureTransformer
 from data_load import SemevalKeyLoader
 from sklearn import cross_validation
-import numpy as np
 from logger import SemevalLogger
 from nlp_utils import calc_perp
 from collections import defaultdict as dd
@@ -20,6 +19,15 @@ formats can be added in data_load module.
 """
 
 __all__ = ['Evaluator', 'SemevalEvaluator']
+
+
+def create_CV(n, n_fold, splits=[]):
+    if len(splits) == 0:
+        cv = cross_validation.KFold(n, n_folds=n_fold)
+    else:
+        print splits
+    return cv
+
 
 class Evaluator(object):
 
@@ -36,9 +44,9 @@ class Evaluator(object):
             self.logger = SemevalLogger(3)
         self.clf_wrapper = clf_wrapper
         
-        self.X = None
-        self.Y = None
-        self.X_dev = None
+        #self.X = None
+        #self.Y = None
+        #self.X_dev = None
         logger.init(self)
 
     def load_key_file(self, f):
@@ -92,8 +100,11 @@ class SemevalEvaluator(Evaluator):
                     target = dev_gold_dict[tw]
                     X, y = self.ft.convert_data(data, target)
                     X = self.ft.scale_data(X, drange=[-1,1])
-                    cv = cross_validation.ShuffleSplit(len(y), n_iter=100,
-                                test_size=0.2, random_state=0)
+                    cv = cross_validation.KFold(len(y), n_folds=self.k)
+                    for train, test in cv:
+                        print train, len(train)
+                        print test, len(test)
+                    exit()
                     p, e = self.clf_wrapper.optimize(X, y, cv=cv)
                     if p is not None:
                         params.append(p)
@@ -108,10 +119,9 @@ class SemevalEvaluator(Evaluator):
         self.logger.info(self.clf_wrapper.classifier)
 
         for tw, val in system_key_dict.iteritems():
-            y = gold_dict[tw]
-            X =  self.ft.convert_data(val)
-            cv = cross_validation.ShuffleSplit(len(y), n_iter=self.k,
-                        test_size=0.2, random_state=0)
+            target = gold_dict[tw]
+            X, y = self.ft.convert_data(val, target)
+            cv = cross_validation.KFold(len(y), n_folds=self.k)
             #self.logger.info('\nCross Validation:' + str([i for i in cv]))
             try:
                 score = cross_validation.cross_val_score(
@@ -129,4 +139,6 @@ class SemevalEvaluator(Evaluator):
         return "SemevalEvaluator:k={}, optimization={}, key_loader={}, \
         feature_transformer={}, logger={}".format(self.k, self.optimization, \
         self.key_loader, self.ft, self.logger)
+
+
 

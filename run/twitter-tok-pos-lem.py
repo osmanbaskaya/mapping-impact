@@ -9,7 +9,7 @@ import sys
 filename = sys.argv[1]
 
 inp = "cat {} | cut -f2- "
-awk = """awk '{print $0, "</s>"}'"""
+awk = """awk '{print $0, "</ENDSENT>"}'"""
 tagger = "../bin/tree-tagger/cmd/tree-tagger-english"
 token2sent = "./twitter-token2sent.py {}"
 
