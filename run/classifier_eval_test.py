@@ -50,11 +50,13 @@ from pprint import pprint
 #debug_level = int(opts.debug_level)
 
 ### PARAMETERS ###
-sys_fs = ['system.key',]
-gold_fs = ['gold.key',]
+#sys_fs = ['system.key',]
+#gold_fs = ['gold.key',]
 #dev_sys_fs = ['dev-system.key',]
 #dev_gold_fs = ['dev-gold.key',]
-dev_sys_fs = ['y-22-cluster.ans',]
+sys_fs = ['all.key',]
+gold_fs = ['all.key',]
+dev_sys_fs = ['all.key',]
 dev_gold_fs = ['all.key',]
 k = 5
 opt = True #optimization
@@ -77,6 +79,5 @@ for i, sys, g, dev_sys, dev_g in izip(counter, sys_fs, gold_fs, dev_sys_fs, dev_
         logger = SemevalLogger(trainset, devset, w.name, debug_mode)
         e = SemevalEvaluator(w, trainset, devset, k, optimization=opt, logger=logger)
         scores = e.score()
-        #pprint(scores)
-        exit()
+        pprint(scores)
         #e.report()

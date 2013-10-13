@@ -4,9 +4,10 @@
 __author__ = "Osman Baskaya"
 
 from feature_transform import SemevalFeatureTransformer
+import re
 from data_load import SemevalKeyLoader
 from sklearn import cross_validation
-from logger import SemevalLogger
+from logger import SemevalLogger, ColorLogger
 from nlp_utils import calc_perp
 from collections import defaultdict as dd
 
@@ -18,7 +19,7 @@ formats can be added in data_load module.
 
 """
 
-__all__ = ['Evaluator', 'SemevalEvaluator']
+__all__ = ['Evaluator', 'SemevalEvaluator', 'ChunkEvaluator']
 
 
 def create_CV(n, n_fold, splits=[]):
@@ -31,38 +32,17 @@ def create_CV(n, n_fold, splits=[]):
 
 class Evaluator(object):
 
-    def __init__(self, clf_wrapper, trainset, devset, k, optimization, \
+    def __init__(self, clf_wrapper, k, optimization, \
                  key_loader, ft, logger):
-        self.trainset = trainset
-        self.devset = devset
         self.k = k # k in k-fold cross validation
         self.optimization = optimization # parameter optimization true/false
         self.key_loader = key_loader
         self.ft = ft #feature transformer
         self.logger = logger
-        if logger is None:
-            self.logger = SemevalLogger(3)
         self.clf_wrapper = clf_wrapper
         
-        #self.X = None
-        #self.Y = None
-        #self.X_dev = None
-        logger.init(self)
-
-    def load_key_file(self, f):
-        return self.key_loader.read_keyfile(f)
-
-    def report(self):
-        """This method provides evaluator's details to stderr"""
-        raise NotImplementedError
-        
-class SemevalEvaluator(Evaluator):
+        self.logger.init(self)
     
-    def __init__(self, clf_wrapper, trainset, devset, k, optimization, logger): 
-        super(SemevalEvaluator, self).__init__(clf_wrapper, trainset, devset, k, 
-            optimization, SemevalKeyLoader(), SemevalFeatureTransformer(weighted=False), 
-            logger=logger)
-
     def set_best_estimator(self, params, estimators):
 
         """ This method finds the best estimator on development set by using
@@ -84,7 +64,24 @@ class SemevalEvaluator(Evaluator):
         self.logger.info("Best set of parameters is: {}".format
                             (zip(par_list, max_par.split())))
         self.clf_wrapper.classifier = d[max_par][1]
-        #self.clf_wrapper.is_optimized = True
+        self.clf_wrapper.is_optimized = True
+
+    def load_key_file(self, f):
+        return self.key_loader.read_keyfile(f)
+    
+    def report(self):
+        """This method provides evaluator's details to stderr"""
+        raise NotImplementedError
+        
+class SemevalEvaluator(Evaluator):
+    
+    def __init__(self, clf_wrapper, trainset, devset, k, optimization, logger=None): 
+        super(SemevalEvaluator, self).__init__(clf_wrapper, k, 
+            optimization, SemevalKeyLoader(), SemevalFeatureTransformer(weighted=False), 
+            logger=logger)
+        
+        self.trainset = trainset
+        self.devset = devset
 
     def score(self):
         scores = {}
@@ -101,10 +98,6 @@ class SemevalEvaluator(Evaluator):
                     X, y = self.ft.convert_data(data, target)
                     X = self.ft.scale_data(X, drange=[-1,1])
                     cv = cross_validation.KFold(len(y), n_folds=self.k)
-                    for train, test in cv:
-                        print train, len(train)
-                        print test, len(test)
-                    exit()
                     p, e = self.clf_wrapper.optimize(X, y, cv=cv)
                     if p is not None:
                         params.append(p)
@@ -129,7 +122,7 @@ class SemevalEvaluator(Evaluator):
             except ValueError, e: # all instances are belongs to the same class
                 self.logger.warning("{}\t{}".format(tw, e))
             scores[tw] = (score.mean(), calc_perp(y))
-            self.ft.dump_data_libsvm_format(X, y, 'libsvm-input/' + tw)
+            #self.ft.dump_data_libsvm_format(X, y, 'libsvm-input/' + tw)
         return scores
 
     def report(self):
@@ -140,5 +133,44 @@ class SemevalEvaluator(Evaluator):
         feature_transformer={}, logger={}".format(self.k, self.optimization, \
         self.key_loader, self.ft, self.logger)
 
+
+class ChunkEvaluator(Evaluator):
+
+    def __init__(self, clf_wrapper, tw_dict, system_files, k, optimization, logger): 
+        super(ChunkEvaluator, self).__init__(clf_wrapper, k, 
+            optimization, SemevalKeyLoader(), SemevalFeatureTransformer(weighted=False), 
+            logger=logger)
+
+        self.system_files = system_files
+        
+        self.gold_dict = {}
+        self.instances = {}
+
+        for key, values in tw_dict.iteritems():
+            vv = map(self.load_key_file, values)
+            self.gold_dict[key] =  [vv[i][key] for i in range(len(vv))]
+            self.instances[key] = [vv[i][key].keys() for i in range(len(vv))]
+
+        self.get_system_answers()
+
+    def get_system_answers(self):
+        
+        self.system_key_dict = {}
+
+        for tw, val in self.system_files.iteritems():
+            print self.instances[tw][0]
+            values =  [val] * len(self.instances[tw])
+            vv = map(self.load_key_file, values)
+            self.system_key_dict[tw] =  [vv[i][tw] for i in range(len(vv))]
+            # Now we need to clear the chunks from other instances
+            include_lists = self.instances[tw]
+            for i, inc in enumerate(include_lists):
+                d = self.system_key_dict[tw][i]
+                self.system_key_dict[tw][i] = dict(zip(inc, map(d.get, inc)))
+
+
+    def score(self):
+        pass
+            
 
 

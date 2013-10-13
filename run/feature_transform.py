@@ -28,7 +28,7 @@ class SemevalFeatureTransformer(FeatureTransformer):
         y = []
         for key in data:
             X.append(dict(data[key]))
-            y.append(target[key][0][0])
+            y.append(target[key][0][0]) # we get only one sense for gold standard
         
         vec = DictVectorizer()
         return vec.fit_transform(X).toarray(), np.array(y)

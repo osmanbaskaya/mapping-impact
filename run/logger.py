@@ -28,6 +28,7 @@ class ColorLogger(object):
         self.FAIL = ''
         self.ENDC = ''
 
+
 class SemevalLogger(ColorLogger):
 
     def __init__(self, ts, devs, wrapper_type, mode):
@@ -63,6 +64,16 @@ class SemevalLogger(ColorLogger):
             msg = "INIT: {}\t{}".format(self.header, message),
             #FIXME: Why tuple msg
             print >> sys.stderr, self.OKBLUE, msg[0], self.ENDC
+
+class ChunkLogger(ColorLogger):
+
+    def __init__(self, mode):
+
+        super(ChunkLogger, self).__init__(mode)
+    
+    def init(self, message):
+        print >> sys.stderr, "Logger Works"
+
 
 def main():
     pass
