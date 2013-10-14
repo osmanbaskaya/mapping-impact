@@ -190,44 +190,43 @@ class ChunkEvaluator(Evaluator):
 
         for tw, chunks in self.system_key_dict.iteritems():
 
-            m = len(chunks)
-            chunk_score = np.zeros(m)
-            for i in range(m):
-                c = chunks[:]
-                g = self.gold_dict[tw][:]
-                test_data = c.pop(i)
-                test_gold = g.pop(i)
+            c = chunks[:]
+            g = self.gold_dict[tw][:]
 
-                val = {}
-                map(val.update, c)
+            # last chunk will be the test chunk.
+            test_data = c.pop()
+            test_gold = g.pop()
 
-                target = {}
-                map(target.update, g)
+            # data of the remaining chunks are incorporated
+            val = {}
+            map(val.update, c)
 
-                #print len(val), len(target)
-                
-                #print len(c), len(chunks)
-                #print len(g), len(self.gold_dict[tw])
-                #exit()
+            # gold labels of the remaining chunks are incorporated
+            target = {}
+            map(target.update, g)
 
-                X_train, y_train = self.ft.convert_data(val, target)
-                X_train = self.ft.scale_data(X_train)
-                X_test, y_test = self.ft.convert_data(test_data, test_gold)
-                X_test = self.ft.scale_data(X_test)
+            #print len(val), len(target)
+            
+            #print len(c), len(chunks)
+            #print len(g), len(self.gold_dict[tw])
+            #exit()
 
-                score = 0.0
-                try:
-                    self.clf_wrapper.classifier.fit(X_train, y_train)
-                    score = self.clf_wrapper.classifier.score(X_test, y_test)
-                    #prediction = self.clf_wrapper.classifier.predict(X_test)
-                except ValueError, e: # all instances are belongs to the same class
-                    pass
-                    #self.logger.warning("{}\t{}".format(tw, e))
-                chunk_score[i] = score
-                print score
-            scores[tw] = (chunk_score.mean())
+            X_train, y_train = self.ft.convert_data(val, target)
+            X_train = self.ft.scale_data(X_train)
+            X_test, y_test = self.ft.convert_data(test_data, test_gold)
+            X_test = self.ft.scale_data(X_test)
 
-            #self.ft.dump_data_libsvm_format(X, y, 'libsvm-input/' + tw)
+            score = 0.0
+            try:
+                self.clf_wrapper.classifier.fit(X_train, y_train)
+                score = self.clf_wrapper.classifier.score(X_test, y_test)
+                #prediction = self.clf_wrapper.classifier.predict(X_test)
+            except ValueError, e: # all instances are belongs to the same class
+                self.logger.warning("{}\t{}".format(tw, e))
+            #print "{}:{}".format(tw, score)
+            scores[tw] = (score, calc_perp(y_test))
+
+        #self.ft.dump_data_libsvm_format(X, y, 'libsvm-input/' + tw)
         return scores
             
 
