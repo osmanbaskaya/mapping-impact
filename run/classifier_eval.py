@@ -8,6 +8,8 @@ import re
 from data_load import SemevalKeyLoader
 from sklearn import cross_validation
 from logger import SemevalLogger, ColorLogger
+import numpy as np
+from pprint import pprint
 from nlp_utils import calc_perp
 from collections import defaultdict as dd
 
@@ -20,15 +22,6 @@ formats can be added in data_load module.
 """
 
 __all__ = ['Evaluator', 'SemevalEvaluator', 'ChunkEvaluator']
-
-
-def create_CV(n, n_fold, splits=[]):
-    if len(splits) == 0:
-        cv = cross_validation.KFold(n, n_folds=n_fold)
-    else:
-        print splits
-    return cv
-
 
 class Evaluator(object):
 
@@ -61,8 +54,8 @@ class Evaluator(object):
             d[s][1] = e
 
         max_par = max(d, key= lambda x: d[x][0])
-        self.logger.info("Best set of parameters is: {}".format
-                            (zip(par_list, max_par.split())))
+        #self.logger.info("Best set of parameters is: {}".format
+                            #(zip(par_list, max_par.split())))
         self.clf_wrapper.classifier = d[max_par][1]
         self.clf_wrapper.is_optimized = True
 
@@ -136,12 +129,13 @@ class SemevalEvaluator(Evaluator):
 
 class ChunkEvaluator(Evaluator):
 
-    def __init__(self, clf_wrapper, tw_dict, system_files, k, optimization, logger): 
+    def __init__(self, clf_wrapper, tw_dict, system_files, devset, k, optimization, logger): 
         super(ChunkEvaluator, self).__init__(clf_wrapper, k, 
             optimization, SemevalKeyLoader(), SemevalFeatureTransformer(weighted=False), 
             logger=logger)
 
         self.system_files = system_files
+        self.devset = devset
         
         self.gold_dict = {}
         self.instances = {}
@@ -158,7 +152,6 @@ class ChunkEvaluator(Evaluator):
         self.system_key_dict = {}
 
         for tw, val in self.system_files.iteritems():
-            print self.instances[tw][0]
             values =  [val] * len(self.instances[tw])
             vv = map(self.load_key_file, values)
             self.system_key_dict[tw] =  [vv[i][tw] for i in range(len(vv))]
@@ -170,7 +163,72 @@ class ChunkEvaluator(Evaluator):
 
 
     def score(self):
-        pass
+        scores = {}
+        # optimization
+        if self.optimization:
+            files = [self.devset.data, self.devset.target]
+            dev_system_dict, dev_gold_dict = map(self.load_key_file, files)
+
+            if not self.clf_wrapper.is_optimized:
+                params = []
+                estimators = []
+                for tw, data in sorted(dev_system_dict.iteritems()):
+                    target = dev_gold_dict[tw]
+                    X, y = self.ft.convert_data(data, target)
+                    X = self.ft.scale_data(X)
+                    cv = cross_validation.KFold(len(y), n_folds=self.k)
+                    p, e = self.clf_wrapper.optimize(X, y, cv=cv)
+                    if p is not None:
+                        params.append(p)
+                        estimators.append(e)
+                    #print p
+
+                self.set_best_estimator(params, estimators)
+            self.logger.info("Optimization finished")
+        
+        self.logger.info(self.clf_wrapper.classifier)
+
+        for tw, chunks in self.system_key_dict.iteritems():
+
+            m = len(chunks)
+            chunk_score = np.zeros(m)
+            for i in range(m):
+                c = chunks[:]
+                g = self.gold_dict[tw][:]
+                test_data = c.pop(i)
+                test_gold = g.pop(i)
+
+                val = {}
+                map(val.update, c)
+
+                target = {}
+                map(target.update, g)
+
+                #print len(val), len(target)
+                
+                #print len(c), len(chunks)
+                #print len(g), len(self.gold_dict[tw])
+                #exit()
+
+                X_train, y_train = self.ft.convert_data(val, target)
+                X_train = self.ft.scale_data(X_train)
+                X_test, y_test = self.ft.convert_data(test_data, test_gold)
+                X_test = self.ft.scale_data(X_test)
+
+                score = 0.0
+                try:
+                    self.clf_wrapper.classifier.fit(X_train, y_train)
+                    score = self.clf_wrapper.classifier.score(X_test, y_test)
+                    #prediction = self.clf_wrapper.classifier.predict(X_test)
+                except ValueError, e: # all instances are belongs to the same class
+                    pass
+                    #self.logger.warning("{}\t{}".format(tw, e))
+                chunk_score[i] = score
+                print score
+            scores[tw] = (chunk_score.mean())
+
+            #self.ft.dump_data_libsvm_format(X, y, 'libsvm-input/' + tw)
+        return scores
             
 
 

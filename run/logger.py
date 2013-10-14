@@ -19,6 +19,36 @@ class ColorLogger(object):
         if mode is None:
             self.disable()
         self.mode = mode
+        self.header = ""
+
+    def error(self, message):
+        if self.mode >= 1:
+            #msg = "ERROR: {}\t{}".format(self.header, message),
+            msg = "ERROR: {}".format(message),
+            #FIXME: Why tuple msg
+            print >> sys.stderr, self.FAIL, msg[0], self.ENDC
+
+
+    def warning(self, message):
+        if self.mode >= 2:
+            #msg = "WARNING: {}\t{}".format(self.header, message),
+            msg = "WARNING: {}".format(message),
+            #FIXME: Why tuple msg
+            print >> sys.stderr, self.WARNING, msg[0], self.ENDC
+
+    def info(self, message):
+        if self.mode >= 3:
+            msg = "INFO: {}".format(message),
+            #msg = "INFO: {}\t{}".format(self.header, message),
+            #FIXME: Why tuple msg
+            print >> sys.stderr, self.OKGREEN, msg[0], self.ENDC
+    
+    def init(self, message):
+        if self.mode >= 3:
+            #msg = "INFO: {}".format(message),
+            msg = "INIT: {}\t{}".format(self.header, message),
+            #FIXME: Why tuple msg
+            print >> sys.stderr, self.OKBLUE, msg[0], self.ENDC
 
     def disable(self):
         self.HEADER = ''
@@ -72,7 +102,7 @@ class ChunkLogger(ColorLogger):
         super(ChunkLogger, self).__init__(mode)
     
     def init(self, message):
-        print >> sys.stderr, "Logger Works"
+        pass
 
 
 def main():

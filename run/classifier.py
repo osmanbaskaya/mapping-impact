@@ -45,8 +45,8 @@ class SVCWrapper(ClassifierWrapper):
     def __init__(self):
         super(SVCWrapper, self).__init__("SVC", SVC(kernel='linear'))
         #FIXME: add gamma parameter? Check ranges
-        #self.parameters = {'kernel':('linear', 'rbf'), 'C':[0.01, 0.05, 0.1, 0.5, 1, 2, 5, 10]}
-        self.parameters = {'kernel':('linear', 'rbf'), 'C':[10]}
+        self.parameters = {'kernel':('linear', 'rbf'), 'C':[0.01, 0.05, 0.1, 0.5, 1, 2, 5, 10]}
+        #self.parameters = {'kernel':('linear', 'rbf'), 'C':[10]}
 
 class MultinomialNBWrapper(ClassifierWrapper):
     

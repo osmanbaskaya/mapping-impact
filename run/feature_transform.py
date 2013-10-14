@@ -21,7 +21,8 @@ class SemevalFeatureTransformer(FeatureTransformer):
 
     def __init__(self, weighted=False):
         super(SemevalFeatureTransformer, self).__init__("SemevalFeatureTransformer")
-        self.vectorizer = CountVectorizer(min_df=0, token_pattern=r'[\w:\.%\d.]+')
+        #self.vectorizer = CountVectorizer(min_df=0, token_pattern=r'[\w:\.%\d.]+')
+        self.vectorizer = DictVectorizer()
     
     def convert_data(self, data, target):
         X = []
@@ -30,8 +31,8 @@ class SemevalFeatureTransformer(FeatureTransformer):
             X.append(dict(data[key]))
             y.append(target[key][0][0]) # we get only one sense for gold standard
         
-        vec = DictVectorizer()
-        return vec.fit_transform(X).toarray(), np.array(y)
+        X, y = self.vectorizer.fit_transform(X).toarray(), np.array(y)
+        return X, y
         
     def scale_data(self, X, drange=[0,1]):
         return MinMaxScaler(feature_range=drange).fit_transform(X)
