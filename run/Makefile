@@ -220,6 +220,10 @@ twitter-pseudoword-samples-more-than-%.txt: twitter-exclude-list%.txt create-pwl
 	create-pwlist.py ${PSEUDO_W_FILE} $< > $@
 	wc -l $@
 
+PSEUDOWORDS=$(shell find ans3/ -name "*.ans" | sed -e 's|\.ans||g' -e 's|ans3/||g') 
+chunk-evaluation:
+	performance_eval.py ${PSEUDOWORDS}
+
 clear-data: 
 	rm -rf ../data/components ../data/monosemous-words ../data/pos-filtering
 
