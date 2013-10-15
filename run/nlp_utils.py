@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import division
 import sys
+import numpy as np
 import math
 from collections import defaultdict as dd
 from itertools import izip
@@ -71,6 +72,34 @@ def calc_perp_dict_graded(d):
         entropy += -p * math.log(p, 2)
     return 2 ** entropy
 
+
+#def is_features_same(f1, f2):
+    #for e1, e2 in izip(f1, f2):
+        #if e1 != e2:
+            #return False
+    #return True
+
+def delete_features(f1, f2, X_train, X_test):
+    
+    a = set(f1)
+    b = set(f2)
+    c = a.difference(b).union(b.difference(a))
+
+    remove_list = []
+    for i, e in enumerate(f1):
+        if e in c:
+            remove_list.append(i)
+
+    X_train = np.delete(X_train, remove_list, axis=1)
+
+    remove_list = []
+    for i, e in enumerate(f2):
+        if e in c:
+            remove_list.append(i)
+    
+    X_test = np.delete(X_test, remove_list, axis=1)
+
+    return X_train, X_test
 
 
 #a = [1, 1, 1, 2, 2, 2, 3, 3]

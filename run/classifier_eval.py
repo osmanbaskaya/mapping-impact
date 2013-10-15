@@ -10,7 +10,7 @@ from sklearn import cross_validation
 from logger import SemevalLogger, ColorLogger
 import numpy as np
 from pprint import pprint
-from nlp_utils import calc_perp
+from nlp_utils import calc_perp, delete_features
 from collections import defaultdict as dd
 
 
@@ -160,11 +160,12 @@ class ChunkEvaluator(Evaluator):
             for i, inc in enumerate(include_lists):
                 d = self.system_key_dict[tw][i]
                 self.system_key_dict[tw][i] = dict(zip(inc, map(d.get, inc)))
+        self.logger.info("Reading all system answers done")
 
 
-    def score(self):
-        scores = {}
-        # optimization
+
+
+    def optimize(self):
         if self.optimization:
             files = [self.devset.data, self.devset.target]
             dev_system_dict, dev_gold_dict = map(self.load_key_file, files)
@@ -182,13 +183,10 @@ class ChunkEvaluator(Evaluator):
                         params.append(p)
                         estimators.append(e)
                     #print p
-
                 self.set_best_estimator(params, estimators)
-            self.logger.info("Optimization finished")
-        
-        self.logger.info(self.clf_wrapper.classifier)
+                self.logger.info("Optimization finished")
 
-        for tw, chunks in self.system_key_dict.iteritems():
+    def _prepare(self, tw, chunks):
 
             c = chunks[:]
             g = self.gold_dict[tw][:]
@@ -213,21 +211,98 @@ class ChunkEvaluator(Evaluator):
 
             X_train, y_train = self.ft.convert_data(val, target)
             X_train = self.ft.scale_data(X_train)
+            features1 = self.ft.vectorizer.get_feature_names()
             X_test, y_test = self.ft.convert_data(test_data, test_gold)
-            X_test = self.ft.scale_data(X_test)
 
+            # check the order 
+            #pprint(X_test.tolist()[:10])
+            #pprint(zip(test_data.keys(), y_test)[:10])
+            #print self.ft.vectorizer.get_feature_names()
+
+            X_test = self.ft.scale_data(X_test)
+            features2 = self.ft.vectorizer.get_feature_names()
+            # Feature space should be the same for both training and testing
+
+            if features1 != features2:
+                X_train, X_test = delete_features(features1, features2, X_train, X_test)
+
+            return X_train, X_test, y_train, y_test, test_data.keys()
+    
+    def predict(self):
+        predictions = {}
+        # optimization
+        self.optimize()
+        self.logger.info(self.clf_wrapper.classifier)
+        
+        for tw, chunks in self.system_key_dict.iteritems():
+
+            X_train, X_test, y_train, y_test, test_inst_order = self._prepare(tw,chunks)
+            
+            try:
+                self.clf_wrapper.classifier.fit(X_train, y_train)
+                prediction = self.clf_wrapper.classifier.predict(X_test)
+            except ValueError, e: # all instances are belongs to the same class
+                self.logger.warning("{}\t{}".format(tw, e))
+                if str(e) == "The number of classes has to be greater than one.":
+                    prediction = [y_train[0]] * len(y_test)
+
+            print "predictions"
+            predictions[tw] = (zip(test_inst_order, prediction))
+
+        pprint(predictions[tw])
+        return predictions
+
+    def score(self):
+        scores = {}
+        # optimization
+        self.optimize()
+        self.logger.info(self.clf_wrapper.classifier)
+        
+        for tw, chunks in self.system_key_dict.iteritems():
+
+            X_train, X_test, y_train, y_test, test_inst_order = self._prepare(tw,chunks)
+            
             score = 0.0
             try:
                 self.clf_wrapper.classifier.fit(X_train, y_train)
                 score = self.clf_wrapper.classifier.score(X_test, y_test)
-                #prediction = self.clf_wrapper.classifier.predict(X_test)
             except ValueError, e: # all instances are belongs to the same class
                 self.logger.warning("{}\t{}".format(tw, e))
-            #print "{}:{}".format(tw, score)
+                if str(e) == "The number of classes has to be greater than one.":
+                    prediction = [y_train[0]] * len(y_test)
+                    score = sum(prediction == y_test) / float(len(y_test))
+            
             scores[tw] = (score, calc_perp(y_test))
-
         #self.ft.dump_data_libsvm_format(X, y, 'libsvm-input/' + tw)
         return scores
+
+    def score_and_predict(self):
+        scores = {}
+        predictions = {}
+        # optimization
+        self.optimize()
+        self.logger.info(self.clf_wrapper.classifier)
+        
+        for tw, chunks in self.system_key_dict.iteritems():
+
+            X_train, X_test, y_train, y_test, test_inst_order = self._prepare(tw,chunks)
             
+            score = 0.0
+            try:
+                self.clf_wrapper.classifier.fit(X_train, y_train)
+                prediction = self.clf_wrapper.classifier.predict(X_test)
+                score = self.clf_wrapper.classifier.score(X_test, y_test)
+            except ValueError, e: # all instances are belongs to the same class
+                self.logger.warning("{}\t{}".format(tw, e))
+                if str(e) == "The number of classes has to be greater than one.":
+                    prediction = [y_train[0]] * len(y_test)
+                    score = sum(prediction == y_test) / float(len(y_test))
+            
+            scores[tw] = (score, calc_perp(y_test))
+            predictions[tw] = (zip(test_inst_order, prediction))
+        #self.ft.dump_data_libsvm_format(X, y, 'libsvm-input/' + tw)
+        return scores, predictions
+
+
 
 

@@ -24,14 +24,14 @@ class SemevalFeatureTransformer(FeatureTransformer):
         #self.vectorizer = CountVectorizer(min_df=0, token_pattern=r'[\w:\.%\d.]+')
         self.vectorizer = DictVectorizer()
     
-    def convert_data(self, data, target):
+    def convert_data(self, data, target, rem=None):
         X = []
         y = []
         for key in data:
             X.append(dict(data[key]))
             y.append(target[key][0][0]) # we get only one sense for gold standard
         
-        X, y = self.vectorizer.fit_transform(X).toarray(), np.array(y)
+        X, y = self.vectorizer.fit_transform(X, rem).toarray(), np.array(y)
         return X, y
         
     def scale_data(self, X, drange=[0,1]):
