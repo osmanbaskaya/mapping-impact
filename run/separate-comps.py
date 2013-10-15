@@ -9,8 +9,8 @@ import re
 import sys
 from os import path
 
-data = gzip.open(sys.argv[1])
-out_dir = sys.argv[2]
+files = map(gzip.open, sys.argv[2:])
+out_dir = sys.argv[1]
 
 d = dd(list)
 
@@ -20,9 +20,10 @@ def write2file(d, out):
         f.write(''.join(values))
         f.close()
 
-for line in data:
-    testm = re.search('<(\w+)', line)
-    d[testm.group(1)].append(line)
+for f in files:
+    for line in f:
+        testm = re.search('<(\w+)', line)
+        d[testm.group(1)].append(line)
 
 write2file(d, out_dir)
 

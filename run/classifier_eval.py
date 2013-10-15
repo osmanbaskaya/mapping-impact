@@ -25,9 +25,8 @@ __all__ = ['Evaluator', 'SemevalEvaluator', 'ChunkEvaluator']
 
 class Evaluator(object):
 
-    def __init__(self, clf_wrapper, k, optimization, \
+    def __init__(self, clf_wrapper, optimization, \
                  key_loader, ft, logger):
-        self.k = k # k in k-fold cross validation
         self.optimization = optimization # parameter optimization true/false
         self.key_loader = key_loader
         self.ft = ft #feature transformer
@@ -69,10 +68,10 @@ class Evaluator(object):
 class SemevalEvaluator(Evaluator):
     
     def __init__(self, clf_wrapper, trainset, devset, k, optimization, logger=None): 
-        super(SemevalEvaluator, self).__init__(clf_wrapper, k, 
-            optimization, SemevalKeyLoader(), SemevalFeatureTransformer(weighted=False), 
-            logger=logger)
+        super(SemevalEvaluator, self).__init__(clf_wrapper, optimization, 
+         SemevalKeyLoader(), SemevalFeatureTransformer(weighted=False), logger=logger)
         
+        self.k = k # k in k-fold cross validation
         self.trainset = trainset
         self.devset = devset
 
@@ -129,10 +128,9 @@ class SemevalEvaluator(Evaluator):
 
 class ChunkEvaluator(Evaluator):
 
-    def __init__(self, clf_wrapper, tw_dict, system_files, devset, k, optimization, logger): 
-        super(ChunkEvaluator, self).__init__(clf_wrapper, k, 
-            optimization, SemevalKeyLoader(), SemevalFeatureTransformer(weighted=False), 
-            logger=logger)
+    def __init__(self, clf_wrapper, tw_dict, system_files, devset, optimization, logger): 
+        super(ChunkEvaluator, self).__init__(clf_wrapper, optimization, 
+         SemevalKeyLoader(), SemevalFeatureTransformer(weighted=False), logger=logger)
 
         self.system_files = system_files
         self.devset = devset

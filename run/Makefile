@@ -16,7 +16,7 @@ TRAIN3=$(shell ls ../data/ukwac/UKWAC-* | sort -k 2 -t - -n | head -15 | tail -5
 TRAIN4=$(shell ls ../data/ukwac/UKWAC-* | sort -k 2 -t - -n | head -20 | tail -5)
 TRAIN5=$(shell ls ../data/ukwac/UKWAC-* | sort -k 2 -t - -n | head -25 | tail -5)
 
-TEST=$(shell find ../data/pos-filtering/  -name "*.raw.gz" | sort)
+TEST=$(shell find ../data/monosemous-words/ -name "*.raw.gz" | sort)
 
 ### BIN SETUP
 bin:
@@ -107,11 +107,27 @@ test-inst-list.gz: ../data/keys/
 	cat ../data/keys/*.instances | sort -t$$'\t' -k1,1 -k2,2n \
 	| uniq | gzip > $@
 
-test.context.gz: test-inst-list.gz
-	zcat $< | extract-test-context.py | gzip > $@
+twitter-inst-list.gz: ../data/twitter/keys/
+	cat ../data/twitter/keys/*.instances | sort -t$$'\t' -k2,2 -k3,3n \
+	| uniq | gzip > $@
 
+# test-inst-list.gz should be sorted
+# test-inst-list does not have instance column like twitter-inst-list so
+# it should not work properly. instance files in keys/ should have instance ids column.
+test.context.gz: test-inst-list.gz
+	zcat $< | extract-context.py ../data/pos-filtering/ | gzip > $@
+
+# twitter-inst-list.gz should be sorted
+twitter.context.gz: twitter-inst-list.gz
+	zcat $< | extract-context.py ../data/twitter/pos-filtering/ | gzip > $@
+
+# test-inst-list.gz should be sorted
 test.sentence.gz: test-inst-list.gz
 	zcat $< | extract-test-sentence.py | gzip > $@
+
+# twitter-inst-list.gz should be sorted
+twitter.sentence.gz: twitter-inst-list.gz
+	zcat $< | extract-sentence.py ../data/twitter/pos-filtering/ | gzip > $@
 
 random.context.gz: train.context.gz
 	zcat $< | ./sample-contexts.py 2500  | gzip > $@
@@ -119,13 +135,19 @@ random.context.gz: train.context.gz
 random.sentence.gz: train.sentence.gz
 	zcat $< | ./sample-contexts.py 2500  | gzip > $@
 
-test-comp-sep: sentence/test
-	separate-comps.py test.sentence.gz $<
+test-comp-sep: sentence/test test.sentence.gz
+	separate-comps.py $^
 
-train-comp-sep: sentence/train
-	separate-comps.py random.sentence.gz $<
+train-comp-sep: sentence/train random.sentence.gz 
+	separate-comps.py $^
 
-sub-comp-sep: target.sub.gz sub/
+twitter-test-comp-sep: twitter-sentence/test twitter.sentence.gz
+	separate-comps.py $^
+
+twitter-train-comp-sep: twitter-sentence/train random.sentence.gz test.sentence.gz
+	separate-comps.py $^
+
+sub-comp-sep: sub/ target.sub.gz
 	separate-comps.py $^
 
 FS_NSUB=100 # go until you have this many substitutes
@@ -159,11 +181,25 @@ test.sub.1.gz test.sub.2.gz test.sub.3.gz test.sub.4.gz test.sub.5.gz test.sub.6
 	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > test.sub.4.gz &\
 	zcat $< | tail -n +600001 | head -150000 |\
 	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > test.sub.5.gz &\
-	zcat $< | tail -n +750000 |\
+	zcat $< | tail -n +750001 |\
 	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > test.sub.6.gz &\
 	wait
 
+twitter.sub.1.gz twitter.sub.2.gz twitter.sub.3.gz twitter.sub.4.gz: twitter.context.gz train.lm.gz
+	zcat $< | tail -n +00001 | head -45000 |\
+	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > twitter.sub.1.gz &\
+	zcat $< | tail -n +45001 | head -45000 |\
+	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > twitter.sub.2.gz &\
+	zcat $< | tail -n +90001 | head -45000 |\
+	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > twitter.sub.3.gz &\
+	zcat $< | tail -n +135001 |\
+	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > twitter.sub.4.gz &\
+	wait
+
 test.sub.gz: test.sub.1.gz test.sub.2.gz test.sub.3.gz test.sub.4.gz test.sub.5.gz test.sub.6.gz
+	zcat $^ | gzip > $@
+
+twitter.sub.gz: twitter.sub.1.gz twitter.sub.2.gz twitter.sub.3.gz twitter.sub.4.gz 
 	zcat $^ | gzip > $@
 
 #2199795 442158795 4402274133
@@ -207,10 +243,16 @@ PAIRS=$(shell find pairs/ -name "*")
 aiku-run:
 	echo ${PAIRS} | sed -e 's/pairs.gz/ans/g' -e 's/pairs/ans/g' | xargs -n 1 -P 60 make
 #./key-mapper.py ans/actor.ans ../data/keys/actor.key
+
 AIKU_ANS=$(shell find ans/ -name "*.ans" | sed -e 's|\.ans||g' -e 's|ans/||g') 
 eval/aiku.ans:
 	for f in ${AIKU_ANS}; do aiku-key-mapper.py ans/$$f.ans ../data/keys/$$f.key; done
 	cat ans2/*.ans > $@
+
+hdp-ans/%.ans:
+	paste <(cat ../data/keys/$*.key2 | cut -d' ' -f1,2) <(cat eval/hdp.ans | grep -P "^$*.n " | cut -d ' ' -f3-) > $@
+	# to run it with all data: for i in `ls ../data/keys/*.key2 | sed -e 's|../data/keys/||g' -e 's|.key2||g'`; 
+	# do make hdp-ans/$i.ans; done
 
 twitter-exclude-list%.txt: ../data/cleaned-tweets/
 	for i in `ls $<*.tsv`; do echo `cat $$i | wc -l | awk \
