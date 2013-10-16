@@ -8,8 +8,8 @@ import os
 import gzip
 import re
 
-test_path = 'sentence/test/'
-train_path = 'sentence/train/'
+test_path = 'twitter-sentence/test/'
+train_path = 'twitter-sentence/train/'
 
 out = 'hdp-wsi/wsi_input/example/'
 all_fold = out + 'all/'
@@ -27,7 +27,7 @@ def fetch(path, comps):
 
 def replace(base, test, train):
     test.extend(train)
-    return re.sub('<\w+\..*>', '{}.n'.format(base), ''.join(test))
+    return re.sub('<\w+\..*\d+>', '{}'.format(base), ''.join(test))
 
 num_file = open(num_file_name, 'w')
 for line in open(sys.argv[1]):
@@ -41,5 +41,10 @@ for line in open(sys.argv[1]):
     num_file.write("{}.n {}\n".format(base, test_total))
     fn = "{}{}.n.lemma".format(all_fold, base)
     pseudoword_file = open(fn, 'w')
-    pseudoword_file.write(replace(base, test_insts, train_insts))
+    s = replace(base, test_insts, train_insts)
+    #FIXME: HDP Sorun cikartiyor alttaki satir olmadiginda. HDP tarafinda fixle
+    pseudoword_file.write(s.replace('#', '*'))
     pseudoword_file.close()
+
+
+

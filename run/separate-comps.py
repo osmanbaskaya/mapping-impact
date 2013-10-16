@@ -22,7 +22,7 @@ def write2file(d, out):
 
 for f in files:
     for line in f:
-        testm = re.search('<(\w+)', line)
+        testm = re.search('<(\w+)\.\w+', line)
         d[testm.group(1)].append(line)
 
 write2file(d, out_dir)

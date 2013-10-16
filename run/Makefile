@@ -16,7 +16,7 @@ TRAIN3=$(shell ls ../data/ukwac/UKWAC-* | sort -k 2 -t - -n | head -15 | tail -5
 TRAIN4=$(shell ls ../data/ukwac/UKWAC-* | sort -k 2 -t - -n | head -20 | tail -5)
 TRAIN5=$(shell ls ../data/ukwac/UKWAC-* | sort -k 2 -t - -n | head -25 | tail -5)
 
-TEST=$(shell find ../data/monosemous-words/ -name "*.raw.gz" | sort)
+TEST=$(shell find ../data/pos-filtering/ -name "*.raw.gz" | sort)
 
 ### BIN SETUP
 bin:
@@ -114,8 +114,14 @@ twitter-inst-list.gz: ../data/twitter/keys/
 # test-inst-list.gz should be sorted
 # test-inst-list does not have instance column like twitter-inst-list so
 # it should not work properly. instance files in keys/ should have instance ids column.
+# See new_key target
 test.context.gz: test-inst-list.gz
 	zcat $< | extract-context.py ../data/pos-filtering/ | gzip > $@
+
+../data/keys2:
+	mkdir $@
+	for i in `ls *\.key | sed 's|.key||g'`; do paste <(cat $i.key | cut -d ' ' -f2) \
+		<(cat $i.instances) > ../keys/$i.instances; done
 
 # twitter-inst-list.gz should be sorted
 twitter.context.gz: twitter-inst-list.gz
@@ -123,7 +129,7 @@ twitter.context.gz: twitter-inst-list.gz
 
 # test-inst-list.gz should be sorted
 test.sentence.gz: test-inst-list.gz
-	zcat $< | extract-test-sentence.py | gzip > $@
+	zcat $< | extract-sentence.py ../data/pos-filtering/ | gzip > $@
 
 # twitter-inst-list.gz should be sorted
 twitter.sentence.gz: twitter-inst-list.gz
@@ -218,6 +224,10 @@ SC_OPTIONS=-a -r 1 -d 25 -z 0.166 -p 50 -u 0.2 -s ${SEED} -v
 create-input-for-hdp: ${PSEUDO_W_FILE}
 	rm -rf hdp-wsi/wsi_input/example/all/*.lemma
 	create-hdp-input.py $<
+
+# some pseudowords that have missing component(s) should be deleted
+twitter-hdp-input-cleaner: hdp-wsi/wsi_input/example/num_test_instances.all.txt
+	twitter-hdp-cleaner.py
 
 create-input-for-wordsub: ${PSEUDO_W_FILE}
 	create-wordsub-input.py $<
