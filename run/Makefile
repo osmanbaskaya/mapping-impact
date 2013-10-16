@@ -17,6 +17,8 @@ TRAIN4=$(shell ls ../data/ukwac/UKWAC-* | sort -k 2 -t - -n | head -20 | tail -5
 TRAIN5=$(shell ls ../data/ukwac/UKWAC-* | sort -k 2 -t - -n | head -25 | tail -5)
 
 TEST=$(shell find ../data/pos-filtering/ -name "*.raw.gz" | sort)
+TWITTER_EXISTED_PW_LIST='existed-twitter-pseudoword-list.txt'
+#ls *.key | sed 's|.key||g' > ../../../run/existed-twitter-pseudoword-list.txt
 
 ### BIN SETUP
 bin:
@@ -28,7 +30,6 @@ gigafetch.out:
 
 tokenize-lemmatize-postag.out:
 	echo ${RAW_FILES} | xargs -n 1 -P 60 run-tok-pos-lem.py > $@
-
 
 ../data/components: ${PSEUDO_W_FILE}  #wc -l = 22632220
 	mkdir $@
@@ -156,6 +157,9 @@ twitter-train-comp-sep: twitter-sentence/train random.sentence.gz test.sentence.
 sub-comp-sep: sub/ target.sub.gz
 	separate-comps.py $^
 
+twitter-sub-comp-sep: twitter/sub/ twitter.sub.gz
+	separate-comps.py $^
+
 FS_NSUB=100 # go until you have this many substitutes
 FS_PSUB=1.0 # or this much cumulative probability
 FS_OPTIONS=-n ${FS_NSUB} -p ${FS_PSUB}
@@ -191,7 +195,7 @@ test.sub.1.gz test.sub.2.gz test.sub.3.gz test.sub.4.gz test.sub.5.gz test.sub.6
 	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > test.sub.6.gz &\
 	wait
 
-twitter.sub.1.gz twitter.sub.2.gz twitter.sub.3.gz twitter.sub.4.gz: twitter.context.gz train.lm.gz
+twitter.all.sub.1.gz twitter.all.sub.2.gz twitter.all.sub.3.gz twitter.all.sub.4.gz: twitter.context.gz train.lm.gz
 	zcat $< | tail -n +00001 | head -45000 |\
 	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > twitter.sub.1.gz &\
 	zcat $< | tail -n +45001 | head -45000 |\
@@ -205,8 +209,8 @@ twitter.sub.1.gz twitter.sub.2.gz twitter.sub.3.gz twitter.sub.4.gz: twitter.con
 test.sub.gz: test.sub.1.gz test.sub.2.gz test.sub.3.gz test.sub.4.gz test.sub.5.gz test.sub.6.gz
 	zcat $^ | gzip > $@
 
-twitter.sub.gz: twitter.sub.1.gz twitter.sub.2.gz twitter.sub.3.gz twitter.sub.4.gz 
-	zcat $^ | gzip > $@
+twitter.sub.gz: twitter.all.sub.1.gz twitter.all.sub.2.gz twitter.all.sub.3.gz twitter.all.sub.4.gz 
+	zcat $^ | grep -P '^<\w+\.\w+' | gzip > $@
 
 #2199795 442158795 4402274133
 target.sub.gz: test.sub.gz all.sub.1.gz all.sub.2.gz all.sub.3.gz all.sub.4.gz
@@ -230,15 +234,22 @@ twitter-hdp-input-cleaner: hdp-wsi/wsi_input/example/num_test_instances.all.txt
 	twitter-hdp-cleaner.py
 
 create-input-for-wordsub: ${PSEUDO_W_FILE}
-	create-wordsub-input.py $<
+	create-wordsub-input.py $< sub/ wordsub/
+
+twitter-create-input-for-wordsub: ${PSEUDO_W_FILE}
+	create-wordsub-input.py $< twitter/sub/ twitter/wordsub/ ${TWITTER_EXISTED_PW_LIST}
 
 %.pairs.gz:
-	perl -le 'print "wordsub/$*.gz" for 1..100' | xargs zcat | wordsub -s ${SEED} | \
-	gzip > pairs/$@
+	perl -le 'print "twitter/wordsub/$*.gz" for 1..100' | xargs zcat | wordsub -s ${SEED} \
+	| gzip > twitter/pairs/$@
 
 SUBS=$(shell find wordsub/  -name "*" | sed 's|wordsub/||g' | sort)
 create-input-for-pairs: wordsub/
 	echo ${SUBS} | sed 's|.gz|.pairs.gz|g' | xargs -n1 -P 50 make 
+
+TSUBS=$(shell find twitter/wordsub/  -name "*" | sed 's|twitter/wordsub/||g' | sort)
+twitter-create-input-for-pairs: twitter/wordsub/
+	echo ${TSUBS} | sed 's|.gz|.pairs.gz|g' | xargs -n1 -P 50 make 
 
 eval/hdp.ans:
 	rm -rf hdp-wsi/topicmodelling/topicmodel_output/*
@@ -249,10 +260,17 @@ NUM_CLUST=10
 ans/%.ans:
 	y-cluster.py $* ${SEED} ${NUM_CLUST} #| gzip > $@
 
+twitter/ans/%.ans:
+	y-twitter-cluster.py $* ${SEED} ${NUM_CLUST} #| gzip > $@
+
 PAIRS=$(shell find pairs/ -name "*") 
 aiku-run:
 	echo ${PAIRS} | sed -e 's/pairs.gz/ans/g' -e 's/pairs/ans/g' | xargs -n 1 -P 60 make
 #./key-mapper.py ans/actor.ans ../data/keys/actor.key
+
+twitter-aiku-run: 
+	cat ${TWITTER_EXISTED_PW_LIST} | sed -e 's|$$|.ans|g' -e 's|^|twitter/ans/|g' | \
+		xargs -n 1 -P 60 make
 
 AIKU_ANS=$(shell find ans/ -name "*.ans" | sed -e 's|\.ans||g' -e 's|ans/||g') 
 eval/aiku.ans:

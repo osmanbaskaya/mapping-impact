@@ -26,8 +26,9 @@ def fetch(path, comps):
     return (all_lines, len(all_lines))
 
 def replace(base, test, train):
-    test.extend(train)
-    return re.sub('<\w+\..*\d+>', '{}'.format(base), ''.join(test))
+    #test.extend(train)
+    return ''.join(test)
+    #return re.sub('<\w+\..*\d+>', '{}'.format(base), ''.join(test))
 
 num_file = open(num_file_name, 'w')
 for line in open(sys.argv[1]):
@@ -35,14 +36,13 @@ for line in open(sys.argv[1]):
     base, comps = line[0], line[1:]
     base = base[1:-1]
     base = base.replace("'", "")
-    seen = {}
     test_insts, test_total = fetch(test_path, comps)
     train_insts, train_total = fetch(train_path, comps)
     num_file.write("{}.n {}\n".format(base, test_total))
     fn = "{}{}.n.lemma".format(all_fold, base)
     pseudoword_file = open(fn, 'w')
     s = replace(base, test_insts, train_insts)
-    #FIXME: HDP Sorun cikartiyor alttaki satir olmadiginda. HDP tarafinda fixle
+    #FIXME: Twitter HDP Sorun cikartiyor alttaki satir olmadiginda. HDP tarafinda fixle
     pseudoword_file.write(s.replace('#', '*'))
     pseudoword_file.close()
 

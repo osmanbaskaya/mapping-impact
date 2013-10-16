@@ -9,9 +9,9 @@ import gzip
 #import re
 #from itertools import count
 
-sub_path = 'sub/'
-out = 'wordsub/'
-
+sub_path = sys.argv[2] # sub vector path
+out = sys.argv[3] # output path. that is wordsub
+existed = set([tw.strip() for tw in open(sys.argv[4]).readlines()])# existed pseudowords
 def fetch(path, comps):
     all_lines = []
     for comp in comps:
@@ -21,17 +21,15 @@ def fetch(path, comps):
             all_lines.extend(lines)
     return (all_lines, len(all_lines))
 
-#def replace(base, data):
-    #return re.sub('<\w+', '<{}'.format(base), ''.join(data))
-
+#FIXME unnecessary fetching with some pseuwords that share the same components
 for line in open(sys.argv[1]):
     line = line.split()
     base, comps = line[0], line[1:]
     base = base[1:-1]
     base = base.replace("'", "")
-    seen = {}
-    test_insts, test_total = fetch(sub_path, comps)
-    fn = "{}{}".format(out, base)
-    pseudoword_file = gzip.open(fn + '.gz', 'w')
-    pseudoword_file.write(''.join(test_insts))
-    pseudoword_file.close()
+    if base in existed:
+        test_insts, test_total = fetch(sub_path, comps)
+        fn = "{}{}".format(out, base)
+        pseudoword_file = gzip.open(fn + '.gz', 'w')
+        pseudoword_file.write(''.join(test_insts))
+        pseudoword_file.close()
