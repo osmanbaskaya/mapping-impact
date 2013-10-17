@@ -6,6 +6,7 @@ __author__ = "Osman Baskaya"
 from sklearn import grid_search
 from sklearn.svm import SVC
 from sklearn.naive_bayes import MultinomialNB, BernoulliNB
+from sklearn.tree import DecisionTreeClassifier
 #from statsmodels.discrete.discrete_model import MNLogit
 import numpy as np
 import sys
@@ -61,6 +62,14 @@ class BernoulliNBWrapper(ClassifierWrapper):
         super(BernoulliNBWrapper, self).__init__("BernoulliNBWrapper", BernoulliNB())
         #FIXME: Check ranges
         self.parameters = {'alpha': np.linspace(0,1,11)}
+
+class DecisionTreeWrapper(ClassifierWrapper):
+    
+    def __init__(self):
+        super(DecisionTreeWrapper, self).__init__("DecisionTreeWrapper",
+                                    DecisionTreeClassifier(criterion="entropy"))
+        #FIXME: Check ranges
+        self.parameters = {}
 
 #class MNLogitWrapper(ClassifierWrapper):
 
