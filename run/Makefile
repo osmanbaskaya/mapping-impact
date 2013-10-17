@@ -290,9 +290,14 @@ twitter-pseudoword-samples-more-than-%.txt: twitter-exclude-list%.txt create-pwl
 	create-pwlist.py ${PSEUDO_W_FILE} $< > $@
 	wc -l $@
 
-PSEUDOWORDS=$(shell find ans3/ -name "*.ans" | sed -e 's|\.ans||g' -e 's|ans3/||g') 
-chunk-evaluation:
-	performance_eval.py ${PSEUDOWORDS}
+PSEUDOWORDS=$(shell find aiku-ans/ -name "*.ans" | sed -e 's|\.ans||g' -e 's|aiku-ans/||g') 
+%-chunk-evaluation:
+	performance_eval.py $*-ans/ $*-chunk-keys 1 0 200 ${PSEUDOWORDS} & \
+	performance_eval.py $*-ans/ $*-chunk-keys 2 200 400 ${PSEUDOWORDS} & \
+	performance_eval.py $*-ans/ $*-chunk-keys 3 400 600 ${PSEUDOWORDS} & \
+	performance_eval.py $*-ans/ $*-chunk-keys 4 600 800 ${PSEUDOWORDS} & \
+	performance_eval.py $*-ans/ $*-chunk-keys 5 800 1000 ${PSEUDOWORDS} & \
+	wait
 
 clear-data: 
 	rm -rf ../data/components ../data/monosemous-words ../data/pos-filtering

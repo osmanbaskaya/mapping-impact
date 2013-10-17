@@ -6,12 +6,12 @@ from itertools import izip, combinations
 import os
 from collections import defaultdict as dd
 
-def get_exp_name(exp, tw, cls_name):
+def get_exp_name(exp, tw, cls_name, exp_part):
 
     detail = [tt.rsplit('.', 3)[1:3] for tt in exp[tw]]
     tr, te = detail[0][1], detail[-1][1]
     #exp_name = "%s-%s-%s-%s" % (cls_name, tr, te, detail[-1][0])
-    exp_name = "%s-%s-%s" % (cls_name, tr, te)
+    exp_name = "{}-{}-{}-{}".format(cls_name, tr, te, exp_part)
     return exp_name
 
 def get_gold_chunk_filename(word, chunk_path, types):
