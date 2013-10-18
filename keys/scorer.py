@@ -39,10 +39,10 @@ for c in common_set:
 
 precision = true_pos / sys_line
 recall = true_pos / gold_line
-print 'Scores for system_file: "{}" \t gold_file: "{}"'.format(s_file, g_file)
+print '\nScores for system_file: "{}" \t gold_file: "{}"'.format(s_file, g_file)
 print "\tPrecision is {} ({} correct of {} attempted)".format(precision, true_pos, sys_line)
 print "\tRecall is {} ({} correct of {} attempted)".format(recall, true_pos, gold_line)
-print "\tF1-Score is {}".format((2 * precision * recall) / (precision + recall))
+print "\tF1-Score is {}\n".format((2 * precision * recall) / (precision + recall))
 
 
 
