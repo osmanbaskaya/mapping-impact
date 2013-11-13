@@ -123,16 +123,37 @@ public class ChunkExtractor {
                 continue;
             int[] freqs = semCorFreqSums[wordIDs.size()];
 
+            // First see how many times this word's senses occurred
+            int numOcc = 0;
             for (int i = 0; i < wordIDs.size(); ++i) {
                 IWordID id = wordIDs.get(i);
                 IWord word = dict.getWord(id);
                 ISenseKey key = word.getSenseKey();
                 Integer freq = senseToFreq.get(key.toString());
                 if (freq != null)
+                    numOcc += freq;
+            }
+            
+            // Skip using lemmas that had fewer than 10 senses occur
+            if (numOcc < 10)
+                continue;
+
+            //System.out.println("using " + idxWord);
+
+            for (int i = 0; i < wordIDs.size(); ++i) {
+                IWordID id = wordIDs.get(i);
+                IWord word = dict.getWord(id);
+                ISenseKey key = word.getSenseKey();
+                Integer freq = senseToFreq.get(key.toString());
+                
+                if (freq != null)
                     freqs[i] += freq;
             }
         }
         System.out.println("Finished computing avg SemCor freqs");
+        for (int i = 2; i < semCorFreqSums.length; ++i) {
+            System.out.printf("%d -> %s%n", i, Arrays.toString(semCorFreqSums[i]));
+        }
 
         int numSensesTotal = 0;
         int numSemCorInstancesTotal = 0;
@@ -165,8 +186,9 @@ public class ChunkExtractor {
             int[] freqs = new int[psenses.size()];
 
             numSensesTotal += psenses.size();
+            //System.err.printf("%s -> %s%n", pword, psenses);
 
-            double max = 0;
+            double max = 0, freqsum = 0;
             for (int i = 0; i < senseKeys.size(); ++i) {
                 Integer freq = senseToFreq.get(senseKeys.get(i));
                 if (freq == null) {
@@ -176,12 +198,14 @@ public class ChunkExtractor {
                     if (freq > max)
                         max = freq;
                     freqs[i] = freq;
+                    freqsum += freq;
                 }
             }
             
             // EDGE CASE: the lemma was never seen in WordNet
-            if (max == 0) {
-                // System.out.printf("Edge case: %s has no SemCor frequencies%n", pword);
+            if (freqsum < 10) {
+                System.out.printf("Edge case: %s has too few SemCor tags: %d%n", 
+                                  pword, (int)freqsum);
                 // Assume "uniform" probability across all senses
                 freqs = semCorFreqSums[senseKeys.size()];
                 for (int f : freqs)
