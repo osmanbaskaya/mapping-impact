@@ -1,0 +1,289 @@
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/SVM_Gaussian-uniform-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.733539477477 (839778 correct of 1144830 attempted)
+	Recall is 0.731545799033 (839778 correct of 1147950 attempted)
+	F1-Score is 0.732541281763
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/MultinomialNB-semcor-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.870075803237 (996068 correct of 1144806 attempted)
+	Recall is 0.867692843765 (996068 correct of 1147950 attempted)
+	F1-Score is 0.868882689654
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/DecisionTree-Gini-hybrid-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.66842544709 (764535 correct of 1143785 attempted)
+	Recall is 0.66708693983 (764535 correct of 1146080 attempted)
+	F1-Score is 0.667755522705
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/MultinomialNB-random-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.735766882419 (842328 correct of 1144830 attempted)
+	Recall is 0.733767150137 (842328 correct of 1147950 attempted)
+	F1-Score is 0.734765655667
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/SVM_Gaussian-semcor-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.538201672517 (615587 correct of 1143785 attempted)
+	Recall is 0.537123935502 (615587 correct of 1146080 attempted)
+	F1-Score is 0.537662263933
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/BernoulliNBWrapper-random-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.680644526725 (778511 correct of 1143785 attempted)
+	Recall is 0.679281551026 (778511 correct of 1146080 attempted)
+	F1-Score is 0.679962355859
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/SVM_Linear-uniform-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.731460020896 (836633 correct of 1143785 attempted)
+	Recall is 0.729995288287 (836633 correct of 1146080 attempted)
+	F1-Score is 0.730726920583
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/BernoulliNBWrapper-uniform-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.682206091734 (781010 correct of 1144830 attempted)
+	Recall is 0.680351931704 (781010 correct of 1147950 attempted)
+	F1-Score is 0.681277750155
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/SVM_Gaussian-uniform-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.730517536075 (835555 correct of 1143785 attempted)
+	Recall is 0.729054690772 (835555 correct of 1146080 attempted)
+	F1-Score is 0.729785380361
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/DecisionTree-Entropy-hybrid-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.66828556066 (764375 correct of 1143785 attempted)
+	Recall is 0.666947333519 (764375 correct of 1146080 attempted)
+	F1-Score is 0.667615776476
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/DecisionTree-Entropy-uniform-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.683437883868 (781706 correct of 1143785 attempted)
+	Recall is 0.682069314533 (781706 correct of 1146080 attempted)
+	F1-Score is 0.682752913381
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/BernoulliNBWrapper-semcor-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.537008266414 (614222 correct of 1143785 attempted)
+	Recall is 0.535932919168 (614222 correct of 1146080 attempted)
+	F1-Score is 0.536470053911
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/SVM_Linear-semcor-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.566478839992 (647930 correct of 1143785 attempted)
+	Recall is 0.56534447857 (647930 correct of 1146080 attempted)
+	F1-Score is 0.565911090828
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/SVM_Linear-hybrid-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.839379645886 (960947 correct of 1144830 attempted)
+	Recall is 0.837098305675 (960947 correct of 1147950 attempted)
+	F1-Score is 0.838237423564
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/SVM_Gaussian-hybrid-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.846655835364 (969277 correct of 1144830 attempted)
+	Recall is 0.844354719282 (969277 correct of 1147950 attempted)
+	F1-Score is 0.845503711651
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/BernoulliNBWrapper-uniform-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.679309485611 (776984 correct of 1143785 attempted)
+	Recall is 0.677949183303 (776984 correct of 1146080 attempted)
+	F1-Score is 0.678628652781
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/DecisionTree-Entropy-random-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.687530026292 (787105 correct of 1144830 attempted)
+	Recall is 0.685661396402 (787105 correct of 1147950 attempted)
+	F1-Score is 0.686594439938
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/DecisionTree-Gini-random-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.684848988228 (783320 correct of 1143785 attempted)
+	Recall is 0.683477593187 (783320 correct of 1146080 attempted)
+	F1-Score is 0.684162603472
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/DecisionTree-Entropy-semcor-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.597586959088 (683511 correct of 1143785 attempted)
+	Recall is 0.596390304342 (683511 correct of 1146080 attempted)
+	F1-Score is 0.596988032046
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/DecisionTree-Gini-semcor-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.597337786385 (683226 correct of 1143785 attempted)
+	Recall is 0.596141630602 (683226 correct of 1146080 attempted)
+	F1-Score is 0.596739109074
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/DecisionTree-Gini-hybrid-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.773710507237 (885767 correct of 1144830 attempted)
+	Recall is 0.771607648417 (885767 correct of 1147950 attempted)
+	F1-Score is 0.772657647049
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/MultinomialNB-uniform-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.732383271332 (837689 correct of 1143785 attempted)
+	Recall is 0.730916689934 (837689 correct of 1146080 attempted)
+	F1-Score is 0.731649245698
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/BernoulliNBWrapper-semcor-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.862734205078 (987684 correct of 1144830 attempted)
+	Recall is 0.860389389782 (987684 correct of 1147950 attempted)
+	F1-Score is 0.861560202025
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/SVM_Linear-semcor-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.876890018605 (1003890 correct of 1144830 attempted)
+	Recall is 0.874506729387 (1003890 correct of 1147950 attempted)
+	F1-Score is 0.875696752414
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/DecisionTree-Entropy-hybrid-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.774697553349 (886897 correct of 1144830 attempted)
+	Recall is 0.772592011847 (886897 correct of 1147950 attempted)
+	F1-Score is 0.773643349994
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/DecisionTree-Entropy-random-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.684526375149 (782951 correct of 1143785 attempted)
+	Recall is 0.683155626134 (782951 correct of 1146080 attempted)
+	F1-Score is 0.68384031373
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/MultinomialNB-uniform-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.734800800119 (841222 correct of 1144830 attempted)
+	Recall is 0.732803693541 (841222 correct of 1147950 attempted)
+	F1-Score is 0.733800888005
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/MultinomialNB-hybrid-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.654997224129 (749176 correct of 1143785 attempted)
+	Recall is 0.653685606589 (749176 correct of 1146080 attempted)
+	F1-Score is 0.65434075808
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/SVM_Linear-hybrid-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.698727470635 (799194 correct of 1143785 attempted)
+	Recall is 0.697328284238 (799194 correct of 1146080 attempted)
+	F1-Score is 0.698027176275
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/BernoulliNBWrapper-hybrid-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.812674370867 (930374 correct of 1144830 attempted)
+	Recall is 0.810465612614 (930374 correct of 1147950 attempted)
+	F1-Score is 0.811568488909
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/DecisionTree-Gini-uniform-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.683413403743 (781678 correct of 1143785 attempted)
+	Recall is 0.682044883429 (781678 correct of 1146080 attempted)
+	F1-Score is 0.682728457791
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/DecisionTree-Entropy-uniform-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.685096477206 (784319 correct of 1144830 attempted)
+	Recall is 0.683234461431 (784319 correct of 1147950 attempted)
+	F1-Score is 0.684164202409
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/SVM_Gaussian-semcor-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.876566826516 (1003520 correct of 1144830 attempted)
+	Recall is 0.874184415698 (1003520 correct of 1147950 attempted)
+	F1-Score is 0.875374000122
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/SVM_Linear-random-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.736000978311 (842596 correct of 1144830 attempted)
+	Recall is 0.734000609783 (842596 correct of 1147950 attempted)
+	F1-Score is 0.734999433003
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/BernoulliNBWrapper-random-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.68221657364 (781022 correct of 1144830 attempted)
+	Recall is 0.680362385121 (781022 correct of 1147950 attempted)
+	F1-Score is 0.681288217797
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/DecisionTree-Gini-random-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.687652315191 (787245 correct of 1144830 attempted)
+	Recall is 0.685783352933 (787245 correct of 1147950 attempted)
+	F1-Score is 0.686716562426
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/SVM_Gaussian-hybrid-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.688028781633 (786957 correct of 1143785 attempted)
+	Recall is 0.686651019126 (786957 correct of 1146080 attempted)
+	F1-Score is 0.687339209953
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/SVM_Linear-uniform-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.734060952281 (840375 correct of 1144830 attempted)
+	Recall is 0.732065856527 (840375 correct of 1147950 attempted)
+	F1-Score is 0.733062046947
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/DecisionTree-Gini-uniform-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.684687682887 (783851 correct of 1144830 attempted)
+	Recall is 0.68282677817 (783851 correct of 1147950 attempted)
+	F1-Score is 0.683755964375
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/MultinomialNB-random-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.733322258991 (838763 correct of 1143785 attempted)
+	Recall is 0.731853797292 (838763 correct of 1146080 attempted)
+	F1-Score is 0.732587292264
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/SVM_Gaussian-random-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.735184263166 (841661 correct of 1144830 attempted)
+	Recall is 0.733186114378 (841661 correct of 1147950 attempted)
+	F1-Score is 0.734183829238
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/SVM_Gaussian-random-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.731494118213 (836672 correct of 1143785 attempted)
+	Recall is 0.730029317325 (836672 correct of 1146080 attempted)
+	F1-Score is 0.730760983726
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/DecisionTree-Entropy-semcor-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.841614038766 (963505 correct of 1144830 attempted)
+	Recall is 0.839326625724 (963505 correct of 1147950 attempted)
+	F1-Score is 0.840468775897
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/SVM_Linear-random-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.732774953335 (838137 correct of 1143785 attempted)
+	Recall is 0.731307587603 (838137 correct of 1146080 attempted)
+	F1-Score is 0.732040535141
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/MultinomialNB-hybrid-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.864966850974 (990240 correct of 1144830 attempted)
+	Recall is 0.862615967594 (990240 correct of 1147950 attempted)
+	F1-Score is 0.863789809751
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/DecisionTree-Gini-semcor-semcor.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.semcor.key"
+	Precision is 0.840675908213 (962431 correct of 1144830 attempted)
+	Recall is 0.838391044906 (962431 correct of 1147950 attempted)
+	F1-Score is 0.839531921946
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/BernoulliNBWrapper-hybrid-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.647113749525 (740159 correct of 1143785 attempted)
+	Recall is 0.64581791847 (740159 correct of 1146080 attempted)
+	F1-Score is 0.646465184629
+
+
+Scores for system_file: "../keys/hdp/mapped/gigaword/default/MultinomialNB-semcor-uniform.ans.gz" 	 gold_file: "../keys/gold/gold-and-dev/gigaword.uniform.key"
+	Precision is 0.483369340273 (552859 correct of 1143761 attempted)
+	Recall is 0.482391281586 (552859 correct of 1146080 attempted)
+	F1-Score is 0.482879815673
+
+
