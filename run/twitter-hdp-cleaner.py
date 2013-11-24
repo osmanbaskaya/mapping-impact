@@ -7,7 +7,8 @@ import os
 
 inst = "hdp-wsi/wsi_input/example/num_test_instances.all.txt"
 wsi_input_folder = "hdp-wsi/wsi_input/example/all/"
-key_folder = "/scratch/1/obaskaya/mapping-impact/data/twitter/keys"
+#key_folder = "/scratch/1/obaskaya/mapping-impact/data/twitter/keys"
+key_folder = "../data/twitter/keys"
 existed = set([f[:-4] + ".n" for f in os.listdir(key_folder) if f.endswith('.key')])
 
 

@@ -12,7 +12,7 @@ import numpy as np
 from pprint import pprint
 from nlp_utils import calc_perp, delete_features
 from collections import defaultdict as dd
-
+import os
 
 """
 This script is used to test various mapping procedures. Now it supports
@@ -88,7 +88,7 @@ class SemevalEvaluator(Evaluator):
                 for tw, data in sorted(dev_system_dict.iteritems()):
                     target = dev_gold_dict[tw]
                     X, y = self.ft.convert_data(data, target)
-                    X = self.ft.scale_data(X, drange=[-1,1])
+                    X = self.ft.scale_data(X)
                     cv = cross_validation.KFold(len(y), n_folds=self.k)
                     p, e = self.clf_wrapper.optimize(X, y, cv=cv)
                     if p is not None:
@@ -160,29 +160,26 @@ class ChunkEvaluator(Evaluator):
                 self.system_key_dict[tw][i] = dict(zip(inc, map(d.get, inc)))
         self.logger.info("Reading all system answers done")
 
-
-
-
     def optimize(self):
-        if self.optimization:
-            files = [self.devset.data, self.devset.target]
-            dev_system_dict, dev_gold_dict = map(self.load_key_file, files)
+        if self.optimization and not self.clf_wrapper.is_optimized:
+            params = []
+            estimators = []
+            for sys_file, gold_file in zip(self.devset[0], self.devset[1]):
 
-            if not self.clf_wrapper.is_optimized:
-                params = []
-                estimators = []
-                for tw, data in sorted(dev_system_dict.iteritems()):
-                    target = dev_gold_dict[tw]
-                    X, y = self.ft.convert_data(data, target)
-                    X = self.ft.scale_data(X)
-                    cv = cross_validation.KFold(len(y), n_folds=self.k)
-                    p, e = self.clf_wrapper.optimize(X, y, cv=cv)
-                    if p is not None:
-                        params.append(p)
-                        estimators.append(e)
-                    #print p
-                self.set_best_estimator(params, estimators)
-                self.logger.info("Optimization finished")
+                tw = os.path.basename(sys_file)[:-4]
+
+                val, target = map(self.load_key_file, (sys_file, gold_file))
+
+                X, y = self.ft.convert_data(val[tw], target[tw])
+                X = self.ft.scale_data(X)
+                cv = cross_validation.KFold(len(y), n_folds=10)
+                p, e = self.clf_wrapper.optimize(X, y, cv=cv)
+                if p is not None:
+                    params.append(p)
+                    estimators.append(e)
+                print p
+            self.set_best_estimator(params, estimators)
+            self.logger.info("Optimization finished")
 
     def _prepare(self, tw, chunks):
 
@@ -205,7 +202,6 @@ class ChunkEvaluator(Evaluator):
             
             #print len(c), len(chunks)
             #print len(g), len(self.gold_dict[tw])
-            #exit()
 
             X_train, y_train = self.ft.convert_data(val, target)
             X_train = self.ft.scale_data(X_train)
@@ -240,14 +236,13 @@ class ChunkEvaluator(Evaluator):
                 self.clf_wrapper.classifier.fit(X_train, y_train)
                 prediction = self.clf_wrapper.classifier.predict(X_test)
             except ValueError, e: # all instances are belongs to the same class
-                self.logger.warning("{}\t{}".format(tw, e))
+                self.logger.warning("{}-{}: {}".format(self.clf_wrapper.name, tw, e))
                 if str(e) == "The number of classes has to be greater than one.":
                     prediction = [y_train[0]] * len(y_test)
 
-            print "predictions"
             predictions[tw] = (zip(test_inst_order, prediction))
 
-        pprint(predictions[tw])
+            print "predictions"
         return predictions
 
     def score(self):
@@ -265,7 +260,7 @@ class ChunkEvaluator(Evaluator):
                 self.clf_wrapper.classifier.fit(X_train, y_train)
                 score = self.clf_wrapper.classifier.score(X_test, y_test)
             except ValueError, e: # all instances are belongs to the same class
-                self.logger.warning("{}\t{}".format(tw, e))
+                self.logger.warning("{}-{}: {}".format(self.clf_wrapper.name, tw, e))
                 if str(e) == "The number of classes has to be greater than one.":
                     prediction = [y_train[0]] * len(y_test)
                     score = sum(prediction == y_test) / float(len(y_test))
@@ -291,10 +286,13 @@ class ChunkEvaluator(Evaluator):
                 prediction = self.clf_wrapper.classifier.predict(X_test)
                 score = self.clf_wrapper.classifier.score(X_test, y_test)
             except ValueError, e: # all instances are belongs to the same class
-                self.logger.warning("{}\t{}".format(tw, e))
+                self.logger.warning("{}-{}: {}".format(self.clf_wrapper.name, tw, e))
                 if str(e) == "The number of classes has to be greater than one.":
                     prediction = [y_train[0]] * len(y_test)
                     score = sum(prediction == y_test) / float(len(y_test))
+                if str(e) == "Input X must be non-negative.":
+                    pass
+
             
             scores[tw] = (score, calc_perp(y_test))
             predictions[tw] = (zip(test_inst_order, prediction))

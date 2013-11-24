@@ -13,10 +13,10 @@ import mapping_utils
 import sys
 import os
 
-training_word_list = sys.argv[6:]
+training_word_list = [line.strip() for line in open(sys.argv[6]).readlines()]
 
-#chunk_types = ['semcor', 'uniform', 'random', 'hybrid'] 
-chunk_types = ['uniform', 'hybrid'] 
+chunk_types = ['semcor', 'uniform', 'random', 'hybrid'] 
+#chunk_types = ['uniform', 'hybrid'] 
 chunk_path = '../data/chunks/'
 tw_dict = {}
 sys_ans_dict = {}
@@ -32,18 +32,23 @@ start = int(sys.argv[4])
 end = int(sys.argv[5])
 
 # Development data stuff
-#dev_sys_fs = ['../data/keys/leon.key2',]
-#dev_gold_fs = ['ans2/leon.ans',]
-#devset = mapping_utils.Dataset(dev_sys_fs[0], dev_gold_fs[0])
-devset = []
+system_devset_dir = '{}-dev/'.format(system_key_folder.split('-')[0])
+gold_dir = "gold/gigaword/"
 
+devfiles = 'activeness brahms bathroom appleton ashur'.split()
+
+sys_dev = [system_devset_dir + f + ".ans" for f in devfiles]
+gold_dev = [gold_dir + f + '.gold' for f in devfiles]
+
+devset = [sys_dev, gold_dev]
 
 wrappers = [
-            SVCWrapper('SVM_Linear', kernel='linear'), 
-            #SVCWrapper('SVM_Gaussian', kernel='Gaussian'), 
-            #DecisionTreeWrapper(), 
-            #BernoulliNBWrapper(), 
-            #MultinomialNBWrapper()
+            SVCWrapper('SVM_Linear', kernel='linear', C=1), 
+            SVCWrapper('SVM_Gaussian', kernel='rbf', C=1, gamma=0), 
+            DecisionTreeWrapper("DecisionTree-Gini", criterion='gini'), 
+            DecisionTreeWrapper("DecisionTree-Entropy", criterion='entropy'), 
+            BernoulliNBWrapper(), 
+            MultinomialNBWrapper()
            ]
 
 logger = ChunkLogger(3)
@@ -62,7 +67,7 @@ for tw in processed:
 
 exp_length = len(tw_dict[processed[0]])
 logger.info("Evaluation started for %s" % system_key_folder)
-
+optimization = False
 print "Total pseudowords: %d" % len(processed)
 for w in wrappers:
     results = dd(list)
@@ -77,8 +82,11 @@ for w in wrappers:
         if not os.path.exists(out):
             os.mkdir(out)
 
-        exp_name = mapping_utils.get_exp_name(exp, tw, w.name, exp_part)
-        e = ChunkEvaluator(w, exp, sys_ans_dict, devset, False, logger=logger)
+        exp_name, test_chunk = mapping_utils.get_exp_name(exp, tw, w.name, exp_part)
+        if test_chunk not in ['semcor', 'uniform']:
+            continue
+
+        e = ChunkEvaluator(w, exp, sys_ans_dict, devset, optimization, logger=logger)
         score, prediction = e.score_and_predict()
         print system_out_dir, exp_name
         num_pw = len(score.keys())

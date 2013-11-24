@@ -43,10 +43,14 @@ class ClassifierWrapper(object):
 
 class SVCWrapper(ClassifierWrapper):
     
-    def __init__(self, name, kernel):
-        super(SVCWrapper, self).__init__(name, SVC(kernel=kernel))
+    def __init__(self, name, kernel='rbf', C=1, gamma=0):
+        super(SVCWrapper, self).__init__(name, SVC(kernel=kernel, C=C, gamma=gamma))
         #FIXME: add gamma parameter? Check ranges
-        self.parameters = {'kernel':('linear', 'rbf'), 'C':[0.01, 0.05, 0.1, 0.5, 1, 2, 5, 10]}
+        if self.classifier.kernel == "rbf":
+            self.parameters = {'C':[0.01, 0.05, 0.1, 0.5, 1, 2, 5, 10], 'gamma':[0,1,2,3]}
+        elif self.classifier.kernel == "linear":
+            self.parameters = {'C':[0.01, 0.05, 0.1, 0.5, 1, 2, 5, 10]}
+ 
         #self.parameters = {'kernel':('linear', 'rbf'), 'C':[10]}
 
 class MultinomialNBWrapper(ClassifierWrapper):
@@ -54,6 +58,7 @@ class MultinomialNBWrapper(ClassifierWrapper):
     def __init__(self):
         super(MultinomialNBWrapper, self).__init__("MultinomialNB", MultinomialNB())
         #FIXME: Check ranges
+        self.is_optimized = True
         self.parameters = {'alpha': np.linspace(0,1,11)}
 
 class BernoulliNBWrapper(ClassifierWrapper):
@@ -62,14 +67,16 @@ class BernoulliNBWrapper(ClassifierWrapper):
         super(BernoulliNBWrapper, self).__init__("BernoulliNBWrapper", BernoulliNB())
         #FIXME: Check ranges
         self.parameters = {'alpha': np.linspace(0,1,11)}
+        self.is_optimized = True
 
 class DecisionTreeWrapper(ClassifierWrapper):
     
-    def __init__(self):
-        super(DecisionTreeWrapper, self).__init__("DecisionTreeWrapper",
-                                    DecisionTreeClassifier(criterion="entropy"))
+    def __init__(self, name, criterion):
+        super(DecisionTreeWrapper, self).__init__(name,
+                                    DecisionTreeClassifier(criterion=criterion))
         #FIXME: Check ranges
-        self.parameters = {}
+        #self.parameters = {'criterion': ['entropy', 'gini']}
+        self.is_optimized = True
 
 #class MNLogitWrapper(ClassifierWrapper):
 

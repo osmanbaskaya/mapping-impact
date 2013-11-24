@@ -290,14 +290,43 @@ twitter-pseudoword-samples-more-than-%.txt: twitter-exclude-list%.txt create-pwl
 	create-pwlist.py ${PSEUDO_W_FILE} $< > $@
 	wc -l $@
 
-PSEUDOWORDS=$(shell find aiku-ans/ -name "*.ans" | sed -e 's|\.ans||g' -e 's|aiku-ans/||g') 
-%-chunk-evaluation:
-	performance_eval.py $*-ans/ $*-chunk-keys 1 0 200 ${PSEUDOWORDS} & \
-	performance_eval.py $*-ans/ $*-chunk-keys 2 200 400 ${PSEUDOWORDS} & \
-	performance_eval.py $*-ans/ $*-chunk-keys 3 400 600 ${PSEUDOWORDS} & \
-	performance_eval.py $*-ans/ $*-chunk-keys 4 600 800 ${PSEUDOWORDS} & \
-	performance_eval.py $*-ans/ $*-chunk-keys 5 800 1000 ${PSEUDOWORDS} & \
+%-pw-list.txt: %-ans
+	ls $</* | sed -re 's|$</||g' -e 's|\.ans||g' > $@
+	wc $@
+
+%-chunk-experiment: %-pw-list.txt
+	performance_eval.py $*-ans/ $*-chunk-keys 1 0 150 $< & \
+	performance_eval.py $*-ans/ $*-chunk-keys 2 150 300 $< & \
+	performance_eval.py $*-ans/ $*-chunk-keys 3 300 450 $< & \
+	performance_eval.py $*-ans/ $*-chunk-keys 4 450 600 $< & \
+	performance_eval.py $*-ans/ $*-chunk-keys 5 600 750 $< & \
+	performance_eval.py $*-ans/ $*-chunk-keys 6 750 850 $< & \
+	performance_eval.py $*-ans/ $*-chunk-keys 7 850 1000 $< & \
 	wait
+	# twitter
+	#performance_eval.py $*-ans/ $*-chunk-keys 1 0 90 $< & \
+	#performance_eval.py $*-ans/ $*-chunk-keys 2 90 180 $< & \
+	#performance_eval.py $*-ans/ $*-chunk-keys 3 180 270 $< & \
+	#performance_eval.py $*-ans/ $*-chunk-keys 4 270 360 $< & \
+	#performance_eval.py $*-ans/ $*-chunk-keys 5 360 450 $< & \
+	#performance_eval.py $*-ans/ $*-chunk-keys 6 450 540 $< & \
+	#performance_eval.py $*-ans/ $*-chunk-keys 7 540 1000 $< & \
+	#wait
+
+%-gigaword-default-chunk-merge: %-chunk-keys
+	chunk-merger.py $* default gigaword
+
+%-twitter-default-chunk-merge: %-chunk-keys
+	chunk-merger.py $* default twitter
+
+%-tuned-chunk-merge: %-chunk-keys
+	chunk-merger.py $* tuned
+
+chunk-scores/%-mapped-gigaword-tuned.scores:
+	./classifiers-scorer.py $* mapped gigaword tuned > $@
+
+chunk-scores/%-mapped-gigaword-default.scores:
+	./classifiers-scorer.py $* mapped gigaword default > $@
 
 clear-data: 
 	rm -rf ../data/components ../data/monosemous-words ../data/pos-filtering

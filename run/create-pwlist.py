@@ -3,6 +3,9 @@
 
 __author__ = "Osman Baskaya"
 
+
+#./create-pwlist.py pseudoword-samples/pseudowords.979-count.txt twitter-new-exclude.txt
+
 import sys, os
 
 orig_f = open(sys.argv[1])

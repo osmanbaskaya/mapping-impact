@@ -4,6 +4,7 @@
 __author__ = "Osman Baskaya"
 
 from sklearn.feature_extraction.text import CountVectorizer
+from pprint import pprint
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.feature_extraction import DictVectorizer
 import numpy as np
@@ -28,6 +29,7 @@ class SemevalFeatureTransformer(FeatureTransformer):
         X = []
         y = []
         for key in data:
+            #print key
             X.append(dict(data[key]))
             y.append(target[key][0][0]) # we get only one sense for gold standard
         

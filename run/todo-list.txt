@@ -1,0 +1,5 @@
+1. 
+
+Su an training datasi icin fastsub calistirmak gerekiyor. Eksik olan
+target word'ler var. Yani context enrichment yapilmamis onlara.
+Sadece fastsubs calistirmak gerekiyor yeniden.
