@@ -52,6 +52,8 @@ wrappers = [
            ]
 
 logger = ChunkLogger(3)
+
+# quick testing
 #training_word_list = [
                       #'horne', 
                       #'adams_apple', 
@@ -67,7 +69,7 @@ for tw in processed:
 
 exp_length = len(tw_dict[processed[0]])
 logger.info("Evaluation started for %s" % system_key_folder)
-optimization = False
+optimization = True
 print "Total pseudowords: %d" % len(processed)
 for w in wrappers:
     results = dd(list)
