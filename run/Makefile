@@ -18,6 +18,7 @@ TRAIN5=$(shell ls ../data/ukwac/UKWAC-* | sort -k 2 -t - -n | head -25 | tail -5
 
 TEST=$(shell find ../data/pos-filtering/ -name "*.raw.gz" | sort)
 TWITTER_EXISTED_PW_LIST='existed-twitter-pseudoword-list.txt'
+DEVDATA=activeness brahms batroom appleton ashur
 #ls *.key | sed 's|.key||g' > ../../../run/existed-twitter-pseudoword-list.txt
 
 ### BIN SETUP
@@ -139,6 +140,9 @@ twitter.sentence.gz: twitter-inst-list.gz
 random.context.gz: train.context.gz
 	zcat $< | ./sample-contexts.py 2500  | gzip > $@
 
+missing.context.gz: train.context.gz sub-missing-words.txt
+	zcat $< | ./sample-missing-contexts.py 2500 sub-missing-words.txt | gzip > $@
+
 random.sentence.gz: train.sentence.gz
 	zcat $< | ./sample-contexts.py 2500  | gzip > $@
 
@@ -166,17 +170,26 @@ FS_OPTIONS=-n ${FS_NSUB} -p ${FS_PSUB}
 # all.sub.gz: train.lm.gz train.context.gz trial.context.gz test.context.gz
 # 	zcat train.context.gz trial.context.gz test.context.gz |\
 # 	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > $@
+#
+missing.sub.1.gz missing.sub.2.gz missing.sub.3.gz: missing.context.gz train.lm.gz
+	zcat $< | tail -n +000001 | head -115000 |\
+	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > missing.sub.1.gz &\
+	zcat $< | tail -n +115001 | head -115000 |\
+	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > missing.sub.2.gz &\
+	zcat $< | tail -n +230001 |\
+	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > missing.sub.3.gz &\
+	wait
 
-all.sub.1.gz all.sub.2.gz all.sub.3.gz all.sub.4.gz all.sub.5.gz: train.lm.gz random.context.gz
-	zcat random.context.gz | tail -n +000001 | head -325000 |\
+all.sub.1.gz all.sub.2.gz all.sub.3.gz all.sub.4.gz all.sub.5.gz: random.context.gz train.lm.gz
+	zcat $< | tail -n +000001 | head -325000 |\
 	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > all.sub.1.gz &\
-	zcat random.context.gz | tail -n +325001 | head -325000 |\
+	zcat $< | tail -n +325001 | head -325000 |\
 	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > all.sub.2.gz &\
-	zcat random.context.gz | tail -n +650001 | head -325000 |\
+	zcat $< | tail -n +650001 | head -325000 |\
 	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > all.sub.3.gz &\
-	zcat random.context.gz | tail -n +975001 | head -325000 |\
+	zcat $< | tail -n +975001 | head -325000 |\
 	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > all.sub.4.gz &\
-	zcat random.context.gz | tail -n +1300001 |\
+	zcat $< | tail -n +1300001 |\
 	fastsubs ${FS_OPTIONS} train.lm.gz | gzip > all.sub.5.gz &\
 	wait
 
@@ -209,11 +222,14 @@ twitter.all.sub.1.gz twitter.all.sub.2.gz twitter.all.sub.3.gz twitter.all.sub.4
 test.sub.gz: test.sub.1.gz test.sub.2.gz test.sub.3.gz test.sub.4.gz test.sub.5.gz test.sub.6.gz
 	zcat $^ | gzip > $@
 
+missing.sub.gz: missing.sub.1.gz missing.sub.2.gz missing.sub.3.gz
+	zcat $^ | gzip > $@
+
 twitter.sub.gz: twitter.all.sub.1.gz twitter.all.sub.2.gz twitter.all.sub.3.gz twitter.all.sub.4.gz 
 	zcat $^ | grep -P '^<\w+\.\w+' | gzip > $@
 
 #2199795 442158795 4402274133
-target.sub.gz: test.sub.gz all.sub.1.gz all.sub.2.gz all.sub.3.gz all.sub.4.gz
+target.sub.gz: test.sub.gz all.sub.1.gz all.sub.2.gz all.sub.3.gz all.sub.4.gz all.sub.5.gz
 	zcat $^ | grep -P '^<\w+\.\w+' | gzip > $@
 
 pairs.100.gz: target.sub.gz
@@ -240,12 +256,14 @@ twitter-create-input-for-wordsub: ${PSEUDO_W_FILE}
 	create-wordsub-input.py $< twitter/sub/ twitter/wordsub/ ${TWITTER_EXISTED_PW_LIST}
 
 %.pairs.gz:
-	perl -le 'print "twitter/wordsub/$*.gz" for 1..100' | xargs zcat | wordsub -s ${SEED} \
-	| gzip > twitter/pairs/$@
+	perl -le 'print "wordsub/$*.gz" for 1..100' | xargs zcat | wordsub -s ${SEED} \
+	| gzip > pairs/$@
+	#perl -le 'print "twitter/wordsub/$*.gz" for 1..100' | xargs zcat | wordsub -s ${SEED} \
+	#| gzip > twitter/pairs/$@
 
 SUBS=$(shell find wordsub/  -name "*" | sed 's|wordsub/||g' | sort)
 create-input-for-pairs: wordsub/
-	echo ${SUBS} | sed 's|.gz|.pairs.gz|g' | xargs -n1 -P 50 make 
+	echo ${SUBS} | sed 's|.gz|.pairs.gz|g' | xargs -n1 -P 50 make
 
 TSUBS=$(shell find twitter/wordsub/  -name "*" | sed 's|twitter/wordsub/||g' | sort)
 twitter-create-input-for-pairs: twitter/wordsub/
@@ -294,6 +312,7 @@ twitter-pseudoword-samples-more-than-%.txt: twitter-exclude-list%.txt create-pwl
 	ls $</* | sed -re 's|$</||g' -e 's|\.ans||g' > $@
 	wc $@
 
+# mapping needs to be done first!(eval/aiku.ans) then use prepare-chunk-experiment-%
 %-chunk-experiment: %-pw-list.txt
 	performance_eval.py $*-ans/ $*-chunk-keys 1 0 150 $< & \
 	performance_eval.py $*-ans/ $*-chunk-keys 2 150 300 $< & \
@@ -331,6 +350,14 @@ chunk-scores/%-mapped-gigaword-default.scores:
 clear-data: 
 	rm -rf ../data/components ../data/monosemous-words ../data/pos-filtering
 
+prepare-chunk-experiment-%: %
+	for i in ${DEVDATA} pack ford; do rm $*/$$i.ans; done
+	cat $*/adams_apple.ans | sed "s|adams_apple|adam\'s_apple|g" > $*/adam\'s_apple.ans
+
+excel-%.tab: chunk-scores
+	score-excel-format.py $* $</*.scores > $@
+
 .SECONDARY:
 #small.tok.gz small.pos.gz small.lem.gz small.raw.gz
 #tok.mono.gz pos.mono.gz lem.mono.gz raw.mono.gz
+

@@ -54,6 +54,7 @@ baronetage
 barrymore
 barth
 bather
+bathroom
 bazaar
 bazar
 bearer
@@ -590,7 +591,6 @@ outlier
 overnighter
 owen
 owner
-packer
 packinghouse
 padre
 palsy

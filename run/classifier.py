@@ -24,6 +24,7 @@ class ClassifierWrapper(object):
         best_params = best_estimator = None
         if parameters is None:
             parameters = self.parameters
+        print >> sys.stderr, "Parameter space:{}".format(parameters)
         try:
             clf = grid_search.GridSearchCV(self.classifier, parameters, cv=cv)
             clf.fit(X, y)
@@ -34,11 +35,12 @@ class ClassifierWrapper(object):
         #FIXME: Why do we get index errors for book.v
         except IndexError, e:
             print >> sys.stderr, e
-        try:
-            print "Best Score", y[0], clf.best_score_
-        except AttributeError:
-            pass
-        return best_params, best_estimator
+        #try:
+            #msg = "Best_params:{}, Best Score:{}".format(best_params, clf.best_score_)
+            #print >> sys.stderr, msg
+        #except AttributeError:
+            #pass
+        return best_params, best_estimator, clf.best_score_
 
 
 class SVCWrapper(ClassifierWrapper):

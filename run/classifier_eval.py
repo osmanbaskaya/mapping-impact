@@ -35,29 +35,39 @@ class Evaluator(object):
         
         self.logger.init(self)
     
-    def set_best_estimator(self, params, estimators):
+    def optimize(self):
 
         """ This method finds the best estimator on development set by using
         GridSearchCV and set this estimator as classifier. It also sets 
         is_optimized parameters to avoid unnecessary tuning"""
-        
-        #print estimators
-        assert len(params) == len(estimators)
-        par_list = self.clf_wrapper.parameters.keys()
-        d = dd(lambda : [0, None])
 
-        for e in estimators:
-            pdict = e.get_params()
-            s = ' '.join(map(str, map(pdict.get, par_list)))
-            d[s][0] += 1
-            d[s][1] = e
+        if self.optimization and not self.clf_wrapper.is_optimized:
 
-        max_par = max(d, key= lambda x: d[x][0])
-        #self.logger.info("Best set of parameters is: {}".format
-                            #(zip(par_list, max_par.split())))
-        self.clf_wrapper.classifier = d[max_par][1]
-        self.clf_wrapper.is_optimized = True
+            all_val = []
+            all_target = []
+            
+            for sys_file, gold_file in zip(self.devset[0], self.devset[1]):
 
+                tw = os.path.basename(sys_file)[:-4]
+                val, target = map(self.load_key_file, (sys_file, gold_file))
+
+                for k, v in val[tw].iteritems():
+                    all_val.append((k,v))
+
+                for k, v in target[tw].iteritems():
+                    all_target.append((k,v))
+
+            X, y = self.ft.convert_data(dict(all_val), dict(all_target))
+            X = self.ft.scale_data(X)
+            self.logger.info("Scaling done for tuning data")
+            cv = cross_validation.KFold(len(y), n_folds=10)
+            p, e, s = self.clf_wrapper.optimize(X, y, cv=cv)
+            msg = "Best_params:{}, Best Score:{}, Best Estimator".format(p, s, e)
+            self.logger.info(msg)
+            self.clf_wrapper.classifier = e
+            self.clf_wrapper.is_optimized = True
+            self.logger.info("Optimization finished")
+    
     def load_key_file(self, f):
         return self.key_loader.read_keyfile(f)
     
@@ -85,18 +95,20 @@ class SemevalEvaluator(Evaluator):
             if not self.clf_wrapper.is_optimized:
                 params = []
                 estimators = []
+                tuned_scores = []
                 for tw, data in sorted(dev_system_dict.iteritems()):
                     target = dev_gold_dict[tw]
                     X, y = self.ft.convert_data(data, target)
                     X = self.ft.scale_data(X)
                     cv = cross_validation.KFold(len(y), n_folds=self.k)
-                    p, e = self.clf_wrapper.optimize(X, y, cv=cv)
+                    p, e, s = self.clf_wrapper.optimize(X, y, cv=cv)
                     if p is not None:
                         params.append(p)
                         estimators.append(e)
+                        tuned_scores.append(s)
                     #print p
 
-                self.set_best_estimator(params, estimators)
+                self.set_best_estimator(params, estimators, tuned_scores)
             self.logger.info("Optimization finished")
         
         files = [self.trainset.data, self.trainset.target]
@@ -159,27 +171,6 @@ class ChunkEvaluator(Evaluator):
                 d = self.system_key_dict[tw][i]
                 self.system_key_dict[tw][i] = dict(zip(inc, map(d.get, inc)))
         self.logger.info("Reading all system answers done")
-
-    def optimize(self):
-        if self.optimization and not self.clf_wrapper.is_optimized:
-            params = []
-            estimators = []
-            for sys_file, gold_file in zip(self.devset[0], self.devset[1]):
-
-                tw = os.path.basename(sys_file)[:-4]
-
-                val, target = map(self.load_key_file, (sys_file, gold_file))
-
-                X, y = self.ft.convert_data(val[tw], target[tw])
-                X = self.ft.scale_data(X)
-                cv = cross_validation.KFold(len(y), n_folds=10)
-                p, e = self.clf_wrapper.optimize(X, y, cv=cv)
-                if p is not None:
-                    params.append(p)
-                    estimators.append(e)
-                print p
-            self.set_best_estimator(params, estimators)
-            self.logger.info("Optimization finished")
 
     def _prepare(self, tw, chunks):
 
