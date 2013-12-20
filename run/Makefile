@@ -312,24 +312,34 @@ twitter-pseudoword-samples-more-than-%.txt: twitter-exclude-list%.txt create-pwl
 	ls $</* | sed -re 's|$</||g' -e 's|\.ans||g' > $@
 	wc $@
 
+
+twitter-pw-list.txt:
+	make aiku-twitter-pw-list.txt
+	make cw-twitter-pw-list.txt
+	make hdp-twitter-pw-list.txt
+
 # mapping needs to be done first!(eval/aiku.ans) then use prepare-chunk-experiment-%
-%-chunk-experiment: %-pw-list.txt
-	performance_eval.py $*-ans/ $*-chunk-keys 1 0 90 $< & \
-	performance_eval.py $*-ans/ $*-chunk-keys 2 90 180 $< & \
-	performance_eval.py $*-ans/ $*-chunk-keys 3 180 270 $< & \
-	performance_eval.py $*-ans/ $*-chunk-keys 4 270 360 $< & \
-	performance_eval.py $*-ans/ $*-chunk-keys 5 360 450 $< & \
-	performance_eval.py $*-ans/ $*-chunk-keys 6 450 540 $< & \
-	performance_eval.py $*-ans/ $*-chunk-keys 7 540 1000 $< & \
+CHUNKS="../data/chunks/"
+gigaword-%-chunk-experiment: %-ans %-chunk-keys %-pw-list.txt gold/gigaword
+	chunk-exp.py $^ ${CHUNKS} 1   0 150  ${DEVDATA} & \
+	chunk-exp.py $^ ${CHUNKS} 2 150 300  ${DEVDATA} & \
+	chunk-exp.py $^ ${CHUNKS} 3 300 450  ${DEVDATA} & \
+	chunk-exp.py $^ ${CHUNKS} 4 450 600  ${DEVDATA} & \
+	chunk-exp.py $^ ${CHUNKS} 5 600 750  ${DEVDATA} & \
+	chunk-exp.py $^ ${CHUNKS} 6 750 850  ${DEVDATA} & \
+	chunk-exp.py $^ ${CHUNKS} 7 850 1000 ${DEVDATA} & \
 	wait
-	#performance_eval.py $*-ans/ $*-chunk-keys 1 0 150 $< & \
-	#performance_eval.py $*-ans/ $*-chunk-keys 2 150 300 $< & \
-	#performance_eval.py $*-ans/ $*-chunk-keys 3 300 450 $< & \
-	#performance_eval.py $*-ans/ $*-chunk-keys 4 450 600 $< & \
-	#performance_eval.py $*-ans/ $*-chunk-keys 5 600 750 $< & \
-	#performance_eval.py $*-ans/ $*-chunk-keys 6 750 850 $< & \
-	#performance_eval.py $*-ans/ $*-chunk-keys 7 850 1000 $< & \
-	#wait
+
+CHUNKS="../data/twitter/chunks/"
+twitter-%-chunk-exp: %-twitter-ans/ %-twitter-chunk-keys %-twitter-pw-list.txt gold/twitter
+	chunk-exp.py $^ ${CHUNKS} 1   0  90  ${DEVDATA} & \
+	chunk-exp.py $^ ${CHUNKS} 2  90 180  ${DEVDATA} & \
+	chunk-exp.py $^ ${CHUNKS} 3 180 270  ${DEVDATA} & \
+	chunk-exp.py $^ ${CHUNKS} 4 270 360  ${DEVDATA} & \
+	chunk-exp.py $^ ${CHUNKS} 5 360 450  ${DEVDATA} & \
+	chunk-exp.py $^ ${CHUNKS} 6 450 540  ${DEVDATA} & \
+	chunk-exp.py $^ ${CHUNKS} 7 540 1000 ${DEVDATA} & \
+	wait
 
 %-gigaword-default-chunk-merge: %-chunk-keys
 	chunk-merger.py $* default gigaword
@@ -349,7 +359,7 @@ chunk-scores/%-mapped-gigaword-default.scores:
 clear-data: 
 	rm -rf ../data/components ../data/monosemous-words ../data/pos-filtering
 
-prepare-chunk-experiment-%: %
+prepare-chunk-experiment-%: % # for aiku and hdp experiment
 	for i in ${DEVDATA} pack ford; do rm $*/$$i.ans; done
 	cat $*/adams_apple.ans | sed "s|adams_apple|adam\'s_apple|g" > $*/adam\'s_apple.ans
 
@@ -357,8 +367,11 @@ excel-%.tab: chunk-scores
 	score-excel-format.py $* $</*.scores > $@
 
 cw-twitter-key-copy: ../keys/cw/cw-wsd-twitter
-	#for i in `ls $</*graded*`; do cp $$i cw-twitter-ans/; done
-	cd cw-twitter-ans; ls | sed -e "p;s|cw.graded-sense.key|.ans|"| xargs -n2 mv
+	for i in `ls $</*graded*`; do cp $$i cw-twitter-ans/; done
+	cd cw-twitter-ans; ls | sed -e "p;s|cw.graded-sense.key|ans|" | xargs -n2 mv
+
+gold-%-split: ../keys/gold/dev/%.dev.key gold/% # does not work for gigaword, format prob.
+	gold-key-splitter.py $^ ${DEVDATA}
 
 .SECONDARY:
 #small.tok.gz small.pos.gz small.lem.gz small.raw.gz

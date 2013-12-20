@@ -25,4 +25,3 @@ for c in classifiers:
             process += form.format(system, c, train, test, sys.argv[1], sys.argv[3], typ, c, train, test)
 
 os.system(process + " wait")
-#os.system("wc ../keys/{}/mapped/{}/{}/*".format(sys.argv[1], sys.argv[3], typ))

@@ -13,11 +13,7 @@ import mapping_utils
 import sys
 import os
 
-training_word_list = [line.strip() for line in open(sys.argv[6]).readlines()]
-
 chunk_types = ['semcor', 'uniform', 'random', 'hybrid'] 
-#chunk_types = ['uniform', 'hybrid'] 
-chunk_path = '../data/twitter/chunks/'
 tw_dict = {}
 sys_ans_dict = {}
 
@@ -27,20 +23,17 @@ sys_ans_dict = {}
 
 system_key_folder = sys.argv[1]
 system_out_dir = sys.argv[2]
-exp_part = sys.argv[3]
-start = int(sys.argv[4])
-end = int(sys.argv[5])
+training_word_list = [line.strip() for line in open(sys.argv[3]).readlines()]
+gold_dir = sys.argv[4]
+chunk_path = sys.argv[5]
+exp_part = sys.argv[6]
+start = int(sys.argv[7])
+end = int(sys.argv[8])
 
 # Development data stuff
-system_devset_dir = '{}-dev/'.format(system_key_folder.split('-')[0])
-gold_dir = "gold/gigaword/"
-
-devfiles = 'activeness brahms bathroom appleton ashur'.split()
-
-sys_dev = [system_devset_dir + f + ".ans" for f in devfiles]
-gold_dev = [gold_dir + f + '.gold' for f in devfiles]
-
-devset = [sys_dev, gold_dev]
+devfiles = sys.argv[9:] # development files
+gold_dev = [os.path.join(gold_dir, f + '.key') for f in devfiles]
+sys_dev = ["{}{}.ans".format(system_key_folder, tw) for tw in devfiles]
 
 wrappers = [
             SVCWrapper('SVM_Linear', kernel='linear', C=1), 
@@ -64,13 +57,24 @@ logger = ChunkLogger(3)
 training_word_list.sort()
 processed = training_word_list[start:end]
 for tw in processed:
-    sys_ans_dict[tw] = "{}{}.ans".format(system_key_folder, tw)
-    tw_dict[tw] = mapping_utils.get_gold_chunk_filename(tw, chunk_path, chunk_types)
+    ans_file = "{}{}.ans".format(system_key_folder, tw)
+    if tw not in set(devfiles):
+        sys_ans_dict[tw] = ans_file
+        tw_dict[tw] = mapping_utils.get_gold_chunk_filename(tw, chunk_path, chunk_types)
 
+devset = [sys_dev, gold_dev]
 exp_length = len(tw_dict[processed[0]])
-logger.info("Evaluation started for %s" % system_key_folder)
 optimization = False
-print "Total pseudowords: %d" % len(processed)
+
+### Prints all information for the experiment ###
+logger.info("Evaluation started for %s" % system_key_folder)
+logger.info("Total pseudowords: %d" % len(processed))
+logger.info("Chunk Path is: %s" % chunk_path)
+logger.info("Dev. set: %s" % devset[0])
+logger.info("Gold Dev. set: %s" % devset[1])
+logger.info("Optimization: %s" % optimization)
+logger.info("Gold key directory: %s" % gold_dir)
+logger.info("Number of classifiers: %d" % len(wrappers))
 for w in wrappers:
     results = dd(list)
     predictions = dd(list)
