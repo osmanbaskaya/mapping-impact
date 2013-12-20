@@ -17,7 +17,7 @@ training_word_list = [line.strip() for line in open(sys.argv[6]).readlines()]
 
 chunk_types = ['semcor', 'uniform', 'random', 'hybrid'] 
 #chunk_types = ['uniform', 'hybrid'] 
-chunk_path = '../data/chunks/'
+chunk_path = '../data/twitter/chunks/'
 tw_dict = {}
 sys_ans_dict = {}
 
@@ -69,7 +69,7 @@ for tw in processed:
 
 exp_length = len(tw_dict[processed[0]])
 logger.info("Evaluation started for %s" % system_key_folder)
-optimization = True
+optimization = False
 print "Total pseudowords: %d" % len(processed)
 for w in wrappers:
     results = dd(list)

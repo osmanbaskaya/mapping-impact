@@ -314,22 +314,21 @@ twitter-pseudoword-samples-more-than-%.txt: twitter-exclude-list%.txt create-pwl
 
 # mapping needs to be done first!(eval/aiku.ans) then use prepare-chunk-experiment-%
 %-chunk-experiment: %-pw-list.txt
-	performance_eval.py $*-ans/ $*-chunk-keys 1 0 150 $< & \
-	performance_eval.py $*-ans/ $*-chunk-keys 2 150 300 $< & \
-	performance_eval.py $*-ans/ $*-chunk-keys 3 300 450 $< & \
-	performance_eval.py $*-ans/ $*-chunk-keys 4 450 600 $< & \
-	performance_eval.py $*-ans/ $*-chunk-keys 5 600 750 $< & \
-	performance_eval.py $*-ans/ $*-chunk-keys 6 750 850 $< & \
-	performance_eval.py $*-ans/ $*-chunk-keys 7 850 1000 $< & \
+	performance_eval.py $*-ans/ $*-chunk-keys 1 0 90 $< & \
+	performance_eval.py $*-ans/ $*-chunk-keys 2 90 180 $< & \
+	performance_eval.py $*-ans/ $*-chunk-keys 3 180 270 $< & \
+	performance_eval.py $*-ans/ $*-chunk-keys 4 270 360 $< & \
+	performance_eval.py $*-ans/ $*-chunk-keys 5 360 450 $< & \
+	performance_eval.py $*-ans/ $*-chunk-keys 6 450 540 $< & \
+	performance_eval.py $*-ans/ $*-chunk-keys 7 540 1000 $< & \
 	wait
-	# twitter
-	#performance_eval.py $*-ans/ $*-chunk-keys 1 0 90 $< & \
-	#performance_eval.py $*-ans/ $*-chunk-keys 2 90 180 $< & \
-	#performance_eval.py $*-ans/ $*-chunk-keys 3 180 270 $< & \
-	#performance_eval.py $*-ans/ $*-chunk-keys 4 270 360 $< & \
-	#performance_eval.py $*-ans/ $*-chunk-keys 5 360 450 $< & \
-	#performance_eval.py $*-ans/ $*-chunk-keys 6 450 540 $< & \
-	#performance_eval.py $*-ans/ $*-chunk-keys 7 540 1000 $< & \
+	#performance_eval.py $*-ans/ $*-chunk-keys 1 0 150 $< & \
+	#performance_eval.py $*-ans/ $*-chunk-keys 2 150 300 $< & \
+	#performance_eval.py $*-ans/ $*-chunk-keys 3 300 450 $< & \
+	#performance_eval.py $*-ans/ $*-chunk-keys 4 450 600 $< & \
+	#performance_eval.py $*-ans/ $*-chunk-keys 5 600 750 $< & \
+	#performance_eval.py $*-ans/ $*-chunk-keys 6 750 850 $< & \
+	#performance_eval.py $*-ans/ $*-chunk-keys 7 850 1000 $< & \
 	#wait
 
 %-gigaword-default-chunk-merge: %-chunk-keys
@@ -339,7 +338,7 @@ twitter-pseudoword-samples-more-than-%.txt: twitter-exclude-list%.txt create-pwl
 	chunk-merger.py $* default twitter
 
 %-tuned-chunk-merge: %-chunk-keys
-	chunk-merger.py $* tuned
+	chunk-merger.py $* tuned gigaword
 
 chunk-scores/%-mapped-gigaword-tuned.scores:
 	./classifiers-scorer.py $* mapped gigaword tuned > $@
@@ -356,6 +355,10 @@ prepare-chunk-experiment-%: %
 
 excel-%.tab: chunk-scores
 	score-excel-format.py $* $</*.scores > $@
+
+cw-twitter-key-copy: ../keys/cw/cw-wsd-twitter
+	#for i in `ls $</*graded*`; do cp $$i cw-twitter-ans/; done
+	cd cw-twitter-ans; ls | sed -e "p;s|cw.graded-sense.key|.ans|"| xargs -n2 mv
 
 .SECONDARY:
 #small.tok.gz small.pos.gz small.lem.gz small.raw.gz
