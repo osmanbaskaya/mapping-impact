@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 ### PATH
 SRILM_PATH=/opt/srilm/bin/i686-m64
-export PATH := .:${PATH}:/work/_upos_new/bin:.:${SRILM_PATH}
+export PATH := .:${PATH}:/scratch/1/obaskaya/tools/bin/:${SRILM_PATH}
 MATLAB_PATH=/mnt/opt/matlab/linux64/R2011a/bin/matlab -nojvm -nodisplay
 SEED=1
 
@@ -18,7 +18,7 @@ TRAIN5=$(shell ls ../data/ukwac/UKWAC-* | sort -k 2 -t - -n | head -25 | tail -5
 
 TEST=$(shell find ../data/pos-filtering/ -name "*.raw.gz" | sort)
 TWITTER_EXISTED_PW_LIST='existed-twitter-pseudoword-list.txt'
-DEVDATA=activeness brahms batroom appleton ashur
+DEVDATA=activeness brahms bathroom al ashur
 #ls *.key | sed 's|.key||g' > ../../../run/existed-twitter-pseudoword-list.txt
 
 ### BIN SETUP
@@ -239,7 +239,7 @@ SC_OPTIONS=-a -r 1 -d 25 -z 0.166 -p 50 -u 0.2 -s ${SEED} -v
 # example: add.v.scode.gz
 # caution: no instance enrichment will be made ({1,3})
 %.scode.gz: pairs.100.gz
-	 zcat $< | grep -P '^<$*\.\d{1,3}>' | scode -i 50 ${SC_OPTIONS} | gzip > scode_vec/$@
+	 zcat $< | grep -P '^<$*\.\d{1,3}>' | scode ${SC_OPTIONS} | gzip > scode_vec/$@
 
 create-input-for-hdp: ${PSEUDO_W_FILE}
 	rm -rf hdp-wsi/wsi_input/example/all/*.lemma
@@ -309,46 +309,55 @@ twitter-pseudoword-samples-more-than-%.txt: twitter-exclude-list%.txt create-pwl
 	wc -l $@
 
 %-pw-list.txt: %-ans
-	ls $</* | sed -re 's|$</||g' -e 's|\.ans||g' > $@
+	ls $</* | sed -re 's|$</||g' -e 's|\.ans||g' | sort > $@
 	wc $@
 
+gigaword-pw-list.txt: aiku-pw-list.txt cw-pw-list.txt hdp-pw-list.txt squat-pw-list.txt
+	comm -12 hdp-pw-list.txt $< | sort > intersect.tmp
+	comm -12 squat-pw-list.txt cw-pw-list.txt | sort > intersect2.tmp
+	comm -12 intersect.tmp intersect2.tmp > $@
+	rm intersect.tmp intersect2.tmp
 
-twitter-pw-list.txt:
-	make aiku-twitter-pw-list.txt
-	make cw-twitter-pw-list.txt
-	make hdp-twitter-pw-list.txt
+twitter-pw-list.txt: aiku-twitter-pw-list.txt cw-twitter-pw-list.txt hdp-twitter-pw-list.txt squat-twitter-pw-list.txt
+	comm -12 hdp-twitter-pw-list.txt $< | sort > intersect.tmp
+	comm -12 squat-twitter-pw-list.txt cw-twitter-pw-list.txt | sort > intersect2.tmp
+	comm -12 intersect.tmp intersect2.tmp > $@
+	rm intersect.tmp intersect2.tmp
 
 # mapping needs to be done first!(eval/aiku.ans) then use prepare-chunk-experiment-%
-CHUNKS="../data/chunks/"
-gigaword-%-chunk-experiment: %-ans %-chunk-keys %-pw-list.txt gold/gigaword
-	chunk-exp.py $^ ${CHUNKS} 1   0 150  ${DEVDATA} & \
-	chunk-exp.py $^ ${CHUNKS} 2 150 300  ${DEVDATA} & \
-	chunk-exp.py $^ ${CHUNKS} 3 300 450  ${DEVDATA} & \
-	chunk-exp.py $^ ${CHUNKS} 4 450 600  ${DEVDATA} & \
-	chunk-exp.py $^ ${CHUNKS} 5 600 750  ${DEVDATA} & \
-	chunk-exp.py $^ ${CHUNKS} 6 750 850  ${DEVDATA} & \
-	chunk-exp.py $^ ${CHUNKS} 7 850 1000 ${DEVDATA} & \
+GIGA_CHUNKS="../data/chunks/"
+gigaword-%-chunk-exp: %-ans/ %-chunk-keys gigaword-pw-list.txt gold/gigaword
+	chunk-exp.py $^ ${GIGA_CHUNKS} 1   0 150  ${DEVDATA} & \
+	chunk-exp.py $^ ${GIGA_CHUNKS} 2 150 300  ${DEVDATA} & \
+	chunk-exp.py $^ ${GIGA_CHUNKS} 3 300 450  ${DEVDATA} & \
+	chunk-exp.py $^ ${GIGA_CHUNKS} 4 450 600  ${DEVDATA} & \
+	chunk-exp.py $^ ${GIGA_CHUNKS} 5 600 750  ${DEVDATA} & \
+	chunk-exp.py $^ ${GIGA_CHUNKS} 6 750 850  ${DEVDATA} & \
+	chunk-exp.py $^ ${GIGA_CHUNKS} 7 850 1000 ${DEVDATA} & \
 	wait
 
-CHUNKS="../data/twitter/chunks/"
-twitter-%-chunk-exp: %-twitter-ans/ %-twitter-chunk-keys %-twitter-pw-list.txt gold/twitter
-	chunk-exp.py $^ ${CHUNKS} 1   0  90  ${DEVDATA} & \
-	chunk-exp.py $^ ${CHUNKS} 2  90 180  ${DEVDATA} & \
-	chunk-exp.py $^ ${CHUNKS} 3 180 270  ${DEVDATA} & \
-	chunk-exp.py $^ ${CHUNKS} 4 270 360  ${DEVDATA} & \
-	chunk-exp.py $^ ${CHUNKS} 5 360 450  ${DEVDATA} & \
-	chunk-exp.py $^ ${CHUNKS} 6 450 540  ${DEVDATA} & \
-	chunk-exp.py $^ ${CHUNKS} 7 540 1000 ${DEVDATA} & \
+TW_CHUNKS="../data/twitter/chunks/"
+twitter-%-chunk-exp: %-twitter-ans/ %-twitter-chunk-keys twitter-pw-list.txt gold/twitter
+	chunk-exp.py $^ ${TW_CHUNKS} 1   0  90  ${DEVDATA} & \
+	chunk-exp.py $^ ${TW_CHUNKS} 2  90 180  ${DEVDATA} & \
+	chunk-exp.py $^ ${TW_CHUNKS} 3 180 270  ${DEVDATA} & \
+	chunk-exp.py $^ ${TW_CHUNKS} 4 270 360  ${DEVDATA} & \
+	chunk-exp.py $^ ${TW_CHUNKS} 5 360 450  ${DEVDATA} & \
+	chunk-exp.py $^ ${TW_CHUNKS} 6 450 540  ${DEVDATA} & \
+	chunk-exp.py $^ ${TW_CHUNKS} 7 540 1000 ${DEVDATA} & \
 	wait
 
-%-gigaword-default-chunk-merge: %-chunk-keys
+gigaword-%-default-chunk-merge: %-chunk-keys
 	chunk-merger.py $* default gigaword
 
-%-twitter-default-chunk-merge: %-chunk-keys
+twitter-%-default-chunk-merge: %-chunk-keys
 	chunk-merger.py $* default twitter
 
-%-tuned-chunk-merge: %-chunk-keys
+gigaword-%-tuned-chunk-merge: %-chunk-keys
 	chunk-merger.py $* tuned gigaword
+
+twitter-%-tuned-chunk-merge: %-chunk-keys
+	chunk-merger.py $* tuned twitter
 
 chunk-scores/%-mapped-gigaword-tuned.scores:
 	./classifiers-scorer.py $* mapped gigaword tuned > $@
@@ -360,8 +369,9 @@ clear-data:
 	rm -rf ../data/components ../data/monosemous-words ../data/pos-filtering
 
 prepare-chunk-experiment-%: % # for aiku and hdp experiment
-	for i in ${DEVDATA} pack ford; do rm $*/$$i.ans; done
+	-for i in pack ford; do rm $*/$$i.ans; done
 	cat $*/adams_apple.ans | sed "s|adams_apple|adam\'s_apple|g" > $*/adam\'s_apple.ans
+	-rm -rf adams_apple.ans
 
 excel-%.tab: chunk-scores
 	score-excel-format.py $* $</*.scores > $@
@@ -369,6 +379,14 @@ excel-%.tab: chunk-scores
 cw-twitter-key-copy: ../keys/cw/cw-wsd-twitter
 	for i in `ls $</*graded*`; do cp $$i cw-twitter-ans/; done
 	cd cw-twitter-ans; ls | sed -e "p;s|cw.graded-sense.key|ans|" | xargs -n2 mv
+
+squat-gigaword-key-copy: ../keys/squat/squat-wsd-gigaword
+	for i in `ls $</*graded*`; do cp $$i squat-ans/; done
+	cd squat-ans; ls | sed -e "p;s|squat.graded-sense.key|ans|" | xargs -n2 mv
+
+squat-twitter-key-copy: ../keys/squat/squat-wsd-twitter
+	for i in `ls $</*graded*`; do cp $$i squat-twitter-ans/; done
+	cd squat-twitter-ans; ls | sed -e "p;s|squat.graded-sense.key|ans|" | xargs -n2 mv
 
 gold-%-split: ../keys/gold/dev/%.dev.key gold/% # does not work for gigaword, format prob.
 	gold-key-splitter.py $^ ${DEVDATA}

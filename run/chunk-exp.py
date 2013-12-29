@@ -45,7 +45,6 @@ wrappers = [
            ]
 
 logger = ChunkLogger(3)
-
 # quick testing
 #training_word_list = [
                       #'horne', 

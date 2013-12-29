@@ -3,8 +3,10 @@ aaron
 aboriginal
 aborigine
 accelerator
+activeness
 actor
 adam's_apple
+adams_apple
 admirer
 advocate
 aggressiveness
@@ -20,8 +22,9 @@ anaglyph
 angler
 angus
 antagonism
-aragon
+appleton
 ar
+aragon
 arbiter
 archaist
 aristocracy
@@ -30,6 +33,7 @@ arnold
 artaxerxes
 article_of_faith
 artificer
+ashur
 athenaeum
 atheneum
 athletics
@@ -78,6 +82,7 @@ bourbon
 bowler
 boyle
 brady
+brahms
 brave
 bread
 briar
@@ -398,8 +403,8 @@ hospice
 hostel
 hosteller
 hot_seat
-hot_spot
 hotspot
+hot_spot
 housebreaker
 howe
 hubbard
@@ -570,8 +575,8 @@ nickname
 niebuhr
 niger
 noguchi
-norman
 norm
+norman
 north_platte
 no-show
 nursery
@@ -591,6 +596,7 @@ outlier
 overnighter
 owen
 owner
+packer
 packinghouse
 padre
 palsy

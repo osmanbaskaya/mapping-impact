@@ -6,7 +6,7 @@ __author__ = "Osman Baskaya"
 all_comps = set()
 clean_comps = set()
 
-all_comp_file = 'pseudoword-samples/pseudowords.999-count.txt'
+all_comp_file = 'pseudoword-samples/pseudowords.979-count.txt'
 clean_file = 'pseudoword-list-excluded.txt'
 
 for line in open(all_comp_file).readlines():
