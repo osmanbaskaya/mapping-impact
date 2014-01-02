@@ -18,7 +18,7 @@ if len(sys.argv) != 5:
     print >> sys.stderr, msg.format(sys.argv[0])
     exit(1)
 
-gold_form = "../keys/gold/gold-and-dev/{}.{}.key"
+gold_form = "../keys/gold/{}.{}.key"
 score_exec = "../keys/scorer.py"
 
 system = sys.argv[1]
@@ -31,6 +31,7 @@ key_path = "../keys/{}/{}/{}/{}/".format(system, typ, corpus, cls)
 pool = Pool(processes=16)
 
 pairs = []
+print >> sys.stderr, "Key path:", key_path
 for res in os.listdir(key_path):
     test_set = res.rsplit('-', 1)[-1].split('.')[0]
     gold = gold_form.format(corpus, test_set)

@@ -18,6 +18,7 @@ TRAIN5=$(shell ls ../data/ukwac/UKWAC-* | sort -k 2 -t - -n | head -25 | tail -5
 
 TEST=$(shell find ../data/pos-filtering/ -name "*.raw.gz" | sort)
 TWITTER_EXISTED_PW_LIST='existed-twitter-pseudoword-list.txt'
+# If dev data is changed, you should change the gold standard file
 DEVDATA=activeness brahms bathroom al ashur
 #ls *.key | sed 's|.key||g' > ../../../run/existed-twitter-pseudoword-list.txt
 
@@ -359,11 +360,17 @@ gigaword-%-tuned-chunk-merge: %-chunk-keys
 twitter-%-tuned-chunk-merge: %-chunk-keys
 	chunk-merger.py $* tuned twitter
 
-chunk-scores/%-mapped-gigaword-tuned.scores:
+chunk-scores/%-mapped-gigaword-tuned.scores: ../keys/gold/gigaword.semcor.key ../keys/gold/gigaword.uniform.key
 	./classifiers-scorer.py $* mapped gigaword tuned > $@
 
-chunk-scores/%-mapped-gigaword-default.scores:
+chunk-scores/%-mapped-gigaword-default.scores: ../keys/gold/gigaword.semcor.key ../keys/gold/gigaword.uniform.key
 	./classifiers-scorer.py $* mapped gigaword default > $@
+
+chunk-scores/%-mapped-twitter-tuned.scores: ../keys/gold/twitter.semcor.key ../keys/gold/twitter.uniform.key
+	./classifiers-scorer.py $* mapped twitter tuned > $@
+
+chunk-scores/%-mapped-twitter-default.scores: ../keys/gold/twitter.semcor.key ../keys/gold/twitter.uniform.key
+	./classifiers-scorer.py $* mapped twitter default > $@
 
 clear-data: 
 	rm -rf ../data/components ../data/monosemous-words ../data/pos-filtering
@@ -391,7 +398,25 @@ squat-twitter-key-copy: ../keys/squat/squat-wsd-twitter
 gold-%-split: ../keys/gold/dev/%.dev.key gold/% # does not work for gigaword, format prob.
 	gold-key-splitter.py $^ ${DEVDATA}
 
+../keys/gold/gigaword.%.key: ../data/chunks/ gigaword-pw-list.txt
+	gold-standard-creator.py $^ $* ${DEVDATA} | sort | uniq > $@
+
+../keys/gold/twitter.%.key: ../data/twitter/chunks/ twitter-pw-list.txt
+	gold-standard-creator.py $^ $* ${DEVDATA} | sort | uniq > $@
+
+#../keys/gold/gigaword/gigaword.%.key: ../keys/gold/gigaword/%
+	#cd $<; ls *.key | grep -Pv "^((activeness)|(brahms)|(bathroom)|(ashur)|(al))\." |\
+	#xargs -0 -d'\n' cat > ../key.tmp
+	#mv $</../key.tmp $@
+	#wc $@
+
+#../keys/gold/twitter/twitter.%.key: ../data/twitter/chunks
+	#cd $<; ls *.$*.key |\
+	#grep -Pv "^((activeness)|(brahms)|(bathroom)|(ashur)|(al))\." | xargs -n 1 cat \
+	#> ../key.tmp
+	#mv $</../key.tmp $@
+	#wc $@
+
 .SECONDARY:
 #small.tok.gz small.pos.gz small.lem.gz small.raw.gz
 #tok.mono.gz pos.mono.gz lem.mono.gz raw.mono.gz
-

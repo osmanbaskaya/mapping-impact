@@ -7,17 +7,21 @@ __author__ = "Osman Baskaya"
 import sys, os
 
 
-system = sys.argv[1] + "-chunk-keys"
-typ = sys.argv[2]
 dataset = sys.argv[3]
+if dataset != "gigaword":
+    system = sys.argv[1] + "-%s-chunk-keys" % dataset
+else:
+    system = sys.argv[1] + "-chunk-keys"
 
+typ = sys.argv[2]
 classifiers = os.listdir(system)
-
 training = "semcor uniform hybrid random".split()
 testing = "semcor uniform".split()
 
 process = ""
 form = "cat {}/{}/*{}-{}* | gzip > ../keys/{}/mapped/{}/{}/{}-{}-{}.ans.gz & "
+
+print >> sys.stderr, system, dataset, typ
 
 for c in classifiers:
     for train in training:
