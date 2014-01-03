@@ -3,11 +3,12 @@
 from __future__ import division
 import sys
 import gzip
+from pprint import pprint
 
 __author__ = "Osman Baskaya"
 
 if len(sys.argv) != 3:
-    print >> sys.stderr, "Usage {} system_ans_file gold_file".format(sys.argv[0])
+    print >> sys.stderr, "Usage: {} system_ans_file gold_file".format(sys.argv[0])
     exit()
 
 def fopen(filename):
@@ -53,3 +54,10 @@ print '\nScores for system_file: "{}" \t gold_file: "{}"'.format(s_file, g_file)
 print "\tPrecision is {} ({} correct of {} attempted)".format(precision, true_pos, sys_line)
 print "\tRecall is {} ({} correct of {} attempted)".format(recall, true_pos, gold_line)
 print "\tF1-Score is {}\n".format((2 * precision * recall) / (precision + recall))
+
+#diff2 = set(gold.keys()).difference(set(system.keys()))
+#print len(diff2)
+#pprint(diff2)
+
+
+

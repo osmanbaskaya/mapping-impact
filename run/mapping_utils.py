@@ -12,7 +12,7 @@ def get_exp_name(exp, tw, cls_name, exp_part):
     tr, te = detail[0][1], detail[-1][1]
     #exp_name = "%s-%s-%s-%s" % (cls_name, tr, te, detail[-1][0])
     exp_name = "{}-{}-{}-{}".format(cls_name, tr, te, exp_part)
-    return exp_name, te
+    return exp_name, tr, te
 
 def get_gold_chunk_filename(word, chunk_path, types):
     gold_data = []

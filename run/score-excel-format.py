@@ -42,6 +42,7 @@ m = 4
 c = 0
 for ts, clf, s in product(train_sets, classifiers, systems):
     clf = clf + "-" + "-".join([ts, test_set])
+    print >> sys.stderr, clf, s
     #print >> sys.stderr, s, clf
     if c % m == 0 and c != 0:
         print "\n"

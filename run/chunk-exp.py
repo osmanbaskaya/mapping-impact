@@ -87,7 +87,7 @@ for w in wrappers:
         if not os.path.exists(out):
             os.mkdir(out)
 
-        exp_name, test_chunk = mapping_utils.get_exp_name(exp, tw, w.name, exp_part)
+        exp_name, tr_ch, test_chunk = mapping_utils.get_exp_name(exp, tw, w.name, exp_part)
         if test_chunk not in ['semcor', 'uniform']:
             continue
 

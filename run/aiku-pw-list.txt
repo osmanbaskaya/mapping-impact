@@ -6,7 +6,6 @@ accelerator
 activeness
 actor
 adam's_apple
-adams_apple
 admirer
 advocate
 aggressiveness

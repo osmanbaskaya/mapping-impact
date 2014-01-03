@@ -348,6 +348,10 @@ twitter-%-chunk-exp: %-twitter-ans/ %-twitter-chunk-keys twitter-pw-list.txt gol
 	chunk-exp.py $^ ${TW_CHUNKS} 7 540 1000 ${DEVDATA} & \
 	wait
 
+GIGA_CHUNKS="../data/chunks/"
+gigaword-%-chunk-imsbased-exp: %-ans/ %-chunk-keys gigaword-pw-list.txt gold/gigaword
+	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} 1   0 150  ${DEVDATA}
+
 gigaword-%-default-chunk-merge: %-chunk-keys
 	chunk-merger.py $* default gigaword
 
@@ -404,6 +408,29 @@ gold-%-split: ../keys/gold/dev/%.dev.key gold/% # does not work for gigaword, fo
 ../keys/gold/twitter.%.key: ../data/twitter/chunks/ twitter-pw-list.txt
 	gold-standard-creator.py $^ $* ${DEVDATA} | sort | uniq > $@
 
+%-gigaword-uniform-gradedsense.key: %-ans ../keys/gold/gigaword.uniform.key
+	cat $</*ans | system-key-creator.py ../keys/gold/gigaword.uniform.key | sort > $@ 
+
+%-gigaword-semcor-gradedsense.key: %-ans ../keys/gold/gigaword.semcor.key
+	cat $</*ans | system-key-creator.py ../keys/gold/gigaword.semcor.key | sort > $@ 
+
+%-gigaword-uniform-singlesense.key: %-gigaword-uniform-gradedsense.key
+	cat $< | graded2single.py > $@
+
+%-gigaword-semcor-singlesense.key: %-gigaword-semcor-gradedsense.key
+	cat $< | graded2single.py > $@
+
+## make ensemble-gigaword-uniform-singlesense.key
+gigaword-ensemble-%.key:
+	ensemble-key-creator.py misc/*gigaword-$*.key | sort > $@
+
+ensemble-ans-create: gigaword-pw-list.txt
+	ensemble-ans-creator.py $< aiku-ans cw-ans hdp-ans squat-ans
+
+.SECONDARY:
+#small.tok.gz small.pos.gz small.lem.gz small.raw.gz
+#tok.mono.gz pos.mono.gz lem.mono.gz raw.mono.gz
+
 #../keys/gold/gigaword/gigaword.%.key: ../keys/gold/gigaword/%
 	#cd $<; ls *.key | grep -Pv "^((activeness)|(brahms)|(bathroom)|(ashur)|(al))\." |\
 	#xargs -0 -d'\n' cat > ../key.tmp
@@ -416,7 +443,3 @@ gold-%-split: ../keys/gold/dev/%.dev.key gold/% # does not work for gigaword, fo
 	#> ../key.tmp
 	#mv $</../key.tmp $@
 	#wc $@
-
-.SECONDARY:
-#small.tok.gz small.pos.gz small.lem.gz small.raw.gz
-#tok.mono.gz pos.mono.gz lem.mono.gz raw.mono.gz

@@ -4,14 +4,10 @@
 __author__ = "Osman Baskaya"
 
 from feature_transform import SemevalFeatureTransformer
-import re
 from data_load import SemevalKeyLoader
 from sklearn import cross_validation
 from logger import SemevalLogger, ColorLogger
-import numpy as np
-from pprint import pprint
 from nlp_utils import calc_perp, delete_features
-from collections import defaultdict as dd
 import os
 
 """
@@ -233,7 +229,7 @@ class ChunkEvaluator(Evaluator):
 
             predictions[tw] = (zip(test_inst_order, prediction))
 
-            print "predictions"
+            #print "predictions"
         return predictions
 
     def score(self):
@@ -291,5 +287,23 @@ class ChunkEvaluator(Evaluator):
         return scores, predictions
 
 
+class IMSBasedChunkEvaluator(ChunkEvaluator):
+
+    def __init__(self, clf_wrapper, tw_dict, system_files, devset, optimization, logger): 
+        super(IMSBasedChunkEvaluator, self).__init__(clf_wrapper, optimization, 
+         SemevalKeyLoader(), SemevalFeatureTransformer(weighted=False), logger=logger)
+
+        self.system_files = system_files
+        self.devset = devset
+        
+        self.gold_dict = {}
+        self.instances = {}
+
+        for key, values in tw_dict.iteritems():
+            vv = map(self.load_key_file, values)
+            self.gold_dict[key] =  [vv[i][key] for i in range(len(vv))]
+            self.instances[key] = [vv[i][key].keys() for i in range(len(vv))]
+
+        self.get_system_answers()
 
 
