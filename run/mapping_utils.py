@@ -14,6 +14,19 @@ def get_exp_name(exp, tw, cls_name, exp_part):
     exp_name = "{}-{}-{}-{}".format(cls_name, tr, te, exp_part)
     return exp_name, tr, te
 
+def get_ims_training_set_size(pw_list, dist_types, ims_training_path):
+    d = dd(dict)
+    for dtype in dist_types:
+        for pw in pw_list:
+            fn = "{}.{}.key".format(pw, dtype)
+            counts = dd(int)
+            for line in open(os.path.join(ims_training_path, fn)):
+                tag = line.split()[-1]
+                counts[tag] += 1
+            d[dtype][pw] = counts
+    return d
+
+
 def get_gold_chunk_filename(word, chunk_path, types):
     gold_data = []
     form = "{}{}.chunk{}.{}.key"

@@ -349,8 +349,8 @@ twitter-%-chunk-exp: %-twitter-ans/ %-twitter-chunk-keys twitter-pw-list.txt gol
 	wait
 
 GIGA_CHUNKS="../data/chunks/"
-gigaword-%-chunk-imsbased-exp: %-ans/ %-chunk-keys gigaword-pw-list.txt gold/gigaword
-	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} 1   0 150  ${DEVDATA}
+gigaword-%-chunk-imsbased-exp: %-ans/ %-ims-chunk-keys gigaword-pw-list.txt gold/gigaword
+	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 1   0 150  ${DEVDATA}
 
 gigaword-%-default-chunk-merge: %-chunk-keys
 	chunk-merger.py $* default gigaword

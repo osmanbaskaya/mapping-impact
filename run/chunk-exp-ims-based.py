@@ -8,6 +8,7 @@ from collections import defaultdict as dd
 from classifier_eval import IMSBasedChunkEvaluator
 from logger import ChunkLogger
 from classifier import *
+from pprint import pprint
 import mapping_utils
 import sys
 import os
@@ -21,16 +22,19 @@ sys_ans_dict = {}
 #exp_part = 1
 
 system_key_folder = sys.argv[1]
-system_out_dir = sys.argv[2]
+system_out_dir = os.path.join(sys.argv[2], sys.argv[6])
+if not os.path.exists(system_out_dir):
+    os.mkdir(system_out_dir)
 training_word_list = [line.strip() for line in open(sys.argv[3]).readlines()]
 gold_dir = sys.argv[4]
 chunk_path = sys.argv[5]
-exp_part = sys.argv[6]
-start = int(sys.argv[7])
-end = int(sys.argv[8])
+num_inst_in_training = int(sys.argv[6])
+exp_part = sys.argv[7]
+start = int(sys.argv[8])
+end = int(sys.argv[9])
 
 # Development data stuff
-devfiles = sys.argv[9:] # development files
+devfiles = sys.argv[10:] # development files
 gold_dev = [os.path.join(gold_dir, f + '.key') for f in devfiles]
 sys_dev = ["{}{}.ans".format(system_key_folder, tw) for tw in devfiles]
 
@@ -45,12 +49,12 @@ wrappers = [
 
 logger = ChunkLogger(3)
 # quick testing
-#training_word_list = [
+training_word_list = [
                       #'horne', 
                       #'adams_apple', 
                       #'loot', 
-                      #'para'
-                     #]
+                      'para'
+                     ]
 
 training_word_list.sort()
 processed = training_word_list[start:end]
@@ -64,15 +68,20 @@ devset = [sys_dev, gold_dev]
 exp_length = len(tw_dict[processed[0]])
 optimization = False
 
+IMS_path = "ims-training-data/has-{}-instances".format(num_inst_in_training)
+inst_num_d = mapping_utils.get_ims_training_set_size(tw_dict.keys(), chunk_types, IMS_path)
+print "semcor-para:", inst_num_d["semcor"]["para"]
+#print tw_dict["advocate"]
+
 ### Prints all information for the experiment ###
-logger.info("Evaluation started for %s" % system_key_folder)
-logger.info("Total pseudowords: %d" % len(processed))
-logger.info("Chunk Path is: %s" % chunk_path)
-logger.info("Dev. set: %s" % devset[0])
-logger.info("Gold Dev. set: %s" % devset[1])
-logger.info("Optimization: %s" % optimization)
-logger.info("Gold key directory: %s" % gold_dir)
-logger.info("Number of classifiers: %d" % len(wrappers))
+#logger.info("Evaluation started for %s" % system_key_folder)
+#logger.info("Total pseudowords: %d" % len(processed))
+#logger.info("Chunk Path is: %s" % chunk_path)
+#logger.info("Dev. set: %s" % devset[0])
+#logger.info("Gold Dev. set: %s" % devset[1])
+#logger.info("Optimization: %s" % optimization)
+#logger.info("Gold key directory: %s" % gold_dir)
+#logger.info("Number of classifiers: %d" % len(wrappers))
 for w in wrappers:
     results = dd(list)
     predictions = dd(list)
@@ -89,11 +98,12 @@ for w in wrappers:
         exp_name, ta, te = mapping_utils.get_exp_name(exp, tw, w.name, exp_part)
         if te != ta: # Distribution of the test and training should be the same.
             continue
-
-        print exp_name, ta, te
-
-        #e = IMSBasedChunkEvaluator(w,exp,sys_ans_dict,devset,optimization,logger=logger)
-        #score, prediction = e.score_and_predict()
+        pprint(exp)
+        inst = inst_num_d[ta]
+        e = IMSBasedChunkEvaluator(w,exp,sys_ans_dict,devset,inst,optimization,logger)
+        score, prediction = e.score_and_predict()
+        print score
+        #pprint (prediction)
         #print system_out_dir, exp_name
         #num_pw = len(score.keys())
         #avg_score = sum([s[0] for s in score.values()]) / num_pw
