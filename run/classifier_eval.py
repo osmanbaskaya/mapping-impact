@@ -10,6 +10,7 @@ from pprint import pprint
 from sklearn import cross_validation
 from logger import SemevalLogger, ColorLogger
 from nlp_utils import calc_perp, delete_features
+from collections import defaultdict as dd
 import os
 import random
 
@@ -287,124 +288,129 @@ class ChunkEvaluator(Evaluator):
         #self.ft.dump_data_libsvm_format(X, y, 'libsvm-input/' + tw)
         return scores, predictions
 
+    @staticmethod
+    def write_prediction2file(predictions, out_path):
 
-class IMSBasedChunkEvaluator(ChunkEvaluator):
+        d = dd(list)
+        for exp_name, chunks in predictions.iteritems():
+            for chunk in chunks:
+                for tw, pred in chunk.iteritems():
+                    for inst_id, label in pred:
+                        s = "{} {} {}".format(tw, inst_id, label)
+                        d[exp_name].append(s)
 
-    def __init__(self,clf_wrapper,tw_dict,system_files,devset,inst,optimization, logger): 
-        super(IMSBasedChunkEvaluator, self).__init__(clf_wrapper, tw_dict, system_files, 
-                                                        devset, optimization, logger)
+
+        for key, val in d.iteritems():
+            f = open(os.path.join(out_path, key), 'w')
+            f.write('\n'.join(val))
+            f.write('\n')
+
+
+                
+
+
+class IMSBasedChunkEvaluator(Evaluator):
+
+    def __init__(self,clf_wrapper,dataset,system_files,devset,optimization, logger): 
+        super(IMSBasedChunkEvaluator, self).__init__(clf_wrapper, optimization, 
+         SemevalKeyLoader(), SemevalFeatureTransformer(weighted=False), logger=logger)
 
         self.system_files = system_files
+        self.dataset = dataset
         self.devset = devset
-        self.inst_list = inst
         
-        self.gold_dict = {}
-        self.instances = {}
+    def get_system_answers(self):
+        
+        self.system_key_dict = {}
 
-        for key, values in tw_dict.iteritems():
+        print self.inst_list['para']
+
+        for tw, val in self.system_files.iteritems():
+            print val
+            exit()
+            values =  [val] * len(self.instances[tw])
             vv = map(self.load_key_file, values)
-            self.gold_dict[key] =  [vv[i][key] for i in range(len(vv))]
-            self.instances[key] = [vv[i][key].keys() for i in range(len(vv))]
-
-        self.get_system_answers()
-
-    def sample_from_ims(self, tw, val, target):
-        d = self.inst_list[tw]
-        L = []
-        for key, v in d.viewitems():
-            keys = [x for x in target.keys() if x.startswith(key)]
-            m = len(keys)
-            #if m < v:
-                #self.logger.warning("Sampling problem {}: {}, {}".format(tw,m,v))
-            L.extend(random.sample(keys, min(m,v)))
-
-        new_val = dict(zip(L, map(val.get, L)))
-        new_target = dict(zip(L, map(target.get, L)))
-
-        return new_val, new_target
-
-    def test_data_filter(self, test_data, test_gold, psenses):
-        remove_list = []
-        for key in test_data.keys():
-            if key.rsplit(".", 2)[0] not in psenses:
-                remove_list.append(key)
-                
-        map(test_data.pop, remove_list)
-        map(test_gold.pop, remove_list)
-        return test_data, test_gold
-
-    def _prepare(self, tw, chunks):
+            self.system_key_dict[tw] =  [vv[i][tw] for i in range(len(vv))]
+            # Now we need to clear the chunks from other instances
+            include_lists = self.instances[tw]
+            for i, inc in enumerate(include_lists):
+                d = self.system_key_dict[tw][i]
+                self.system_key_dict[tw][i] = dict(zip(inc, map(d.get, inc)))
+        self.logger.info("Reading all system answers done")
 
 
-            c = chunks[:]
-            g = self.gold_dict[tw][:]
+    def _prepare(self, tw, train_file, test_file):
 
-            # last chunk will be the test chunk.
-            test_data = c.pop()
-            test_gold = g.pop()
+            system_keys = self.load_key_file(self.system_files[tw])[tw]
 
-            # data of the remaining chunks are incorporated
-            val = {}
-            map(val.update, c)
+            tr_gold = self.load_key_file(train_file)[tw + ".n"] # ims keys has .n
+            te_gold = self.load_key_file(test_file)[tw + ".n"] # ims keys has .n
 
-            # gold labels of the remaining chunks are incorporated
-            target = {}
-            map(target.update, g)
-            
-            val, target = self.sample_from_ims(tw, val, target) # sampling
-            
-            # filter out other pseudosenses that are not observed in training.
-            # filtering is necessary when distribution is semcor.
-            # David said that IMS is the same for these cases so there is no
-            # need to remove these kind of instances.
+            tr_inst = tr_gold.keys()
+            te_inst = te_gold.keys()
 
-            #psenses = set(self.inst_list[tw].keys())
-            #test_data, test_gold = self.test_data_filter(test_data, test_gold, psenses)
-            
-            X_train, y_train = self.ft.convert_data(val, target)
+            system_tr_dict = dict(zip(tr_inst, map(system_keys.get, tr_inst)))
+            system_te_dict = dict(zip(te_inst, map(system_keys.get, te_inst)))
+
+            assert len(tr_inst) == len(system_tr_dict)
+            assert len(te_inst) == len(system_te_dict)
+
+            X_train, y_train = self.ft.convert_data(system_tr_dict, tr_gold)
+
             vectorizer = self.ft.get_vectorizer()
             X_train = vectorizer.fit_transform(X_train)
             if self.clf_wrapper.name in ["SVM_Linear", "SVM_Gaussian"]:
                 scaler = self.ft.get_scaler()
                 X_train = scaler.fit_transform(X_train)
 
-            X_test, y_test = self.ft.convert_data(test_data, test_gold)
+
+            X_test, y_test = self.ft.convert_data(system_te_dict, te_gold)
             X_test = vectorizer.transform(X_test)
 
             if self.clf_wrapper.name in ["SVM_Linear", "SVM_Gaussian"]:
                 X_test = scaler.transform(X_test)
             
-            #print >> sys.stderr, tw, X_train.shape, X_test.shape
-            
-            return X_train, X_test, y_train, y_test, test_data.keys()
+            return X_train, X_test, y_train, y_test, te_inst
 
-    def score_and_predict(self):
-        scores = {}
-        predictions = {}
+    def predict(self):
+        predictions = dict()
         # optimization
         self.optimize()
         self.logger.info(self.clf_wrapper.classifier)
-        
-        for tw, chunks in self.system_key_dict.iteritems():
 
-            X_train, X_test, y_train, y_test, test_inst_order = self._prepare(tw, chunks)
+        for tw, chunks in self.dataset.viewitems():
+            tw_predictions = []
+            #tw_scores = []
+            for tr, te in chunks: #test set and train set
+                X_train, X_test, y_train, y_test, test_inst_order = self._prepare(tw,tr,te)
+                #score = 0.0
+                try:
+                    self.clf_wrapper.classifier.fit(X_train, y_train)
+                    prediction = self.clf_wrapper.classifier.predict(X_test)
+                    #score = self.clf_wrapper.classifier.score(X_test, y_test)
+                except ValueError, e: # all instances are belongs to the same class
+                    self.logger.warning("{}-{}: {}".format(self.clf_wrapper.name, tw, e))
+                    if str(e) == "The number of classes has to be greater than one.":
+                        prediction = [y_train[0]] * len(y_test)
+                        #score = sum(prediction == y_test) / float(len(y_test))
+                    if str(e) == "Input X must be non-negative.":
+                        pass
+                
+                tw_predictions.extend(zip(test_inst_order, prediction))
+            predictions[tw] = dict(tw_predictions)
+        return predictions
 
-            #print len(test_inst_order)
-            
-            score = 0.0
-            try:
-                self.clf_wrapper.classifier.fit(X_train, y_train)
-                prediction = self.clf_wrapper.classifier.predict(X_test)
-                score = self.clf_wrapper.classifier.score(X_test, y_test)
-            except ValueError, e: # all instances are belongs to the same class
-                self.logger.warning("{}-{}: {}".format(self.clf_wrapper.name, tw, e))
-                if str(e) == "The number of classes has to be greater than one.":
-                    prediction = [y_train[0]] * len(y_test)
-                    score = sum(prediction == y_test) / float(len(y_test))
-                if str(e) == "Input X must be non-negative.":
-                    pass
-            
-            scores[tw] = (score, calc_perp(y_test))
-            predictions[tw] = (zip(test_inst_order, prediction))
-        #self.ft.dump_data_libsvm_format(X, y, 'libsvm-input/' + tw)
-        return scores, predictions
+    @staticmethod
+    def write_prediction2file(predictions, out_path):
+
+        d = dd(list)
+        for exp_name, preds in predictions.viewitems():
+            for tw, pred in preds.iteritems():
+                for inst_id, label in pred.viewitems():
+                    s = "{} {} {}".format(tw, inst_id, label)
+                    d[exp_name].append(s)
+
+        for key, val in d.iteritems():
+            f = open(os.path.join(out_path, key), 'w')
+            f.write('\n'.join(val))
+            f.write('\n')
