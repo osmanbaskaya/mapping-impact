@@ -6,7 +6,7 @@ __author__ = "Osman Baskaya"
 Gold standard creator provides a gold standard file. Important to 
 exclude all dev set pseudowords in the gold standard. Addition to this
 gold standard file needs to contain only the common set of pseudowords
-for all 4 systems. (that is why one of the input file is *.pw-list.txt)
+for all n systems. (that is why one of the input file is *.pw-list.txt)
 """
 #ls *.uniform.key |  grep -Pv "^((activeness)|(brahms)|(bathroom)|(ashur)|(al))\."  | xargs -0 -d "\n" cat | wc 
 

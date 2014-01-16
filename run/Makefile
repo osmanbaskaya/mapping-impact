@@ -319,6 +319,12 @@ gigaword-pw-list.txt: aiku-pw-list.txt cw-pw-list.txt hdp-pw-list.txt squat-pw-l
 	comm -12 intersect.tmp intersect2.tmp > $@
 	rm intersect.tmp intersect2.tmp
 
+gigaword-p%-pw-list.txt: ${PSEUDO_W_FILE} gigaword-pw-list.txt 
+	cat $< | awk '{print $$1"\t"NF-1}' | sed "s|[<>]||g" #| grep -P "\t$*" | cut -f1 \
+	#| sort > list.tmp
+	#comm -12 list.tmp gigaword-pw-list.txt | sort > $@
+	#wc $@
+
 twitter-pw-list.txt: aiku-twitter-pw-list.txt cw-twitter-pw-list.txt hdp-twitter-pw-list.txt squat-twitter-pw-list.txt
 	comm -12 hdp-twitter-pw-list.txt $< | sort > intersect.tmp
 	comm -12 squat-twitter-pw-list.txt cw-twitter-pw-list.txt | sort > intersect2.tmp
@@ -349,8 +355,25 @@ twitter-%-chunk-exp: %-twitter-ans/ %-twitter-chunk-keys twitter-pw-list.txt gol
 	wait
 
 GIGA_CHUNKS="../data/chunks/"
-gigaword-%-chunk-imsbased-exp: %-ans/ %-ims-chunk-keys gigaword-pw-list.txt gold/gigaword
-	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 1   0 150  ${DEVDATA}
+
+ims%-pw-list.txt: gigaword-pw-list.txt
+	cd ims-testing-output/has-$*-instances/semcor; \
+	ls *.result | sed 's|\.n\.result||g' | sort > intersect.tmp; 
+	mv ims-testing-output/has-$*-instances/semcor/intersect.tmp .
+	comm -12 intersect.tmp $< > $@
+	rm intersect.tmp
+	wc $@
+
+gigaword-%-chunk-imsbased-exp: %-ans/ %-ims-chunk-keys ims${NUM_INST}-pw-list.txt gold/gigaword
+	-mkdir $*-ims-chunk-keys/${NUM_INST}
+	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 1    0 100  ${DEVDATA} & \
+	#chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 2  100 200  ${DEVDATA} &\
+	#chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 3  200 300  ${DEVDATA} &\
+	#chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 4  300 400  ${DEVDATA} & \
+	#chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 5  400 520  ${DEVDATA} &\
+	#chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 6  520 630  ${DEVDATA} &\
+	#chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 7  630 800  ${DEVDATA} &\
+	wait
 
 gigaword-%-default-chunk-merge: %-chunk-keys
 	chunk-merger.py $* default gigaword
@@ -364,17 +387,42 @@ gigaword-%-tuned-chunk-merge: %-chunk-keys
 twitter-%-tuned-chunk-merge: %-chunk-keys
 	chunk-merger.py $* tuned twitter
 
+ims-%-default-chunk-merge: %-ims-chunk-keys
+	ims-chunk-merger.py $* default ims ${INST_NUM}
+
+chunk-scores/%-mapped-gigaword-p6OrMore-default.scores: ../keys/gold/gigaword-p6OrMore.semcor.key ../keys/gold/gigaword-p6OrMore.uniform.key
+	./classifiers-scorer.py $* mapped gigaword default $^ > $@
+
+pw-p%.scores: gigaword-p%-pw-list.txt
+	pw-score.py $< $* ${DEVDATA} > $@
+
 chunk-scores/%-mapped-gigaword-tuned.scores: ../keys/gold/gigaword.semcor.key ../keys/gold/gigaword.uniform.key
-	./classifiers-scorer.py $* mapped gigaword tuned > $@
+	./classifiers-scorer.py $* mapped gigaword tuned $^ > $@
 
 chunk-scores/%-mapped-gigaword-default.scores: ../keys/gold/gigaword.semcor.key ../keys/gold/gigaword.uniform.key
-	./classifiers-scorer.py $* mapped gigaword default > $@
+	./classifiers-scorer.py $* mapped gigaword default $^ > $@
 
 chunk-scores/%-mapped-twitter-tuned.scores: ../keys/gold/twitter.semcor.key ../keys/gold/twitter.uniform.key
-	./classifiers-scorer.py $* mapped twitter tuned > $@
+	./classifiers-scorer.py $* mapped twitter tuned $^ > $@
 
 chunk-scores/%-mapped-twitter-default.scores: ../keys/gold/twitter.semcor.key ../keys/gold/twitter.uniform.key
-	./classifiers-scorer.py $* mapped twitter default > $@
+	./classifiers-scorer.py $* mapped twitter default $^ > $@
+
+chunk-scores/ims/aiku-mapped-ims%-default.scores: ../keys/gold/ims%.semcor.key ../keys/gold/ims%.uniform.key
+	ims-classifiers-scorer.py aiku $* mapped ims default > $@
+
+chunk-scores/ims/cw-mapped-ims%-default.scores: ../keys/gold/ims%.semcor.key ../keys/gold/ims%.uniform.key
+	ims-classifiers-scorer.py cw $* mapped ims default > $@
+
+chunk-scores/ims/squat-mapped-ims%-default.scores: ../keys/gold/ims%.semcor.key ../keys/gold/ims%.uniform.key
+	ims-classifiers-scorer.py squat $* mapped ims default > $@
+
+chunk-scores/ims/ensemble-mapped-ims%-default.scores: ../keys/gold/ims%.semcor.key ../keys/gold/ims%.uniform.key
+	ims-classifiers-scorer.py ensemble $* mapped ims default > $@
+
+chunk-scores/ims/hdp-mapped-ims%-default.scores: ../keys/gold/ims%.semcor.key ../keys/gold/ims%.uniform.key
+	ims-classifiers-scorer.py hdp $* mapped ims default > $@
+
 
 clear-data: 
 	rm -rf ../data/components ../data/monosemous-words ../data/pos-filtering
@@ -385,7 +433,10 @@ prepare-chunk-experiment-%: % # for aiku and hdp experiment
 	-rm -rf adams_apple.ans
 
 excel-%.tab: chunk-scores
-	score-excel-format.py $* $</*.scores > $@
+	score-excel-format.py $* $</*p2*.scores > $@
+
+ims-excel-%.tab: chunk-scores/ims
+	score-ims-excel-format.py $* $</*.scores > $@
 
 cw-twitter-key-copy: ../keys/cw/cw-wsd-twitter
 	for i in `ls $</*graded*`; do cp $$i cw-twitter-ans/; done
@@ -402,11 +453,25 @@ squat-twitter-key-copy: ../keys/squat/squat-wsd-twitter
 gold-%-split: ../keys/gold/dev/%.dev.key gold/% # does not work for gigaword, format prob.
 	gold-key-splitter.py $^ ${DEVDATA}
 
+../keys/gold/gigaword-p%.semcor.key: ../data/chunks/ gigaword-p%-pw-list.txt
+	gold-standard-creator.py $^ semcor ${DEVDATA} | sort | uniq > $@
+	wc $@
+
+../keys/gold/gigaword-p%.uniform.key: ../data/chunks/ gigaword-p%-pw-list.txt
+	gold-standard-creator.py $^ uniform ${DEVDATA} | sort | uniq > $@
+	wc $@
+
 ../keys/gold/gigaword.%.key: ../data/chunks/ gigaword-pw-list.txt
 	gold-standard-creator.py $^ $* ${DEVDATA} | sort | uniq > $@
 
 ../keys/gold/twitter.%.key: ../data/twitter/chunks/ twitter-pw-list.txt
 	gold-standard-creator.py $^ $* ${DEVDATA} | sort | uniq > $@
+
+../keys/gold/ims%.semcor.key: ../data/chunks/ ims%-pw-list.txt
+	gold-standard-creator.py $^ semcor ${DEVDATA} | sort | uniq > $@
+
+../keys/gold/ims%.uniform.key: ../data/chunks/ ims%-pw-list.txt
+	gold-standard-creator.py $^ uniform ${DEVDATA} | sort | uniq > $@
 
 %-gigaword-uniform-gradedsense.key: %-ans ../keys/gold/gigaword.uniform.key
 	cat $</*ans | system-key-creator.py ../keys/gold/gigaword.uniform.key | sort > $@ 
@@ -425,7 +490,8 @@ gigaword-ensemble-%.key:
 	ensemble-key-creator.py misc/*gigaword-$*.key | sort > $@
 
 ensemble-ans-create: gigaword-pw-list.txt
-	ensemble-ans-creator.py $< aiku-ans cw-ans hdp-ans squat-ans
+	ensemble-ans-creator.py $< aiku-ans hdp-ans #cw-ans squat-ans
+
 
 .SECONDARY:
 #small.tok.gz small.pos.gz small.lem.gz small.raw.gz

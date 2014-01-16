@@ -19,7 +19,7 @@ files = map(open, sys.argv[2:])
 regex = re.compile(".*/keys/(\w+)/.*/(.*).ans.gz.*\.(.*).key")
 pr_regex = re.compile(".*(0\.\d+)")
 
-systems = "aiku hdp cw squat".split()
+systems = "aiku hdp cw squat ensemble".split()
 classifiers = "BernoulliNBWrapper MultinomialNB SVM_Linear SVM_Gaussian \
                DecisionTree-Entropy DecisionTree-Gini".split()
 train_sets = "semcor uniform hybrid random".split()
@@ -38,7 +38,7 @@ for f in files:
             pr = pr_regex.search(line).group(1)
             d[s][t][m].append(pr)
 
-m = 4
+m = len(systems)
 c = 0
 for ts, clf, s in product(train_sets, classifiers, systems):
     clf = clf + "-" + "-".join([ts, test_set])

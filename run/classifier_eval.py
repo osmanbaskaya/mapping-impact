@@ -5,6 +5,7 @@ __author__ = "Osman Baskaya"
 
 from feature_transform import SemevalFeatureTransformer
 from data_load import SemevalKeyLoader
+import sys
 from pprint import pprint
 from sklearn import cross_validation
 from logger import SemevalLogger, ColorLogger
@@ -19,7 +20,7 @@ formats can be added in data_load module.
 
 """
 
-__all__ = ['Evaluator', 'SemevalEvaluator', 'ChunkEvaluator']
+__all__ = ['Evaluator', 'SemevalEvaluator', 'ChunkEvaluator', 'IMSBasedChunkEvaluator']
 
 class Evaluator(object):
 
@@ -310,11 +311,13 @@ class IMSBasedChunkEvaluator(ChunkEvaluator):
     def sample_from_ims(self, tw, val, target):
         d = self.inst_list[tw]
         L = []
-        print d
         for key, v in d.viewitems():
-            L.extend(random.sample([x for x in target.keys() if x.startswith(key)], v))
+            keys = [x for x in target.keys() if x.startswith(key)]
+            m = len(keys)
+            #if m < v:
+                #self.logger.warning("Sampling problem {}: {}, {}".format(tw,m,v))
+            L.extend(random.sample(keys, min(m,v)))
 
-        print L
         new_val = dict(zip(L, map(val.get, L)))
         new_target = dict(zip(L, map(target.get, L)))
 
@@ -349,11 +352,14 @@ class IMSBasedChunkEvaluator(ChunkEvaluator):
             map(target.update, g)
             
             val, target = self.sample_from_ims(tw, val, target) # sampling
-
+            
             # filter out other pseudosenses that are not observed in training.
             # filtering is necessary when distribution is semcor.
-            psenses = set(self.inst_list[tw].keys())
-            test_data, test_gold = self.test_data_filter(test_data, test_gold, psenses)
+            # David said that IMS is the same for these cases so there is no
+            # need to remove these kind of instances.
+
+            #psenses = set(self.inst_list[tw].keys())
+            #test_data, test_gold = self.test_data_filter(test_data, test_gold, psenses)
             
             X_train, y_train = self.ft.convert_data(val, target)
             vectorizer = self.ft.get_vectorizer()
@@ -368,6 +374,8 @@ class IMSBasedChunkEvaluator(ChunkEvaluator):
             if self.clf_wrapper.name in ["SVM_Linear", "SVM_Gaussian"]:
                 X_test = scaler.transform(X_test)
             
+            #print >> sys.stderr, tw, X_train.shape, X_test.shape
+            
             return X_train, X_test, y_train, y_test, test_data.keys()
 
     def score_and_predict(self):
@@ -379,10 +387,9 @@ class IMSBasedChunkEvaluator(ChunkEvaluator):
         
         for tw, chunks in self.system_key_dict.iteritems():
 
-            X_train, X_test, y_train, y_test, test_inst_order = self._prepare(tw,chunks)
+            X_train, X_test, y_train, y_test, test_inst_order = self._prepare(tw, chunks)
 
-            print X_train.shape, X_test.shape, y_train.shape, y_test.shape
-            print len(test_inst_order)
+            #print len(test_inst_order)
             
             score = 0.0
             try:
@@ -396,7 +403,6 @@ class IMSBasedChunkEvaluator(ChunkEvaluator):
                     score = sum(prediction == y_test) / float(len(y_test))
                 if str(e) == "Input X must be non-negative.":
                     pass
-
             
             scores[tw] = (score, calc_perp(y_test))
             predictions[tw] = (zip(test_inst_order, prediction))

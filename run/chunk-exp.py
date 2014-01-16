@@ -63,7 +63,7 @@ for tw in processed:
 
 devset = [sys_dev, gold_dev]
 exp_length = len(tw_dict[processed[0]])
-optimization = True
+optimization = False
 
 ### Prints all information for the experiment ###
 logger.info("Evaluation started for %s" % system_key_folder)

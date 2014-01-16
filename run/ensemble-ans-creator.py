@@ -5,8 +5,6 @@ __author__ = "Osman Baskaya"
 """
 ensemble-ans/ directory needs to be filled with the ensemble ans 
 files. So this module does that very well.  
-Important: Assuming that
-
 """
 
 import sys
