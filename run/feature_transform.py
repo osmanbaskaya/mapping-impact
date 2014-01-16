@@ -28,7 +28,6 @@ class SemevalFeatureTransformer(FeatureTransformer):
         X = []
         y = []
         for key in data:
-            #print key
             X.append(dict(data[key]))
             y.append(target[key][0][0]) # we get only one sense for gold standard
         

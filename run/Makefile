@@ -367,12 +367,12 @@ ims%-pw-list.txt: gigaword-pw-list.txt
 gigaword-%-chunk-imsbased-exp: %-ans/ %-ims-chunk-keys ims${NUM_INST}-pw-list.txt gold/gigaword
 	-mkdir $*-ims-chunk-keys/${NUM_INST}
 	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 1    0 100  ${DEVDATA} & \
-	#chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 2  100 200  ${DEVDATA} &\
-	#chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 3  200 300  ${DEVDATA} &\
-	#chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 4  300 400  ${DEVDATA} & \
-	#chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 5  400 520  ${DEVDATA} &\
-	#chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 6  520 630  ${DEVDATA} &\
-	#chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 7  630 800  ${DEVDATA} &\
+	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 2  100 200  ${DEVDATA} &\
+	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 3  200 300  ${DEVDATA} &\
+	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 4  300 400  ${DEVDATA} & \
+	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 5  400 520  ${DEVDATA} &\
+	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 6  520 630  ${DEVDATA} &\
+	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 7  630 800  ${DEVDATA} &\
 	wait
 
 gigaword-%-default-chunk-merge: %-chunk-keys

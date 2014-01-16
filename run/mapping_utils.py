@@ -26,6 +26,14 @@ def get_ims_training_set_size(pw_list, dist_types, ims_training_path):
             d[dtype][pw] = counts
     return d
 
+def get_ims_training_instances(pw_list, dist_types, ims_training_path):
+    d = dd(dict)
+    for dtype in dist_types:
+        for pw in pw_list:
+            fn = os.path.join(ims_training_path, "{}.{}.key".format(pw, dtype))
+            d[dtype][pw] = [line.split()[1] for line in open(fn)]
+    return d
+
 
 def get_gold_chunk_filename(word, chunk_path, types):
     gold_data = []
@@ -48,21 +56,3 @@ class Dataset(object):
         self.target = target
 
 
-def write_prediction2file(predictions, out_path):
-
-    d = dd(list)
-    for exp_name, chunks in predictions.iteritems():
-        for chunk in chunks:
-            for tw, pred in chunk.iteritems():
-                for inst_id, label in pred:
-                    s = "{} {} {}".format(tw, inst_id, label)
-                    d[exp_name].append(s)
-
-
-    for key, val in d.iteritems():
-        f = open(os.path.join(out_path, key), 'w')
-        f.write('\n'.join(val))
-        f.write('\n')
-
-
-                

@@ -30,7 +30,8 @@ class SemevalKeyLoader(KeyLoader):
         for line in lines:
             line = line.split()
             size = len(line)
-            assert size >= 3, "Keyfile does not meet the Semeval constraints"
+            me = "Keyfile violation the Semeval constraints: {}, {}".format(line, keyfile)
+            assert size >= 3, me
             if delim in line[2]:
                 ss = [ll.split(delim) for ll in line[2:]]
                 # rating should be parse as float
@@ -53,7 +54,8 @@ class ChunkLoader(KeyLoader):
         for line in lines:
             line = line.split()
             size = len(line)
-            assert size >= 3, "Keyfile does not meet the Semeval constraints"
+            me = "Keyfile violation the Semeval constraints: {}, {}".format(line, keyfile)
+            assert size >= 3, me
             if delim in line[2]:
                 ss = [ll.split(delim) for ll in line[2:]]
                 # rating should be parse as float

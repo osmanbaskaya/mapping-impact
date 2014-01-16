@@ -98,7 +98,7 @@ for w in wrappers:
     results = dd(list)
     predictions = dict()
 
-    out = os.path.join("dummy-dir", w.name)
+    out = os.path.join(system_out_dir, w.name)
     if not os.path.exists(out):
          os.mkdir(out)
 
