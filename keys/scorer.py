@@ -9,6 +9,8 @@ __author__ = "Osman Baskaya"
 
 if len(sys.argv) != 3:
     print >> sys.stderr, "Usage: {} system_ans_file gold_file".format(sys.argv[0])
+    print >> sys.stderr, len(sys.argv)
+    print >> sys.stderr, sys.argv[-1]
     exit()
 
 def fopen(filename):

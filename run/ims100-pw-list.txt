@@ -3,13 +3,11 @@ aaron
 aboriginal
 aborigine
 accelerator
-activeness
 actor
 admirer
 advocate
 aggressiveness
 ague
-al
 aliyah
 allen
 amateur
@@ -31,9 +29,9 @@ arnold
 artaxerxes
 article_of_faith
 artificer
-ashur
 athenaeum
 atheneum
+athletics
 atlanta
 aversion
 averting
@@ -55,7 +53,6 @@ baronetage
 barrymore
 barth
 bather
-bathroom
 bazaar
 bazar
 bearer
@@ -78,7 +75,6 @@ bourbon
 bowler
 boyle
 brady
-brahms
 brave
 bread
 briar
@@ -106,6 +102,7 @@ button
 ca
 cabal
 cabalist
+cabaret
 cad
 calm
 calvin
@@ -169,7 +166,9 @@ comrade
 conception
 condensate
 condominium
+conferrer
 confession
+confessor
 congo
 conservator
 conservatory
@@ -178,6 +177,7 @@ convenience
 convict
 conviction
 cooper
+cordoba
 cordon_bleu
 cordova
 corduroy
@@ -203,8 +203,10 @@ crown_princess
 crud
 cruiser
 cubicle
+cul_de_sac
 cumberland
 cynic
+dancer
 danish
 david
 davis
@@ -212,6 +214,7 @@ daybed
 dead_end
 debacle
 dec
+decency
 decker
 defaulter
 defeat
@@ -258,6 +261,7 @@ enmity
 entrant
 envoy
 episcopate
+eristic
 eugene
 excogitation
 exotic_dancer
@@ -283,6 +287,7 @@ field_of_honor
 fighter
 fireman
 firestorm
+first_lady
 fitzgerald
 flack
 flak
@@ -302,6 +307,7 @@ forester
 forge
 fourier
 franck
+frankfort
 franklin
 free_agent
 frustration
@@ -315,6 +321,7 @@ garibaldi
 gas
 gas_oven
 gatekeeper
+gem
 georgia
 gershwin
 gibson
@@ -322,6 +329,7 @@ giver
 gladstone
 god
 gold_coast
+gold_digger
 goldenbush
 gould
 grave
@@ -345,6 +353,7 @@ hands
 hard_hat
 hardware
 harriman
+harris
 harrison
 harrod
 hart
@@ -355,6 +364,7 @@ hays
 headshot
 health_care
 heartbreaker
+heath
 hemp
 herder
 heretic
@@ -371,6 +381,7 @@ illusionist
 imaging
 imp
 impasse
+imperial
 importation
 imposition
 inactiveness
@@ -379,17 +390,20 @@ indian_potato
 indisposition
 infamy
 infanticide
+informant
 information
 inge
 initiate
 inmate
 inset
 insurgent
+interpreter
 invention
 investigator
 ironmonger
 irregular
 jacobs
+jewel
 johann_strauss
 johns_hopkins
 joliot-curie
@@ -403,11 +417,13 @@ klein
 kremlin
 krupp
 kurdistan
+lady
 lame
 lamp
 lancaster
 lander
 landslide
+lauder
 laugher
 lawlessness
 lawrence
@@ -471,6 +487,8 @@ mccormick
 mead
 meade
 mechanic
+medalist
+medallist
 mercer
 meter_reading
 metropolitan
@@ -525,12 +543,15 @@ ostiary
 ottoman
 outfielder
 outlier
+overnighter
 owen
+owner
 packer
 packinghouse
 padre
 palsy
 pan
+panorama
 para
 pardoner
 parentage
@@ -539,10 +560,12 @@ parker
 parkinson
 parliamentarian
 pastoral
+pastorate
 patois
 patrician
 patron
 pavement
+pavlova
 payback
 payload
 peacekeeper
@@ -579,6 +602,7 @@ pope
 popper
 porter
 portland
+postulator
 potato
 potato_tree
 pothunter
@@ -588,6 +612,7 @@ pox
 prelacy
 prelature
 prelim
+preliminary
 prescriptivism
 presenter
 preserver
@@ -606,6 +631,8 @@ psychopathology
 psychotherapy
 ptolemy
 public_square
+pudding
+puke
 pull-up
 punter
 pusher
@@ -613,6 +640,8 @@ quandary
 rabbinate
 racine
 raider
+rambler
+ranger
 rapscallion
 raree-show
 rascal
@@ -626,6 +655,7 @@ referral
 refrigeration
 registrar
 reich
+release
 renegade
 rep
 repeater
@@ -634,6 +664,7 @@ rescuer
 residency
 resident
 resource
+respondent
 rheumatism
 rhine
 richardson
@@ -698,9 +729,11 @@ shooting
 showman
 shylock
 sierra_nevada
+signer
 silverweed
 simon
 simon_legree
+sinclair
 sinew
 singer
 singing
@@ -712,6 +745,7 @@ slave_driver
 slider
 small_fry
 smith
+smoothie
 snatcher
 snitcher
 software_package
@@ -740,6 +774,7 @@ stimulant
 stinker
 story
 storyteller
+stout
 straphanger
 strategy
 strauss
@@ -749,6 +784,7 @@ strongman
 struma
 stuart
 studio
+study_hall
 stuffer
 stylist
 suer
@@ -778,6 +814,7 @@ tete-a-tete
 thatcher
 thompson
 thomson
+thorndike
 threshold
 thrower
 tin_can
@@ -785,12 +822,16 @@ tip
 totalitarianism
 tourer
 town
+townsman
 tragedian
 tragedy
+translator
+transportation
 travail
 trent
 trespass
 trickster
+trifle
 tripoli
 truant
 trumbull
@@ -822,6 +863,8 @@ visionary
 voicer
 volta
 voluntary
+vulgariser
+vulgarizer
 vulture
 wagner
 walker
@@ -831,6 +874,7 @@ wallace
 walpole
 walton
 wanderer
+warner
 warrantee
 watchword
 waterproof

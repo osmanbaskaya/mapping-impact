@@ -356,23 +356,23 @@ twitter-%-chunk-exp: %-twitter-ans/ %-twitter-chunk-keys twitter-pw-list.txt gol
 
 GIGA_CHUNKS="../data/chunks/"
 
-ims%-pw-list.txt: gigaword-pw-list.txt
-	cd ims-testing-output/has-$*-instances/semcor; \
+ims%-pw-list.txt: gigaword-pw-list.txt ims-testing-output/has-%-instances/semcor.chunk.0
+	cd ims-testing-output/has-$*-instances/semcor.chunk.0; \
 	ls *.result | sed 's|\.n\.result||g' | sort > intersect.tmp; 
-	mv ims-testing-output/has-$*-instances/semcor/intersect.tmp .
+	mv ims-testing-output/has-$*-instances/semcor.chunk.0/intersect.tmp .
 	comm -12 intersect.tmp $< > $@
 	rm intersect.tmp
 	wc $@
 
 gigaword-%-chunk-imsbased-exp: %-ans/ %-ims-chunk-keys ims${NUM_INST}-pw-list.txt gold/gigaword
 	-mkdir $*-ims-chunk-keys/${NUM_INST}
-	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 1    0 100  ${DEVDATA} & \
-	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 2  100 200  ${DEVDATA} &\
-	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 3  200 300  ${DEVDATA} &\
-	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 4  300 400  ${DEVDATA} & \
-	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 5  400 520  ${DEVDATA} &\
-	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 6  520 630  ${DEVDATA} &\
-	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 7  630 800  ${DEVDATA} &\
+	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 1    0 130  ${DEVDATA} & \
+	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 2  130 260  ${DEVDATA} &\
+	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 3  260 390  ${DEVDATA} &\
+	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 4  390 520  ${DEVDATA} & \
+	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 5  520 650  ${DEVDATA} &\
+	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 6  650 780  ${DEVDATA} &\
+	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 7  780 990  ${DEVDATA} &\
 	wait
 
 gigaword-%-default-chunk-merge: %-chunk-keys
@@ -396,7 +396,7 @@ chunk-scores/%-mapped-gigaword-p6OrMore-default.scores: ../keys/gold/gigaword-p6
 pw-p%.scores: gigaword-p%-pw-list.txt
 	pw-score.py $< $* ${DEVDATA} > $@
 
-chunk-scores/%-mapped-gigaword-tuned.scores: ../keys/gold/gigaword.semcor.key ../keys/gold/gigaword.uniform.key
+chunk-scores/%-mapped-gigaword-tuned.scores: ../keys/gold/gigaword.semcor.key ../keys/gold/gigaword.uniform.key 
 	./classifiers-scorer.py $* mapped gigaword tuned $^ > $@
 
 chunk-scores/%-mapped-gigaword-default.scores: ../keys/gold/gigaword.semcor.key ../keys/gold/gigaword.uniform.key
@@ -408,21 +408,20 @@ chunk-scores/%-mapped-twitter-tuned.scores: ../keys/gold/twitter.semcor.key ../k
 chunk-scores/%-mapped-twitter-default.scores: ../keys/gold/twitter.semcor.key ../keys/gold/twitter.uniform.key
 	./classifiers-scorer.py $* mapped twitter default $^ > $@
 
-chunk-scores/ims/aiku-mapped-ims%-default.scores: ../keys/gold/ims%.semcor.key ../keys/gold/ims%.uniform.key
+chunk-scores/ims/aiku-mapped-ims%-default.scores: ../keys/gold/ims%.semcor.key ../keys/gold/ims%.uniform.key ../keys/aiku/mapped/ims/default/%/*
 	ims-classifiers-scorer.py aiku $* mapped ims default > $@
 
-chunk-scores/ims/cw-mapped-ims%-default.scores: ../keys/gold/ims%.semcor.key ../keys/gold/ims%.uniform.key
+chunk-scores/ims/cw-mapped-ims%-default.scores: ../keys/gold/ims%.semcor.key ../keys/gold/ims%.uniform.key ../keys/cw/mapped/ims/default/%/*
 	ims-classifiers-scorer.py cw $* mapped ims default > $@
 
-chunk-scores/ims/squat-mapped-ims%-default.scores: ../keys/gold/ims%.semcor.key ../keys/gold/ims%.uniform.key
+chunk-scores/ims/squat-mapped-ims%-default.scores: ../keys/gold/ims%.semcor.key ../keys/gold/ims%.uniform.key ../keys/squat/mapped/ims/default/%/*
 	ims-classifiers-scorer.py squat $* mapped ims default > $@
 
-chunk-scores/ims/ensemble-mapped-ims%-default.scores: ../keys/gold/ims%.semcor.key ../keys/gold/ims%.uniform.key
+chunk-scores/ims/ensemble-mapped-ims%-default.scores: ../keys/gold/ims%.semcor.key ../keys/gold/ims%.uniform.key ../keys/ensemble/mapped/ims/default/%/*
 	ims-classifiers-scorer.py ensemble $* mapped ims default > $@
 
-chunk-scores/ims/hdp-mapped-ims%-default.scores: ../keys/gold/ims%.semcor.key ../keys/gold/ims%.uniform.key
+chunk-scores/ims/hdp-mapped-ims%-default.scores: ../keys/gold/ims%.semcor.key ../keys/gold/ims%.uniform.key ../keys/hdp/mapped/ims/default/%/*
 	ims-classifiers-scorer.py hdp $* mapped ims default > $@
-
 
 clear-data: 
 	rm -rf ../data/components ../data/monosemous-words ../data/pos-filtering
@@ -435,7 +434,7 @@ prepare-chunk-experiment-%: % # for aiku and hdp experiment
 excel-%.tab: chunk-scores
 	score-excel-format.py $* $</*p2*.scores > $@
 
-ims-excel-%.tab: chunk-scores/ims
+ims-excel-%.tab: chunk-scores/ims chunk-scores/ims/*
 	score-ims-excel-format.py $* $</*.scores > $@
 
 cw-twitter-key-copy: ../keys/cw/cw-wsd-twitter
@@ -490,7 +489,7 @@ gigaword-ensemble-%.key:
 	ensemble-key-creator.py misc/*gigaword-$*.key | sort > $@
 
 ensemble-ans-create: gigaword-pw-list.txt
-	ensemble-ans-creator.py $< aiku-ans hdp-ans #cw-ans squat-ans
+	ensemble-ans-creator.py $< aiku-ans hdp-ans cw-ans squat-ans
 
 
 .SECONDARY:

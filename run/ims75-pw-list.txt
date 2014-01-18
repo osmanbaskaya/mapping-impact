@@ -3,13 +3,11 @@ aaron
 aboriginal
 aborigine
 accelerator
-activeness
 actor
 admirer
 advocate
 aggressiveness
 ague
-al
 aliyah
 allen
 amateur
@@ -31,9 +29,9 @@ arnold
 artaxerxes
 article_of_faith
 artificer
-ashur
 athenaeum
 atheneum
+athletics
 atlanta
 aversion
 averting
@@ -55,7 +53,6 @@ baronetage
 barrymore
 barth
 bather
-bathroom
 bazaar
 bazar
 bearer
@@ -78,7 +75,6 @@ bourbon
 bowler
 boyle
 brady
-brahms
 brave
 bread
 briar
@@ -106,6 +102,7 @@ button
 ca
 cabal
 cabalist
+cabaret
 cad
 calm
 calvin
@@ -180,6 +177,7 @@ convenience
 convict
 conviction
 cooper
+cordoba
 cordon_bleu
 cordova
 corduroy
@@ -205,6 +203,7 @@ crown_princess
 crud
 cruiser
 cubicle
+cul_de_sac
 cumberland
 cynic
 dancer
@@ -262,6 +261,7 @@ enmity
 entrant
 envoy
 episcopate
+eristic
 eugene
 excogitation
 exotic_dancer
@@ -321,6 +321,7 @@ garibaldi
 gas
 gas_oven
 gatekeeper
+gem
 georgia
 gershwin
 gibson
@@ -352,6 +353,7 @@ hands
 hard_hat
 hardware
 harriman
+harris
 harrison
 harrod
 hart
@@ -362,6 +364,7 @@ hays
 headshot
 health_care
 heartbreaker
+heath
 hemp
 herder
 heretic
@@ -378,6 +381,7 @@ illusionist
 imaging
 imp
 impasse
+imperial
 importation
 imposition
 inactiveness
@@ -386,17 +390,20 @@ indian_potato
 indisposition
 infamy
 infanticide
+informant
 information
 inge
 initiate
 inmate
 inset
 insurgent
+interpreter
 invention
 investigator
 ironmonger
 irregular
 jacobs
+jewel
 johann_strauss
 johns_hopkins
 joliot-curie
@@ -410,6 +417,7 @@ klein
 kremlin
 krupp
 kurdistan
+lady
 lame
 lamp
 lancaster
@@ -537,11 +545,13 @@ outfielder
 outlier
 overnighter
 owen
+owner
 packer
 packinghouse
 padre
 palsy
 pan
+panorama
 para
 pardoner
 parentage
@@ -550,10 +560,12 @@ parker
 parkinson
 parliamentarian
 pastoral
+pastorate
 patois
 patrician
 patron
 pavement
+pavlova
 payback
 payload
 peacekeeper
@@ -619,6 +631,8 @@ psychopathology
 psychotherapy
 ptolemy
 public_square
+pudding
+puke
 pull-up
 punter
 pusher
@@ -641,6 +655,7 @@ referral
 refrigeration
 registrar
 reich
+release
 renegade
 rep
 repeater
@@ -714,6 +729,7 @@ shooting
 showman
 shylock
 sierra_nevada
+signer
 silverweed
 simon
 simon_legree
@@ -729,6 +745,7 @@ slave_driver
 slider
 small_fry
 smith
+smoothie
 snatcher
 snitcher
 software_package
@@ -757,6 +774,7 @@ stimulant
 stinker
 story
 storyteller
+stout
 straphanger
 strategy
 strauss
@@ -766,6 +784,7 @@ strongman
 struma
 stuart
 studio
+study_hall
 stuffer
 stylist
 suer
@@ -806,10 +825,13 @@ town
 townsman
 tragedian
 tragedy
+translator
+transportation
 travail
 trent
 trespass
 trickster
+trifle
 tripoli
 truant
 trumbull
@@ -841,6 +863,8 @@ visionary
 voicer
 volta
 voluntary
+vulgariser
+vulgarizer
 vulture
 wagner
 walker

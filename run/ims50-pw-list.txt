@@ -3,13 +3,11 @@ aaron
 aboriginal
 aborigine
 accelerator
-activeness
 actor
 admirer
 advocate
 aggressiveness
 ague
-al
 aliyah
 allen
 amateur
@@ -31,7 +29,6 @@ arnold
 artaxerxes
 article_of_faith
 artificer
-ashur
 athenaeum
 atheneum
 athletics
@@ -56,7 +53,6 @@ baronetage
 barrymore
 barth
 bather
-bathroom
 bazaar
 bazar
 bearer
@@ -79,7 +75,6 @@ bourbon
 bowler
 boyle
 brady
-brahms
 brave
 bread
 briar
@@ -107,6 +102,7 @@ button
 ca
 cabal
 cabalist
+cabaret
 cad
 calm
 calvin
@@ -265,6 +261,7 @@ enmity
 entrant
 envoy
 episcopate
+eristic
 eugene
 excogitation
 exotic_dancer
@@ -324,6 +321,7 @@ garibaldi
 gas
 gas_oven
 gatekeeper
+gem
 georgia
 gershwin
 gibson
@@ -366,6 +364,7 @@ hays
 headshot
 health_care
 heartbreaker
+heath
 hemp
 herder
 heretic
@@ -382,6 +381,7 @@ illusionist
 imaging
 imp
 impasse
+imperial
 importation
 imposition
 inactiveness
@@ -403,6 +403,7 @@ investigator
 ironmonger
 irregular
 jacobs
+jewel
 johann_strauss
 johns_hopkins
 joliot-curie
@@ -416,6 +417,7 @@ klein
 kremlin
 krupp
 kurdistan
+lady
 lame
 lamp
 lancaster
@@ -543,6 +545,7 @@ outfielder
 outlier
 overnighter
 owen
+owner
 packer
 packinghouse
 padre
@@ -557,10 +560,12 @@ parker
 parkinson
 parliamentarian
 pastoral
+pastorate
 patois
 patrician
 patron
 pavement
+pavlova
 payback
 payload
 peacekeeper
@@ -626,6 +631,7 @@ psychopathology
 psychotherapy
 ptolemy
 public_square
+pudding
 puke
 pull-up
 punter
@@ -739,6 +745,7 @@ slave_driver
 slider
 small_fry
 smith
+smoothie
 snatcher
 snitcher
 software_package
@@ -824,6 +831,7 @@ travail
 trent
 trespass
 trickster
+trifle
 tripoli
 truant
 trumbull

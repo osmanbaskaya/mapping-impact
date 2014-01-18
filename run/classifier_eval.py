@@ -305,10 +305,6 @@ class ChunkEvaluator(Evaluator):
             f.write('\n'.join(val))
             f.write('\n')
 
-
-                
-
-
 class IMSBasedChunkEvaluator(Evaluator):
 
     def __init__(self,clf_wrapper,dataset,system_files,devset,optimization, logger): 
@@ -348,14 +344,18 @@ class IMSBasedChunkEvaluator(Evaluator):
 
             tr_inst = tr_gold.keys()
             te_inst = te_gold.keys()
+            
+            #print te_inst[:20]
 
             system_tr_dict = dict(zip(tr_inst, map(system_keys.get, tr_inst)))
             system_te_dict = dict(zip(te_inst, map(system_keys.get, te_inst)))
 
+            #print system_te_dict.keys()[:20]
+
             assert len(tr_inst) == len(system_tr_dict)
             assert len(te_inst) == len(system_te_dict)
 
-            X_train, y_train = self.ft.convert_data(system_tr_dict, tr_gold)
+            X_train, y_train, inst_list_tr = self.ft.convert_data(system_tr_dict, tr_gold)
 
             vectorizer = self.ft.get_vectorizer()
             X_train = vectorizer.fit_transform(X_train)
@@ -364,13 +364,13 @@ class IMSBasedChunkEvaluator(Evaluator):
                 X_train = scaler.fit_transform(X_train)
 
 
-            X_test, y_test = self.ft.convert_data(system_te_dict, te_gold)
+            X_test, y_test, inst_list_te = self.ft.convert_data(system_te_dict, te_gold)
             X_test = vectorizer.transform(X_test)
 
             if self.clf_wrapper.name in ["SVM_Linear", "SVM_Gaussian"]:
                 X_test = scaler.transform(X_test)
             
-            return X_train, X_test, y_train, y_test, te_inst
+            return X_train, X_test, y_train, y_test, inst_list_te
 
     def predict(self):
         predictions = dict()
@@ -383,6 +383,7 @@ class IMSBasedChunkEvaluator(Evaluator):
             #tw_scores = []
             for tr, te in chunks: #test set and train set
                 X_train, X_test, y_train, y_test, test_inst_order = self._prepare(tw,tr,te)
+
                 #score = 0.0
                 try:
                     self.clf_wrapper.classifier.fit(X_train, y_train)
@@ -402,15 +403,17 @@ class IMSBasedChunkEvaluator(Evaluator):
 
     @staticmethod
     def write_prediction2file(predictions, out_path):
-
         d = dd(list)
         for exp_name, preds in predictions.viewitems():
             for tw, pred in preds.iteritems():
                 for inst_id, label in pred.viewitems():
                     s = "{} {} {}".format(tw, inst_id, label)
                     d[exp_name].append(s)
+        
 
         for key, val in d.iteritems():
-            f = open(os.path.join(out_path, key), 'w')
+            out_f = os.path.join(out_path, key)
+            print out_f
+            f = open(out_f, 'w')
             f.write('\n'.join(val))
             f.write('\n')

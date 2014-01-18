@@ -3,7 +3,6 @@
 
 __author__ = "Osman Baskaya"
 
-
 from collections import defaultdict as dd
 from classifier_eval import IMSBasedChunkEvaluator
 from logger import ChunkLogger
@@ -111,5 +110,5 @@ for w in wrappers:
 
     logger.info("\n%s completed..." % exp_name)
 
-IMSBasedChunkEvaluator.write_prediction2file(predictions, out)
+    IMSBasedChunkEvaluator.write_prediction2file(predictions, out)
 

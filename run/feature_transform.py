@@ -27,11 +27,12 @@ class SemevalFeatureTransformer(FeatureTransformer):
     def convert_data(self, data, target, rem=None):
         X = []
         y = []
+        inst_list = []
         for key in data:
             X.append(dict(data[key]))
             y.append(target[key][0][0]) # we get only one sense for gold standard
-        
-        return X, np.array(y)
+            inst_list.append(key)
+        return X, np.array(y), inst_list
 
     def get_vectorizer(self):
         return DictVectorizer(sparse=False)
