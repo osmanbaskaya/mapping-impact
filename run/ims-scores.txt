@@ -4,6 +4,8 @@ has-25-instances-semcor.scores	0.871846	920
 has-25-instances-uniform.scores	0.706811	920
 has-50-instances-semcor.scores	0.880983	920
 has-50-instances-uniform.scores	0.759242	920
+has-75-instances-semcor.scores	0.886707	920
+has-75-instances-uniform.scores	0.786386	920
 has-100-instances-semcor.scores	0.893157	920
 has-100-instances-uniform.scores	0.805406	920
 has-150-instances-semcor.scores	0.901501	920

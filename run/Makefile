@@ -491,6 +491,10 @@ gigaword-ensemble-%.key:
 ensemble-ans-create: gigaword-pw-list.txt
 	ensemble-ans-creator.py $< aiku-ans hdp-ans cw-ans squat-ans
 
+perp-exp-%: ../keys/gold/gigaword.%.key chunk-scores/pw-scores/
+	for f in `ls ../keys/*/mapped/ims/default/750/*$*.ans.gz`; do \
+		pw-score-perp-calc.py $$f $^; \
+	done
 
 .SECONDARY:
 #small.tok.gz small.pos.gz small.lem.gz small.raw.gz
