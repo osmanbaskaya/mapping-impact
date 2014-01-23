@@ -29,17 +29,19 @@ gold = {}
 def load_key(filename):
     d = {}
     total_line = 0
-    for line in fopen(filename):
+    for i, line in enumerate(fopen(filename)):
         total_line += 1
-        try:
-            tw, inst_id, sense = line.split()
-        except:
-            print >> sys.stderr, line, filename
-            exit()
-        key = "{}__{}".format(tw, inst_id)
-        d[key] = sense
+        line = line.split()
+        if len(line) == 3:
+            tw, inst_id, sense = line
+            key = "{}__{}".format(tw, inst_id)
+            d[key] = sense
+        else:
+            print >> sys.stderr, "Empty line detected in {}, line:{}".format(filename, i)
+
 
     return (d, total_line)
+
 
 system, sys_line = load_key(s_file) # system key
 gold, gold_line = load_key(g_file) # gold key

@@ -4,7 +4,7 @@ __author__ = "Osman Baskaya"
 
 """
 Split the keys according to target words. Our gold file is merged. 
-All keys are in the same file.  In order create a development set 
+All keys are in the same file.  In order to create a development set 
 in run/gold/twitter|gigaword, we need to split keys in dev set
 into separate files.
 

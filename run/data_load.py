@@ -35,7 +35,7 @@ class SemevalKeyLoader(KeyLoader):
             if delim in line[2]:
                 ss = [ll.split(delim) for ll in line[2:]]
                 # rating should be parse as float
-                ss = [(ll[0], float(ll[1])) for ll in ss]
+                ss = [(ll[0], float(ll[1])) if len(ll) == 2 else (ll[0], 1) for ll in ss ]
             else:
                 ss = [(ll, 1) for ll in line[2:]]
             senses[line[0]][line[1]] = ss

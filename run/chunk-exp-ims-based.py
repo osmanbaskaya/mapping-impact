@@ -39,11 +39,11 @@ sys_dev = ["{}{}.ans".format(system_key_folder, tw) for tw in devfiles]
 
 wrappers = [
             SVCWrapper('SVM_Linear', kernel='linear', C=1), 
-            SVCWrapper('SVM_Gaussian', kernel='rbf', C=1, gamma=0), 
-            DecisionTreeWrapper("DecisionTree-Gini", criterion='gini'), 
-            DecisionTreeWrapper("DecisionTree-Entropy", criterion='entropy'), 
-            BernoulliNBWrapper(), 
-            MultinomialNBWrapper()
+            #SVCWrapper('SVM_Gaussian', kernel='rbf', C=729, gamma=1), 
+            #DecisionTreeWrapper("DecisionTree-Gini", criterion='gini'), 
+            #DecisionTreeWrapper("DecisionTree-Entropy", criterion='entropy'), 
+            #BernoulliNBWrapper(), 
+            #MultinomialNBWrapper()
            ]
 
 logger = ChunkLogger(3)
@@ -81,7 +81,7 @@ for tw in processed:
             tw_dict[ch_type][tw] = get_input_filenames(tw, ch_type)
 
 devset = [sys_dev, gold_dev]
-optimization = False
+optimization = True
 
 ## Prints all information for the experiment ###
 logger.info("Evaluation started for %s" % system_key_folder)
@@ -110,5 +110,5 @@ for w in wrappers:
 
     logger.info("\n%s completed..." % exp_name)
 
-    IMSBasedChunkEvaluator.write_prediction2file(predictions, out)
+    #IMSBasedChunkEvaluator.write_prediction2file(predictions, out)
 

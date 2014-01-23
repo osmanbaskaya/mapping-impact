@@ -26,8 +26,10 @@ class ClassifierWrapper(object):
             parameters = self.parameters
         print >> sys.stderr, "Parameter space:{}".format(parameters)
         try:
-            clf = grid_search.GridSearchCV(self.classifier, parameters, cv=cv)
+            clf = grid_search.GridSearchCV(self.classifier, parameters, cv=cv, verbose=1,
+                                          n_jobs=20)
             clf.fit(X, y)
+            print >> sys.stderr, clf.grid_scores_
             best_params = clf.best_params_
             best_estimator = clf.best_estimator_
         except ValueError, e: # all instances belong to the same class
@@ -45,10 +47,11 @@ class ClassifierWrapper(object):
 
 class SVCWrapper(ClassifierWrapper):
     
-    def __init__(self, name, kernel='rbf', C=1, gamma=0):
-        super(SVCWrapper, self).__init__(name, SVC(kernel=kernel, C=C, gamma=gamma))
-        gamma = range(0,6)
-        C = [0.003, 0.01, 0.05, 0.1, 0.5, 1, 2, 5, 10, 40]
+    def __init__(self, name, **kwargs):
+        super(SVCWrapper, self).__init__(name, SVC(**kwargs))
+        gamma = 10.0 ** np.arange(-5, 4)
+        C = 10.0 ** np.arange(-2, 6)
+        #C = [0.003, 0.03, 0.3, 1, 9, 27, 81, 243, 729, 2000, 6000]
         if self.classifier.kernel == "rbf":
             self.parameters = {'C': C, 'gamma': gamma}
         elif self.classifier.kernel == "linear":
@@ -56,15 +59,15 @@ class SVCWrapper(ClassifierWrapper):
  
 class MultinomialNBWrapper(ClassifierWrapper):
     
-    def __init__(self):
-        super(MultinomialNBWrapper, self).__init__("MultinomialNB", MultinomialNB())
+    def __init__(self, name="MultinomialNB"):
+        super(MultinomialNBWrapper, self).__init__(name, MultinomialNB())
         self.is_optimized = True
         self.parameters = {'alpha': np.linspace(0,1,11)}
 
 class BernoulliNBWrapper(ClassifierWrapper):
     
-    def __init__(self):
-        super(BernoulliNBWrapper, self).__init__("BernoulliNBWrapper", BernoulliNB())
+    def __init__(self, name="BernoulliNBWrapper"):
+        super(BernoulliNBWrapper, self).__init__(name, BernoulliNB())
         self.parameters = {'alpha': np.linspace(0,1,11)}
         self.is_optimized = True
 

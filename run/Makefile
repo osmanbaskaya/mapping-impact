@@ -366,14 +366,14 @@ ims%-pw-list.txt: gigaword-pw-list.txt ims-testing-output/has-%-instances/semcor
 
 gigaword-%-chunk-imsbased-exp: %-ans/ %-ims-chunk-keys ims${NUM_INST}-pw-list.txt gold/gigaword
 	-mkdir $*-ims-chunk-keys/${NUM_INST}
-	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 1    0 130  ${DEVDATA} & \
-	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 2  130 260  ${DEVDATA} &\
-	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 3  260 390  ${DEVDATA} &\
-	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 4  390 520  ${DEVDATA} & \
-	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 5  520 650  ${DEVDATA} &\
-	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 6  650 780  ${DEVDATA} &\
-	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 7  780 990  ${DEVDATA} &\
-	wait
+	chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 1    0 130  ${DEVDATA} #& \
+	#chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 2  130 260  ${DEVDATA} &\
+	#chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 3  260 390  ${DEVDATA} &\
+	#chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 4  390 520  ${DEVDATA} & \
+	#chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 5  520 650  ${DEVDATA} &\
+	#chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 6  650 780  ${DEVDATA} &\
+	#chunk-exp-ims-based.py $^ ${GIGA_CHUNKS} ${NUM_INST} 7  780 990  ${DEVDATA} &\
+	#wait
 
 gigaword-%-default-chunk-merge: %-chunk-keys
 	chunk-merger.py $* default gigaword
@@ -488,13 +488,73 @@ gold-%-split: ../keys/gold/dev/%.dev.key gold/% # does not work for gigaword, fo
 gigaword-ensemble-%.key:
 	ensemble-key-creator.py misc/*gigaword-$*.key | sort > $@
 
-ensemble-ans-create: gigaword-pw-list.txt
-	ensemble-ans-creator.py $< aiku-ans hdp-ans cw-ans squat-ans
+ensemble-ans-create: gigaword-pw-list.txt ensemble-ans
+	ensemble-ans-creator.py $^ aiku-ans hdp-ans cw-ans squat-ans
 
 perp-exp-%: ../keys/gold/gigaword.%.key chunk-scores/pw-scores/
 	for f in `ls ../keys/*/mapped/ims/default/750/*$*.ans.gz`; do \
 		pw-score-perp-calc.py $$f $^; \
 	done
+
+chunk-scores/pw-scores/ims-pw-%: ims-pw-scores/has-750-instances-%.scores ../keys/gold/ims750.%.key
+	ims-score-perp-calc.py $^ $* > $@
+
+### Tests on real datasets [ Semeval 07, 10, 13 ] ###
+# Semeval 13
+SEM13=../data/semeval-datasets/s13/key-splits/single-sense-instances
+create-s13-chunks:
+	for i in `seq 0 4`; do \
+		dataset-splitter.py ${SEM13}/split-$$i.train.key ${SEM13}/split-$$i.eval.key \
+		../data/chunks-s13 $$i; \
+	done
+
+# Semeval 10
+SEM10=../data/semeval-datasets/s10/evaluation/sup_eval/80_20/all
+create-s10-chunks:
+	for i in `seq 1 5`; do \
+		dataset-splitter.py ${SEM10}/mapping.$$i.key ${SEM10}/test.$$i.key \
+		../data/chunks-s10 `expr $$i - 1`; \
+	done
+
+# Semeval 07
+SEM07=../data/semeval-datasets/s07/keys/random_split/82_18
+create-s07-chunks:
+	dataset-splitter.py ${SEM07}/senseinduction.random82train.key \
+	${SEM07}/senseinduction.random82test.key ../data/chunks-s07 0
+
+create-%-system-ans-dir: ../data/semeval-system-ans/%
+	for s in `ls $</`; do \
+		system-key-splitter.py $</$$s semeval-systems/$*/$$s; done
+
+# TEST ET
+%-ensemble-ans-create: %-tw-list.txt ../keys/gold/%.key
+	-rm -rf semeval-systems/$*/ensemble-ans
+	-mkdir semeval-systems/ensemble-ans
+	ensemble-ans-creator.py $^ semeval-systems/ensemble-ans `ls -d semeval-systems/$*/*ans/`
+	mv semeval-systems/ensemble-ans semeval-systems/$*/
+
+%-tw-list.txt: ../data/chunks-% 
+	cat $</*.key | cut -f1 -d' ' | sort | uniq > $@
+	wc $@
+
+#${SEM} can be semeval07, semeval10, semeval13
+%-chunk-semeval-exp: semeval-systems/${SEM}/%-ans/ semeval-systems/${SEM}/%-chunk-keys \
+		${SEM}-tw-list.txt gold/${SEM}
+	chunk-exp-semeval-based.py $^ ../data/chunks-${SEM} ${SEM}
+
+../keys/gold/%.key: ../data/chunks-%
+	cat $</*chunk0*.key | sort | uniq > $@
+	wc $@
+
+evaluate-%-s13:
+	for i in `seq 0 4`; do ../keys/scorer.py semeval-systems/s13/$*-chunk-keys/SVM_Linear/SVM_Linear-semeval-semeval-1-$$i ../keys/gold/s13.test.$$i.key; done
+	for i in `seq 0 4`; do ../keys/scorer.py semeval-systems/s13/$*-chunk-keys/SVM_Linear/SVM_Linear-semeval-semeval-1-$$i ../keys/gold/s13.test.$$i.key; done | grep Precision | awk '{sum+=$$3}END{print sum/NR}'
+
+evaluate-%-s07:
+	../keys/scorer.py semeval-systems/s07/$*-chunk-keys/SVM_Linear/SVM_Linear-semeval-semeval-1-0 ../keys/gold/s07.test.0.key
+
+evaluate-%-s10:
+	for i in `seq 0 4`; do ../keys/scorer.py semeval-systems/s10/$*-chunk-keys/SVM_Linear/SVM_Linear-semeval-semeval-1-$$i ../keys/gold/s10.test.$$i.key; done | grep Precision | awk '{sum+=$$3}END{print sum/NR}'
 
 .SECONDARY:
 #small.tok.gz small.pos.gz small.lem.gz small.raw.gz
