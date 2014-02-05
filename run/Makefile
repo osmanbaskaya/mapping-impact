@@ -554,6 +554,7 @@ evaluate-%-s07:
 	../keys/scorer.py semeval-systems/s07/$*-chunk-keys/SVM_Linear/SVM_Linear-semeval-semeval-1-0 ../keys/gold/s07.test.0.key
 
 evaluate-%-s10:
+	for i in `seq 0 4`; do ../keys/scorer.py semeval-systems/s10/$*-chunk-keys/SVM_Linear/SVM_Linear-semeval-semeval-1-$$i ../keys/gold/s10.test.$$i.key; done
 	for i in `seq 0 4`; do ../keys/scorer.py semeval-systems/s10/$*-chunk-keys/SVM_Linear/SVM_Linear-semeval-semeval-1-$$i ../keys/gold/s10.test.$$i.key; done | grep Precision | awk '{sum+=$$3}END{print sum/NR}'
 
 .SECONDARY:

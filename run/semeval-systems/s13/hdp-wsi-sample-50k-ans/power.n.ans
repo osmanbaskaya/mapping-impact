@@ -1,0 +1,100 @@
+power.n power.n.1 t.7/0.7500 t.2/0.2500
+power.n power.n.2 t.3/1.0000
+power.n power.n.3 t.3/0.8750 t.7/0.1250
+power.n power.n.4 t.8/0.6875 t.7/0.3125
+power.n power.n.5 t.7/1.0000
+power.n power.n.6 t.8/1.0000
+power.n power.n.7 t.3/0.8571 t.7/0.1429
+power.n power.n.8 t.7/0.5556 t.3/0.3333 t.8/0.1111
+power.n power.n.9 t.7/0.6667 t.3/0.3333
+power.n power.n.10 t.7/0.8824 t.8/0.1176
+power.n power.n.11 t.3/0.6667 t.7/0.2083 t.4/0.0833 t.8/0.0417
+power.n power.n.12 t.8/0.7500 t.2/0.1250 t.4/0.1250
+power.n power.n.13 t.3/0.8000 t.8/0.2000
+power.n power.n.14 t.8/0.5200 t.3/0.4800
+power.n power.n.15 t.3/0.9231 t.7/0.0769
+power.n power.n.16 t.3/0.8000 t.7/0.2000
+power.n power.n.17 t.3/0.8182 t.7/0.0909 t.2/0.0455 t.4/0.0455
+power.n power.n.18 t.3/0.8571 t.1/0.1429
+power.n power.n.19 t.3/0.7895 t.4/0.2105
+power.n power.n.20 t.3/0.5882 t.8/0.4118
+power.n power.n.21 t.8/0.7143 t.2/0.1429 t.7/0.1429
+power.n power.n.22 t.7/0.4118 t.8/0.3529 t.1/0.1765 t.3/0.0588
+power.n power.n.23 t.3/0.7143 t.7/0.2143 t.8/0.0714
+power.n power.n.24 t.7/1.0000
+power.n power.n.25 t.3/0.7500 t.8/0.1500 t.7/0.1000
+power.n power.n.26 t.3/1.0000
+power.n power.n.27 t.7/0.5909 t.8/0.2273 t.4/0.1818
+power.n power.n.28 t.8/0.6667 t.1/0.2593 t.3/0.0741
+power.n power.n.29 t.3/0.7000 t.7/0.1667 t.4/0.1000 t.8/0.0333
+power.n power.n.30 t.3/0.9375 t.7/0.0625
+power.n power.n.31 t.4/0.7143 t.2/0.2143 t.8/0.0714
+power.n power.n.32 t.3/0.6250 t.1/0.1875 t.4/0.1250 t.8/0.0625
+power.n power.n.33 t.2/0.4545 t.7/0.4545 t.3/0.0909
+power.n power.n.34 t.3/0.7692 t.2/0.0769 t.7/0.0769 t.8/0.0769
+power.n power.n.35 t.3/0.8125 t.1/0.1875
+power.n power.n.36 t.7/0.5556 t.2/0.3333 t.5/0.1111
+power.n power.n.37 t.3/0.9091 t.8/0.0909
+power.n power.n.38 t.7/0.8500 t.2/0.1000 t.5/0.0500
+power.n power.n.39 t.3/0.5000 t.8/0.2500 t.1/0.1667 t.2/0.0833
+power.n power.n.40 t.8/0.7000 t.3/0.3000
+power.n power.n.41 t.7/0.6250 t.8/0.3125 t.4/0.0625
+power.n power.n.42 t.3/0.7143 t.1/0.1429 t.8/0.1429
+power.n power.n.43 t.3/0.5600 t.1/0.2800 t.4/0.1600
+power.n power.n.44 t.8/0.5556 t.7/0.3333 t.1/0.0556 t.4/0.0556
+power.n power.n.45 t.3/0.9231 t.7/0.0769
+power.n power.n.46 t.4/1.0000
+power.n power.n.47 t.7/0.6207 t.8/0.3103 t.4/0.0690
+power.n power.n.48 t.1/1.0000
+power.n power.n.49 t.3/0.8947 t.8/0.1053
+power.n power.n.50 t.7/0.8000 t.4/0.1333 t.3/0.0667
+power.n power.n.51 t.5/0.5385 t.8/0.4615
+power.n power.n.52 t.3/0.5000 t.7/0.4000 t.1/0.1000
+power.n power.n.53 t.3/0.8333 t.5/0.1667
+power.n power.n.54 t.3/1.0000
+power.n power.n.55 t.4/0.6154 t.8/0.3077 t.1/0.0769
+power.n power.n.56 t.8/1.0000
+power.n power.n.57 t.8/0.8235 t.2/0.1765
+power.n power.n.58 t.2/0.8000 t.8/0.2000
+power.n power.n.59 t.7/1.0000
+power.n power.n.60 t.7/1.0000
+power.n power.n.61 t.3/0.9231 t.4/0.0385 t.8/0.0385
+power.n power.n.62 t.8/0.5357 t.2/0.2500 t.5/0.2143
+power.n power.n.63 t.3/0.4000 t.4/0.3000 t.8/0.3000
+power.n power.n.64 t.8/0.4444 t.4/0.2778 t.7/0.2222 t.1/0.0556
+power.n power.n.65 t.7/0.8182 t.2/0.1818
+power.n power.n.66 t.3/0.6000 t.1/0.2000 t.7/0.2000
+power.n power.n.67 t.3/0.4545 t.7/0.3636 t.1/0.1818
+power.n power.n.68 t.8/0.5556 t.3/0.2222 t.7/0.2222
+power.n power.n.69 t.2/0.8182 t.7/0.1818
+power.n power.n.70 t.2/0.5000 t.7/0.2143 t.8/0.2143 t.3/0.0714
+power.n power.n.71 t.1/0.9000 t.4/0.1000
+power.n power.n.72 t.3/0.7647 t.7/0.2353
+power.n power.n.73 t.3/0.7143 t.8/0.2857
+power.n power.n.74 t.3/0.5439 t.7/0.4561
+power.n power.n.75 t.3/0.5625 t.7/0.2812 t.1/0.0938 t.5/0.0312 t.8/0.0312
+power.n power.n.76 t.7/0.5000 t.3/0.3333 t.8/0.1667
+power.n power.n.77 t.3/0.8966 t.4/0.1034
+power.n power.n.78 t.7/0.4286 t.3/0.3571 t.8/0.2143
+power.n power.n.79 t.3/0.7000 t.7/0.2000 t.1/0.1000
+power.n power.n.80 t.8/0.5789 t.5/0.2632 t.4/0.1579
+power.n power.n.81 t.5/0.5500 t.7/0.4000 t.8/0.0500
+power.n power.n.82 t.3/0.6538 t.7/0.3462
+power.n power.n.83 t.2/0.3846 t.3/0.3077 t.7/0.3077
+power.n power.n.84 t.1/1.0000
+power.n power.n.85 t.3/0.7333 t.8/0.2667
+power.n power.n.86 t.8/0.6429 t.7/0.3571
+power.n power.n.87 t.8/0.6087 t.4/0.3913
+power.n power.n.88 t.7/1.0000
+power.n power.n.89 t.8/0.5000 t.7/0.2143 t.3/0.1429 t.2/0.0714 t.4/0.0714
+power.n power.n.90 t.7/0.7500 t.3/0.2500
+power.n power.n.91 t.2/0.5000 t.8/0.5000
+power.n power.n.92 t.3/0.6923 t.5/0.1538 t.7/0.0769 t.8/0.0769
+power.n power.n.93 t.7/0.8889 t.4/0.1111
+power.n power.n.94 t.8/0.9231 t.7/0.0769
+power.n power.n.95 t.8/0.5833 t.2/0.3333 t.1/0.0833
+power.n power.n.96 t.5/0.6250 t.3/0.3750
+power.n power.n.97 t.2/0.5000 t.8/0.2500 t.1/0.1875 t.3/0.0625
+power.n power.n.98 t.3/0.6923 t.8/0.1538 t.5/0.0769 t.7/0.0769
+power.n power.n.99 t.4/1.0000
+power.n power.n.100 t.3/0.6154 t.7/0.3846

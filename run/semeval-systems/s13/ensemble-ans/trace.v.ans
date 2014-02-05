@@ -1,0 +1,71 @@
+trace.v trace.v.78 s0-trace.v.13/2 s0-trace.v.15/3 s0-trace.v.21/15 s0-trace.v.18/2 s0-trace.v.2/11 s0-trace.v.8/19 s0-trace.v.20/48 s1-t.1/0.4615 s1-t.4/0.3846 s1-t.15/0.1538 s2-t.1/0.6667 s2-t.2/0.3333
+trace.v trace.v.16 s0-trace.v.12/3 s0-trace.v.15/6 s0-trace.v.19/24 s0-trace.v.18/2 s0-trace.v.6/64 s0-trace.v.8/1 s1-t.14/0.7273 s1-t.15/0.1818 s1-t.9/0.0909 s2-t.19/0.6000 s2-t.6/0.4000
+trace.v trace.v.19 s0-trace.v.12/16 s0-trace.v.15/6 s0-trace.v.21/9 s0-trace.v.17/1 s0-trace.v.19/1 s0-trace.v.3/8 s0-trace.v.6/59 s1-t.12/1.0000 s2-t.10/1.0000
+trace.v trace.v.15 s0-trace.v.13/6 s0-trace.v.12/1 s0-trace.v.20/1 s0-trace.v.21/69 s0-trace.v.6/3 s0-trace.v.9/20 s1-t.14/1.0000 s2-t.6/1.0000
+trace.v trace.v.37 s0-trace.v.11/10 s0-trace.v.19/3 s0-trace.v.13/9 s0-trace.v.5/77 s0-trace.v.4/1 s1-t.14/0.6667 s1-t.1/0.3333 s2-t.6/0.6000 s2-t.9/0.4000
+trace.v trace.v.65 s0-trace.v.11/3 s0-trace.v.13/81 s0-trace.v.12/3 s0-trace.v.19/1 s0-trace.v.5/2 s0-trace.v.6/9 s0-trace.v.8/1 s1-t.5/0.6667 s1-t.8/0.3333 s2-t.8/1.0000
+trace.v trace.v.64 s0-trace.v.2/51 s0-trace.v.20/23 s0-trace.v.21/14 s0-trace.v.17/1 s0-trace.v.6/11 s1-t.9/0.5294 s1-t.5/0.2941 s1-t.14/0.1765 s2-t.2/0.6000 s2-t.19/0.2000 s2-t.4/0.2000
+trace.v trace.v.67 s0-trace.v.13/1 s0-trace.v.12/2 s0-trace.v.15/2 s0-trace.v.21/22 s0-trace.v.19/1 s0-trace.v.3/4 s0-trace.v.6/66 s0-trace.v.14/2 s1-t.14/0.6154 s1-t.12/0.3077 s1-t.5/0.0769 s2-t.4/0.6250 s2-t.6/0.3750
+trace.v trace.v.63 s0-trace.v.11/13 s0-trace.v.10/2 s0-trace.v.13/28 s0-trace.v.12/2 s0-trace.v.14/2 s0-trace.v.19/1 s0-trace.v.0/2 s0-trace.v.3/27 s0-trace.v.6/23 s1-t.14/0.6364 s1-t.4/0.2727 s1-t.7/0.0909 s2-t.4/0.4286 s2-t.6/0.2857 s2-t.11/0.1429 s2-t.22/0.1429
+trace.v trace.v.69 s0-trace.v.9/100 s1-t.9/1.0000 s2-t.6/0.8000 s2-t.19/0.2000
+trace.v trace.v.68 s0-trace.v.11/8 s0-trace.v.5/12 s0-trace.v.4/79 s0-trace.v.21/1 s1-t.14/0.7143 s1-t.4/0.2857 s2-t.6/1.0000
+trace.v trace.v.10 s0-trace.v.13/1 s0-trace.v.20/1 s0-trace.v.3/1 s0-trace.v.6/97 s1-t.1/0.5455 s1-t.15/0.4545 s2-t.1/0.5833 s2-t.4/0.4167
+trace.v trace.v.12 s0-trace.v.11/66 s0-trace.v.10/1 s0-trace.v.13/5 s0-trace.v.12/3 s0-trace.v.21/1 s0-trace.v.17/4 s0-trace.v.19/12 s0-trace.v.18/2 s0-trace.v.3/2 s0-trace.v.6/4 s1-t.14/0.9412 s1-t.8/0.0588 s2-t.6/0.6364 s2-t.19/0.3636
+trace.v trace.v.18 s0-trace.v.11/3 s0-trace.v.19/1 s0-trace.v.13/15 s0-trace.v.5/80 s0-trace.v.4/1 s1-t.9/0.8182 s1-t.14/0.0909 s1-t.15/0.0909 s2-t.4/0.6667 s2-t.6/0.3333
+trace.v trace.v.75 s0-trace.v.5/7 s0-trace.v.4/92 s0-trace.v.21/1 s1-t.4/0.9474 s1-t.7/0.0526 s2-t.19/0.5000 s2-t.3/0.1667 s2-t.4/0.1667 s2-t.6/0.1667
+trace.v trace.v.17 s0-trace.v.10/2 s0-trace.v.12/2 s0-trace.v.20/5 s0-trace.v.21/1 s0-trace.v.17/46 s0-trace.v.19/1 s0-trace.v.18/28 s0-trace.v.0/10 s0-trace.v.3/1 s0-trace.v.8/1 s0-trace.v.6/2 s0-trace.v.15/1 s1-t.14/1.0000 s2-t.6/0.9412 s2-t.9/0.0588
+trace.v trace.v.11 s0-trace.v.13/2 s0-trace.v.12/1 s0-trace.v.15/1 s0-trace.v.21/19 s0-trace.v.1/1 s0-trace.v.4/10 s0-trace.v.6/44 s0-trace.v.9/22 s1-t.4/1.0000 s2-t.6/0.9231 s2-t.3/0.0769
+trace.v trace.v.36 s0-trace.v.15/13 s0-trace.v.17/64 s0-trace.v.19/5 s0-trace.v.18/4 s0-trace.v.0/8 s0-trace.v.3/1 s0-trace.v.20/5 s1-t.12/1.0000 s2-t.12/0.4000 s2-t.8/0.4000 s2-t.10/0.2000
+trace.v trace.v.34 s0-trace.v.11/21 s0-trace.v.19/7 s0-trace.v.13/18 s0-trace.v.5/54 s1-t.14/0.5833 s1-t.4/0.4167 s2-t.6/1.0000
+trace.v trace.v.35 s0-trace.v.11/1 s0-trace.v.13/89 s0-trace.v.3/10 s1-t.6/0.7000 s1-t.14/0.2000 s1-t.4/0.1000 s2-t.1/0.5000 s2-t.9/0.5000
+trace.v trace.v.32 s0-trace.v.9/100 s1-t.7/0.4348 s1-t.14/0.3478 s1-t.4/0.0870 s1-t.8/0.0870 s1-t.1/0.0435 s2-t.2/0.3077 s2-t.5/0.3077 s2-t.19/0.2308 s2-t.4/0.1538
+trace.v trace.v.30 s0-trace.v.15/1 s0-trace.v.21/11 s0-trace.v.17/3 s0-trace.v.19/2 s0-trace.v.18/1 s0-trace.v.6/1 s0-trace.v.9/2 s0-trace.v.20/79 s1-t.14/0.5263 s1-t.1/0.2105 s1-t.15/0.2105 s1-t.9/0.0526 s2-t.19/0.5000 s2-t.6/0.4000 s2-t.12/0.1000
+trace.v trace.v.31 s0-trace.v.11/7 s0-trace.v.10/1 s0-trace.v.13/15 s0-trace.v.15/1 s0-trace.v.21/2 s0-trace.v.17/25 s0-trace.v.19/10 s0-trace.v.18/1 s0-trace.v.2/1 s0-trace.v.8/37 s1-t.12/0.6667 s1-t.15/0.3333 s2-t.11/0.6429 s2-t.2/0.2143 s2-t.3/0.1429
+trace.v trace.v.72 s0-trace.v.11/32 s0-trace.v.12/6 s0-trace.v.20/8 s0-trace.v.21/5 s0-trace.v.18/37 s0-trace.v.6/12 s1-t.14/0.5385 s1-t.15/0.3846 s1-t.6/0.0769 s2-t.8/0.6667 s2-t.2/0.3333
+trace.v trace.v.70 s0-trace.v.10/8 s0-trace.v.13/1 s0-trace.v.12/1 s0-trace.v.20/1 s0-trace.v.14/3 s0-trace.v.17/22 s0-trace.v.19/3 s0-trace.v.2/1 s0-trace.v.6/2 s0-trace.v.8/58 s1-t.5/0.9375 s1-t.7/0.0625 s2-t.12/0.7500 s2-t.4/0.2500
+trace.v trace.v.77 s0-trace.v.10/2 s0-trace.v.15/16 s0-trace.v.17/10 s0-trace.v.19/4 s0-trace.v.18/14 s0-trace.v.1/1 s0-trace.v.6/10 s0-trace.v.8/43 s1-t.12/0.7143 s1-t.15/0.1786 s1-t.14/0.0714 s1-t.5/0.0357 s2-t.4/0.6875 s2-t.10/0.1250 s2-t.5/0.1250 s2-t.9/0.0625
+trace.v trace.v.74 s0-trace.v.11/24 s0-trace.v.4/76 s1-t.9/0.5000 s1-t.14/0.3750 s1-t.1/0.1250 s2-t.5/0.6000 s2-t.6/0.4000
+trace.v trace.v.54 s0-trace.v.11/8 s0-trace.v.13/2 s0-trace.v.12/13 s0-trace.v.15/7 s0-trace.v.19/9 s0-trace.v.18/1 s0-trace.v.1/46 s0-trace.v.5/1 s0-trace.v.4/2 s0-trace.v.6/11 s1-t.4/0.5000 s1-t.14/0.5000 s2-t.6/0.8462 s2-t.19/0.1538
+trace.v trace.v.57 s0-trace.v.2/51 s0-trace.v.20/35 s0-trace.v.21/14 s1-t.9/1.0000 s2-t.10/1.0000
+trace.v trace.v.29 s0-trace.v.11/1 s0-trace.v.13/1 s0-trace.v.12/6 s0-trace.v.15/3 s0-trace.v.3/1 s0-trace.v.6/87 s0-trace.v.20/1 s1-t.4/0.5833 s1-t.15/0.2500 s1-t.9/0.0833 s1-t.5/0.0833 s2-t.1/0.8333 s2-t.19/0.1667
+trace.v trace.v.28 s0-trace.v.11/1 s0-trace.v.15/23 s0-trace.v.21/1 s0-trace.v.17/65 s0-trace.v.19/2 s0-trace.v.18/4 s0-trace.v.0/4 s1-t.12/0.9524 s1-t.6/0.0476 s2-t.10/0.6667 s2-t.19/0.2500 s2-t.1/0.0833
+trace.v trace.v.21 s0-trace.v.13/1 s0-trace.v.2/15 s0-trace.v.20/53 s0-trace.v.21/31 s1-t.14/0.5000 s1-t.8/0.4286 s1-t.9/0.0714 s2-t.4/0.7778 s2-t.12/0.1111 s2-t.6/0.1111
+trace.v trace.v.20 s0-trace.v.11/2 s0-trace.v.13/7 s0-trace.v.5/88 s0-trace.v.4/3 s1-t.5/0.4500 s1-t.4/0.3000 s1-t.3/0.1500 s1-t.7/0.1000 s2-t.4/0.8889 s2-t.6/0.1111
+trace.v trace.v.23 s0-trace.v.9/80 s0-trace.v.20/1 s0-trace.v.21/19 s1-t.14/0.7500 s1-t.15/0.2500 s2-t.6/0.8333 s2-t.10/0.1667
+trace.v trace.v.22 s0-trace.v.11/4 s0-trace.v.19/3 s0-trace.v.13/10 s0-trace.v.5/82 s0-trace.v.4/1 s1-t.14/0.8889 s1-t.6/0.1111 s2-t.19/0.5000 s2-t.6/0.5000
+trace.v trace.v.25 s0-trace.v.11/4 s0-trace.v.13/11 s0-trace.v.5/70 s0-trace.v.4/12 s0-trace.v.17/3 s1-t.14/0.5714 s1-t.3/0.2857 s1-t.6/0.1429 s2-t.4/0.7500 s2-t.20/0.2500
+trace.v trace.v.24 s0-trace.v.11/77 s0-trace.v.18/14 s0-trace.v.21/9 s1-t.15/0.8750 s1-t.5/0.1250 s2-t.3/0.5000 s2-t.5/0.5000
+trace.v trace.v.27 s0-trace.v.11/1 s0-trace.v.13/3 s0-trace.v.15/58 s0-trace.v.19/1 s0-trace.v.5/1 s0-trace.v.6/36 s1-t.15/1.0000 s2-t.19/0.4000 s2-t.4/0.4000 s2-t.10/0.1000 s2-t.8/0.1000
+trace.v trace.v.26 s0-trace.v.11/3 s0-trace.v.12/8 s0-trace.v.15/69 s0-trace.v.14/5 s0-trace.v.0/2 s0-trace.v.2/2 s0-trace.v.6/11 s1-t.3/0.6364 s1-t.6/0.1818 s1-t.15/0.0909 s1-t.8/0.0909 s2-t.6/0.6667 s2-t.3/0.3333
+trace.v trace.v.7 s0-trace.v.13/2 s0-trace.v.12/6 s0-trace.v.21/3 s0-trace.v.1/2 s0-trace.v.3/1 s0-trace.v.6/72 s0-trace.v.9/14 s1-t.14/1.0000 s2-t.6/0.8000 s2-t.19/0.2000
+trace.v trace.v.4 s0-trace.v.11/2 s0-trace.v.13/59 s0-trace.v.12/13 s0-trace.v.15/1 s0-trace.v.19/5 s0-trace.v.18/13 s0-trace.v.0/2 s0-trace.v.5/5 s1-t.4/0.7857 s1-t.3/0.0714 s1-t.5/0.0714 s1-t.15/0.0714 s2-t.12/0.4444 s2-t.5/0.3333 s2-t.6/0.2222
+trace.v trace.v.2 s0-trace.v.11/32 s0-trace.v.13/15 s0-trace.v.12/1 s0-trace.v.15/2 s0-trace.v.19/2 s0-trace.v.3/1 s0-trace.v.5/44 s0-trace.v.4/3 s1-t.8/0.5882 s1-t.3/0.3529 s1-t.1/0.0588 s2-t.6/0.5556 s2-t.3/0.3333 s2-t.2/0.1111
+trace.v trace.v.44 s0-trace.v.8/1 s0-trace.v.13/2 s0-trace.v.5/85 s0-trace.v.6/12 s1-t.3/0.4545 s1-t.8/0.2727 s1-t.6/0.1818 s1-t.4/0.0909 s2-t.3/0.6667 s2-t.12/0.3333
+trace.v trace.v.43 s0-trace.v.8/6 s0-trace.v.12/11 s0-trace.v.15/83 s1-t.15/0.5000 s1-t.14/0.3000 s1-t.4/0.2000 s2-t.4/0.7500 s2-t.2/0.2500
+trace.v trace.v.71 s0-trace.v.11/9 s0-trace.v.13/1 s0-trace.v.15/7 s0-trace.v.21/63 s0-trace.v.17/3 s0-trace.v.19/1 s0-trace.v.2/3 s0-trace.v.6/12 s0-trace.v.8/1 s1-t.15/0.4167 s1-t.7/0.3333 s1-t.5/0.1667 s1-t.6/0.0833 s2-t.8/1.0000
+trace.v trace.v.73 s0-trace.v.11/3 s0-trace.v.13/73 s0-trace.v.19/7 s0-trace.v.3/8 s0-trace.v.5/7 s0-trace.v.6/2 s1-t.14/0.6429 s1-t.1/0.2857 s1-t.15/0.0714 s2-t.6/0.7778 s2-t.12/0.2222
+trace.v trace.v.13 s0-trace.v.5/2 s0-trace.v.4/98 s1-t.14/0.8182 s1-t.9/0.1818 s2-t.6/0.7143 s2-t.10/0.2857
+trace.v trace.v.39 s0-trace.v.11/5 s0-trace.v.13/1 s0-trace.v.12/18 s0-trace.v.15/36 s0-trace.v.19/5 s0-trace.v.6/12 s0-trace.v.8/23 s1-t.14/0.4324 s1-t.15/0.4054 s1-t.1/0.0811 s1-t.5/0.0541 s1-t.7/0.0270 s2-t.19/0.4444 s2-t.6/0.2778 s2-t.12/0.2222 s2-t.1/0.0556
+trace.v trace.v.66 s0-trace.v.12/1 s0-trace.v.20/2 s0-trace.v.21/77 s0-trace.v.3/1 s0-trace.v.2/17 s0-trace.v.5/2 s1-t.14/1.0000 s2-t.6/1.0000
+trace.v trace.v.61 s0-trace.v.11/1 s0-trace.v.13/3 s0-trace.v.12/1 s0-trace.v.14/5 s0-trace.v.19/1 s0-trace.v.3/8 s0-trace.v.6/81 s1-t.9/0.6667 s1-t.2/0.2667 s1-t.12/0.0667 s2-t.5/0.6667 s2-t.2/0.1111 s2-t.19/0.1111 s2-t.10/0.1111
+trace.v trace.v.60 s0-trace.v.8/89 s0-trace.v.12/2 s0-trace.v.4/2 s0-trace.v.6/7 s1-t.14/1.0000 s2-t.6/1.0000
+trace.v trace.v.62 s0-trace.v.11/2 s0-trace.v.13/5 s0-trace.v.15/2 s0-trace.v.17/89 s0-trace.v.3/1 s0-trace.v.6/1 s1-t.12/0.5000 s1-t.6/0.5000 s2-t.9/1.0000
+trace.v trace.v.9 s0-trace.v.11/20 s0-trace.v.13/14 s0-trace.v.5/65 s0-trace.v.4/1 s1-t.6/0.5556 s1-t.15/0.4444 s2-t.20/0.6000 s2-t.4/0.2000 s2-t.2/0.2000
+trace.v trace.v.47 s0-trace.v.8/6 s0-trace.v.13/10 s0-trace.v.5/82 s0-trace.v.17/1 s0-trace.v.18/1 s1-t.8/0.5833 s1-t.6/0.4167 s2-t.12/0.4286 s2-t.20/0.4286 s2-t.1/0.1429
+trace.v trace.v.46 s0-trace.v.11/3 s0-trace.v.8/1 s0-trace.v.2/19 s0-trace.v.20/6 s0-trace.v.21/71 s1-t.5/0.6552 s1-t.8/0.2759 s1-t.1/0.0345 s1-t.15/0.0345 s2-t.12/0.7619 s2-t.4/0.1429 s2-t.1/0.0952
+trace.v trace.v.45 s0-trace.v.11/4 s0-trace.v.12/3 s0-trace.v.20/3 s0-trace.v.21/85 s0-trace.v.17/1 s0-trace.v.18/1 s0-trace.v.2/1 s0-trace.v.5/1 s0-trace.v.9/1 s1-t.4/0.3934 s1-t.15/0.3934 s1-t.8/0.1311 s1-t.6/0.0820 s2-t.4/0.5714 s2-t.6/0.2000 s2-t.12/0.1714 s2-t.3/0.0571
+trace.v trace.v.41 s0-trace.v.11/1 s0-trace.v.12/1 s0-trace.v.20/8 s0-trace.v.21/77 s0-trace.v.17/1 s0-trace.v.0/2 s0-trace.v.2/9 s0-trace.v.8/1 s1-t.4/0.5000 s1-t.8/0.4375 s1-t.14/0.0625 s2-t.10/0.6000 s2-t.20/0.2000 s2-t.4/0.2000
+trace.v trace.v.58 s0-trace.v.11/6 s0-trace.v.8/3 s0-trace.v.13/63 s0-trace.v.5/28 s1-t.4/0.6923 s1-t.15/0.3077 s2-t.6/0.9000 s2-t.9/0.1000
+trace.v trace.v.55 s0-trace.v.10/1 s0-trace.v.13/1 s0-trace.v.12/2 s0-trace.v.20/4 s0-trace.v.21/5 s0-trace.v.19/5 s0-trace.v.2/12 s0-trace.v.6/66 s0-trace.v.8/4 s1-t.4/0.7500 s1-t.9/0.1250 s1-t.6/0.1250 s2-t.3/1.0000
+trace.v trace.v.56 s0-trace.v.19/4 s0-trace.v.11/1 s0-trace.v.13/87 s0-trace.v.2/1 s0-trace.v.5/7 s1-t.14/1.0000 s2-t.6/0.8000 s2-t.1/0.2000
+trace.v trace.v.50 s0-trace.v.11/5 s0-trace.v.13/10 s0-trace.v.5/83 s0-trace.v.4/2 s1-t.15/0.9375 s1-t.14/0.0625 s2-t.6/1.0000
+trace.v trace.v.51 s0-trace.v.11/74 s0-trace.v.13/4 s0-trace.v.12/6 s0-trace.v.15/10 s0-trace.v.17/1 s0-trace.v.19/2 s0-trace.v.5/2 s0-trace.v.8/1 s1-t.15/0.7143 s1-t.6/0.2857 s2-t.12/1.0000
+trace.v trace.v.52 s0-trace.v.3/20 s0-trace.v.5/1 s0-trace.v.13/8 s0-trace.v.6/71 s1-t.3/0.5000 s1-t.14/0.5000 s2-t.6/1.0000
+trace.v trace.v.53 s0-trace.v.11/3 s0-trace.v.12/13 s0-trace.v.15/2 s0-trace.v.21/8 s0-trace.v.17/1 s0-trace.v.19/11 s0-trace.v.0/1 s0-trace.v.3/2 s0-trace.v.5/1 s0-trace.v.6/48 s0-trace.v.20/2 s0-trace.v.14/8 s1-t.15/0.5556 s1-t.12/0.4444 s2-t.4/0.7368 s2-t.22/0.2105 s2-t.6/0.0526
+trace.v trace.v.6 s0-trace.v.0/2 s0-trace.v.15/3 s0-trace.v.21/3 s0-trace.v.17/87 s0-trace.v.18/5 s1-t.4/0.5000 s1-t.8/0.5000 s2-t.1/0.7778 s2-t.2/0.1111 s2-t.12/0.1111
+trace.v trace.v.3 s0-trace.v.9/16 s0-trace.v.2/16 s0-trace.v.20/66 s0-trace.v.21/2 s1-t.14/0.6250 s1-t.1/0.3125 s1-t.7/0.0625 s2-t.6/0.7778 s2-t.5/0.2222
+trace.v trace.v.33 s0-trace.v.11/12 s0-trace.v.13/1 s0-trace.v.5/21 s0-trace.v.4/66 s1-t.4/0.5625 s1-t.12/0.3750 s1-t.15/0.0625 s2-t.3/0.6250 s2-t.7/0.3750
+trace.v trace.v.8 s0-trace.v.15/3 s0-trace.v.14/1 s0-trace.v.19/4 s0-trace.v.3/3 s0-trace.v.5/1 s0-trace.v.6/88 s1-t.9/0.5000 s1-t.4/0.5000 s2-t.16/0.7000 s2-t.6/0.3000
+trace.v trace.v.5 s0-trace.v.11/8 s0-trace.v.13/15 s0-trace.v.21/12 s0-trace.v.0/1 s0-trace.v.3/3 s0-trace.v.2/7 s0-trace.v.5/1 s0-trace.v.6/3 s0-trace.v.9/50 s1-t.14/0.6000 s1-t.7/0.4000 s2-t.2/0.7500 s2-t.12/0.2500
+trace.v trace.v.49 s0-trace.v.11/21 s0-trace.v.10/5 s0-trace.v.13/12 s0-trace.v.12/22 s0-trace.v.15/3 s0-trace.v.21/5 s0-trace.v.19/8 s0-trace.v.18/1 s0-trace.v.0/1 s0-trace.v.2/1 s0-trace.v.5/21 s1-t.15/0.3333 s1-t.1/0.2500 s1-t.14/0.2500 s1-t.4/0.1667 s2-t.1/1.0000
+trace.v trace.v.48 s0-trace.v.9/67 s0-trace.v.1/1 s0-trace.v.2/2 s0-trace.v.21/1 s0-trace.v.6/29 s1-t.14/0.5000 s1-t.4/0.3333 s1-t.7/0.1667 s2-t.6/1.0000

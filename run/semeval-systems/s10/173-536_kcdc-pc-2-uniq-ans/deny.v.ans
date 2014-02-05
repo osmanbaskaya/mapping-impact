@@ -1,0 +1,112 @@
+deny.v deny.v.100 @deny@|3/0.999
+deny.v deny.v.101 @deny@|3/1.0 @deny@|1/0.85370296 @deny@|0/0.5679274 @deny@|4/0.14221716 @deny@|2/0.063172415
+deny.v deny.v.102 @deny@|0/1.0 @deny@|3/0.40190914 @deny@|4/0.07430977 @deny@|2/0.052935425 @deny@|1/0.01904833
+deny.v deny.v.103 @deny@|3/0.999
+deny.v deny.v.104 @deny@|3/0.999
+deny.v deny.v.105 @deny@|3/0.999
+deny.v deny.v.106 @deny@|3/1.0 @deny@|1/0.5048914 @deny@|4/0.43066496 @deny@|0/0.2104615 @deny@|2/0.18607315
+deny.v deny.v.107 @deny@|3/1.0 @deny@|2/0.1490407 @deny@|1/0.13206889 @deny@|0/0.09401967 @deny@|4/0.08226451
+deny.v deny.v.108 @deny@|3/1.0 @deny@|1/0.1442196 @deny@|4/0.048019733 @deny@|0/0.02944138 @deny@|2/0.027798658
+deny.v deny.v.109 @deny@|3/0.999
+deny.v deny.v.10 @deny@|4/1.0 @deny@|3/0.85843295 @deny@|2/0.3284041 @deny@|1/0.3222784 @deny@|0/0.22990224
+deny.v deny.v.110 @deny@|3/0.999
+deny.v deny.v.111 @deny@|3/1.0 @deny@|4/0.58829993 @deny@|1/0.2764807 @deny@|2/0.13931276 @deny@|0/0.024977116
+deny.v deny.v.112 @deny@|3/0.999
+deny.v deny.v.11 @deny@|3/1.0 @deny@|4/0.75807387 @deny@|2/0.40661168 @deny@|1/0.18885632 @deny@|0/0.15897515
+deny.v deny.v.12 @deny@|3/1.0 @deny@|1/0.07708909 @deny@|0/0.061821654 @deny@|4/0.03825322 @deny@|2/0.010173925
+deny.v deny.v.13 @deny@|3/1.0 @deny@|1/0.35260525 @deny@|0/0.23580094 @deny@|4/0.13762775 @deny@|2/0.05519619
+deny.v deny.v.14 @deny@|4/1.0 @deny@|3/0.11320634 @deny@|2/0.0949097 @deny@|1/0.05364816 @deny@|0/0.026091246
+deny.v deny.v.15 @deny@|3/1.0 @deny@|1/0.400838 @deny@|4/0.22094084 @deny@|0/0.20208403 @deny@|2/0.06467827
+deny.v deny.v.16 @deny@|3/0.999
+deny.v deny.v.17 @deny@|4/1.0 @deny@|3/0.67441094 @deny@|1/0.153355 @deny@|2/0.0375434 @deny@|0/0.011235769
+deny.v deny.v.18 @deny@|3/1.0 @deny@|1/0.37910324 @deny@|4/0.33713633 @deny@|0/0.2983182 @deny@|2/0.09388369
+deny.v deny.v.19 @deny@|1/1.0 @deny@|3/0.7100654 @deny@|4/0.07620924 @deny@|0/0.043255515 @deny@|2/0.021158276
+deny.v deny.v.1 @deny@|3/1.0 @deny@|1/0.09839512 @deny@|0/0.055892132 @deny@|4/0.041268654 @deny@|2/0.011528066
+deny.v deny.v.20 @deny@|3/1.0 @deny@|4/0.25263628 @deny@|1/0.18227217 @deny@|0/0.01867353
+deny.v deny.v.21 @deny@|0/1.0 @deny@|3/0.87793463 @deny@|1/0.8106111 @deny@|4/0.29306138 @deny@|2/0.030088749
+deny.v deny.v.22 @deny@|3/1.0 @deny@|1/0.41761607 @deny@|4/0.22348869 @deny@|0/0.11976187 @deny@|2/0.11581876
+deny.v deny.v.23 @deny@|3/1.0 @deny@|1/0.03642513 @deny@|4/0.016695237 @deny@|2/0.0060916007 @deny@|0/0.004791841
+deny.v deny.v.24 @deny@|3/0.999
+deny.v deny.v.25 @deny@|2/1.0 @deny@|4/0.31428516 @deny@|1/0.1770406 @deny@|3/0.17036326 @deny@|0/0.10365822
+deny.v deny.v.26 @deny@|3/1.0 @deny@|4/0.7063002 @deny@|1/0.29429686 @deny@|2/0.032186598
+deny.v deny.v.27 @deny@|4/1.0 @deny@|1/0.52275527 @deny@|3/0.441227 @deny@|2/0.38163865 @deny@|0/0.28850347
+deny.v deny.v.28 @deny@|3/1.0 @deny@|1/0.14631806 @deny@|0/0.05085153 @deny@|4/0.017598126 @deny@|2/0.012491952
+deny.v deny.v.29 @deny@|3/0.999
+deny.v deny.v.2 @deny@|3/0.999
+deny.v deny.v.30 @deny@|3/1.0 @deny@|1/0.24335313 @deny@|2/0.19203998 @deny@|4/0.14709574 @deny@|0/0.011429865
+deny.v deny.v.31 @deny@|3/1.0 @deny@|4/0.27249515 @deny@|2/0.21480423 @deny@|1/0.19454011 @deny@|0/0.12366179
+deny.v deny.v.32 @deny@|0/1.0 @deny@|2/0.14451472 @deny@|1/0.08391975 @deny@|3/0.07543381 @deny@|4/0.048360243
+deny.v deny.v.33 @deny@|3/0.999
+deny.v deny.v.34 @deny@|1/1.0 @deny@|3/0.6470692 @deny@|4/0.33395782 @deny@|2/0.12587115 @deny@|0/0.060601193
+deny.v deny.v.35 @deny@|3/1.0 @deny@|1/0.7585036 @deny@|4/0.24592294 @deny@|2/0.23335513
+deny.v deny.v.36 @deny@|3/1.0 @deny@|4/0.8317254 @deny@|1/0.39076212 @deny@|2/0.22279029 @deny@|0/0.07379793
+deny.v deny.v.37 @deny@|3/0.999
+deny.v deny.v.38 @deny@|3/1.0 @deny@|0/0.21131217 @deny@|4/0.20833477 @deny@|1/0.16619444 @deny@|2/0.016679747
+deny.v deny.v.39 @deny@|3/0.999
+deny.v deny.v.3 @deny@|3/0.999
+deny.v deny.v.40 @deny@|3/1.0 @deny@|1/0.24342099 @deny@|2/0.09669843 @deny@|4/0.0888311 @deny@|0/0.013594431
+deny.v deny.v.41 @deny@|3/1.0 @deny@|2/0.43389153 @deny@|4/0.12678784 @deny@|1/0.09128737
+deny.v deny.v.42 @deny@|3/1.0 @deny@|4/0.930721 @deny@|0/0.51278186 @deny@|2/0.42692587 @deny@|1/0.40724748
+deny.v deny.v.43 @deny@|3/0.999
+deny.v deny.v.44 @deny@|4/1.0 @deny@|3/0.34567824 @deny@|2/0.22285052 @deny@|1/0.18330885 @deny@|0/0.11187069
+deny.v deny.v.45 @deny@|3/0.999
+deny.v deny.v.46 @deny@|4/1.0 @deny@|3/0.27099007 @deny@|1/0.22826324 @deny@|2/0.14121604
+deny.v deny.v.47 @deny@|3/1.0 @deny@|4/0.2939724 @deny@|2/0.25403774 @deny@|0/0.1665575 @deny@|1/0.12841226
+deny.v deny.v.48 @deny@|3/1.0 @deny@|4/0.2114787 @deny@|0/0.14339228 @deny@|2/0.08915837 @deny@|1/0.08214958
+deny.v deny.v.49 @deny@|3/1.0 @deny@|4/0.2114787 @deny@|0/0.14339228 @deny@|2/0.08915837 @deny@|1/0.08214958
+deny.v deny.v.4 @deny@|3/1.0 @deny@|0/0.44348556 @deny@|1/0.37552705 @deny@|2/0.1665153 @deny@|4/0.14488508
+deny.v deny.v.50 @deny@|4/1.0 @deny@|1/0.19709958 @deny@|3/0.18220922 @deny@|0/0.12586689 @deny@|2/0.06966158
+deny.v deny.v.51 @deny@|3/0.999
+deny.v deny.v.52 @deny@|2/1.0 @deny@|3/0.6999584 @deny@|0/0.69431955 @deny@|4/0.33056504 @deny@|1/0.16135399
+deny.v deny.v.53 @deny@|3/1.0 @deny@|1/0.5277376 @deny@|4/0.32629222 @deny@|2/0.27729985 @deny@|0/0.1899412
+deny.v deny.v.54 @deny@|3/1.0 @deny@|0/0.6029504 @deny@|4/0.43572792 @deny@|2/0.31283042 @deny@|1/0.17958748
+deny.v deny.v.55 @deny@|3/1.0 @deny@|1/0.41402304 @deny@|4/0.3062513 @deny@|2/0.18706709 @deny@|0/0.17981213
+deny.v deny.v.56 @deny@|3/0.999
+deny.v deny.v.57 @deny@|3/1.0 @deny@|2/0.4355277 @deny@|4/0.18898527 @deny@|1/0.13391685 @deny@|0/0.072189584
+deny.v deny.v.58 @deny@|3/0.999
+deny.v deny.v.59 @deny@|2/1.0 @deny@|1/0.13425758 @deny@|4/0.09492222 @deny@|3/0.09046773 @deny@|0/0.06082691
+deny.v deny.v.5 @deny@|1/1.0 @deny@|3/0.16067559 @deny@|4/0.037375048 @deny@|2/0.028816283 @deny@|0/0.02464071
+deny.v deny.v.60 @deny@|3/0.999
+deny.v deny.v.61 @deny@|3/1.0 @deny@|1/0.75412494 @deny@|2/0.23532218 @deny@|4/0.18822876 @deny@|0/0.09917882
+deny.v deny.v.62 @deny@|3/0.999
+deny.v deny.v.63 @deny@|3/0.999
+deny.v deny.v.64 @deny@|3/0.999
+deny.v deny.v.65 @deny@|3/0.999
+deny.v deny.v.66 @deny@|3/0.999
+deny.v deny.v.67 @deny@|3/0.999
+deny.v deny.v.68 @deny@|3/0.999
+deny.v deny.v.69 @deny@|3/0.999
+deny.v deny.v.6 @deny@|4/1.0 @deny@|3/0.4827956 @deny@|1/0.2035532 @deny@|2/0.2027536 @deny@|0/0.12417318
+deny.v deny.v.70 @deny@|3/0.999
+deny.v deny.v.71 @deny@|3/0.999
+deny.v deny.v.72 @deny@|3/0.999
+deny.v deny.v.73 @deny@|3/1.0 @deny@|1/0.24342099 @deny@|2/0.09669843 @deny@|4/0.0888311 @deny@|0/0.013594431
+deny.v deny.v.74 @deny@|3/1.0 @deny@|1/0.26672685 @deny@|0/0.08721358 @deny@|4/0.082823806 @deny@|2/0.017942412
+deny.v deny.v.75 @deny@|3/0.999
+deny.v deny.v.76 @deny@|3/1.0 @deny@|1/0.28844482 @deny@|4/0.16278829 @deny@|0/0.15228528 @deny@|2/0.12573953
+deny.v deny.v.77 @deny@|3/1.0 @deny@|1/0.36712942 @deny@|4/0.31223595 @deny@|0/0.14895457 @deny@|2/0.034699704
+deny.v deny.v.78 @deny@|3/0.999
+deny.v deny.v.79 @deny@|3/0.999
+deny.v deny.v.7 @deny@|3/1.0 @deny@|0/0.5303707 @deny@|1/0.51187676 @deny@|4/0.1846744 @deny@|2/0.021014152
+deny.v deny.v.80 @deny@|3/1.0 @deny@|1/0.6529541 @deny@|4/0.5040076 @deny@|0/0.28560203 @deny@|2/0.26053768
+deny.v deny.v.81 @deny@|3/1.0 @deny@|1/0.6529541 @deny@|4/0.5040076 @deny@|0/0.28560203 @deny@|2/0.26053768
+deny.v deny.v.82 @deny@|3/1.0 @deny@|4/0.500115 @deny@|1/0.32116896 @deny@|2/0.15107208 @deny@|0/0.03801585
+deny.v deny.v.83 @deny@|3/1.0 @deny@|0/0.27403316 @deny@|1/0.22667825 @deny@|4/0.13782163 @deny@|2/0.054816283
+deny.v deny.v.84 @deny@|3/1.0 @deny@|1/0.12270015 @deny@|0/0.07340047 @deny@|2/0.042541564 @deny@|4/0.030906519
+deny.v deny.v.85 @deny@|3/1.0 @deny@|1/0.32282287 @deny@|4/0.23127578 @deny@|0/0.17508231 @deny@|2/0.07007555
+deny.v deny.v.86 @deny@|4/1.0 @deny@|0/0.26929736 @deny@|1/0.24928486 @deny@|2/0.197487 @deny@|3/0.13854852
+deny.v deny.v.87 @deny@|0/1.0 @deny@|3/0.21613498 @deny@|1/0.093593396 @deny@|4/0.090037346 @deny@|2/0.019560238
+deny.v deny.v.88 @deny@|0/1.0 @deny@|3/0.6682583 @deny@|1/0.11906287 @deny@|4/0.008308835
+deny.v deny.v.89 @deny@|3/1.0 @deny@|4/0.7719322 @deny@|1/0.38922682 @deny@|0/0.34227118 @deny@|2/0.2769612
+deny.v deny.v.8 @deny@|0/1.0 @deny@|3/0.9709121 @deny@|4/0.4457534 @deny@|1/0.42502233 @deny@|2/0.3726263
+deny.v deny.v.90 @deny@|3/1.0 @deny@|4/0.22039266 @deny@|1/0.14563839 @deny@|2/0.06078366 @deny@|0/0.019421663
+deny.v deny.v.91 @deny@|3/1.0 @deny@|0/0.03658476 @deny@|1/0.015917622 @deny@|4/0.012917835 @deny@|2/0.0028653964
+deny.v deny.v.92 @deny@|3/1.0 @deny@|1/0.27252427 @deny@|4/0.08501337 @deny@|0/0.042437214 @deny@|2/0.021534413
+deny.v deny.v.93 @deny@|3/1.0 @deny@|2/0.21991654 @deny@|1/0.17544973 @deny@|0/0.14703734 @deny@|4/0.09173482
+deny.v deny.v.94 @deny@|3/1.0 @deny@|1/0.14204122 @deny@|4/0.058677826 @deny@|0/0.04342347 @deny@|2/0.01982638
+deny.v deny.v.95 @deny@|3/1.0 @deny@|2/0.119072445 @deny@|4/0.08728553 @deny@|1/0.07341627 @deny@|0/0.03542656
+deny.v deny.v.96 @deny@|3/1.0 @deny@|4/0.08283398 @deny@|2/0.079137094 @deny@|1/0.06671833 @deny@|0/0.034561235
+deny.v deny.v.97 @deny@|3/1.0 @deny@|4/0.075505435 @deny@|1/0.05569155 @deny@|0/0.03313665 @deny@|2/0.01339186
+deny.v deny.v.98 @deny@|3/1.0 @deny@|1/0.51884425 @deny@|2/0.05983856 @deny@|4/0.05650326 @deny@|0/0.045890473
+deny.v deny.v.99 @deny@|3/1.0 @deny@|1/0.19596718 @deny@|0/0.1571227 @deny@|2/0.09143954 @deny@|4/0.0758122
+deny.v deny.v.9 @deny@|3/0.999

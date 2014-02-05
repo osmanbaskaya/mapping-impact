@@ -27,7 +27,6 @@ kmeans_input_base= "zcat scode/{}.scode.gz".format(tw)
 kmeans_base = "wkmeans -r 40 -l -w -v -s {} -k {}".format(seed, kval)
 kmeans_out_base = "gzip > kmeans/{}.kmeans.gz".format(tw)
 
-
 process = " | ".join([kmeans_input_base, column, kmeans_base, kmeans_out_base])
 #print process
 os.system(process + " & wait")

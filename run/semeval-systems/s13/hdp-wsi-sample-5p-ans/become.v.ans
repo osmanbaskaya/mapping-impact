@@ -1,0 +1,100 @@
+become.v become.v.1 t.1/0.4286 t.2/0.2857 t.7/0.2857
+become.v become.v.2 t.7/0.5000 t.2/0.3333 t.5/0.1667
+become.v become.v.3 t.5/0.4828 t.2/0.2414 t.3/0.1379 t.4/0.1034 t.7/0.0345
+become.v become.v.4 t.4/0.5714 t.2/0.4286
+become.v become.v.5 t.2/0.5714 t.3/0.4286
+become.v become.v.6 t.6/0.9167 t.3/0.0833
+become.v become.v.7 t.5/0.5294 t.7/0.4706
+become.v become.v.8 t.2/0.8571 t.5/0.1429
+become.v become.v.9 t.6/0.7391 t.3/0.2174 t.5/0.0435
+become.v become.v.10 t.1/0.5714 t.2/0.4286
+become.v become.v.11 t.4/0.6842 t.7/0.3158
+become.v become.v.12 t.2/0.5333 t.7/0.3333 t.4/0.1333
+become.v become.v.13 t.7/0.9200 t.2/0.0400 t.3/0.0400
+become.v become.v.14 t.7/0.7500 t.2/0.2500
+become.v become.v.15 t.6/0.8000 t.3/0.1000 t.5/0.1000
+become.v become.v.16 t.4/0.3810 t.2/0.2857 t.6/0.2857 t.5/0.0476
+become.v become.v.17 t.2/0.8182 t.1/0.1818
+become.v become.v.18 t.1/0.7333 t.5/0.1667 t.15/0.0667 t.6/0.0333
+become.v become.v.19 t.6/0.5000 t.2/0.3750 t.1/0.1250
+become.v become.v.20 t.3/0.3529 t.6/0.3529 t.7/0.2941
+become.v become.v.21 t.7/1.0000
+become.v become.v.22 t.2/1.0000
+become.v become.v.23 t.6/0.7692 t.2/0.2308
+become.v become.v.24 t.2/0.3000 t.4/0.2000 t.6/0.2000 t.7/0.2000 t.3/0.1000
+become.v become.v.25 t.3/0.8000 t.8/0.2000
+become.v become.v.26 t.2/0.5833 t.6/0.2500 t.3/0.0833 t.5/0.0833
+become.v become.v.27 t.3/1.0000
+become.v become.v.28 t.9/0.5556 t.4/0.2222 t.3/0.1111 t.5/0.1111
+become.v become.v.29 t.4/0.8462 t.1/0.0769 t.7/0.0769
+become.v become.v.30 t.4/0.6875 t.6/0.1250 t.7/0.1250 t.2/0.0625
+become.v become.v.31 t.4/0.7692 t.2/0.1538 t.7/0.0769
+become.v become.v.32 t.4/0.4231 t.7/0.3077 t.6/0.1538 t.1/0.1154
+become.v become.v.33 t.7/1.0000
+become.v become.v.34 t.2/0.6923 t.5/0.3077
+become.v become.v.35 t.7/0.8750 t.1/0.1250
+become.v become.v.36 t.7/0.5714 t.4/0.4286
+become.v become.v.37 t.1/1.0000
+become.v become.v.38 t.2/0.5000 t.7/0.5000
+become.v become.v.39 t.1/0.6923 t.2/0.1538 t.4/0.0769 t.6/0.0769
+become.v become.v.40 t.7/1.0000
+become.v become.v.41 t.5/0.7143 t.7/0.2857
+become.v become.v.42 t.2/0.5455 t.7/0.4545
+become.v become.v.43 t.7/1.0000
+become.v become.v.44 t.4/0.4286 t.5/0.4286 t.3/0.1429
+become.v become.v.45 t.7/1.0000
+become.v become.v.46 t.4/0.7500 t.7/0.2500
+become.v become.v.47 t.4/0.6250 t.7/0.2500 t.2/0.1250
+become.v become.v.48 t.3/0.4286 t.4/0.3810 t.7/0.1905
+become.v become.v.49 t.3/0.6429 t.5/0.2857 t.6/0.0714
+become.v become.v.50 t.7/0.5385 t.6/0.4615
+become.v become.v.51 t.7/0.7419 t.4/0.2581
+become.v become.v.52 t.1/0.5000 t.7/0.3000 t.2/0.1000 t.3/0.1000
+become.v become.v.53 t.3/0.6667 t.1/0.1333 t.2/0.1333 t.7/0.0667
+become.v become.v.54 t.2/0.8333 t.4/0.0833 t.7/0.0833
+become.v become.v.55 t.2/0.6000 t.1/0.4000
+become.v become.v.56 t.4/0.4615 t.3/0.3846 t.2/0.0769 t.7/0.0769
+become.v become.v.57 t.7/1.0000
+become.v become.v.58 t.3/0.9000 t.2/0.1000
+become.v become.v.59 t.2/0.8889 t.7/0.1111
+become.v become.v.60 t.2/0.3846 t.1/0.3077 t.7/0.2821 t.4/0.0256
+become.v become.v.61 t.7/0.7059 t.2/0.1176 t.6/0.1176 t.3/0.0588
+become.v become.v.62 t.2/0.7667 t.7/0.2000 t.4/0.0333
+become.v become.v.63 t.7/0.6471 t.3/0.2941 t.4/0.0588
+become.v become.v.64 t.2/0.5714 t.1/0.4286
+become.v become.v.65 t.3/0.7500 t.1/0.2500
+become.v become.v.66 t.2/1.0000
+become.v become.v.67 t.3/0.9091 t.1/0.0909
+become.v become.v.68 t.5/0.6429 t.2/0.2857 t.11/0.0714
+become.v become.v.69 t.7/0.8333 t.3/0.1667
+become.v become.v.70 t.2/0.8750 t.3/0.1250
+become.v become.v.71 t.3/1.0000
+become.v become.v.72 t.4/0.7647 t.6/0.1765 t.1/0.0588
+become.v become.v.73 t.4/1.0000
+become.v become.v.74 t.2/0.4167 t.6/0.2500 t.3/0.1667 t.7/0.1667
+become.v become.v.75 t.4/0.6667 t.5/0.3333
+become.v become.v.76 t.2/1.0000
+become.v become.v.77 t.2/0.8333 t.3/0.1667
+become.v become.v.78 t.2/0.6667 t.3/0.0833 t.4/0.0833 t.5/0.0833 t.7/0.0833
+become.v become.v.79 t.1/0.8000 t.2/0.1000 t.3/0.1000
+become.v become.v.80 t.1/0.6000 t.2/0.3000 t.7/0.1000
+become.v become.v.81 t.3/0.8182 t.1/0.1818
+become.v become.v.82 t.4/0.5652 t.5/0.1739 t.3/0.1304 t.7/0.0870 t.2/0.0435
+become.v become.v.83 t.2/0.8889 t.1/0.1111
+become.v become.v.84 t.2/0.8750 t.5/0.1250
+become.v become.v.85 t.6/0.5833 t.5/0.3333 t.3/0.0833
+become.v become.v.86 t.2/0.7857 t.7/0.2143
+become.v become.v.87 t.7/0.7500 t.1/0.2500
+become.v become.v.88 t.2/0.5385 t.7/0.4615
+become.v become.v.89 t.7/1.0000
+become.v become.v.90 t.5/0.5116 t.6/0.3721 t.9/0.1163
+become.v become.v.91 t.2/1.0000
+become.v become.v.92 t.2/0.5833 t.7/0.2500 t.4/0.0833 t.6/0.0833
+become.v become.v.93 t.5/1.0000
+become.v become.v.94 t.6/0.8421 t.5/0.1579
+become.v become.v.95 t.1/0.5000 t.6/0.5000
+become.v become.v.96 t.5/0.8750 t.7/0.1250
+become.v become.v.97 t.7/0.5714 t.2/0.3571 t.3/0.0714
+become.v become.v.98 t.6/0.4667 t.2/0.4000 t.3/0.0667 t.7/0.0667
+become.v become.v.99 t.3/0.8125 t.5/0.1250 t.4/0.0625
+become.v become.v.100 t.7/0.8919 t.4/0.0811 t.2/0.0270

@@ -1,0 +1,100 @@
+write.v write.v.1 t.5/0.7500 t.8/0.2500
+write.v write.v.2 t.2/0.6667 t.12/0.3333
+write.v write.v.3 t.2/0.7632 t.4/0.1579 t.8/0.0789
+write.v write.v.4 t.2/0.5000 t.4/0.5000
+write.v write.v.5 t.2/0.4783 t.12/0.3913 t.3/0.1304
+write.v write.v.6 t.2/0.7143 t.4/0.2857
+write.v write.v.7 t.12/0.6000 t.2/0.2000 t.3/0.2000
+write.v write.v.8 t.2/1.0000
+write.v write.v.9 t.2/0.7742 t.5/0.2258
+write.v write.v.10 t.2/0.6429 t.4/0.3571
+write.v write.v.11 t.2/1.0000
+write.v write.v.12 t.2/0.8889 t.3/0.1111
+write.v write.v.13 t.2/1.0000
+write.v write.v.14 t.12/1.0000
+write.v write.v.15 t.2/0.7692 t.5/0.2308
+write.v write.v.16 t.2/1.0000
+write.v write.v.17 t.2/0.6923 t.12/0.3077
+write.v write.v.18 t.5/0.9474 t.4/0.0526
+write.v write.v.19 t.2/0.9167 t.1/0.0833
+write.v write.v.20 t.2/0.6667 t.3/0.2667 t.12/0.0667
+write.v write.v.21 t.2/0.6111 t.4/0.3333 t.3/0.0556
+write.v write.v.22 t.12/0.5000 t.5/0.3182 t.2/0.0909 t.6/0.0909
+write.v write.v.23 t.5/0.7143 t.6/0.2143 t.4/0.0714
+write.v write.v.24 t.8/0.6316 t.5/0.3158 t.6/0.0526
+write.v write.v.25 t.2/0.5000 t.5/0.3333 t.6/0.1667
+write.v write.v.26 t.2/0.5000 t.12/0.5000
+write.v write.v.27 t.6/0.5714 t.2/0.4286
+write.v write.v.28 t.4/1.0000
+write.v write.v.29 t.6/0.7895 t.12/0.1579 t.5/0.0526
+write.v write.v.30 t.8/0.5833 t.4/0.4167
+write.v write.v.31 t.2/1.0000
+write.v write.v.32 t.3/0.5556 t.2/0.4444
+write.v write.v.33 t.5/0.6000 t.6/0.3000 t.4/0.1000
+write.v write.v.34 t.5/0.4444 t.6/0.2222 t.1/0.1111 t.3/0.1111 t.12/0.1111
+write.v write.v.35 t.5/0.8182 t.2/0.1818
+write.v write.v.36 t.5/1.0000
+write.v write.v.37 t.2/0.8750 t.4/0.1250
+write.v write.v.38 t.2/0.6429 t.5/0.3571
+write.v write.v.39 t.8/0.5000 t.5/0.3571 t.3/0.0714 t.6/0.0714
+write.v write.v.40 t.5/0.8333 t.8/0.1667
+write.v write.v.41 t.12/0.6429 t.2/0.3571
+write.v write.v.42 t.8/0.5000 t.5/0.4286 t.2/0.0714
+write.v write.v.43 t.8/0.5385 t.6/0.4615
+write.v write.v.44 t.4/0.5000 t.5/0.4000 t.3/0.1000
+write.v write.v.45 t.6/0.6667 t.1/0.1111 t.2/0.1111 t.5/0.1111
+write.v write.v.46 t.12/0.6316 t.2/0.3684
+write.v write.v.47 t.2/0.5556 t.4/0.3333 t.12/0.1111
+write.v write.v.48 t.2/0.7500 t.12/0.2500
+write.v write.v.49 t.12/0.8182 t.2/0.0909 t.4/0.0455 t.5/0.0455
+write.v write.v.50 t.12/0.6250 t.8/0.2500 t.3/0.1250
+write.v write.v.51 t.5/0.9259 t.4/0.0741
+write.v write.v.52 t.2/0.4545 t.3/0.4545 t.4/0.0909
+write.v write.v.53 t.5/0.8667 t.4/0.1333
+write.v write.v.54 t.2/1.0000
+write.v write.v.55 t.2/1.0000
+write.v write.v.56 t.12/0.6250 t.4/0.3750
+write.v write.v.57 t.8/0.5833 t.2/0.3333 t.3/0.0833
+write.v write.v.58 t.2/0.7000 t.5/0.3000
+write.v write.v.59 t.5/1.0000
+write.v write.v.60 t.4/0.5714 t.8/0.4286
+write.v write.v.61 t.2/1.0000
+write.v write.v.62 t.2/0.7059 t.5/0.2941
+write.v write.v.63 t.2/0.6316 t.3/0.1579 t.6/0.1579 t.12/0.0526
+write.v write.v.64 t.6/0.4615 t.2/0.2308 t.8/0.2308 t.4/0.0769
+write.v write.v.65 t.1/0.4074 t.4/0.3333 t.2/0.1852 t.5/0.0741
+write.v write.v.66 t.5/1.0000
+write.v write.v.67 t.5/0.8750 t.8/0.1250
+write.v write.v.68 t.8/0.6154 t.6/0.2308 t.4/0.1538
+write.v write.v.69 t.12/0.8077 t.2/0.1154 t.3/0.0385 t.13/0.0385
+write.v write.v.70 t.6/0.7368 t.8/0.2632
+write.v write.v.71 t.6/0.6000 t.8/0.2400 t.2/0.1600
+write.v write.v.72 t.5/0.5238 t.6/0.4286 t.4/0.0476
+write.v write.v.73 t.2/0.6897 t.5/0.3103
+write.v write.v.74 t.2/0.8462 t.5/0.1538
+write.v write.v.75 t.5/0.8621 t.6/0.1379
+write.v write.v.76 t.5/1.0000
+write.v write.v.77 t.2/0.6818 t.3/0.3182
+write.v write.v.78 t.2/0.7143 t.6/0.2857
+write.v write.v.79 t.5/0.6364 t.8/0.3636
+write.v write.v.80 t.4/0.5455 t.5/0.1818 t.8/0.1818 t.2/0.0909
+write.v write.v.81 t.2/0.6000 t.6/0.3000 t.12/0.1000
+write.v write.v.82 t.5/0.8889 t.8/0.1111
+write.v write.v.83 t.8/0.5652 t.5/0.3043 t.6/0.1304
+write.v write.v.84 t.5/0.7895 t.6/0.2105
+write.v write.v.85 t.5/0.7059 t.2/0.2353 t.4/0.0588
+write.v write.v.86 t.6/0.6000 t.3/0.3000 t.8/0.1000
+write.v write.v.87 t.5/0.9091 t.2/0.0909
+write.v write.v.88 t.5/0.8750 t.2/0.1250
+write.v write.v.89 t.12/0.5556 t.5/0.4444
+write.v write.v.90 t.2/0.7143 t.12/0.2143 t.8/0.0714
+write.v write.v.91 t.12/1.0000
+write.v write.v.92 t.2/0.6190 t.5/0.2857 t.12/0.0952
+write.v write.v.93 t.5/0.8125 t.12/0.1250 t.8/0.0625
+write.v write.v.94 t.2/0.3750 t.6/0.3750 t.8/0.2500
+write.v write.v.95 t.4/0.5385 t.2/0.4615
+write.v write.v.96 t.5/0.6667 t.8/0.2222 t.2/0.1111
+write.v write.v.97 t.8/0.8333 t.3/0.0833 t.6/0.0833
+write.v write.v.98 t.1/0.4062 t.8/0.3125 t.5/0.2812
+write.v write.v.99 t.5/0.6154 t.8/0.3846
+write.v write.v.100 t.2/0.5263 t.8/0.2632 t.12/0.2105

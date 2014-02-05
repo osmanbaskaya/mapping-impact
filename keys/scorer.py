@@ -30,9 +30,9 @@ def load_key(filename):
     d = {}
     total_line = 0
     for i, line in enumerate(fopen(filename)):
-        total_line += 1
         line = line.split()
         if len(line) == 3:
+            total_line += 1
             tw, inst_id, sense = line
             key = "{}__{}".format(tw, inst_id)
             d[key] = sense

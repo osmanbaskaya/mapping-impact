@@ -1,0 +1,100 @@
+wait.v wait.v.1 wait.v.sense.1/0.05394 wait.v.sense.2/0.03055 wait.v.sense.3/0.01918 wait.v.sense.4/0.01617
+wait.v wait.v.2 wait.v.sense.1/0.04977 wait.v.sense.3/0.04629 wait.v.sense.2/0.03604 wait.v.sense.4/0.02369
+wait.v wait.v.3 wait.v.sense.3/0.03453 wait.v.sense.4/0.03271 wait.v.sense.2/0.01290
+wait.v wait.v.4 wait.v.sense.1/0.02335 wait.v.sense.3/0.01109 wait.v.sense.4/0.00191
+wait.v wait.v.5 wait.v.sense.1/0.09251 wait.v.sense.2/0.04662 wait.v.sense.3/0.04465 wait.v.sense.4/0.02280
+wait.v wait.v.6 wait.v.sense.3/0.05738 wait.v.sense.2/0.03138 wait.v.sense.4/0.01544 wait.v.sense.1/0.00107
+wait.v wait.v.7 wait.v.sense.4/0.06919 wait.v.sense.1/0.02352 wait.v.sense.3/0.02308 wait.v.sense.2/0.02101
+wait.v wait.v.8 wait.v.sense.2/0.04329 wait.v.sense.4/0.03650 wait.v.sense.1/0.03336 wait.v.sense.3/0.01368
+wait.v wait.v.9 wait.v.sense.3/0.03723 wait.v.sense.4/0.03142 wait.v.sense.2/0.01801 wait.v.sense.1/0.01680
+wait.v wait.v.10 wait.v.sense.4/0.02810 wait.v.sense.3/0.02251 wait.v.sense.2/0.01686 wait.v.sense.1/0.01415
+wait.v wait.v.11 wait.v.sense.4/0.04843 wait.v.sense.1/0.04521 wait.v.sense.3/0.02531 wait.v.sense.2/0.00968
+wait.v wait.v.12 wait.v.sense.1/0.06209 wait.v.sense.2/0.03403 wait.v.sense.3/0.02933 wait.v.sense.4/0.01533
+wait.v wait.v.13 wait.v.sense.3/0.05313 wait.v.sense.4/0.02867 wait.v.sense.2/0.00698 wait.v.sense.1/0.00361
+wait.v wait.v.14 wait.v.sense.1/0.36354 wait.v.sense.4/0.01429 wait.v.sense.3/0.00751 wait.v.sense.2/0.00542
+wait.v wait.v.15 wait.v.sense.4/0.05526 wait.v.sense.3/0.02819 wait.v.sense.2/0.00837 wait.v.sense.1/0.00604
+wait.v wait.v.16 wait.v.sense.3/0.03346 wait.v.sense.4/0.03321 wait.v.sense.1/0.01716 wait.v.sense.2/0.00674
+wait.v wait.v.17 wait.v.sense.1/0.09592 wait.v.sense.4/0.04670 wait.v.sense.3/0.03241 wait.v.sense.2/0.02357
+wait.v wait.v.18 wait.v.sense.4/0.07048 wait.v.sense.3/0.01839 wait.v.sense.1/0.01051
+wait.v wait.v.19 wait.v.sense.1/0.19412 wait.v.sense.3/0.02067 wait.v.sense.2/0.01567 wait.v.sense.4/0.00743
+wait.v wait.v.20 wait.v.sense.4/0.05699 wait.v.sense.1/0.04559 wait.v.sense.2/0.00778 wait.v.sense.3/0.00755
+wait.v wait.v.21 wait.v.sense.3/0.05012 wait.v.sense.4/0.02489 wait.v.sense.1/0.01747 wait.v.sense.2/0.01640
+wait.v wait.v.22 wait.v.sense.3/0.04153 wait.v.sense.2/0.03715 wait.v.sense.4/0.02640 wait.v.sense.1/0.00568
+wait.v wait.v.23 wait.v.sense.4/0.04510 wait.v.sense.2/0.01386 wait.v.sense.3/0.01157 wait.v.sense.1/0.00461
+wait.v wait.v.24 wait.v.sense.1/0.15527 wait.v.sense.3/0.06476 wait.v.sense.4/0.02384 wait.v.sense.2/0.00988
+wait.v wait.v.25 wait.v.sense.3/0.05665 wait.v.sense.1/0.02232 wait.v.sense.2/0.01848 wait.v.sense.4/0.01313
+wait.v wait.v.26 wait.v.sense.1/0.06234 wait.v.sense.4/0.03616 wait.v.sense.3/0.00807 wait.v.sense.2/0.00514
+wait.v wait.v.27 wait.v.sense.4/0.03537 wait.v.sense.2/0.03239 wait.v.sense.3/0.03086 wait.v.sense.1/0.01487
+wait.v wait.v.28 wait.v.sense.4/0.03716 wait.v.sense.3/0.02632 wait.v.sense.2/0.01578 wait.v.sense.1/0.01229
+wait.v wait.v.29 wait.v.sense.4/0.05851 wait.v.sense.3/0.03785 wait.v.sense.2/0.01106 wait.v.sense.1/0.00451
+wait.v wait.v.30 wait.v.sense.4/0.03815 wait.v.sense.1/0.01656 wait.v.sense.2/0.00992 wait.v.sense.3/0.00880
+wait.v wait.v.31 wait.v.sense.1/0.23975 wait.v.sense.3/0.04088 wait.v.sense.4/0.01828 wait.v.sense.2/0.01154
+wait.v wait.v.32 wait.v.sense.4/0.02967 wait.v.sense.3/0.02029 wait.v.sense.2/0.01099 wait.v.sense.1/0.00473
+wait.v wait.v.33 wait.v.sense.3/0.03825 wait.v.sense.4/0.03173 wait.v.sense.1/0.02940 wait.v.sense.2/0.01385
+wait.v wait.v.34 wait.v.sense.3/0.03611 wait.v.sense.4/0.03518 wait.v.sense.2/0.01960 wait.v.sense.1/0.00043
+wait.v wait.v.35 wait.v.sense.3/0.03310 wait.v.sense.4/0.02550 wait.v.sense.2/0.00760 wait.v.sense.1/0.00256
+wait.v wait.v.36 wait.v.sense.1/0.03797 wait.v.sense.4/0.03793 wait.v.sense.2/0.03185 wait.v.sense.3/0.00588
+wait.v wait.v.37 wait.v.sense.3/0.03039 wait.v.sense.4/0.02461 wait.v.sense.2/0.02265 wait.v.sense.1/0.01834
+wait.v wait.v.38 wait.v.sense.3/0.03875 wait.v.sense.4/0.02743 wait.v.sense.2/0.02081 wait.v.sense.1/0.00789
+wait.v wait.v.39 wait.v.sense.4/0.03357 wait.v.sense.2/0.01844 wait.v.sense.1/0.01466 wait.v.sense.3/0.01273
+wait.v wait.v.40 wait.v.sense.3/0.03596 wait.v.sense.4/0.03204 wait.v.sense.2/0.01774 wait.v.sense.1/0.00290
+wait.v wait.v.41 wait.v.sense.2/0.02137 wait.v.sense.4/0.02105 wait.v.sense.3/0.01253 wait.v.sense.1/0.00134
+wait.v wait.v.42 wait.v.sense.4/0.04912 wait.v.sense.3/0.02022 wait.v.sense.1/0.00215
+wait.v wait.v.43 wait.v.sense.4/0.03249 wait.v.sense.2/0.01298 wait.v.sense.3/0.00895 wait.v.sense.1/0.00815
+wait.v wait.v.44 wait.v.sense.3/0.04898 wait.v.sense.4/0.03111 wait.v.sense.1/0.01525 wait.v.sense.2/0.01298
+wait.v wait.v.45 wait.v.sense.4/0.04023 wait.v.sense.3/0.03929 wait.v.sense.1/0.02721 wait.v.sense.2/0.01811
+wait.v wait.v.46 wait.v.sense.1/0.04463 wait.v.sense.4/0.03326 wait.v.sense.3/0.01069 wait.v.sense.2/0.00371
+wait.v wait.v.47 wait.v.sense.3/0.08684 wait.v.sense.4/0.04696 wait.v.sense.2/0.04682 wait.v.sense.1/0.00771
+wait.v wait.v.48 wait.v.sense.4/0.03982 wait.v.sense.1/0.02994 wait.v.sense.3/0.02629 wait.v.sense.2/0.01035
+wait.v wait.v.49 wait.v.sense.4/0.05884 wait.v.sense.2/0.01734 wait.v.sense.3/0.01121 wait.v.sense.1/0.00501
+wait.v wait.v.50 wait.v.sense.1/0.04902 wait.v.sense.2/0.03809 wait.v.sense.3/0.03563 wait.v.sense.4/0.03302
+wait.v wait.v.51 wait.v.sense.4/0.10515 wait.v.sense.3/0.02134 wait.v.sense.1/0.00468 wait.v.sense.2/0.00298
+wait.v wait.v.52 wait.v.sense.4/0.03737 wait.v.sense.3/0.01423 wait.v.sense.2/0.00770
+wait.v wait.v.53 wait.v.sense.4/0.05967 wait.v.sense.1/0.03002 wait.v.sense.3/0.00146
+wait.v wait.v.54 wait.v.sense.4/0.04673 wait.v.sense.3/0.04411 wait.v.sense.1/0.01369 wait.v.sense.2/0.00293
+wait.v wait.v.55 wait.v.sense.4/0.06083 wait.v.sense.1/0.05067 wait.v.sense.3/0.03484 wait.v.sense.2/0.01921
+wait.v wait.v.56 wait.v.sense.2/0.04441 wait.v.sense.3/0.01928 wait.v.sense.1/0.01523 wait.v.sense.4/0.01380
+wait.v wait.v.57 wait.v.sense.4/0.03201 wait.v.sense.2/0.02783 wait.v.sense.3/0.01522 wait.v.sense.1/0.01188
+wait.v wait.v.58 wait.v.sense.4/0.04871 wait.v.sense.1/0.04189 wait.v.sense.3/0.02903 wait.v.sense.2/0.01282
+wait.v wait.v.59 wait.v.sense.3/0.04380 wait.v.sense.4/0.04017 wait.v.sense.2/0.02058 wait.v.sense.1/0.00475
+wait.v wait.v.60 wait.v.sense.1/0.10834 wait.v.sense.4/0.04027 wait.v.sense.2/0.01328 wait.v.sense.3/0.01011
+wait.v wait.v.61 wait.v.sense.4/0.08572 wait.v.sense.3/0.02300 wait.v.sense.1/0.00422 wait.v.sense.2/0.00413
+wait.v wait.v.62 wait.v.sense.4/0.04735 wait.v.sense.3/0.01867 wait.v.sense.2/0.00527
+wait.v wait.v.63 wait.v.sense.3/0.03596 wait.v.sense.4/0.03204 wait.v.sense.2/0.01774 wait.v.sense.1/0.00290
+wait.v wait.v.64 wait.v.sense.4/0.03132 wait.v.sense.3/0.02975 wait.v.sense.2/0.01478 wait.v.sense.1/0.00136
+wait.v wait.v.65 wait.v.sense.3/0.04126 wait.v.sense.4/0.03087 wait.v.sense.1/0.02390 wait.v.sense.2/0.01255
+wait.v wait.v.66 wait.v.sense.4/0.08012 wait.v.sense.1/0.01879 wait.v.sense.2/0.00569 wait.v.sense.3/0.00306
+wait.v wait.v.67 wait.v.sense.4/0.05302 wait.v.sense.3/0.02656 wait.v.sense.2/0.00792
+wait.v wait.v.68 wait.v.sense.3/0.04366 wait.v.sense.4/0.04162 wait.v.sense.1/0.02614 wait.v.sense.2/0.00725
+wait.v wait.v.69 wait.v.sense.3/0.06825 wait.v.sense.4/0.06590 wait.v.sense.1/0.01158
+wait.v wait.v.70 wait.v.sense.4/0.06221 wait.v.sense.3/0.02965 wait.v.sense.2/0.00691 wait.v.sense.1/0.00306
+wait.v wait.v.71 wait.v.sense.3/0.05296 wait.v.sense.1/0.02836 wait.v.sense.4/0.02651 wait.v.sense.2/0.00988
+wait.v wait.v.72 wait.v.sense.1/0.26289 wait.v.sense.4/0.04166 wait.v.sense.2/0.01311 wait.v.sense.3/0.00306
+wait.v wait.v.73 wait.v.sense.4/0.05613 wait.v.sense.3/0.03564 wait.v.sense.2/0.01388 wait.v.sense.1/0.00075
+wait.v wait.v.74 wait.v.sense.4/0.06114 wait.v.sense.1/0.02126 wait.v.sense.2/0.01609 wait.v.sense.3/0.00372
+wait.v wait.v.75 wait.v.sense.4/0.04961 wait.v.sense.3/0.02223 wait.v.sense.2/0.01156 wait.v.sense.1/0.00221
+wait.v wait.v.76 wait.v.sense.1/0.07496 wait.v.sense.3/0.03701 wait.v.sense.4/0.01683 wait.v.sense.2/0.00856
+wait.v wait.v.77 wait.v.sense.1/0.04512 wait.v.sense.2/0.01525 wait.v.sense.3/0.01444 wait.v.sense.4/0.00678
+wait.v wait.v.78 wait.v.sense.3/0.05341 wait.v.sense.4/0.04823
+wait.v wait.v.79 wait.v.sense.4/0.03598 wait.v.sense.2/0.02553 wait.v.sense.3/0.01740
+wait.v wait.v.80 wait.v.sense.4/0.04225 wait.v.sense.3/0.03776 wait.v.sense.2/0.02288 wait.v.sense.1/0.01959
+wait.v wait.v.81 wait.v.sense.4/0.04795 wait.v.sense.3/0.02693 wait.v.sense.1/0.02565 wait.v.sense.2/0.01413
+wait.v wait.v.82 wait.v.sense.2/0.02087 wait.v.sense.4/0.01942 wait.v.sense.1/0.01016 wait.v.sense.3/0.00754
+wait.v wait.v.83 wait.v.sense.4/0.04721 wait.v.sense.3/0.01698 wait.v.sense.2/0.01451 wait.v.sense.1/0.00476
+wait.v wait.v.84 wait.v.sense.1/0.03529 wait.v.sense.4/0.01857 wait.v.sense.3/0.00779 wait.v.sense.2/0.00748
+wait.v wait.v.85 wait.v.sense.4/0.02656 wait.v.sense.3/0.02632 wait.v.sense.2/0.02324 wait.v.sense.1/0.00824
+wait.v wait.v.86 wait.v.sense.3/0.06943 wait.v.sense.1/0.05369 wait.v.sense.4/0.03447 wait.v.sense.2/0.01702
+wait.v wait.v.87 wait.v.sense.4/0.07761 wait.v.sense.2/0.03754 wait.v.sense.3/0.03040 wait.v.sense.1/0.00675
+wait.v wait.v.88 wait.v.sense.4/0.05745 wait.v.sense.3/0.03192 wait.v.sense.2/0.01178 wait.v.sense.1/0.00402
+wait.v wait.v.89 wait.v.sense.4/0.03847 wait.v.sense.2/0.02509 wait.v.sense.1/0.01738 wait.v.sense.3/0.00835
+wait.v wait.v.90 wait.v.sense.4/0.02887 wait.v.sense.3/0.01841 wait.v.sense.2/0.01356 wait.v.sense.1/0.00955
+wait.v wait.v.91 wait.v.sense.4/0.01743 wait.v.sense.3/0.01555 wait.v.sense.2/0.00616 wait.v.sense.1/0.00384
+wait.v wait.v.92 wait.v.sense.4/0.06091 wait.v.sense.3/0.05388 wait.v.sense.2/0.00171
+wait.v wait.v.93 wait.v.sense.1/0.28837 wait.v.sense.4/0.02221 wait.v.sense.3/0.01985 wait.v.sense.2/0.01055
+wait.v wait.v.94 wait.v.sense.4/0.04767 wait.v.sense.1/0.03492 wait.v.sense.2/0.01838 wait.v.sense.3/0.00896
+wait.v wait.v.95 wait.v.sense.3/0.04043 wait.v.sense.4/0.03280 wait.v.sense.1/0.02075 wait.v.sense.2/0.01770
+wait.v wait.v.96 wait.v.sense.4/0.04760 wait.v.sense.3/0.03234 wait.v.sense.1/0.03056 wait.v.sense.2/0.00922
+wait.v wait.v.97 wait.v.sense.4/0.05329 wait.v.sense.3/0.05132 wait.v.sense.2/0.00885 wait.v.sense.1/0.00376
+wait.v wait.v.98 wait.v.sense.3/0.04236 wait.v.sense.4/0.02296 wait.v.sense.2/0.02255 wait.v.sense.1/0.01049
+wait.v wait.v.99 wait.v.sense.1/0.03750 wait.v.sense.4/0.02451 wait.v.sense.3/0.02046 wait.v.sense.2/0.01686
+wait.v wait.v.100 wait.v.sense.4/0.04784 wait.v.sense.3/0.02147 wait.v.sense.2/0.00891 wait.v.sense.1/0.00889

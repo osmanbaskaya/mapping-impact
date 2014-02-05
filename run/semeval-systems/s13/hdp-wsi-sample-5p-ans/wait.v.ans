@@ -1,0 +1,100 @@
+wait.v wait.v.1 t.10/0.5000 t.13/0.5000
+wait.v wait.v.2 t.8/0.8750 t.12/0.1250
+wait.v wait.v.3 t.1/0.6667 t.8/0.3333
+wait.v wait.v.4 t.1/0.7143 t.5/0.2857
+wait.v wait.v.5 t.5/0.5000 t.8/0.3750 t.10/0.1250
+wait.v wait.v.6 t.2/0.4211 t.4/0.2632 t.1/0.1579 t.16/0.1579
+wait.v wait.v.7 t.12/1.0000
+wait.v wait.v.8 t.4/0.5000 t.12/0.3000 t.1/0.2000
+wait.v wait.v.9 t.2/1.0000
+wait.v wait.v.10 t.8/0.5000 t.2/0.3571 t.13/0.1429
+wait.v wait.v.11 t.16/0.6250 t.2/0.3750
+wait.v wait.v.12 t.8/0.8095 t.12/0.0952 t.2/0.0476 t.10/0.0476
+wait.v wait.v.13 t.10/0.5714 t.1/0.1429 t.12/0.1429 t.14/0.1429
+wait.v wait.v.14 t.5/0.7857 t.8/0.0714 t.13/0.0714 t.2/0.0714
+wait.v wait.v.15 t.12/0.8000 t.13/0.2000
+wait.v wait.v.16 t.13/0.6000 t.2/0.3000 t.6/0.1000
+wait.v wait.v.17 t.2/0.6000 t.6/0.4000
+wait.v wait.v.18 t.4/0.6875 t.2/0.1250 t.5/0.1250 t.1/0.0625
+wait.v wait.v.19 t.8/0.5625 t.5/0.2500 t.2/0.1250 t.6/0.0625
+wait.v wait.v.20 t.16/0.5556 t.12/0.4444
+wait.v wait.v.21 t.2/0.7778 t.6/0.2222
+wait.v wait.v.22 t.8/0.8750 t.4/0.1250
+wait.v wait.v.23 t.4/0.5000 t.6/0.5000
+wait.v wait.v.24 t.6/0.5000 t.16/0.4500 t.2/0.0500
+wait.v wait.v.25 t.14/0.5000 t.8/0.5000
+wait.v wait.v.26 t.8/1.0000
+wait.v wait.v.27 t.13/0.5000 t.5/0.2500 t.8/0.2500
+wait.v wait.v.28 t.8/0.5714 t.2/0.2857 t.12/0.0714 t.16/0.0714
+wait.v wait.v.29 t.13/0.9375 t.1/0.0625
+wait.v wait.v.30 t.1/0.5000 t.16/0.5000
+wait.v wait.v.31 t.5/1.0000
+wait.v wait.v.32 t.12/0.8000 t.8/0.2000
+wait.v wait.v.33 t.2/0.8929 t.6/0.0714 t.12/0.0357
+wait.v wait.v.34 t.10/0.4444 t.16/0.4444 t.2/0.1111
+wait.v wait.v.35 t.2/0.9000 t.16/0.1000
+wait.v wait.v.36 t.2/0.5000 t.12/0.5000
+wait.v wait.v.37 t.4/1.0000
+wait.v wait.v.38 t.19/0.5000 t.2/0.3571 t.4/0.0714 t.12/0.0714
+wait.v wait.v.39 t.2/1.0000
+wait.v wait.v.40 t.2/1.0000
+wait.v wait.v.41 t.16/0.8000 t.2/0.2000
+wait.v wait.v.42 t.4/1.0000
+wait.v wait.v.43 t.2/0.8000 t.5/0.2000
+wait.v wait.v.44 t.16/0.4444 t.13/0.3333 t.2/0.2222
+wait.v wait.v.45 t.5/0.5000 t.1/0.2500 t.13/0.2500
+wait.v wait.v.46 t.8/0.7000 t.1/0.3000
+wait.v wait.v.47 t.12/0.8000 t.16/0.2000
+wait.v wait.v.48 t.2/0.5333 t.4/0.2667 t.8/0.2000
+wait.v wait.v.49 t.10/0.8000 t.1/0.2000
+wait.v wait.v.50 t.2/1.0000
+wait.v wait.v.51 t.8/0.8333 t.2/0.1667
+wait.v wait.v.52 t.12/0.3333 t.5/0.3333 t.6/0.3333
+wait.v wait.v.53 t.5/0.3750 t.6/0.3750 t.2/0.2500
+wait.v wait.v.54 t.12/0.5238 t.2/0.3810 t.6/0.0952
+wait.v wait.v.55 t.10/0.7778 t.1/0.1111 t.6/0.1111
+wait.v wait.v.56 t.8/0.5000 t.1/0.1667 t.12/0.1667 t.5/0.1667
+wait.v wait.v.57 t.2/1.0000
+wait.v wait.v.58 t.2/0.3750 t.1/0.2500 t.16/0.2500 t.6/0.1250
+wait.v wait.v.59 t.4/0.5625 t.2/0.4375
+wait.v wait.v.60 t.1/0.6250 t.12/0.1875 t.2/0.0625 t.5/0.0625 t.6/0.0625
+wait.v wait.v.61 t.12/0.8000 t.6/0.2000
+wait.v wait.v.62 t.2/0.5714 t.4/0.4286
+wait.v wait.v.63 t.10/1.0000
+wait.v wait.v.64 t.2/0.9286 t.12/0.0714
+wait.v wait.v.65 t.2/0.8333 t.12/0.1667
+wait.v wait.v.66 t.2/1.0000
+wait.v wait.v.67 t.6/0.7500 t.2/0.2500
+wait.v wait.v.68 t.6/1.0000
+wait.v wait.v.69 t.2/0.4286 t.12/0.4286 t.1/0.0714 t.6/0.0714
+wait.v wait.v.70 t.12/0.8750 t.5/0.1250
+wait.v wait.v.71 t.8/1.0000
+wait.v wait.v.72 t.5/1.0000
+wait.v wait.v.73 t.12/0.6000 t.1/0.2000 t.2/0.2000
+wait.v wait.v.74 t.13/1.0000
+wait.v wait.v.75 t.4/0.5000 t.2/0.2500 t.5/0.2500
+wait.v wait.v.76 t.1/0.6667 t.4/0.3333
+wait.v wait.v.77 t.6/0.6154 t.2/0.3846
+wait.v wait.v.78 t.12/0.8750 t.10/0.1250
+wait.v wait.v.79 t.4/0.9286 t.12/0.0714
+wait.v wait.v.80 t.2/0.9375 t.8/0.0625
+wait.v wait.v.81 t.16/0.9000 t.2/0.1000
+wait.v wait.v.82 t.2/0.7500 t.8/0.2500
+wait.v wait.v.83 t.2/0.6250 t.5/0.2500 t.16/0.1250
+wait.v wait.v.84 t.12/0.6667 t.16/0.3333
+wait.v wait.v.85 t.1/0.3333 t.2/0.3333 t.8/0.3333
+wait.v wait.v.86 t.2/0.6000 t.1/0.4000
+wait.v wait.v.87 t.8/0.6364 t.16/0.2727 t.2/0.0909
+wait.v wait.v.88 t.6/0.8000 t.12/0.1000 t.16/0.1000
+wait.v wait.v.89 t.2/1.0000
+wait.v wait.v.90 t.2/0.5455 t.10/0.2727 t.13/0.1818
+wait.v wait.v.91 t.2/0.3636 t.4/0.2727 t.5/0.2727 t.12/0.0909
+wait.v wait.v.92 t.12/0.5000 t.2/0.3333 t.8/0.1667
+wait.v wait.v.93 t.5/0.5714 t.1/0.4286
+wait.v wait.v.94 t.12/0.3000 t.2/0.2000 t.13/0.2000 t.6/0.2000 t.8/0.1000
+wait.v wait.v.95 t.2/0.5000 t.1/0.4286 t.8/0.0714
+wait.v wait.v.96 t.2/0.8462 t.16/0.1282 t.4/0.0256
+wait.v wait.v.97 t.2/0.6111 t.12/0.3333 t.1/0.0556
+wait.v wait.v.98 t.2/1.0000
+wait.v wait.v.99 t.10/1.0000
+wait.v wait.v.100 t.2/0.7222 t.4/0.2222 t.8/0.0556

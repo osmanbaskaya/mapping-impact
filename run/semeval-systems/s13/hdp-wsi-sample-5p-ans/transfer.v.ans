@@ -1,0 +1,100 @@
+transfer.v transfer.v.1 t.15/1.0000
+transfer.v transfer.v.2 t.10/0.5294 t.7/0.4706
+transfer.v transfer.v.3 t.12/1.0000
+transfer.v transfer.v.4 t.15/0.8182 t.4/0.0909 t.7/0.0909
+transfer.v transfer.v.5 t.15/0.7778 t.1/0.1111 t.12/0.1111
+transfer.v transfer.v.6 t.7/0.6190 t.12/0.1429 t.15/0.1429 t.9/0.0476 t.11/0.0476
+transfer.v transfer.v.7 t.6/0.5000 t.1/0.3500 t.9/0.0500 t.4/0.0500 t.10/0.0500
+transfer.v transfer.v.8 t.15/0.6111 t.9/0.2778 t.14/0.1111
+transfer.v transfer.v.9 t.4/0.3636 t.10/0.2727 t.7/0.2727 t.15/0.0909
+transfer.v transfer.v.10 t.1/0.8333 t.10/0.1667
+transfer.v transfer.v.11 t.3/1.0000
+transfer.v transfer.v.12 t.10/0.7143 t.3/0.2857
+transfer.v transfer.v.13 t.9/0.8571 t.4/0.0714 t.14/0.0714
+transfer.v transfer.v.14 t.10/0.9167 t.4/0.0833
+transfer.v transfer.v.15 t.12/1.0000
+transfer.v transfer.v.16 t.15/0.5263 t.14/0.2632 t.3/0.1053 t.9/0.0526 t.8/0.0526
+transfer.v transfer.v.17 t.3/0.6364 t.12/0.1818 t.13/0.0909 t.15/0.0909
+transfer.v transfer.v.18 t.15/0.6429 t.10/0.1429 t.7/0.1429 t.14/0.0714
+transfer.v transfer.v.19 t.15/1.0000
+transfer.v transfer.v.20 t.9/0.5714 t.12/0.2143 t.4/0.1429 t.15/0.0714
+transfer.v transfer.v.21 t.11/1.0000
+transfer.v transfer.v.22 t.11/0.6000 t.7/0.4000
+transfer.v transfer.v.23 t.14/0.4000 t.7/0.4000 t.8/0.2000
+transfer.v transfer.v.24 t.10/0.5556 t.9/0.3333 t.15/0.1111
+transfer.v transfer.v.25 t.4/0.5000 t.12/0.5000
+transfer.v transfer.v.26 t.12/0.4545 t.13/0.3636 t.9/0.0909 t.14/0.0909
+transfer.v transfer.v.27 t.7/1.0000
+transfer.v transfer.v.28 t.3/1.0000
+transfer.v transfer.v.29 t.3/0.8333 t.4/0.1667
+transfer.v transfer.v.30 t.15/0.9286 t.10/0.0714
+transfer.v transfer.v.31 t.14/1.0000
+transfer.v transfer.v.32 t.14/0.8000 t.10/0.2000
+transfer.v transfer.v.33 t.3/0.8333 t.7/0.1667
+transfer.v transfer.v.34 t.12/0.8000 t.7/0.2000
+transfer.v transfer.v.35 t.12/0.9000 t.7/0.1000
+transfer.v transfer.v.36 t.12/1.0000
+transfer.v transfer.v.37 t.10/0.5556 t.12/0.3333 t.8/0.1111
+transfer.v transfer.v.38 t.12/0.6000 t.14/0.4000
+transfer.v transfer.v.39 t.10/0.5000 t.15/0.3750 t.4/0.1250
+transfer.v transfer.v.40 t.3/0.8333 t.1/0.0833 t.12/0.0833
+transfer.v transfer.v.41 t.7/1.0000
+transfer.v transfer.v.42 t.3/1.0000
+transfer.v transfer.v.43 t.21/0.8000 t.4/0.1000 t.7/0.1000
+transfer.v transfer.v.44 t.12/0.7778 t.4/0.1667 t.7/0.0556
+transfer.v transfer.v.45 t.14/0.6250 t.10/0.2500 t.15/0.1250
+transfer.v transfer.v.46 t.9/0.4000 t.12/0.3200 t.4/0.2800
+transfer.v transfer.v.47 t.3/0.7000 t.13/0.2000 t.1/0.1000
+transfer.v transfer.v.48 t.10/0.8750 t.12/0.1250
+transfer.v transfer.v.49 t.7/1.0000
+transfer.v transfer.v.50 t.10/1.0000
+transfer.v transfer.v.51 t.8/0.4167 t.15/0.2500 t.12/0.1667 t.22/0.1667
+transfer.v transfer.v.52 t.15/1.0000
+transfer.v transfer.v.53 t.10/0.9000 t.9/0.1000
+transfer.v transfer.v.54 t.7/0.4390 t.15/0.2927 t.13/0.2683
+transfer.v transfer.v.55 t.1/0.4000 t.3/0.2000 t.4/0.2000 t.14/0.2000
+transfer.v transfer.v.56 t.1/0.6875 t.4/0.2500 t.9/0.0625
+transfer.v transfer.v.57 t.7/0.4286 t.1/0.2857 t.9/0.1429 t.14/0.1429
+transfer.v transfer.v.58 t.10/1.0000
+transfer.v transfer.v.59 t.3/1.0000
+transfer.v transfer.v.60 t.7/0.5000 t.12/0.2500 t.9/0.1667 t.4/0.0833
+transfer.v transfer.v.61 t.9/1.0000
+transfer.v transfer.v.62 t.10/0.6923 t.13/0.2308 t.7/0.0769
+transfer.v transfer.v.63 t.15/0.6250 t.12/0.3750
+transfer.v transfer.v.64 t.4/0.7500 t.11/0.1667 t.12/0.0417 t.7/0.0417
+transfer.v transfer.v.65 t.14/0.8571 t.20/0.1429
+transfer.v transfer.v.66 t.3/0.9091 t.8/0.0909
+transfer.v transfer.v.67 t.1/0.6875 t.9/0.3125
+transfer.v transfer.v.68 t.4/0.5714 t.9/0.2857 t.15/0.1429
+transfer.v transfer.v.69 t.12/0.5000 t.4/0.5000
+transfer.v transfer.v.70 t.7/0.5455 t.15/0.2727 t.4/0.1818
+transfer.v transfer.v.71 t.7/0.5455 t.14/0.4545
+transfer.v transfer.v.72 t.4/0.7000 t.12/0.3000
+transfer.v transfer.v.73 t.9/0.5000 t.7/0.3333 t.15/0.1667
+transfer.v transfer.v.74 t.14/0.5000 t.15/0.5000
+transfer.v transfer.v.75 t.4/0.5556 t.9/0.1111 t.3/0.1111 t.11/0.1111 t.15/0.1111
+transfer.v transfer.v.76 t.13/1.0000
+transfer.v transfer.v.77 t.1/0.8333 t.13/0.1667
+transfer.v transfer.v.78 t.12/0.9545 t.14/0.0455
+transfer.v transfer.v.79 t.7/0.7000 t.12/0.3000
+transfer.v transfer.v.80 t.12/1.0000
+transfer.v transfer.v.81 t.3/0.5714 t.4/0.4286
+transfer.v transfer.v.82 t.4/0.5000 t.1/0.2500 t.3/0.1250 t.7/0.1250
+transfer.v transfer.v.83 t.7/1.0000
+transfer.v transfer.v.84 t.14/0.7143 t.4/0.1429 t.7/0.1429
+transfer.v transfer.v.85 t.15/1.0000
+transfer.v transfer.v.86 t.7/0.7000 t.8/0.2000 t.14/0.1000
+transfer.v transfer.v.87 t.4/0.4000 t.15/0.4000 t.8/0.2000
+transfer.v transfer.v.88 t.15/0.6818 t.10/0.3182
+transfer.v transfer.v.89 t.10/0.5556 t.14/0.4444
+transfer.v transfer.v.90 t.14/0.5000 t.10/0.2500 t.7/0.2500
+transfer.v transfer.v.91 t.15/0.5600 t.9/0.4000 t.7/0.0400
+transfer.v transfer.v.92 t.7/1.0000
+transfer.v transfer.v.93 t.7/0.5000 t.15/0.5000
+transfer.v transfer.v.94 t.3/0.8333 t.13/0.1667
+transfer.v transfer.v.95 t.1/0.5000 t.13/0.5000
+transfer.v transfer.v.96 t.10/1.0000
+transfer.v transfer.v.97 t.14/0.5000 t.12/0.2500 t.6/0.2500
+transfer.v transfer.v.98 t.10/1.0000
+transfer.v transfer.v.99 t.21/0.2500 t.14/0.2500 t.15/0.2500 t.2/0.1250 t.11/0.1250
+transfer.v transfer.v.100 t.3/0.8000 t.13/0.2000

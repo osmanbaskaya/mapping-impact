@@ -1,0 +1,100 @@
+state.n state.n.1 state.n.sense.6/0.16337 state.n.sense.8/0.07835 state.n.sense.2/0.07190 state.n.sense.1/0.04718 state.n.sense.4/0.02687 state.n.sense.7/0.02604 state.n.sense.5/0.02536 state.n.sense.3/0.00426
+state.n state.n.2 state.n.sense.3/0.06517 state.n.sense.7/0.04532 state.n.sense.8/0.01963 state.n.sense.4/0.01268 state.n.sense.2/0.01038 state.n.sense.6/0.00529 state.n.sense.1/0.00440 state.n.sense.5/0.00391
+state.n state.n.3 state.n.sense.3/0.08953 state.n.sense.7/0.05405 state.n.sense.8/0.05401 state.n.sense.2/0.01752 state.n.sense.6/0.01316 state.n.sense.1/0.00885 state.n.sense.4/0.00873 state.n.sense.5/0.00827
+state.n state.n.4 state.n.sense.3/0.10971 state.n.sense.7/0.07676 state.n.sense.8/0.02763 state.n.sense.4/0.01832 state.n.sense.6/0.01031 state.n.sense.5/0.00881 state.n.sense.2/0.00712
+state.n state.n.5 state.n.sense.3/0.09074 state.n.sense.7/0.03465 state.n.sense.1/0.03033 state.n.sense.8/0.02662 state.n.sense.4/0.01674 state.n.sense.6/0.01444 state.n.sense.5/0.01231 state.n.sense.2/0.00360
+state.n state.n.6 state.n.sense.3/0.05585 state.n.sense.7/0.03995 state.n.sense.8/0.02437 state.n.sense.6/0.01320 state.n.sense.5/0.00866 state.n.sense.2/0.00751
+state.n state.n.7 state.n.sense.4/0.03307 state.n.sense.3/0.02688 state.n.sense.7/0.02345 state.n.sense.6/0.01972 state.n.sense.8/0.01922 state.n.sense.2/0.00833 state.n.sense.5/0.00759
+state.n state.n.8 state.n.sense.3/0.09974 state.n.sense.4/0.07951 state.n.sense.7/0.06482 state.n.sense.8/0.02497 state.n.sense.1/0.01726 state.n.sense.5/0.01471
+state.n state.n.9 state.n.sense.4/0.06901 state.n.sense.8/0.05886 state.n.sense.3/0.03595 state.n.sense.6/0.03159 state.n.sense.7/0.03064 state.n.sense.5/0.02865 state.n.sense.2/0.01679 state.n.sense.1/0.00356
+state.n state.n.10 state.n.sense.7/0.10953 state.n.sense.3/0.10706 state.n.sense.8/0.03795 state.n.sense.6/0.03075 state.n.sense.2/0.02641 state.n.sense.5/0.00541
+state.n state.n.11 state.n.sense.8/0.06515 state.n.sense.3/0.06316 state.n.sense.7/0.03123 state.n.sense.4/0.02757 state.n.sense.5/0.01689 state.n.sense.2/0.00393 state.n.sense.6/0.00227 state.n.sense.1/0.00113
+state.n state.n.12 state.n.sense.5/0.11837 state.n.sense.8/0.03733 state.n.sense.1/0.02742 state.n.sense.6/0.02250 state.n.sense.7/0.02245 state.n.sense.3/0.01571 state.n.sense.4/0.00986
+state.n state.n.13 state.n.sense.1/0.07362 state.n.sense.2/0.05732 state.n.sense.6/0.04650 state.n.sense.7/0.03681 state.n.sense.5/0.02167 state.n.sense.3/0.01938 state.n.sense.8/0.01905 state.n.sense.4/0.01599
+state.n state.n.14 state.n.sense.3/0.11007 state.n.sense.7/0.05653 state.n.sense.4/0.03022 state.n.sense.8/0.02695 state.n.sense.5/0.02540 state.n.sense.2/0.02289 state.n.sense.6/0.02073
+state.n state.n.15 state.n.sense.3/0.03779 state.n.sense.7/0.02927 state.n.sense.8/0.02899 state.n.sense.1/0.02208 state.n.sense.6/0.02066 state.n.sense.5/0.01578 state.n.sense.4/0.01351 state.n.sense.2/0.01080
+state.n state.n.16 state.n.sense.7/0.12504 state.n.sense.3/0.09336 state.n.sense.6/0.03195 state.n.sense.8/0.02626 state.n.sense.5/0.01751 state.n.sense.2/0.01725 state.n.sense.4/0.00461 state.n.sense.1/0.00178
+state.n state.n.17 state.n.sense.3/0.15025 state.n.sense.7/0.09476 state.n.sense.8/0.04909 state.n.sense.6/0.02140 state.n.sense.1/0.01510 state.n.sense.5/0.01197 state.n.sense.2/0.00976 state.n.sense.4/0.00133
+state.n state.n.18 state.n.sense.3/0.14184 state.n.sense.7/0.11480 state.n.sense.8/0.03883 state.n.sense.4/0.01945 state.n.sense.6/0.01565 state.n.sense.2/0.01237 state.n.sense.5/0.00263
+state.n state.n.19 state.n.sense.3/0.03943 state.n.sense.2/0.03574 state.n.sense.8/0.03236 state.n.sense.7/0.02912 state.n.sense.5/0.02614 state.n.sense.6/0.02248 state.n.sense.4/0.01218 state.n.sense.1/0.00293
+state.n state.n.20 state.n.sense.5/0.08356 state.n.sense.2/0.03869 state.n.sense.8/0.03553 state.n.sense.7/0.02824 state.n.sense.1/0.02726 state.n.sense.3/0.02611 state.n.sense.6/0.01195 state.n.sense.4/0.00033
+state.n state.n.21 state.n.sense.3/0.15699 state.n.sense.7/0.05127 state.n.sense.5/0.03873 state.n.sense.2/0.02640 state.n.sense.4/0.02580 state.n.sense.8/0.01296 state.n.sense.6/0.00966 state.n.sense.1/0.00915
+state.n state.n.22 state.n.sense.3/0.07440 state.n.sense.8/0.03924 state.n.sense.7/0.03296 state.n.sense.4/0.02581 state.n.sense.2/0.01459 state.n.sense.5/0.00992 state.n.sense.1/0.00906 state.n.sense.6/0.00511
+state.n state.n.23 state.n.sense.7/0.08306 state.n.sense.3/0.05336 state.n.sense.8/0.04415 state.n.sense.2/0.04051 state.n.sense.6/0.02565 state.n.sense.5/0.01738 state.n.sense.1/0.01104 state.n.sense.4/0.00465
+state.n state.n.24 state.n.sense.3/0.12028 state.n.sense.7/0.04795 state.n.sense.8/0.03163 state.n.sense.4/0.02150 state.n.sense.2/0.01277 state.n.sense.5/0.00230
+state.n state.n.25 state.n.sense.3/0.05598 state.n.sense.2/0.03977 state.n.sense.5/0.03929 state.n.sense.7/0.03877 state.n.sense.8/0.01442 state.n.sense.1/0.01251 state.n.sense.6/0.01068 state.n.sense.4/0.00292
+state.n state.n.26 state.n.sense.3/0.08178 state.n.sense.1/0.04532 state.n.sense.8/0.03093 state.n.sense.7/0.03054 state.n.sense.6/0.02825 state.n.sense.5/0.02296 state.n.sense.4/0.00223
+state.n state.n.27 state.n.sense.3/0.11550 state.n.sense.7/0.06376 state.n.sense.4/0.02834 state.n.sense.2/0.01966 state.n.sense.8/0.01527 state.n.sense.5/0.01487 state.n.sense.6/0.01428 state.n.sense.1/0.00657
+state.n state.n.28 state.n.sense.3/0.11968 state.n.sense.7/0.04316 state.n.sense.5/0.01104 state.n.sense.2/0.00821 state.n.sense.8/0.00230
+state.n state.n.29 state.n.sense.3/0.09353 state.n.sense.7/0.08651 state.n.sense.1/0.03419 state.n.sense.2/0.03404 state.n.sense.8/0.03338 state.n.sense.4/0.02892 state.n.sense.5/0.02143 state.n.sense.6/0.01691
+state.n state.n.30 state.n.sense.3/0.13101 state.n.sense.7/0.06474 state.n.sense.4/0.06273 state.n.sense.1/0.03295 state.n.sense.2/0.03159 state.n.sense.8/0.03109 state.n.sense.5/0.01991 state.n.sense.6/0.00538
+state.n state.n.31 state.n.sense.2/0.03621 state.n.sense.6/0.03409 state.n.sense.3/0.03133 state.n.sense.5/0.02984 state.n.sense.7/0.02173 state.n.sense.1/0.01684 state.n.sense.4/0.01591 state.n.sense.8/0.00251
+state.n state.n.32 state.n.sense.7/0.08553 state.n.sense.3/0.08294 state.n.sense.8/0.03758 state.n.sense.5/0.00610 state.n.sense.2/0.00473
+state.n state.n.33 state.n.sense.7/0.05494 state.n.sense.3/0.04822 state.n.sense.8/0.02392 state.n.sense.5/0.00483
+state.n state.n.34 state.n.sense.3/0.04149 state.n.sense.8/0.03133 state.n.sense.2/0.00640 state.n.sense.5/0.00438
+state.n state.n.35 state.n.sense.3/0.21109 state.n.sense.7/0.10261 state.n.sense.2/0.03607 state.n.sense.8/0.02747 state.n.sense.4/0.01924 state.n.sense.5/0.00514
+state.n state.n.36 state.n.sense.8/0.05344 state.n.sense.3/0.03486 state.n.sense.5/0.03014 state.n.sense.7/0.01950 state.n.sense.4/0.01448 state.n.sense.2/0.00567 state.n.sense.6/0.00463
+state.n state.n.37 state.n.sense.3/0.15651 state.n.sense.7/0.06009 state.n.sense.8/0.04795 state.n.sense.2/0.02849 state.n.sense.4/0.02599 state.n.sense.1/0.01232 state.n.sense.5/0.00337
+state.n state.n.38 state.n.sense.7/0.09070 state.n.sense.3/0.06884 state.n.sense.8/0.02772 state.n.sense.4/0.01484 state.n.sense.2/0.01015 state.n.sense.5/0.00198
+state.n state.n.39 state.n.sense.3/0.09974 state.n.sense.4/0.07951 state.n.sense.7/0.06482 state.n.sense.8/0.02497 state.n.sense.1/0.01726 state.n.sense.5/0.01471
+state.n state.n.40 state.n.sense.3/0.13749 state.n.sense.7/0.08187 state.n.sense.8/0.03431 state.n.sense.2/0.02216 state.n.sense.5/0.01560 state.n.sense.6/0.01433 state.n.sense.1/0.01329 state.n.sense.4/0.00693
+state.n state.n.41 state.n.sense.5/0.08501 state.n.sense.6/0.06976 state.n.sense.3/0.05667 state.n.sense.1/0.04888 state.n.sense.7/0.04663 state.n.sense.2/0.04287 state.n.sense.4/0.02066 state.n.sense.8/0.01232
+state.n state.n.42 state.n.sense.3/0.12160 state.n.sense.7/0.06324 state.n.sense.2/0.04950 state.n.sense.6/0.01615 state.n.sense.8/0.01390 state.n.sense.1/0.00574 state.n.sense.5/0.00352
+state.n state.n.43 state.n.sense.3/0.14977 state.n.sense.7/0.09125 state.n.sense.8/0.03123 state.n.sense.2/0.01639 state.n.sense.5/0.00621
+state.n state.n.44 state.n.sense.3/0.17120 state.n.sense.7/0.08628 state.n.sense.8/0.05392 state.n.sense.2/0.04146 state.n.sense.6/0.03346 state.n.sense.4/0.02699 state.n.sense.5/0.01291 state.n.sense.1/0.00440
+state.n state.n.45 state.n.sense.3/0.05514 state.n.sense.2/0.03546 state.n.sense.1/0.02497 state.n.sense.7/0.02204 state.n.sense.6/0.01745 state.n.sense.5/0.01533 state.n.sense.4/0.01033 state.n.sense.8/0.00859
+state.n state.n.46 state.n.sense.3/0.12956 state.n.sense.7/0.11177 state.n.sense.5/0.03500 state.n.sense.2/0.02452 state.n.sense.8/0.01920 state.n.sense.6/0.01454 state.n.sense.1/0.00777 state.n.sense.4/0.00597
+state.n state.n.47 state.n.sense.8/0.08045 state.n.sense.5/0.06838 state.n.sense.3/0.06155 state.n.sense.2/0.03574 state.n.sense.4/0.03523 state.n.sense.7/0.02977 state.n.sense.6/0.02248 state.n.sense.1/0.00293
+state.n state.n.48 state.n.sense.6/0.10075 state.n.sense.7/0.05892 state.n.sense.8/0.05564 state.n.sense.3/0.04184 state.n.sense.1/0.04066 state.n.sense.4/0.01414 state.n.sense.5/0.01060 state.n.sense.2/0.00610
+state.n state.n.49 state.n.sense.7/0.03907 state.n.sense.3/0.02932 state.n.sense.8/0.02693 state.n.sense.2/0.01375
+state.n state.n.50 state.n.sense.3/0.10156 state.n.sense.7/0.08952 state.n.sense.1/0.05396 state.n.sense.2/0.05220 state.n.sense.6/0.03930 state.n.sense.5/0.03499 state.n.sense.8/0.01514
+state.n state.n.51 state.n.sense.3/0.07932 state.n.sense.7/0.03940 state.n.sense.8/0.02273 state.n.sense.4/0.01282 state.n.sense.5/0.01216 state.n.sense.2/0.01129 state.n.sense.1/0.01106 state.n.sense.6/0.00973
+state.n state.n.52 state.n.sense.3/0.08979 state.n.sense.7/0.04655 state.n.sense.8/0.01444 state.n.sense.2/0.01189 state.n.sense.5/0.00935
+state.n state.n.53 state.n.sense.3/0.11146 state.n.sense.7/0.03848 state.n.sense.8/0.02547 state.n.sense.2/0.01433 state.n.sense.1/0.00048
+state.n state.n.54 state.n.sense.6/0.14142 state.n.sense.2/0.11672 state.n.sense.3/0.07372 state.n.sense.1/0.02702 state.n.sense.7/0.02319 state.n.sense.8/0.02318 state.n.sense.5/0.01741 state.n.sense.4/0.00499
+state.n state.n.55 state.n.sense.3/0.06871 state.n.sense.5/0.06516 state.n.sense.7/0.04042 state.n.sense.6/0.03773 state.n.sense.8/0.02028 state.n.sense.4/0.00850 state.n.sense.1/0.00754 state.n.sense.2/0.00413
+state.n state.n.56 state.n.sense.7/0.05140 state.n.sense.8/0.03520 state.n.sense.3/0.03267 state.n.sense.4/0.01336 state.n.sense.6/0.01318 state.n.sense.5/0.01301 state.n.sense.2/0.01136 state.n.sense.1/0.00476
+state.n state.n.57 state.n.sense.3/0.03879 state.n.sense.6/0.01491 state.n.sense.7/0.01380 state.n.sense.8/0.01226 state.n.sense.1/0.00733 state.n.sense.5/0.00379
+state.n state.n.58 state.n.sense.7/0.06205 state.n.sense.5/0.05939 state.n.sense.6/0.04841 state.n.sense.3/0.02777 state.n.sense.2/0.01671 state.n.sense.1/0.01569 state.n.sense.4/0.01534 state.n.sense.8/0.00246
+state.n state.n.59 state.n.sense.3/0.08359 state.n.sense.7/0.04362 state.n.sense.1/0.04298 state.n.sense.8/0.03061 state.n.sense.6/0.01628 state.n.sense.5/0.01511 state.n.sense.4/0.01245 state.n.sense.2/0.01025
+state.n state.n.60 state.n.sense.2/0.05157 state.n.sense.1/0.04393 state.n.sense.7/0.04192 state.n.sense.6/0.03888 state.n.sense.4/0.02653 state.n.sense.3/0.01926 state.n.sense.5/0.01495 state.n.sense.8/0.01270
+state.n state.n.61 state.n.sense.3/0.09009 state.n.sense.7/0.05837 state.n.sense.5/0.05453 state.n.sense.8/0.04307 state.n.sense.6/0.02727 state.n.sense.2/0.00821
+state.n state.n.62 state.n.sense.3/0.06156 state.n.sense.5/0.04366 state.n.sense.6/0.03915 state.n.sense.1/0.03287 state.n.sense.7/0.02857 state.n.sense.2/0.01658 state.n.sense.4/0.01149 state.n.sense.8/0.01079
+state.n state.n.63 state.n.sense.3/0.04440 state.n.sense.6/0.04027 state.n.sense.1/0.03805 state.n.sense.7/0.02427 state.n.sense.5/0.01985 state.n.sense.8/0.01324 state.n.sense.2/0.00424
+state.n state.n.64 state.n.sense.7/0.03273 state.n.sense.4/0.03061 state.n.sense.5/0.02527 state.n.sense.2/0.02455 state.n.sense.8/0.02052 state.n.sense.1/0.01885 state.n.sense.6/0.01638 state.n.sense.3/0.01084
+state.n state.n.65 state.n.sense.7/0.10065 state.n.sense.3/0.05766 state.n.sense.4/0.04387 state.n.sense.8/0.02370 state.n.sense.5/0.02239 state.n.sense.6/0.00824 state.n.sense.2/0.00565 state.n.sense.1/0.00410
+state.n state.n.66 state.n.sense.7/0.15846 state.n.sense.3/0.10451 state.n.sense.8/0.03218 state.n.sense.2/0.01656 state.n.sense.6/0.01478 state.n.sense.5/0.01071 state.n.sense.4/0.00241
+state.n state.n.67 state.n.sense.8/0.04931 state.n.sense.6/0.03714 state.n.sense.3/0.03246 state.n.sense.7/0.02709 state.n.sense.5/0.00709 state.n.sense.2/0.00544 state.n.sense.1/0.00258
+state.n state.n.68 state.n.sense.3/0.12430 state.n.sense.7/0.08178 state.n.sense.5/0.06581 state.n.sense.2/0.02569 state.n.sense.8/0.01672 state.n.sense.6/0.01587 state.n.sense.1/0.00011
+state.n state.n.69 state.n.sense.7/0.07422 state.n.sense.3/0.04678 state.n.sense.8/0.04432 state.n.sense.5/0.04420 state.n.sense.4/0.02729 state.n.sense.2/0.02464 state.n.sense.1/0.02287 state.n.sense.6/0.01791
+state.n state.n.70 state.n.sense.3/0.21155 state.n.sense.7/0.06621 state.n.sense.2/0.04292 state.n.sense.8/0.03980 state.n.sense.4/0.01370 state.n.sense.6/0.00836 state.n.sense.5/0.00736
+state.n state.n.71 state.n.sense.7/0.04291 state.n.sense.3/0.02722 state.n.sense.4/0.02685 state.n.sense.8/0.02099 state.n.sense.5/0.02072 state.n.sense.2/0.01334 state.n.sense.6/0.00664 state.n.sense.1/0.00572
+state.n state.n.72 state.n.sense.3/0.01010 state.n.sense.7/0.00722 state.n.sense.8/0.00279 state.n.sense.5/0.00229
+state.n state.n.73 state.n.sense.6/0.17012 state.n.sense.7/0.07611 state.n.sense.5/0.05611 state.n.sense.3/0.03752 state.n.sense.4/0.03550 state.n.sense.8/0.03184 state.n.sense.1/0.02453 state.n.sense.2/0.01304
+state.n state.n.74 state.n.sense.3/0.13020 state.n.sense.7/0.07012 state.n.sense.4/0.04239 state.n.sense.8/0.02198 state.n.sense.5/0.02057 state.n.sense.1/0.00697 state.n.sense.2/0.00584 state.n.sense.6/0.00572
+state.n state.n.75 state.n.sense.3/0.10672 state.n.sense.7/0.10373 state.n.sense.4/0.02669 state.n.sense.8/0.02452 state.n.sense.2/0.01102 state.n.sense.6/0.00401 state.n.sense.5/0.00193
+state.n state.n.76 state.n.sense.5/0.08805 state.n.sense.3/0.07312 state.n.sense.2/0.05754 state.n.sense.8/0.03580 state.n.sense.6/0.02708 state.n.sense.7/0.00143
+state.n state.n.77 state.n.sense.8/0.06500 state.n.sense.7/0.05714 state.n.sense.5/0.03017 state.n.sense.3/0.02633 state.n.sense.2/0.01155 state.n.sense.6/0.00694
+state.n state.n.78 state.n.sense.3/0.13611 state.n.sense.7/0.05946 state.n.sense.4/0.03664 state.n.sense.8/0.03597 state.n.sense.2/0.01095 state.n.sense.5/0.00908 state.n.sense.1/0.00146
+state.n state.n.79 state.n.sense.3/0.13850 state.n.sense.4/0.01855 state.n.sense.2/0.01695 state.n.sense.7/0.01468 state.n.sense.8/0.01347 state.n.sense.1/0.01251 state.n.sense.6/0.00434 state.n.sense.5/0.00413
+state.n state.n.80 state.n.sense.3/0.10648 state.n.sense.7/0.09089 state.n.sense.2/0.06206 state.n.sense.6/0.03923 state.n.sense.8/0.03352 state.n.sense.5/0.03339 state.n.sense.1/0.01661 state.n.sense.4/0.01458
+state.n state.n.81 state.n.sense.3/0.09918 state.n.sense.7/0.09292 state.n.sense.8/0.03976 state.n.sense.5/0.01718 state.n.sense.2/0.01629 state.n.sense.6/0.01482 state.n.sense.4/0.00894 state.n.sense.1/0.00249
+state.n state.n.82 state.n.sense.1/0.06644 state.n.sense.5/0.05662 state.n.sense.3/0.05440 state.n.sense.7/0.04960 state.n.sense.2/0.04787 state.n.sense.6/0.04490 state.n.sense.4/0.02390 state.n.sense.8/0.01443
+state.n state.n.83 state.n.sense.3/0.13304 state.n.sense.7/0.03183 state.n.sense.8/0.01165 state.n.sense.5/0.00756 state.n.sense.4/0.00343
+state.n state.n.84 state.n.sense.7/0.09938 state.n.sense.6/0.03682 state.n.sense.8/0.02297 state.n.sense.3/0.01837 state.n.sense.5/0.01138 state.n.sense.1/0.00192
+state.n state.n.85 state.n.sense.7/0.06106 state.n.sense.3/0.05256 state.n.sense.8/0.04626 state.n.sense.6/0.03378 state.n.sense.4/0.02836 state.n.sense.1/0.02461 state.n.sense.5/0.02378 state.n.sense.2/0.02267
+state.n state.n.86 state.n.sense.4/0.13407 state.n.sense.5/0.08555 state.n.sense.8/0.05538 state.n.sense.3/0.05239 state.n.sense.7/0.04778 state.n.sense.1/0.03955 state.n.sense.6/0.02387 state.n.sense.2/0.00287
+state.n state.n.87 state.n.sense.3/0.25506 state.n.sense.7/0.01508 state.n.sense.2/0.01153 state.n.sense.5/0.00155
+state.n state.n.88 state.n.sense.3/0.07891 state.n.sense.7/0.04528 state.n.sense.2/0.03603 state.n.sense.1/0.02158 state.n.sense.8/0.01651 state.n.sense.6/0.01278 state.n.sense.5/0.00758 state.n.sense.4/0.00241
+state.n state.n.89 state.n.sense.5/0.13111 state.n.sense.6/0.07755 state.n.sense.7/0.07114 state.n.sense.2/0.04646 state.n.sense.8/0.02352 state.n.sense.3/0.01086
+state.n state.n.90 state.n.sense.3/0.11294 state.n.sense.7/0.08505 state.n.sense.8/0.03773 state.n.sense.1/0.02039 state.n.sense.4/0.01349 state.n.sense.5/0.00755 state.n.sense.2/0.00683 state.n.sense.6/0.00682
+state.n state.n.91 state.n.sense.3/0.06890 state.n.sense.7/0.05644 state.n.sense.8/0.03433 state.n.sense.1/0.02623 state.n.sense.4/0.02111 state.n.sense.6/0.02010 state.n.sense.2/0.01916 state.n.sense.5/0.01746
+state.n state.n.92 state.n.sense.3/0.08100 state.n.sense.7/0.07811 state.n.sense.8/0.03931 state.n.sense.5/0.01769 state.n.sense.6/0.01733 state.n.sense.4/0.00954 state.n.sense.2/0.00813
+state.n state.n.93 state.n.sense.8/0.04107 state.n.sense.5/0.03178 state.n.sense.7/0.03061 state.n.sense.4/0.02347 state.n.sense.3/0.02169 state.n.sense.6/0.00649 state.n.sense.1/0.00279 state.n.sense.2/0.00019
+state.n state.n.94 state.n.sense.4/0.09276 state.n.sense.8/0.07289 state.n.sense.7/0.04997 state.n.sense.3/0.04071 state.n.sense.6/0.02375 state.n.sense.1/0.02366 state.n.sense.5/0.01411 state.n.sense.2/0.00806
+state.n state.n.95 state.n.sense.8/0.06113 state.n.sense.3/0.04437 state.n.sense.2/0.01899 state.n.sense.5/0.00873 state.n.sense.7/0.00460
+state.n state.n.96 state.n.sense.3/0.06099 state.n.sense.7/0.03390 state.n.sense.5/0.02046 state.n.sense.1/0.01872 state.n.sense.8/0.01852 state.n.sense.4/0.00074
+state.n state.n.97 state.n.sense.6/0.13679 state.n.sense.7/0.07573 state.n.sense.5/0.04231 state.n.sense.3/0.04060 state.n.sense.8/0.02505 state.n.sense.1/0.01881 state.n.sense.2/0.01687
+state.n state.n.98 state.n.sense.3/0.09755 state.n.sense.7/0.07993 state.n.sense.8/0.03243 state.n.sense.4/0.02536 state.n.sense.2/0.01684 state.n.sense.6/0.01057 state.n.sense.1/0.00880 state.n.sense.5/0.00781
+state.n state.n.99 state.n.sense.7/0.05447 state.n.sense.5/0.03764 state.n.sense.8/0.03512 state.n.sense.1/0.03192 state.n.sense.3/0.03175 state.n.sense.2/0.02178 state.n.sense.4/0.02025 state.n.sense.6/0.01018
+state.n state.n.100 state.n.sense.3/0.02681 state.n.sense.8/0.02282 state.n.sense.7/0.01857 state.n.sense.5/0.01312 state.n.sense.2/0.01201 state.n.sense.1/0.00518 state.n.sense.6/0.00226 state.n.sense.4/0.00033

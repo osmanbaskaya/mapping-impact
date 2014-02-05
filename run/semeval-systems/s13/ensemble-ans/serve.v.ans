@@ -1,0 +1,88 @@
+serve.v serve.v.14 s0-serve.v.19/2 s0-serve.v.10/7 s0-serve.v.4/91 s1-t.3/0.9000 s1-t.4/0.0500 s1-t.7/0.0500 s2-t.11/0.6154 s2-t.2/0.1538 s2-t.8/0.1538 s2-t.1/0.0769
+serve.v serve.v.15 s0-serve.v.12/4 s0-serve.v.20/56 s0-serve.v.17/31 s0-serve.v.0/2 s0-serve.v.2/3 s0-serve.v.5/1 s0-serve.v.8/3 s1-t.6/0.7037 s1-t.10/0.1481 s1-t.3/0.0741 s1-t.7/0.0370 s1-t.2/0.0370 s2-t.9/0.5238 s2-t.2/0.1905 s2-t.1/0.1429 s2-t.5/0.0952 s2-t.6/0.0476
+serve.v serve.v.16 s0-serve.v.11/1 s0-serve.v.10/1 s0-serve.v.13/15 s0-serve.v.12/12 s0-serve.v.20/3 s0-serve.v.21/4 s0-serve.v.17/3 s0-serve.v.19/3 s0-serve.v.18/4 s0-serve.v.0/22 s0-serve.v.3/7 s0-serve.v.5/2 s0-serve.v.6/2 s0-serve.v.9/1 s0-serve.v.8/20 s1-t.7/0.5882 s1-t.4/0.1176 s1-t.5/0.1176 s1-t.6/0.1176 s1-t.1/0.0588 s2-t.11/0.5000 s2-t.9/0.2500 s2-t.5/0.2500
+serve.v serve.v.13 s0-serve.v.11/45 s0-serve.v.12/4 s0-serve.v.20/17 s0-serve.v.17/4 s0-serve.v.19/2 s0-serve.v.3/2 s0-serve.v.2/25 s0-serve.v.7/1 s1-t.6/0.4583 s1-t.2/0.2500 s1-t.3/0.2083 s1-t.7/0.0833 s2-t.5/0.9091 s2-t.11/0.0909
+serve.v serve.v.18 s0-serve.v.13/2 s0-serve.v.20/45 s0-serve.v.7/6 s0-serve.v.17/46 s0-serve.v.16/1 s1-t.6/0.7500 s1-t.4/0.1875 s1-t.3/0.0625 s2-t.5/0.7000 s2-t.6/0.2000 s2-t.3/0.1000
+serve.v serve.v.19 s0-serve.v.19/1 s0-serve.v.0/2 s0-serve.v.20/92 s0-serve.v.7/1 s0-serve.v.17/4 s1-t.5/0.5789 s1-t.6/0.3158 s1-t.2/0.0526 s1-t.3/0.0526 s2-t.2/0.4667 s2-t.5/0.3333 s2-t.3/0.1333 s2-t.9/0.0667
+serve.v serve.v.74 s0-serve.v.13/6 s0-serve.v.14/1 s0-serve.v.19/3 s0-serve.v.1/11 s0-serve.v.3/2 s0-serve.v.5/71 s0-serve.v.7/4 s0-serve.v.8/2 s1-t.3/0.6364 s1-t.7/0.3636 s2-t.7/0.5556 s2-t.8/0.3333 s2-t.6/0.1111
+serve.v serve.v.75 s0-serve.v.10/1 s0-serve.v.12/2 s0-serve.v.16/65 s0-serve.v.19/15 s0-serve.v.18/1 s0-serve.v.0/1 s0-serve.v.3/1 s0-serve.v.7/1 s0-serve.v.6/5 s0-serve.v.8/8 s1-t.10/0.6000 s1-t.5/0.2000 s1-t.7/0.2000 s2-t.2/0.5556 s2-t.5/0.3333 s2-t.11/0.1111
+serve.v serve.v.79 s0-serve.v.2/100 s1-t.6/0.5385 s1-t.3/0.3846 s1-t.7/0.0769 s2-t.11/0.5455 s2-t.1/0.4545
+serve.v serve.v.32 s0-serve.v.11/6 s0-serve.v.10/1 s0-serve.v.13/1 s0-serve.v.20/1 s0-serve.v.16/1 s0-serve.v.19/65 s0-serve.v.3/24 s0-serve.v.8/1 s1-t.6/0.8000 s1-t.7/0.2000 s2-t.1/0.5556 s2-t.9/0.2222 s2-t.11/0.1111 s2-t.5/0.1111
+serve.v serve.v.30 s0-serve.v.10/3 s0-serve.v.12/3 s0-serve.v.14/2 s0-serve.v.19/2 s0-serve.v.18/73 s0-serve.v.0/1 s0-serve.v.3/4 s0-serve.v.4/11 s0-serve.v.8/1 s1-t.10/0.8889 s1-t.3/0.1111 s2-t.2/0.5833 s2-t.5/0.3333 s2-t.1/0.0833
+serve.v serve.v.31 s0-serve.v.10/2 s0-serve.v.13/7 s0-serve.v.12/5 s0-serve.v.14/4 s0-serve.v.16/62 s0-serve.v.19/1 s0-serve.v.3/16 s0-serve.v.5/1 s0-serve.v.7/1 s0-serve.v.8/1 s1-t.4/0.6000 s1-t.1/0.2000 s1-t.3/0.1000 s1-t.6/0.1000 s2-t.3/0.6667 s2-t.5/0.3333
+serve.v serve.v.36 s0-serve.v.10/3 s0-serve.v.20/4 s0-serve.v.17/1 s0-serve.v.16/35 s0-serve.v.19/49 s0-serve.v.3/2 s0-serve.v.8/6 s1-t.6/0.8636 s1-t.1/0.0909 s1-t.4/0.0455 s2-t.5/0.5294 s2-t.3/0.2941 s2-t.1/0.1176 s2-t.7/0.0588
+serve.v serve.v.37 s0-serve.v.11/15 s0-serve.v.10/26 s0-serve.v.13/2 s0-serve.v.12/10 s0-serve.v.20/2 s0-serve.v.19/2 s0-serve.v.18/2 s0-serve.v.3/5 s0-serve.v.5/8 s0-serve.v.7/27 s0-serve.v.8/1 s1-t.7/0.6154 s1-t.6/0.3846 s2-t.5/0.8182 s2-t.11/0.1818
+serve.v serve.v.34 s0-serve.v.11/1 s0-serve.v.10/7 s0-serve.v.13/6 s0-serve.v.19/37 s0-serve.v.18/1 s0-serve.v.0/1 s0-serve.v.3/6 s0-serve.v.2/1 s0-serve.v.5/3 s0-serve.v.7/35 s0-serve.v.8/2 s1-t.6/0.9412 s1-t.3/0.0588 s2-t.5/1.0000
+serve.v serve.v.35 s0-serve.v.10/3 s0-serve.v.12/87 s0-serve.v.20/1 s0-serve.v.4/5 s0-serve.v.18/4 s1-t.7/0.4667 s1-t.1/0.4000 s1-t.5/0.0667 s1-t.6/0.0667 s2-t.11/0.5000 s2-t.6/0.5000
+serve.v serve.v.38 s0-serve.v.10/74 s0-serve.v.13/1 s0-serve.v.12/11 s0-serve.v.19/3 s0-serve.v.18/5 s0-serve.v.3/5 s0-serve.v.4/1 s1-t.6/0.4286 s1-t.4/0.2857 s1-t.2/0.2143 s1-t.1/0.0714 s2-t.5/0.4545 s2-t.4/0.2727 s2-t.7/0.2727
+serve.v serve.v.39 s0-serve.v.11/65 s0-serve.v.13/1 s0-serve.v.15/1 s0-serve.v.17/1 s0-serve.v.19/1 s0-serve.v.2/26 s0-serve.v.7/1 s0-serve.v.20/4 s1-t.3/0.8750 s1-t.7/0.1250 s2-t.11/1.0000
+serve.v serve.v.29 s0-serve.v.11/3 s0-serve.v.10/19 s0-serve.v.13/2 s0-serve.v.12/1 s0-serve.v.15/2 s0-serve.v.14/1 s0-serve.v.19/39 s0-serve.v.18/14 s0-serve.v.0/1 s0-serve.v.3/7 s0-serve.v.2/1 s0-serve.v.5/1 s0-serve.v.7/1 s0-serve.v.8/8 s1-t.3/1.0000 s2-t.11/1.0000
+serve.v serve.v.28 s0-serve.v.10/3 s0-serve.v.13/7 s0-serve.v.12/7 s0-serve.v.20/22 s0-serve.v.17/11 s0-serve.v.16/16 s0-serve.v.19/1 s0-serve.v.18/4 s0-serve.v.0/3 s0-serve.v.3/6 s0-serve.v.5/1 s0-serve.v.4/1 s0-serve.v.7/3 s0-serve.v.8/15 s1-t.3/0.4444 s1-t.7/0.4444 s1-t.4/0.1111 s2-t.11/1.0000
+serve.v serve.v.25 s0-serve.v.0/1 s0-serve.v.13/9 s0-serve.v.21/3 s0-serve.v.6/87 s1-t.2/0.6250 s1-t.4/0.3750 s2-t.4/1.0000
+serve.v serve.v.24 s0-serve.v.11/1 s0-serve.v.13/6 s0-serve.v.20/5 s0-serve.v.14/20 s0-serve.v.17/2 s0-serve.v.16/23 s0-serve.v.19/6 s0-serve.v.1/1 s0-serve.v.0/2 s0-serve.v.3/20 s0-serve.v.5/13 s0-serve.v.21/1 s1-t.6/0.6111 s1-t.2/0.2222 s1-t.1/0.1667 s2-t.9/0.8750 s2-t.4/0.0625 s2-t.8/0.0625
+serve.v serve.v.27 s0-serve.v.11/1 s0-serve.v.12/18 s0-serve.v.20/1 s0-serve.v.14/2 s0-serve.v.19/1 s0-serve.v.1/24 s0-serve.v.3/27 s0-serve.v.2/6 s0-serve.v.5/5 s0-serve.v.4/15 s1-t.1/0.8750 s1-t.6/0.1250 s2-t.6/0.6667 s2-t.1/0.3333
+serve.v serve.v.26 s0-serve.v.8/7 s0-serve.v.20/90 s0-serve.v.17/2 s0-serve.v.18/1 s1-t.6/0.5000 s1-t.7/0.5000 s2-t.5/0.4545 s2-t.7/0.4545 s2-t.9/0.0909
+serve.v serve.v.21 s0-serve.v.10/11 s0-serve.v.15/9 s0-serve.v.19/1 s0-serve.v.18/6 s0-serve.v.7/51 s0-serve.v.8/22 s1-t.3/0.8333 s1-t.10/0.0556 s1-t.6/0.0556 s1-t.7/0.0556 s2-t.5/1.0000
+serve.v serve.v.20 s0-serve.v.11/7 s0-serve.v.10/16 s0-serve.v.13/1 s0-serve.v.12/3 s0-serve.v.20/8 s0-serve.v.18/49 s0-serve.v.3/1 s0-serve.v.2/10 s0-serve.v.4/5 s1-t.1/0.5000 s1-t.7/0.5000 s2-t.5/1.0000
+serve.v serve.v.22 s0-serve.v.19/97 s0-serve.v.13/2 s0-serve.v.17/1 s1-t.3/0.7778 s1-t.1/0.2222 s2-t.1/0.6667 s2-t.11/0.3333
+serve.v serve.v.94 s0-serve.v.19/96 s0-serve.v.10/2 s0-serve.v.18/1 s0-serve.v.8/1 s1-t.10/0.4800 s1-t.3/0.4800 s1-t.6/0.0400 s2-t.2/0.5500 s2-t.11/0.2000 s2-t.1/0.1500 s2-t.5/0.1000
+serve.v serve.v.58 s0-serve.v.10/4 s0-serve.v.13/2 s0-serve.v.12/15 s0-serve.v.20/1 s0-serve.v.14/1 s0-serve.v.19/67 s0-serve.v.3/8 s0-serve.v.8/2 s1-t.3/0.5385 s1-t.1/0.2308 s1-t.5/0.2308 s2-t.2/1.0000
+serve.v serve.v.59 s0-serve.v.10/5 s0-serve.v.13/2 s0-serve.v.17/3 s0-serve.v.0/1 s0-serve.v.3/1 s0-serve.v.2/1 s0-serve.v.5/2 s0-serve.v.8/85 s1-t.3/1.0000 s2-t.5/0.6250 s2-t.11/0.3750
+serve.v serve.v.50 s0-serve.v.0/18 s0-serve.v.13/36 s0-serve.v.20/1 s0-serve.v.14/45 s1-t.6/0.5625 s1-t.3/0.3125 s1-t.1/0.0625 s1-t.4/0.0625 s2-t.1/0.7500 s2-t.11/0.1875 s2-t.3/0.0625
+serve.v serve.v.51 s0-serve.v.2/37 s0-serve.v.20/62 s0-serve.v.17/1 s1-t.3/0.8125 s1-t.1/0.1875 s2-t.2/0.5000 s2-t.5/0.3571 s2-t.1/0.0714 s2-t.6/0.0714
+serve.v serve.v.52 s0-serve.v.8/8 s0-serve.v.12/1 s0-serve.v.15/4 s0-serve.v.7/85 s0-serve.v.18/2 s1-t.7/0.7500 s1-t.5/0.2500 s2-t.11/1.0000
+serve.v serve.v.53 s0-serve.v.11/5 s0-serve.v.13/1 s0-serve.v.20/29 s0-serve.v.17/51 s0-serve.v.2/5 s0-serve.v.7/9 s1-t.6/0.9412 s1-t.3/0.0588 s2-t.5/0.5882 s2-t.9/0.2941 s2-t.11/0.0588 s2-t.6/0.0588
+serve.v serve.v.54 s0-serve.v.10/20 s0-serve.v.20/1 s0-serve.v.14/1 s0-serve.v.19/1 s0-serve.v.18/37 s0-serve.v.0/2 s0-serve.v.4/4 s0-serve.v.7/31 s0-serve.v.8/3 s1-t.6/0.7857 s1-t.1/0.0714 s1-t.2/0.0714 s1-t.5/0.0714 s2-t.5/1.0000
+serve.v serve.v.55 s0-serve.v.18/65 s0-serve.v.13/1 s0-serve.v.4/33 s0-serve.v.10/1 s1-t.10/0.7143 s1-t.5/0.2857 s2-t.2/0.8333 s2-t.9/0.1667
+serve.v serve.v.56 s0-serve.v.11/59 s0-serve.v.20/20 s0-serve.v.17/1 s0-serve.v.19/8 s0-serve.v.0/4 s0-serve.v.2/6 s0-serve.v.7/2 s1-t.6/0.6364 s1-t.1/0.3636 s2-t.1/0.4444 s2-t.5/0.4444 s2-t.2/0.1111
+serve.v serve.v.57 s0-serve.v.11/73 s0-serve.v.12/1 s0-serve.v.20/9 s0-serve.v.17/4 s0-serve.v.3/1 s0-serve.v.2/12 s1-t.7/0.7500 s1-t.10/0.2500 s2-t.11/0.6667 s2-t.9/0.3333
+serve.v serve.v.93 s0-serve.v.11/41 s0-serve.v.10/3 s0-serve.v.13/7 s0-serve.v.20/3 s0-serve.v.17/3 s0-serve.v.19/1 s0-serve.v.18/14 s0-serve.v.3/1 s0-serve.v.2/4 s0-serve.v.4/2 s0-serve.v.8/21 s1-t.6/0.7143 s1-t.7/0.2143 s1-t.4/0.0714 s2-t.1/0.8333 s2-t.2/0.1667
+serve.v serve.v.33 s0-serve.v.11/16 s0-serve.v.0/1 s0-serve.v.20/26 s0-serve.v.17/2 s0-serve.v.7/55 s1-t.6/0.9048 s1-t.4/0.0952 s2-t.9/0.5625 s2-t.1/0.3125 s2-t.5/0.1250
+serve.v serve.v.49 s0-serve.v.11/13 s0-serve.v.10/6 s0-serve.v.20/1 s0-serve.v.19/1 s0-serve.v.15/1 s0-serve.v.3/8 s0-serve.v.8/70 s1-t.6/0.8462 s1-t.3/0.1538 s2-t.5/0.6364 s2-t.11/0.3636
+serve.v serve.v.48 s0-serve.v.19/49 s0-serve.v.8/3 s0-serve.v.5/1 s0-serve.v.10/1 s0-serve.v.16/46 s1-t.6/0.9091 s1-t.5/0.0455 s1-t.7/0.0455 s2-t.1/0.5263 s2-t.9/0.4211 s2-t.11/0.0526
+serve.v serve.v.43 s0-serve.v.13/1 s0-serve.v.12/1 s0-serve.v.20/3 s0-serve.v.14/43 s0-serve.v.17/48 s0-serve.v.0/1 s0-serve.v.3/1 s0-serve.v.7/1 s0-serve.v.6/1 s1-t.6/0.9375 s1-t.10/0.0625 s2-t.9/0.8462 s2-t.1/0.0769 s2-t.7/0.0769
+serve.v serve.v.42 s0-serve.v.10/5 s0-serve.v.13/2 s0-serve.v.12/1 s0-serve.v.14/2 s0-serve.v.16/19 s0-serve.v.18/4 s0-serve.v.3/23 s0-serve.v.5/36 s0-serve.v.7/8 s1-t.4/0.5000 s1-t.3/0.4000 s1-t.2/0.1000 s2-t.6/0.6000 s2-t.11/0.4000
+serve.v serve.v.41 s0-serve.v.13/1 s0-serve.v.20/1 s0-serve.v.16/24 s0-serve.v.19/55 s0-serve.v.5/1 s0-serve.v.8/18 s1-t.7/0.9231 s1-t.6/0.0769 s2-t.5/0.7273 s2-t.9/0.0909 s2-t.2/0.0909 s2-t.11/0.0909
+serve.v serve.v.40 s0-serve.v.10/78 s0-serve.v.12/10 s0-serve.v.4/11 s0-serve.v.0/1 s1-t.4/0.7000 s1-t.6/0.3000 s2-t.7/0.8571 s2-t.9/0.1429
+serve.v serve.v.47 s0-serve.v.10/7 s0-serve.v.13/7 s0-serve.v.12/35 s0-serve.v.14/26 s0-serve.v.18/2 s0-serve.v.3/14 s0-serve.v.7/9 s1-t.3/0.8000 s1-t.5/0.2000 s2-t.5/0.6667 s2-t.7/0.1667 s2-t.8/0.1667
+serve.v serve.v.46 s0-serve.v.11/1 s0-serve.v.10/7 s0-serve.v.13/1 s0-serve.v.12/5 s0-serve.v.20/3 s0-serve.v.17/36 s0-serve.v.19/1 s0-serve.v.0/23 s0-serve.v.2/2 s0-serve.v.8/21 s1-t.5/0.8571 s1-t.4/0.1429 s2-t.2/0.4286 s2-t.11/0.4286 s2-t.1/0.1429
+serve.v serve.v.44 s0-serve.v.11/4 s0-serve.v.20/68 s0-serve.v.17/27 s0-serve.v.7/1 s1-t.7/0.5000 s1-t.5/0.2500 s1-t.6/0.2500 s2-t.9/0.5000 s2-t.2/0.5000
+serve.v serve.v.76 s0-serve.v.11/1 s0-serve.v.10/6 s0-serve.v.13/2 s0-serve.v.12/7 s0-serve.v.17/1 s0-serve.v.19/10 s0-serve.v.18/30 s0-serve.v.1/2 s0-serve.v.0/1 s0-serve.v.3/31 s0-serve.v.8/9 s1-t.1/0.6316 s1-t.7/0.2105 s1-t.6/0.1579 s2-t.6/0.7222 s2-t.11/0.2222 s2-t.8/0.0556
+serve.v serve.v.77 s0-serve.v.10/22 s0-serve.v.12/7 s0-serve.v.19/4 s0-serve.v.18/9 s0-serve.v.3/2 s0-serve.v.4/56 s1-t.10/0.5000 s1-t.1/0.3333 s1-t.5/0.0833 s1-t.7/0.0833 s2-t.2/0.4444 s2-t.11/0.4444 s2-t.3/0.1111
+serve.v serve.v.72 s0-serve.v.11/1 s0-serve.v.13/1 s0-serve.v.15/2 s0-serve.v.3/4 s0-serve.v.2/12 s0-serve.v.4/17 s0-serve.v.7/58 s0-serve.v.8/5 s1-t.3/0.8000 s1-t.1/0.2000 s2-t.2/0.5714 s2-t.6/0.2857 s2-t.11/0.1429
+serve.v serve.v.73 s0-serve.v.10/1 s0-serve.v.19/1 s0-serve.v.18/1 s0-serve.v.1/1 s0-serve.v.3/94 s0-serve.v.4/2 s1-t.5/0.8333 s1-t.7/0.1667 s2-t.2/1.0000
+serve.v serve.v.70 s0-serve.v.10/1 s0-serve.v.13/1 s0-serve.v.12/27 s0-serve.v.20/15 s0-serve.v.21/18 s0-serve.v.17/4 s0-serve.v.19/5 s0-serve.v.18/3 s0-serve.v.3/2 s0-serve.v.5/5 s0-serve.v.6/1 s0-serve.v.8/18 s1-t.7/1.0000 s2-t.2/0.7143 s2-t.9/0.1429 s2-t.1/0.1429
+serve.v serve.v.71 s0-serve.v.2/7 s0-serve.v.20/1 s0-serve.v.17/92 s1-t.3/0.4286 s1-t.6/0.4000 s1-t.8/0.0857 s1-t.1/0.0571 s1-t.7/0.0286 s2-t.1/1.0000
+serve.v serve.v.67 s0-serve.v.10/6 s0-serve.v.13/11 s0-serve.v.12/6 s0-serve.v.21/1 s0-serve.v.16/6 s0-serve.v.19/10 s0-serve.v.18/6 s0-serve.v.0/4 s0-serve.v.3/2 s0-serve.v.7/6 s0-serve.v.6/1 s0-serve.v.8/41 s1-t.7/0.5385 s1-t.6/0.3846 s1-t.3/0.0769 s2-t.9/0.4615 s2-t.5/0.4615 s2-t.11/0.0769
+serve.v serve.v.66 s0-serve.v.1/1 s0-serve.v.20/2 s0-serve.v.17/97 s1-t.3/0.6154 s1-t.7/0.2692 s1-t.6/0.1154 s2-t.11/0.5909 s2-t.1/0.3182 s2-t.5/0.0909
+serve.v serve.v.69 s0-serve.v.13/1 s0-serve.v.2/1 s0-serve.v.20/5 s0-serve.v.17/93 s1-t.6/0.7500 s1-t.1/0.2500 s2-t.1/1.0000
+serve.v serve.v.68 s0-serve.v.11/5 s0-serve.v.10/9 s0-serve.v.13/10 s0-serve.v.15/10 s0-serve.v.21/1 s0-serve.v.19/41 s0-serve.v.18/2 s0-serve.v.0/17 s0-serve.v.5/2 s0-serve.v.7/2 s0-serve.v.8/1 s1-t.6/0.9545 s1-t.4/0.0455 s2-t.5/0.8824 s2-t.1/0.0588 s2-t.2/0.0588
+serve.v serve.v.61 s0-serve.v.11/10 s0-serve.v.10/48 s0-serve.v.13/1 s0-serve.v.12/2 s0-serve.v.20/2 s0-serve.v.14/1 s0-serve.v.18/16 s0-serve.v.15/13 s0-serve.v.0/4 s0-serve.v.7/1 s0-serve.v.8/2 s1-t.7/1.0000 s2-t.11/0.8333 s2-t.3/0.1667
+serve.v serve.v.60 s0-serve.v.11/8 s0-serve.v.10/6 s0-serve.v.13/7 s0-serve.v.14/15 s0-serve.v.17/4 s0-serve.v.16/33 s0-serve.v.19/17 s0-serve.v.18/3 s0-serve.v.3/4 s0-serve.v.8/3 s1-t.4/0.8235 s1-t.6/0.1765 s2-t.3/0.8462 s2-t.2/0.0769 s2-t.8/0.0769
+serve.v serve.v.63 s0-serve.v.11/1 s0-serve.v.13/2 s0-serve.v.20/47 s0-serve.v.14/13 s0-serve.v.17/32 s0-serve.v.16/1 s0-serve.v.0/1 s0-serve.v.7/3 s1-t.1/0.8667 s1-t.10/0.0667 s1-t.3/0.0667 s2-t.1/0.5000 s2-t.6/0.5000
+serve.v serve.v.62 s0-serve.v.11/17 s0-serve.v.20/1 s0-serve.v.17/1 s0-serve.v.18/4 s0-serve.v.2/73 s0-serve.v.4/4 s1-t.5/0.9231 s1-t.1/0.0769 s2-t.2/0.9091 s2-t.9/0.0909
+serve.v serve.v.65 s0-serve.v.13/5 s0-serve.v.12/3 s0-serve.v.20/20 s0-serve.v.14/33 s0-serve.v.17/25 s0-serve.v.0/9 s0-serve.v.3/3 s0-serve.v.7/1 s0-serve.v.6/1 s1-t.6/0.8333 s1-t.3/0.0833 s1-t.5/0.0833 s2-t.5/1.0000
+serve.v serve.v.64 s0-serve.v.11/11 s0-serve.v.12/2 s0-serve.v.20/5 s0-serve.v.18/33 s0-serve.v.15/1 s0-serve.v.0/3 s0-serve.v.3/1 s0-serve.v.2/24 s0-serve.v.4/4 s0-serve.v.8/16 s1-t.5/1.0000 s2-t.2/1.0000
+serve.v serve.v.8 s0-serve.v.13/4 s0-serve.v.14/1 s0-serve.v.16/5 s0-serve.v.1/2 s0-serve.v.0/1 s0-serve.v.3/12 s0-serve.v.5/75 s1-t.7/0.8571 s1-t.6/0.1429 s2-t.9/0.8571 s2-t.5/0.1429
+serve.v serve.v.2 s0-serve.v.13/3 s0-serve.v.21/2 s0-serve.v.16/6 s0-serve.v.19/2 s0-serve.v.0/1 s0-serve.v.3/31 s0-serve.v.7/1 s0-serve.v.6/8 s0-serve.v.8/46 s1-t.6/1.0000 s2-t.9/0.8571 s2-t.8/0.1429
+serve.v serve.v.4 s0-serve.v.19/1 s0-serve.v.16/99 s1-t.6/1.0000 s2-t.9/0.9167 s2-t.1/0.0833
+serve.v serve.v.5 s0-serve.v.13/2 s0-serve.v.12/1 s0-serve.v.20/28 s0-serve.v.7/3 s0-serve.v.17/66 s1-t.6/0.5833 s1-t.4/0.2500 s1-t.5/0.1667 s2-t.1/0.5833 s2-t.7/0.3333 s2-t.5/0.0833
+serve.v serve.v.89 s0-serve.v.10/43 s0-serve.v.12/12 s0-serve.v.20/2 s0-serve.v.18/39 s0-serve.v.3/2 s0-serve.v.8/2 s1-t.10/0.8000 s1-t.6/0.2000 s2-t.2/0.7500 s2-t.9/0.2500
+serve.v serve.v.88 s0-serve.v.11/1 s0-serve.v.10/25 s0-serve.v.12/15 s0-serve.v.20/2 s0-serve.v.19/30 s0-serve.v.18/9 s0-serve.v.3/15 s0-serve.v.5/1 s0-serve.v.7/1 s0-serve.v.8/1 s1-t.7/0.4667 s1-t.4/0.2667 s1-t.2/0.2000 s1-t.3/0.0667 s2-t.3/0.8462 s2-t.11/0.0769 s2-t.7/0.0769
+serve.v serve.v.87 s0-serve.v.11/50 s0-serve.v.13/1 s0-serve.v.20/4 s0-serve.v.14/5 s0-serve.v.17/2 s0-serve.v.19/3 s0-serve.v.3/35 s1-t.3/0.7000 s1-t.6/0.2000 s1-t.10/0.1000 s2-t.11/1.0000
+serve.v serve.v.86 s0-serve.v.10/44 s0-serve.v.3/1 s0-serve.v.12/54 s0-serve.v.18/1 s1-t.4/0.7273 s1-t.7/0.1818 s1-t.3/0.0909 s2-t.3/1.0000
+serve.v serve.v.85 s0-serve.v.11/64 s0-serve.v.13/5 s0-serve.v.12/1 s0-serve.v.20/17 s0-serve.v.17/11 s0-serve.v.0/2 s1-t.6/0.6429 s1-t.1/0.3571 s2-t.9/0.8333 s2-t.1/0.1667
+serve.v serve.v.84 s0-serve.v.8/1 s0-serve.v.20/31 s0-serve.v.17/68 s1-t.7/0.5556 s1-t.6/0.4444 s2-t.5/0.6667 s2-t.9/0.3333
+serve.v serve.v.83 s0-serve.v.11/36 s0-serve.v.13/8 s0-serve.v.20/47 s0-serve.v.17/2 s0-serve.v.0/2 s0-serve.v.3/3 s0-serve.v.2/2 s1-t.1/0.5000 s1-t.6/0.3750 s1-t.2/0.1250 s2-t.11/0.8333 s2-t.8/0.1667
+serve.v serve.v.81 s0-serve.v.11/28 s0-serve.v.13/1 s0-serve.v.12/1 s0-serve.v.20/37 s0-serve.v.17/6 s0-serve.v.19/8 s0-serve.v.0/13 s0-serve.v.3/2 s0-serve.v.2/3 s0-serve.v.7/1 s1-t.3/0.6364 s1-t.5/0.3636 s2-t.5/0.7273 s2-t.2/0.2727
+serve.v serve.v.80 s0-serve.v.13/2 s0-serve.v.12/4 s0-serve.v.16/1 s0-serve.v.19/1 s0-serve.v.0/83 s0-serve.v.5/4 s0-serve.v.8/5 s1-t.7/0.8182 s1-t.6/0.1818 s2-t.3/0.7778 s2-t.9/0.2222
+serve.v serve.v.23 s0-serve.v.11/27 s0-serve.v.0/5 s0-serve.v.13/1 s0-serve.v.20/58 s0-serve.v.17/9 s1-t.7/0.5000 s1-t.10/0.4833 s1-t.6/0.0167 s2-t.11/0.5490 s2-t.2/0.3333 s2-t.1/0.0980 s2-t.6/0.0196
+serve.v serve.v.6 s0-serve.v.13/2 s0-serve.v.2/4 s0-serve.v.20/4 s0-serve.v.7/20 s0-serve.v.17/70 s1-t.6/0.7826 s1-t.1/0.1739 s1-t.5/0.0435 s2-t.1/1.0000
+serve.v serve.v.7 s0-serve.v.20/95 s0-serve.v.7/5 s1-t.6/0.6364 s1-t.4/0.1818 s1-t.7/0.1818 s2-t.1/0.7273 s2-t.7/0.2727
+serve.v serve.v.9 s0-serve.v.0/1 s0-serve.v.2/43 s0-serve.v.17/32 s0-serve.v.7/24 s1-t.3/0.7778 s1-t.6/0.2222 s2-t.1/0.7500 s2-t.11/0.2500
+serve.v serve.v.98 s0-serve.v.13/1 s0-serve.v.12/1 s0-serve.v.20/65 s0-serve.v.14/15 s0-serve.v.17/16 s0-serve.v.3/1 s0-serve.v.5/1 s1-t.3/1.0000 s2-t.11/0.8571 s2-t.5/0.1429
+serve.v serve.v.99 s0-serve.v.11/92 s0-serve.v.2/2 s0-serve.v.20/4 s0-serve.v.17/2 s1-t.6/0.7500 s1-t.4/0.1667 s1-t.5/0.0833 s2-t.5/0.7000 s2-t.1/0.2000 s2-t.9/0.1000
+serve.v serve.v.97 s0-serve.v.10/1 s0-serve.v.12/24 s0-serve.v.20/1 s0-serve.v.17/1 s0-serve.v.16/64 s0-serve.v.18/1 s0-serve.v.0/1 s0-serve.v.3/1 s0-serve.v.8/6 s1-t.10/0.4545 s1-t.6/0.2727 s1-t.3/0.1818 s1-t.5/0.0909 s2-t.1/0.3333 s2-t.2/0.3333 s2-t.4/0.1667 s2-t.5/0.1667
+serve.v serve.v.90 s0-serve.v.11/95 s0-serve.v.12/1 s0-serve.v.20/3 s0-serve.v.17/1 s1-t.6/0.5294 s1-t.3/0.3529 s1-t.1/0.1176 s2-t.1/0.5333 s2-t.6/0.2667 s2-t.11/0.1333 s2-t.2/0.0667
+serve.v serve.v.91 s0-serve.v.8/96 s0-serve.v.12/3 s0-serve.v.17/1 s1-t.4/0.5833 s1-t.3/0.2500 s1-t.6/0.1667 s2-t.7/0.9167 s2-t.9/0.0833
+serve.v serve.v.92 s0-serve.v.11/54 s0-serve.v.13/2 s0-serve.v.20/11 s0-serve.v.17/7 s0-serve.v.3/1 s0-serve.v.2/25 s1-t.3/0.9286 s1-t.4/0.0714 s2-t.11/0.8889 s2-t.1/0.1111
