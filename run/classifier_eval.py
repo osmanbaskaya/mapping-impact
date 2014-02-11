@@ -5,10 +5,12 @@ __author__ = "Osman Baskaya"
 
 from feature_transform import SemevalFeatureTransformer
 from data_load import SemevalKeyLoader
+from sklearn import cross_validation
 import sys
 from pprint import pprint
 from sklearn import cross_validation
 from logger import SemevalLogger, ColorLogger
+import numpy as np
 from nlp_utils import calc_perp, delete_features
 from collections import defaultdict as dd
 import os
@@ -21,7 +23,8 @@ formats can be added in data_load module.
 
 """
 
-__all__ = ['Evaluator', 'SemevalEvaluator', 'ChunkEvaluator', 'IMSBasedChunkEvaluator']
+__all__ = ['Evaluator', 'SemevalEvaluator', 'ChunkEvaluator', 'IMSBasedChunkEvaluator',
+           'CVBasedEvaluator']
 
 class Evaluator(object):
 
@@ -319,9 +322,6 @@ class IMSBasedChunkEvaluator(Evaluator):
 
         system_keys = self.load_key_file(self.system_files[tw])[tw]
 
-        #tr_gold = self.load_key_file(train_file)[tw + ".n"] # ims keys has .n
-        #te_gold = self.load_key_file(test_file)[tw + ".n"] # ims keys has .n
-
         tr_gold = self.load_key_file(train_file)[tw] # ims keys has .n
         te_gold = self.load_key_file(test_file)[tw] # ims keys has .n
 
@@ -474,3 +474,115 @@ class IMSBasedChunkEvaluator(Evaluator):
             new_y_test.append(yy)
         
         dump_svmlight_file(X_test, new_y_test, f + ".svmlight.test")
+
+
+class CVBasedEvaluator(Evaluator):
+    """
+        This class is evaluator based on sklearn cross validation module. When chunks are
+        undefined (in contrast to our previous evaulators such as ChunkEvalutor), this 
+        class picks the chunks according to the cross validation module. In order to 
+        evaluate a system (or to map all induced senses into a lexicon senses) this class
+        does this.
+    """
+    def __init__(self, clf_wrapper, system_files, devset, optimization, logger): 
+        super(CVBasedEvaluator, self).__init__(clf_wrapper, optimization, 
+         SemevalKeyLoader(), SemevalFeatureTransformer(weighted=False), logger=logger)
+
+        self.system_files = system_files
+        self.devset = devset
+        
+    def _prepare(self, tw, train_file, test_file):
+
+        system_keys = self.load_key_file(self.system_files[tw])[tw]
+
+        tr_gold = self.load_key_file(train_file)[tw] # ims keys has .n
+        te_gold = self.load_key_file(test_file)[tw] # ims keys has .n
+
+        tr_inst = tr_gold.keys()
+        te_inst = te_gold.keys()
+        
+        system_tr_dict = dict(zip(tr_inst, map(system_keys.get, tr_inst)))
+        system_te_dict = dict(zip(te_inst, map(system_keys.get, te_inst)))
+
+        assert len(tr_inst) == len(system_tr_dict)
+        assert len(te_inst) == len(system_te_dict)
+
+        X_train, y_train, inst_list_tr = self.ft.convert_data(system_tr_dict, tr_gold)
+
+        vectorizer = self.ft.get_vectorizer()
+        X_train = vectorizer.fit_transform(X_train)
+        if self.clf_wrapper.name in ["SVM_Linear", "SVM_Gaussian"]:
+            scaler = self.ft.get_scaler()
+            X_train = scaler.fit_transform(X_train)
+
+        X_test, y_test, inst_list_te = self.ft.convert_data(system_te_dict, te_gold)
+        X_test = vectorizer.transform(X_test)
+
+        if self.clf_wrapper.name in ["SVM_Linear", "SVM_Gaussian"]:
+            X_test = scaler.transform(X_test)
+        
+        return X_train, X_test, y_train, y_test, inst_list_te
+
+
+    def predict(self):
+        predictions = dict()
+        # optimization
+        self.optimize()
+        self.logger.info(self.clf_wrapper.classifier)
+
+        for tw, (sys_fn, gold_fn) in self.system_files.viewitems():
+            system_keys = self.load_key_file(sys_fn)[tw]
+            gold_keys = self.load_key_file(gold_fn)[tw]
+
+            X, y, inst_list = self.ft.convert_data(system_keys, gold_keys)
+            if len(X) < 5:
+                continue
+            kf = cross_validation.KFold(len(X), n_folds=5)
+            X = np.array(X)
+            inst_list = np.array(inst_list)
+            tw_predictions =  []
+            for train_ind, test_ind in kf:
+                X_train, X_test = X[train_ind], X[test_ind] 
+                y_train, y_test = y[train_ind], y[test_ind] 
+                test_inst_order = inst_list[test_ind]
+                vectorizer = self.ft.get_vectorizer()
+                X_train = vectorizer.fit_transform(X_train)
+                if self.clf_wrapper.name in ["SVM_Linear", "SVM_Gaussian"]:
+                    scaler = self.ft.get_scaler()
+                    X_train = scaler.fit_transform(X_train)
+                X_test = vectorizer.transform(X_test)
+                if self.clf_wrapper.name in ["SVM_Linear", "SVM_Gaussian"]:
+                    X_test = scaler.transform(X_test)
+
+                #score = 0.0
+                try:
+                    self.clf_wrapper.classifier.fit(X_train, y_train)
+                    prediction = self.clf_wrapper.classifier.predict(X_test)
+                    #score = self.clf_wrapper.classifier.score(x_test, y_test)
+                except ValueError, e: # all instances are belongs to the same class
+                    self.logger.warning("{}-{}: {}".format(self.clf_wrapper.name, sys_fn, e))
+                    if str(e) == "The number of classes has to be greater than one.":
+                        prediction = [y_train[0]] * len(y_test)
+                        #score = sum(prediction == y_test) / float(len(y_test))
+                    if str(e) == "Input X must be non-negative.":
+                        pass
+                tw_predictions.extend(zip(test_inst_order, prediction))
+            predictions[tw] = dict(tw_predictions)
+        return predictions
+
+    @staticmethod
+    def write_chunk_prediction2file(predictions, out_path):
+        d = dd(list)
+        for exp_name, preds in predictions.viewitems():
+            for tw, pred in preds.viewitems():
+                for inst_id, label in pred.viewitems():
+                    s = "{} {} {}".format(tw, inst_id, label)
+                    d[exp_name].append(s)
+
+        for exp_name, val in d.iteritems():
+            out_f = os.path.join(out_path, "{}-{}".format(exp_name, 1))
+            print out_f
+            f = open(out_f, 'w')
+            f.write('\n'.join(val))
+            f.write('\n')
+        f.close()
