@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+
+Answers to a sense induction task may be provided as a table of 
+INSTANCEID, CLUSTERID pairs, where INSTANCEID refers to the value
+of each "id" attribute of each "instance" element in documents 
+conforming to this dtd.  Additionally, answers may be embedded 
+in this document in order to distribute "gold standard" corpora or 
+to facilitate software processing of all the relevant data.
+ -->
+
+<!-- a corpus is divided up by lexical item and is associated
+     with a language (should maybe use isoXXX character set encodings) -->
+
+<!ELEMENT corpus (lexelt+)>
+<!ATTLIST corpus lang CDATA #REQUIRED>
+
+<!ELEMENT lexelt (instance+)>
+
+<!ATTLIST lexelt item CDATA #REQUIRED>
+
+<!--  
+Instances must denote exactly one head element, which may have satellites in
+the case of (discontinuous) multi word expressions.  Answers will be associated
+with the instances by the instances 'id' attribute.
+
+The docsrc and topic attributes may be used to help track and index the source
+of the data used for senseval.
+-->
+
+<!ELEMENT instance (#PCDATA | head )*>
+
+<!ATTLIST instance
+          id  ID #REQUIRED
+          corpus CDATA #IMPLIED>
+
+<!ELEMENT head (#PCDATA)>
+<!ATTLIST head 
+   sats IDREFS #IMPLIED>
+
+<!ELEMENT sat (#PCDATA)>
+<!ATTLIST sat 
+          id ID #REQUIRED>
+
+

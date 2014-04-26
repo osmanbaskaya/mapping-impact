@@ -1,0 +1,14 @@
+Below is a mapping between files in the upload directory and participants.
+The format is:   filename [tab] contact <email> [tab] team name
+
+If information is missing or you have any questions, please
+send email to Richard Wicentowski (richardw@cs.swarthmore.edu)
+
+--------------------------------------------------
+
+2.I2R-2.TeamI2R.Task2.result.gz	Zheng-Yu Niu <niu_zy@hotmail.com>	I2R
+2.SenseClusters-2.12.new.answers.txt.gz	Ted Pedersen <tpederse@d.umn.edu>	UMND2
+2.UBC-AS-2.ucb-as-task2.key1.gz	Aitor Soroa <a.soroa@ehu.es>	UBC-AS
+2.UOY-2.UOY_WSI_Answer.txt.gz	Ioannis P. Klapaftis <giannis@cs.york.ac.uk>	UOY
+2.UofL-2.task2output.txt.gz	Dr. Yllias Chali <yllias.chali@uleth.ca>	UofL
+2.upv_si-2.KStarJaccardAE1.senses.gz	David Pinto <dpinto@dsic.upv.es>	upv_si
