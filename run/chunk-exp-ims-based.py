@@ -35,7 +35,7 @@ devfiles = []
 if len(sys.argv) > 10:
     devfiles = sys.argv[10:] # development files
 gold_dev = [os.path.join(gold_dir, f + '.key') for f in devfiles]
-sys_dev = ["{}{}.ans".format(system_key_folder, tw) for tw in devfiles]
+sys_dev = []#["{}{}.ans".format(system_key_folder, tw) for tw in devfiles]
 
 wrappers = [
             SVCWrapper('SVM_Linear', kernel='linear', C=1), 
@@ -59,7 +59,7 @@ logger = ChunkLogger(3)
 
 training_word_list.sort()
 processed = training_word_list[start:end]
-training_path = "ims-training-data/has-{}-instances".format(num_inst_in_training)
+training_path = "ims-training-data/has-{1}-instances".format(num_inst_in_training)
 test_path = "ims-test-data/"
 
 def get_input_filenames(tw, ch_type):
@@ -81,7 +81,7 @@ for tw in processed:
             tw_dict[ch_type][tw] = get_input_filenames(tw, ch_type)
 
 devset = [sys_dev, gold_dev]
-optimization = True
+optimization = False
 
 ## Prints all information for the experiment ###
 logger.info("Evaluation started for %s" % system_key_folder)
