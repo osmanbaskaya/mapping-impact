@@ -1,4 +1,3 @@
-for f in `ls -d semeval-systems/s10/*-ans | sed -e "s|-ans||g" -e "s|semeval-systems/s10/||g"`;do echo -e $f '\t' `make evaluate-$f-s10 | tail -2 | grep -v Leaving`; done
 173-511_kcdc-gp-uniq 	 0.592809
 173-512_kcdc-gp-2-uniq 	 0.59236
 173-516_kcdc-pt-uniq 	 0.594944
