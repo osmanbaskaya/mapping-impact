@@ -540,22 +540,33 @@ create-%-system-ans-dir: ../data/semeval-system-ans/%
 #${SEM} can be semeval07, semeval10, semeval13
 %-chunk-semeval-exp: semeval-systems/${SEM}/%-ans/ semeval-systems/${SEM}/%-chunk-keys \
 		${SEM}-tw-list.txt gold/${SEM}
-	chunk-exp-semeval-based.py $^ ../data/chunks-${SEM} ${SEM}
+	python chunk-exp-semeval-based.py $^ ../data/chunks-${SEM} ${SEM}
 
 ../keys/gold/%.key: ../data/chunks-%
 	cat $</*chunk0*.key | sort | uniq > $@
 	wc $@
 
 evaluate-%-s13:
-	for i in `seq 0 4`; do ../keys/scorer.py semeval-systems/s13/$*-chunk-keys/SVM_Linear/SVM_Linear-semeval-semeval-1-$$i ../keys/gold/s13.test.$$i.key; done
-	for i in `seq 0 4`; do ../keys/scorer.py semeval-systems/s13/$*-chunk-keys/SVM_Linear/SVM_Linear-semeval-semeval-1-$$i ../keys/gold/s13.test.$$i.key; done | grep Precision | awk '{sum+=$$3}END{print sum/NR}'
+	for i in `seq 0 4`; do python ../keys/scorer.py semeval-systems/s13/$*-chunk-keys/SVM_Linear/SVM_Linear-semeval-semeval-1-$$i ../keys/gold/s13.test.$$i.key; done
+	for i in `seq 0 4`; do python ../keys/scorer.py semeval-systems/s13/$*-chunk-keys/SVM_Linear/SVM_Linear-semeval-semeval-1-$$i ../keys/gold/s13.test.$$i.key; done | grep Precision | awk '{sum+=$$3}END{print sum/NR}'
 
 evaluate-%-s07:
-	../keys/scorer.py semeval-systems/s07/$*-chunk-keys/SVM_Linear/SVM_Linear-semeval-semeval-1-0 ../keys/gold/s07.test.0.key
+	python ../keys/scorer.py semeval-systems/s07/$*-chunk-keys/SVM_Linear/SVM_Linear-semeval-semeval-1-0 ../keys/gold/s07.test.0.key
 
 evaluate-%-s10:
-	for i in `seq 0 4`; do ../keys/scorer.py semeval-systems/s10/$*-chunk-keys/SVM_Linear/SVM_Linear-semeval-semeval-1-$$i ../keys/gold/s10.test.$$i.key; done
-	for i in `seq 0 4`; do ../keys/scorer.py semeval-systems/s10/$*-chunk-keys/SVM_Linear/SVM_Linear-semeval-semeval-1-$$i ../keys/gold/s10.test.$$i.key; done | grep Precision | awk '{sum+=$$3}END{print sum/NR}'
+	for i in `seq 0 4`; do python ../keys/scorer.py semeval-systems/s10/$*-chunk-keys/SVM_Linear/SVM_Linear-semeval-semeval-1-$$i ../keys/gold/s10.test.$$i.key; done
+	for i in `seq 0 4`; do python ../keys/scorer.py semeval-systems/s10/$*-chunk-keys/SVM_Linear/SVM_Linear-semeval-semeval-1-$$i ../keys/gold/s10.test.$$i.key; done | grep Precision | awk '{sum+=$$3}END{print sum/NR}'
+
+# SEMEVAL INDIVIDUAL SYSTEM EXPERIMENT (Experiment #3 in the paper)
+
+create-chunk-keys-for-semeval-systems-%: semeval-systems/%  # create-chunk-keys-...-s13
+	-ls -d $</*-ans | sed 's|-ans||g'  | xargs -i mkdir '{}-chunk-keys'
+
+%-all-system-chunk-exp: semeval-systems/%/  # call s13-all-system-chunk-exp
+	for f in `ls -d $<*-ans | sed -e "s|-ans||g" -e "s|$<||g"`;do make $$f-chunk-semeval-exp SEM=$*; done
+
+all-system-evaluate-%: semeval-systems/%/ # all-system-evaluate-s13
+	for f in `ls -d $<*-ans | sed -e "s|-ans||g" -e "s|$<||g"`;do echo -e $$f '\t' `make evaluate-$$f-$* | tail -2 | grep -v Leaving`; done
 
 .SECONDARY:
 #small.tok.gz small.pos.gz small.lem.gz small.raw.gz
