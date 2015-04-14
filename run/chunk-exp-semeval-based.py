@@ -67,7 +67,7 @@ def get_input_filenames(tw):
 
 for tw in processed:
     ans_file = "{}{}.ans".format(system_key_folder, tw)
-    if tw not in set(devfiles):
+    if tw not in set(devfiles) and os.path.exists(ans_file):
         sys_ans_dict[tw] = ans_file
         tw_dict[tw] = get_input_filenames(tw)
 
