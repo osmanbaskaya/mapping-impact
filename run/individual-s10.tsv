@@ -1,0 +1,24 @@
+for f in `ls -d semeval-systems/s10/*-ans | sed -e "s|-ans||g" -e "s|semeval-systems/s10/||g"`;do echo -e $f '\t' `make evaluate-$f-s10 | tail -2 | grep -v Leaving`; done
+173-511_kcdc-gp-uniq 	 0.592809
+173-512_kcdc-gp-2-uniq 	 0.59236
+173-516_kcdc-pt-uniq 	 0.594944
+173-517_kcdc-pc-uniq 	 0.598539
+173-530_kcdc-pcgp-uniq 	 0.598202
+173-536_kcdc-pc-2-uniq 	 0.60427
+173-558_kcdc-gpc-uniq 	 0.595843
+302-108_senseval-gap 	 0.618108
+380-408_duluth-wsi-testdata-pk2-new 	 0.605393
+380-513_duluth-wsi-testdata-co-pk2 	 0.604182
+380-514_duluth-wsi-testdata-svd-300-pk2 	 0.605393
+380-518_duluth-wsi-testdata-svd-300-gap 	 0.59
+380-519_duluth-wsi-testdata-co-gap 	 0.604855
+380-520_duluth-wsi-testdata-gap 	 0.601933
+380-617_duluth-mix-pk2 	 0.622449
+380-618_duluth-mix-gap 	 0.611763
+380-620_duluth-mix-narrow-pk2 	 0.611368
+380-622_duluth-mix-narrow-gap 	 0.619054
+380-624_duluth-mix-uni-pk2 	 0.647103
+380-625_duluth-mix-uni-gap 	 0.629533
+39-319_Disamb.solution.10.0.10.0.4.0 	 0.619663
+402-186_task14_ksu 	 0.594719
+ensemble 	 0.669438

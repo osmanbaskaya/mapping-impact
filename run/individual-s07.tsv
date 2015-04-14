@@ -1,0 +1,7 @@
+for f in `ls -d semeval-systems/s07/*-ans | sed -e "s|-ans||g" -e "s|semeval-systems/s07/||g"`;do echo -e $f '\t' `make evaluate-$f-s07 | tail -3 | grep 0`; done
+I2R 	  0.788853601065
+UBC-AS 	  0.757094559984
+UMND2 	  0.767954103063
+UOY 	  0.778608749104
+ensemble 	  0.794795615203
+upv_si 	  0.765495338592
