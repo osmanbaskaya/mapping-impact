@@ -29,9 +29,10 @@ class SemevalFeatureTransformer(FeatureTransformer):
         y = []
         inst_list = []
         for key in data:
-            X.append(dict(data[key]))
-            y.append(target[key][0][0]) # we get only one sense for gold standard
-            inst_list.append(key)
+            if data[key] is not None:
+                X.append(dict(data[key]))
+                y.append(target[key][0][0]) # we get only one sense for gold standard
+                inst_list.append(key)
         return X, np.array(y), inst_list
 
     def get_vectorizer(self):
