@@ -512,7 +512,7 @@ create-s13-chunks:
 SEM10=../data/semeval-datasets/s10/evaluation/sup_eval/80_20/all
 create-s10-chunks:
 	for i in `seq 1 5`; do \
-		dataset-splitter.py ${SEM10}/mapping.$$i.key ${SEM10}/test.$$i.key \
+		python dataset-splitter.py ${SEM10}/mapping.$$i.key ${SEM10}/test.$$i.key \
 		../data/chunks-s10 `expr $$i - 1`; \
 	done
 
@@ -524,7 +524,7 @@ create-s07-chunks:
 
 create-%-system-ans-dir: ../data/semeval-system-ans/%
 	for s in `ls $</`; do \
-		system-key-splitter.py $</$$s semeval-systems/$*/$$s; done
+		python system-key-splitter.py $</$$s semeval-systems/$*/$$s; done
 
 # TEST ET
 %-ensemble-ans-create: %-tw-list.txt ../keys/gold/%.key
@@ -584,3 +584,9 @@ all-system-evaluate-%: semeval-systems/%/ # all-system-evaluate-s13
 	#> ../key.tmp
 	#mv $</../key.tmp $@
 	#wc $@
+
+
+# make create-s13-system-ans-dir
+# make create-chunk-keys-for-semeval-systems-s13
+# for f in `ls -d semeval-systems/s13/*-ans | sed -e "s|-ans||g" -e "s|semeval-systems/s13/||g"`; do make $f-chunk-semeval-exp SEM=s13; done
+# ls -d semeval-systems/s13/*-ans | sed -e "s|-ans||g" -e "s|semeval-systems/s13/||g" | xargs -i make evaluate-{}-s13

@@ -12,6 +12,10 @@
 380-518_duluth-wsi-testdata-svd-300-gap 	 0.59
 380-519_duluth-wsi-testdata-co-gap 	 0.604855
 380-520_duluth-wsi-testdata-gap 	 0.601933
+380-521_duluth-wsi-testdata-r12 	 0.584607
+380-522_duluth-wsi-testdata-r13 	 0.581461
+380-523_duluth-wsi-testdata-r15 	 0.573933
+380-524_duluth-wsi-testdata-r110 	 0.562584
 380-617_duluth-mix-pk2 	 0.622449
 380-618_duluth-mix-gap 	 0.611763
 380-620_duluth-mix-narrow-pk2 	 0.611368

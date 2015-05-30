@@ -1,8 +1,11 @@
+for f in `ls -d semeval-systems/s13/*-ans | sed -e "s|-ans||g" -e "s|semeval-systems/s13/||g"`;do echo -e $f '\t' `make evaluate-$f-s13 | tail -2 | grep -v Leaving`; done
 Sapienza-system1 	 0.570732
 Sapienza-system2 	 0.578496
 UoS-allclusters 	 0.603487
 UoS-wnsenses 	 0.599172
 aiku 	 0.634553
+aiku1000 	 0.601314
+aiku5 	 0.635284
 ensemble 	 0.643531
 hdp-wsi-sample-50k 	 0.602527
 hdp-wsi-sample-5p 	 0.600343
