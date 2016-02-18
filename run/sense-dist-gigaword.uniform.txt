@@ -1,0 +1,14 @@
+Total # of Instance: 1082745	Total # of words: 920
+Mean # of instance: 1176.89673913
+Dataset Perplexity: 439.737232324
+2	632
+3	167
+4	62
+5	29
+6	13
+7	9
+8	3
+9	1
+10	2
+11	1
+12	1
